@@ -20,9 +20,9 @@ Hopbot                         Very basic bot, less than 15kb.
    VladBot 2.x
    | +--ChRoniCBot             Stricter on channel security.
    |    +--IncuBot             The branch incubus worked on.
-   |    +--Mikribot            My branch.
-   |    +--Revbot              Revzoot's branch for #quake.
    |        +--Incubot-Byxnet  Compiler fixes, minor bug fixes.
+   |        +--Revbot          Revzoot's branch for #quake.   
+   |        +--Mikribot        My branch.
    +--HackBot                  Coded by ComStud.
    |   +--ComBot               Coded by ComStud.
    |       +--DweeB0t
