@@ -9,11 +9,11 @@ Hopbot                         Very basic bot, less than 15kb.
    VladBot 2.1.c
    | +---Ariela                A few very minor modifications.
    VladBot 2.1.g
-   | +--Achille
-   |     +--Patrocle
    Vladbot 2.1.h
    | +--Vladbot-pHb-Nefertari  French translation.
    | +--HipBot                 Stripped away some features.
+   | +--Achille
+   |     +--Patrocle
    VladBot 2.10
    | +--fRitE
    |     +--fRitE+             Continuation by a new author.
@@ -23,7 +23,7 @@ Hopbot                         Very basic bot, less than 15kb.
    |    +--Mikribot            My branch.
    |    +--Revbot              Revzoot's branch for #quake.
    |        +--Incubot-Byxnet  Compiler fixes, minor bug fixes.
-   +--HackBot
+   +--HackBot                  Coded by ComStud.
    |   +--ComBot               Coded by ComStud.
    |       +--DweeB0t
    |       +--StelBot          StealthBot.
