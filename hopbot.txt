@@ -1,0 +1,9 @@
+hop1.8.tar.Z
+
+== Findings ==
+/*  hopbot   */
+/*====[bot.c] Bot v0.01   11/7/91 - Peyote Coyote  Generic bot shell ==*/
+
+/*=====[ strcasestr ]========================================================
+  NOT used.  I just pulled it out of Sagebot for possible future use.
+===========================================================================*/
