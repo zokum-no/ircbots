@@ -24,7 +24,7 @@ Hopbot                         Very basic bot, less than 15kb.
    |     +--fRitE+             Continuation by a new author.
    VladBot 2.x
    +--HackBot                  Coded by ComStud.
-   |   +--ComBot               :Coded by ComStud.
+   |   +--ComBot               Coded by ComStud.
    |       +--DweeB0t
    |       +--StelBot          StealthBot.
    |       |   +--RockBot      Fixes alleged backdoors in Stel.
