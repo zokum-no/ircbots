@@ -1,0 +1,106 @@
+How to install VladBot
+----------------------
+First edit the file config.h to your needs.
+What can be defined?
+- IRCSERVER	-	the server to which the bot should connect
+- IRCPORT	-	the ircport on that server (usually 6667)
+- IRCNAME	-	the bot's default NickName
+- USERNAME	-	the bot's loginname on irc (if the server
+			allows this to be set)
+- IRCGECOS	-	the bot's "IRCNAME", i.e., what is show after
+			the user@host with /who
+- CHANNEL	-	default channel to join
+- VERSION	-	Current version. No need in changing this
+
+Now for some files:
+- USERFILE	-	The file which contains the userdatabase
+- SHITFILE	-	The file which contains the shitdatabase
+- PROTFILE	-	The file which contains the protdatabase
+			(more about these files later)
+- DCCLOGFILE 	-	File to which filetransferlogs should be written
+- ERRFILE	-	File to which errors should be written
+
+- FILEROOTDIR	-	The directory where downloadable files can
+			be found
+- CONTENTSFILE	-	File which contains index of FILEROOTDIR
+- FILEUPLOADDIR -	Directory where files should be placed which are
+			uploaded to the bot.
+
+Difficult stuff:
+- WAIT_SEC	-	Number off seconds to wait before continuing
+			with the main loop (to prevent the bot from
+			taking to much system resources)
+- WAIT_MSEC	-	As WAIT_SEC, but then in milliseconds.
+			a combination of 0/250 doesn't slow the bot down
+			too much but doens't take too much resources either
+			Be aware not to make these number too big. If your
+			bot has a lot of connections at once, it might ping
+    			out if WAIT_(M)SEC is too big. A simple formula:
+			Looptime = (WAIT_SEC+WAIT_MSEC)*(Number_of_DCC+1)+d
+			If looptime is too big, the bot won't be able to
+			respond to a server PING. 0/250 usually is sufficient.
+- DCC_TIMEOUT	-	Idle time in seconds before DCC-connection should
+			be closed. Very usefull if ppl do now respond to
+			a !send or !chat
+- AUTO_DCC	-	If this is defined, the bot will initiate a DCC
+			connection when someone requests a command which
+			requires DCC
+- DBUG		-	If you're trying to find an error.
+
+The rest of the file should probably not be changed.
+
+About the user/shit/protlist files:
+-----------------------------------
+The entries in these files are off the form:
+nick!user@host	level
+Wildcards are allowed, comments should be preceeded by a '#'
+a legal USERFILE would be:
+
+# user.file, create by F. Oobar
+#
+# Give everyone opz
+*!*@*		50
+# and make me superuser
+*!*oobar@dummy.com	150
+# end user.file
+
+What is the meaning of these files/levels?
+- USERFILE is used to determine who can access which commands on IRC.
+  for example, level 0   means no priviliges,
+	       level 50  means autoop,
+	       level 100 allows you to modify the lists and
+	       level 150 is operator level. Commands like !diedie
+	       are accessable.
+- SHITFILE is used to take ppls privilges gained in the userlist away,
+  or to keep them away from a channel:
+	       level 0   nothing's wrong
+	       level 50  user has no access to any commands, no matter
+	       what his userlevel is.
+	       level 100 user will be kicked+banned when joining channel
+- PROFILE is used to protect ppl from being masskicked/massdeopped by
+  me. Level 100 means protected, level 0 not. But as masskick/massban etc.
+  do not work properly, there is no real need in specifying users (unless
+  you really want to use masskick etc).
+
+Every file should at least contain ONE entry!
+
+For more help look at vlad-ons.c (there's a quite readable table there
+in which accesslevels are defined) or as the bot for help.
+/dcc chat bot_name
+/msg bot_name !help topic
+where topic can be "" (nothing) to see all available topics, or if you
+want more information about levels:
+useradd userdel userlist userwrite
+protadd protdel protlist protwrite
+shitadd shitdel shitlist shitwrite
+getting_access levels
+
+Where to find more information:
+- Look at the source (if you can read it ;)
+- Ask the bot for help. There quite an extended helpfunction!
+
+
+Have phun! Do something usefull with it!
+
+	-VladDrac-
+

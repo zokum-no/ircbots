@@ -1,0 +1,41 @@
+- Add zircon support. I think the %-idea is quite good
+  (like: %chat etc...)
+- Rewrite the fd-stuff again (as Lindsay
+  suggested...)                       
+- Add multiple servers (for undernet) (severe hacking?)
+ PHASE 1:
+	Add a server list and put all botinfo (as nick, serversocket)
+	in one struct. When the server goes down, the bot should be able
+	to reconnect to another server from the serverlist
+
+	(Perhaps but irrelevant stuff from server.c to vladbot.c, and
+	 rename vlad-bot.c into main.c)
+  :
+  :
+ PHASE X:
+	Make a list of these structs
+- Add some sort of configurationscripts by which bots can be defined, i.e.
+
+# Sample.cfg
+
+Bot "NederServ" {
+	Name "/msg NederServ !help";
+	servers { "ircserver.et.tudelft.nl", "irc.funet.fi" };	
+	Channels { "#dutch", "#Holland" };
+}
+# NederServ on the undernet 
+Bot "NederServ" {
+	Name "/msg NederServ !help";
+	servers "delft.undernet.org";	# whatever
+	Channels { "#WasteLand", "#Dutch" };
+}
+# Prince Service bot
+Bot "UpTown" {
+	Name "/msg UpTown !files";
+	servers "irc.funet.fi";
+	Channels "#prince";
+}
+# end
+	
+- Add some usefull things...;
+ Games, services, messaging system

@@ -1,0 +1,115 @@
+Readme for release 1.7 of VladBot
+=================================
+
+This is the first public release for VladBot (for now only via DCC from NederServ,
+later also via FTP). VladBot is still in an alpha/beta stage. Anyone who wants
+to help porting it to other Operating systems, please notify me.
+
+Disclaimer:
+-----------
+The author of this program (irvdwijk@cs.vu.nl) is absolutely not responsible
+for the use of this program. Use at your own risk!
+
+Release 1.6 now supports:
+-------------------------
+- Three "lists", user - prot and shit. New lists can be added quite easily
+- DCC chat for faster communication
+- DCC send/get for filetransfer
+- (Mass) opping/kicking etc. VladBot was never meant to be a masskick/op bot,
+  I won't add anymore of these features in future releases.
+- Internal liststructures like a channellist by which the bot can recall
+  on which channels it is (handy if the bot gets kicked).
+
+New in 1.7
+----------
+- Logging has been added (error and dcc)
+- VladBot now runs on Ultrix (thanx Richie :)
+- Lots of bugfixes. Massop/kick/ban is still broke
+- Helpfunction is quite complete now (thanx again, richie)
+- More....
+
+New in 1.8
+----------
+- DCC timeout, if a dcc connection is idle for DCC_TIMEOUT secs, it'll
+  be closed
+- FILEUPLOADDIR - files that are uploaded can be put in a seperate dir,
+  this protects ppl. from overwriting existing files.
+- (version 1.8b) When a command is sent private, no ! is needed
+- Some fancy stuff, !info now shows uptime etc. !listdcc has been reformatted
+  (look at it)
+- The bot now waits a definable (WAIT_SEC and WAIT_MSEC) amount of time when
+  it's reading information from a socket. This slows things down a little,
+  but the bot now takes much less systemresources. 
+- Moved some stuff and other small stuff
+
+New in 1.9
+----------
+- Waiting dcc connections ping out earlier that active ones (define 
+  DCC_IDLETIMEOUT and DCC_WAITTIMEOUT for this)
+- Help has been rewritten
+- Added a small utility to read help without starting the bot
+- DCC support for zircon (actually, I rewrote the select-stuff. Now it 
+  works with zircon)
+- Added internal channel, ban and userlists. Now it's possible to mass* 
+  in a fast way, unban users, open channels and use a single nick to 
+  register someone (see nwhois, nuseradd, nshitadd, nprotadd, open, 
+  massunban etc)
+- Mode changes are registred (use !showusers/!showusers #channel and !channels)
+- Added a signalhandler. Usefull to see why your bot died (err.log)
+- Bot now restarts in a proper way after a kill/server shutdown
+- Serverlist has been added. This hasn't really been tested (kinda difficult),
+  but whenever a server goes down, the bot should reconnect to another server.
+  In the serverfiles, each line should contains the servername and an optional
+  portnumber
+- Useless, non working commands like fork, random and spy have been removed.
+- -b switch added (run in background)
+- !files now supports a parameter. !files topic will show INDEX.topic.
+- Some bugs fixed (giveop, 372, !send while dcc chat)
+- Added DCC_MAXFILESIZE to prevent ppl from sending huge files
+
+future plans:
+-------------
+- Add configurationfile (that overrides config.h)
+- Much more...
+
+Bugs:
+-----
+No checking with dcc (you can let the bot make a connection to any host/portnumber). 
+Please let me know is you find any.
+
+Installation:
+-------------
+Unpack the tarfile. Edit the config.h file and change default server, channel and nick.
+VERY IMPORTANT! choose the right directory for FILEROOTDIR. With the current 
+implementation, any file in FILEROOTDIR can be accessed AND uploaded! Make
+it point to some tmpdirectory!
+
+VladBot has been comiled succesfully on SunOs 4.1.2, Ultrix and Linux 0.99pl13
+If you port this thingy to some other OS, I'd be interested in hearing what
+you had to change etc.
+
+History:
+--------
+VladBot was originally based on HopBot but has changed so much, there is hardly
+any resemblance left. For DCC and other things, I took parts from the ircII 2.2.9
+client. This is (also) why VladBot is released under the GNU Copyright.
+
+Copyright:
+----------
+    VladBot 1.9 - A service bot for IRC.
+    (c) 1993 Ivo van der Wijk
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
