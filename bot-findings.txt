@@ -1,14 +1,10 @@
 == HopBot ==
 File: hop1.8.tar.Z
 
-/*====[bot.c] Bot v0.01   11/7/91 - Peyote Coyote  Generic bot shell ==*/
+[bot.c] Bot v0.01   11/7/91 - Peyote Coyote  Generic bot shell
+[ strcasestr ] NOT used. I just pulled it out of Sagebot for possible future use.
 
-/*=====[ strcasestr ]========================================================
-  NOT used.  I just pulled it out of Sagebot for possible future use.
-===========================================================================*/
-
-
-== Vladbot ==
+== Vladbot 1.9m ==
 File: vladbot-1.9m.tar.gz
 
 VladBot was originally based on HopBot but has changed so much, there is hardly
@@ -19,3 +15,8 @@ Copyright:
 ----------
     VladBot 1.9 - A service bot for IRC.
     (c) 1993 Ivo van der Wijk
+
+== VladBot 2.2a-PhB ==
+Looks like a translation fork / personalization of aV ladBot 2.1h. It has a lot of 
+the replies and commands translated into french. Some command levels have been
+changed.
