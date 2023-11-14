@@ -1,8 +1,13 @@
+== Achille 2.1hi-51 ==
+French Vladbot fork from 1996 with added AI code and commands.
+
+
 == HopBot ==
 File: hop1.8.tar.Z
 
 [bot.c] Bot v0.01   11/7/91 - Peyote Coyote  Generic bot shell
 [ strcasestr ] NOT used. I just pulled it out of Sagebot for possible future use.
+
 
 == Vladbot 1.9m ==
 File: vladbot-1.9m.tar.gz
@@ -15,6 +20,12 @@ Copyright:
 ----------
     VladBot 1.9 - A service bot for IRC.
     (c) 1993 Ivo van der Wijk
+
+
+== Vladbot-2.1h-hip ==
+A few memory fixes, vladbomb removal, added two commands and removed some of 
+the more hostile channel protection functionality.
+
 
 == VladBot 2.2a-PhB ==
 Looks like a translation fork / personalization of aV ladBot 2.1h. It has a lot of 
