@@ -1,0 +1,28 @@
+TODO list for VladBot (random order)
+------------------------------------
+- Finish the new ftext and add it to the bot
+- Rewrite helpfiles
+- Extend *list with passwd (actually, prot and user)
+- Leave and rejoin if empty channel and no op
+- Write programmers manual
+  - adding functions
+  - available information (from currentbot)
+- Add ban-protection for protected users
+- Perhaps add something like a temporary shit
+- Add pager to session
+- Add logging (for Zool)
+- Make simple interface for adding functions
+  (i.e. using #include's etc)
+- make more use of sendreply (also something like a DCC field)
+- update dependencies
+- More configuration options (i.e. ONLY_OPS_FOR_REGISTRED etc)
+- Fix problems with userban()
+- Make the bot more robust (less coredumps if misconfigured)
+- Make !ls more unix-ish (switches?)
+- add an accesslist for files
+- add an extra field to the channeldefinition to set a key
+- rewrite lots of stuff, make use of a standard list 
+- Write a FAQ
+
+If you got any suggestions, or you added one of these, mail them to:
+irvdwijk@cs.vu.nl
