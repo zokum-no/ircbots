@@ -1,0 +1,5 @@
+extern  int lcount[3];
+extern  char line[128];
+extern  char *lines[3][128];
+extern  int pling;
+extern 	int gling;

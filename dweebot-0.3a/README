@@ -1,0 +1,115 @@
+*******************************************************************************
+	Credit for the BASIC structure of this bot goes to CoMSTuD
+	(cbeherens@iastate.edu).  However since then and continuing 
+	on I will be cleaning up the code and adding features that
+	I feel were missing, and removing features I felt were not
+	needed.
+
+	please direct your questions to: piraeus@netcom.com
+	
+	if you have any ideas for new features please feel free
+	to email them to me.  PLEASE do not pester me on the IRC
+	about anything as I am usually doing something and do not
+	have time to be answering a million questions.
+
+	Piraeus
+
+*******************************************************************************
+
+DweeB0t v0.6A1:
+
+Added a way to read random ping/greet/etc.. statements from a file: read
+FILES.README for a fuller description of this. 
+
+few bug fixes .. nothing major
+
+to do: create a external string manager for easier file development
+
+DweeB0tv0.03A1 -
+
+Notes: in parese.c (void parse_join(etc..)) you will find the quote's for
+the random greetz. Right now I have these hardcoded as I have yet to spend
+enough time working on them to make them a softcode (ie. read in from a
+file) function.  I plan to do this at a later date when I'm now swamped
+ideas.  To turn them on or off use #togreet (or whatever your chosen command
+character is followed by togreet), by deafult they are turned off.
+
+you will find that there is only ONE greet for the owner ... also I have
+forgotten to add a nick check in the function so the bot will greet itself
+as lord & master as well. This *will* be fixed in the next version but I
+don't feel like doing it right now :).  As for the other greetings . I have
+0-7, you can add or delete as many as you like, just remember to go to the
+i1 = rand() % [?]  line and change the number [?] to ONE more than you r
+number of greetz.
+
+DweeB0tv0.5A2 -
+
+I have added CTCP jupe/grok protection to the bot, if the bot detects a user
+on channel attempting to JUPE/GROK it will auto-kick them from the channel.
+While it seems strange that someone would attempt to JUPE/GROK a bot, it is
+normal for you newbie hacker to attempt to do a full channel JUPE/GROK test
+to *everyone* on the channel.
+
+Also in this version I have added COMMAND.LOG review, if you go back to the 
+orginal version of the DweeB0t you find that there is a new file created in
+the Bot dir.  This file is "command.log", the bot *logs* all commands sent
+to it via public *or* MSG.  With the new revie function you may review X
+number of commands from the top of the command.log.  There is *ONE* oddity
+with this command. say you do a *REVIEW 5 (ie. * is the bot's CMDCHAR and
+you want to review the last 5 commands sent to the bot) you will actually
+recieve *6* lines of log.  The first one will be the command you just sent,
+as the bot writes to the file BEFORE it parses the rest of the function.  I
+thought about fixing this but I feel that this works just as well and
+maintains the structure of the code.
+
+NOTE1: There is one small problem with the "command.log" file at this time,
+it fail to write the user's nick, instead it writes the channel name in that
+slot.  I have the code to fix this but I've been lazy about doing it as it
+will take sometime to fix it as there is a seperate call to the function for
+*every* command in the bot. Needless to say this is a long process when it
+comes to changing *every* call. I may go ahead and do this as I have nothing
+better to do at the time I am writing this but if so you'll prolly never see
+this portion of the text as I'll more than likely erase this and tell you
+about how I *fixed* it :)
+
+	<NOTE>: I fixed it .. you now get time: nick on channel (user@host)
+		did such and such command with following arguements
+
+Note2: Also one other thing to note about the "command.log" file.  At this 
+time it does *NOT* truncate itself at any specified file length. This means
+that unless you go in and cut off the last ? number of lines every once in a
+while you're going to end up with a HUGE file sitting there.  The busier the
+bot it, the bigger your file.  I have come up with 2 ways to solve this
+problem, 1: use a really nast kludge by copying a specified # of line to a
+second file deleting the original and then "mv"ing file2 to file1.  However 
+this is a time consuming process not to mention horribly poor programming.  
+So what I plan to do is this, I am going to specify a certain # of commands
+that the bot will be able to remember back to, say the last 100? and then
+make a virtual file in memory.  Thus the only time the file is actually
+touched is on startup of the bot and shutdown of the bot.  Beyond that the
+bot would not access the file.  The only problem with this is it's failuer
+to remember anything past the specified amount, so what I will do is
+distribute a patch with the bot source that will allow you to change it back
+to the way it is now with it remembering ALL commands to the file.  Just
+remember this, once i change it I will not be held responsible for 5meg
+"comand.log" file just because you forgot to truncate it yourself
+
+Things to Add:
+	flood protection for the bot (note: auto-shit for public flooding,
+	beeping, etc.. has been removed, and the Revenge kicks are gone as
+	well)
+	A better command logging process that won't build a ever growing
+	file in your bot dir (*see note2*)
+	Make the interactive responses available from a read in softcode
+	file rather than hardcoded. (this is to remove the need for a
+	complete recompile every time you want to change the responses or
+	greetings)
+	Add more interactive functions and continue to clean the code up
+
+If you have any ideas for functions you would like to see added to the bot
+or have comments/questions feel free to email me at *piraeus@netcom.com*
+if I don't respond imedietly .. well hell . I'm busy busting my ass
+somewhere :)
+
+Piraeus
+ 

@@ -1,0 +1,25 @@
+/* FILES_README */
+
+NOTE: This function is disabled in this version until I get it working
+properly .. 
+
+new for the DweeB0t series:
+
+In my attempts to make the DweeB0t more and more interactive I am
+implementing a new way to make random ping/greeting/etc.. statements.
+
+each function will have it's own *.list file (i.g. Ping.list), these files
+will coontain random statements up to 79 characters long terminated with a
+\n. What this means to you is that you MUST hit return after adding each
+line or it won't work.  I am currently building an external string manager
+to make this easier but I can only do so many things at once. 
+
+Anyway, this should be pretty simple for you to set up, I will include a
+sample *.list file for every command that will use one. NOTE: PLEASE do NOT
+create extremely long files, anything over the first 100 lines will be
+ognored, if you want to have it read more ... well ... better learn to read
+C code so you can figure out where it is and how to change it :)
+
+but really .. do you need more than 100 friggin lines anyway?
+
+piraeus
