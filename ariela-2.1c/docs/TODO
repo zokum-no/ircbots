@@ -1,0 +1,21 @@
+TODO list for VladBot
+---------------------
+- Expand formatting options for help (take some
+  of Skel's stuff)
+- Extend *list with passwd (actually, prot and user)
+- Leave and rejoin if empty channel and no op
+- Write programmers manual
+  - adding functions
+  - available information (from currentbot)
+- Add protection to !deop
+- Add ban-protection for protected users
+- Perhaps add something like a temporary shit
+- Add the DELLINE and REPLACELINE note-commands
+- Add pager to session
+- Add logging (for Zool)
+- Make simple interface for adding functions
+- Expand the use of sendreply
+- make more use of sendreply (also something like a DCC field)
+
+If you got any suggestions, mail them to:
+irvdwijk@cs.vu.nl

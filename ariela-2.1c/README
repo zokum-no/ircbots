@@ -1,0 +1,164 @@
+Readme for release 2.1 of VladBot
+=================================
+
+Disclaimer:
+-----------
+The author of this program (irvdwijk@cs.vu.nl) is absolutely not responsible
+for the use of this program or damage caused by it. Use at your own risk! 
+See file COPYING for further information
+
+New in 2.1c
+-----------
+Some bugfixes. All problems with dcc (not sending files, just adding to 
+the queue) should be fixed. People who are still running an older 2.1
+version should really upgrade as 2.1c works alot better.
+A new command added (for debugging, but quite usefull) called QUEUE.
+It just displays the filequeue.
+Thanx to President for his debuggin work and (as always) to Richie_B
+
+New in 2.1
+----------
+- Implementation of missing functions like !kick and !deop
+- Rewrite of on_msg, strtok has been replaced with get_token,
+  which works alot nicer.
+- Usage of fnmatch (taken from the GNU fileutils) for patternmatching
+  in stead of match (from ircd). Now, [] works too in patterns, i.e.
+  !useradd *!*@127.0.0.[1234]
+- Ported to AIX by Dathes
+- Rewrite of the cfgfile-parser - THE CFGFILE FORMAT HAS CHANGED!
+  (your old cfgfile won't work anymore!)
+  Changes in cfgfile:
+  - !setting value has been changed into %set setting value,
+    i.e. %set Notefile "/tmp/notes"
+  - Strings and integers as parametertypes added
+  - Some definitions require multiple parameters
+    (example: NederServ channel "#dutch", "+tn", "It ain't much if it ain't Dutch")
+- Started with adding "sessions", something that should become very powerfull
+  in near future, see session.c for more details
+- Added floodcheck (using sessions)
+- Added ftp_dcc, an FTP-ish interface for dcc, including the
+  ls, get and mget command
+- If a command required dcc but there is no connection, the bot will
+  automatically execute the command when the connection is established
+  (so no need to type the same command twice)
+- Some bugfixes
+  - channellist fixed in !global info BotName
+  - ctcp source now gives a proper reply
+  - !invite should work (again?)
+  
+
+New in 2.0
+----------
+Major changes since 1.9. Lots of stuff has been rewritten and improved.
+Here are some changes:
+- Cleaned up config.h. It should be easier to edit the file
+- Support for a configfile in which almost everything can be defined
+  (config.h is merely to declare defaults)
+- A simple but powerfull note system
+- Multiple bot support (run several bots in one "process")
+- Checks to see if server is still active (a lot of servers "just hang")
+  If the test fails, the bot will connect to another server
+- Debugging can be turned on/off at runtime (if DBUG was defined when
+  compiling)
+- Lots of code cleanups (still not finished with it)
+- Fixed some memory leaks and used mstrcpy in stead of strcpy
+  with a fixed stringlenght. This should save quite some memory
+  (esp. with huge userlists etc)
+- A new set of "GLOBAL" commands added to access the "top layer"
+  (!GLOBAL DIE, !GLOBAL INFO etc.)
+- ...
+
+New in 1.9
+----------
+- Waiting dcc connections ping out earlier that active ones (define 
+  DCC_IDLETIMEOUT and DCC_WAITTIMEOUT for this)
+- Help has been rewritten
+- Added a small utility to read help without starting the bot
+- DCC support for zircon (actually, I rewrote the select-stuff. Now it 
+  works with zircon)
+- Added internal channel, ban and userlists. Now it's possible to mass* 
+  in a fast way, unban users, open channels and use a single nick to 
+  register someone (see nwhois, nuseradd, nshitadd, nprotadd, open, 
+  massunban etc)
+- Mode changes are registred (use !showusers/!showusers #channel and !channels)
+- Added a signalhandler. Usefull to see why your bot died (err.log)
+- Bot now restarts in a proper way after a kill/server shutdown
+- Serverlist has been added. This hasn't really been tested (kinda difficult),
+  but whenever a server goes down, the bot should reconnect to another server.
+  In the serverfiles, each line should contains the servername and an optional
+  portnumber
+- Useless, non working commands like fork, random and spy have been removed.
+- -b switch added (run in background)
+- !files now supports a parameter. !files topic will show INDEX.topic.
+- Some bugs fixed (giveop, 372, !send while dcc chat)
+- Added DCC_MAXFILESIZE to prevent ppl from sending huge files
+
+New in 1.8
+----------
+- DCC timeout, if a dcc connection is idle for DCC_TIMEOUT secs, it'll
+  be closed
+- FILEUPLOADDIR - files that are uploaded can be put in a seperate dir,
+  this protects ppl. from overwriting existing files.
+- (version 1.8b) When a command is sent private, no ! is needed
+- Some fancy stuff, !info now shows uptime etc. !listdcc has been reformatted
+  (look at it)
+- The bot now waits a definable (WAIT_SEC and WAIT_MSEC) amount of time when
+  it's reading information from a socket. This slows things down a little,
+  but the bot now takes much less systemresources. 
+- Moved some stuff and other small stuff
+
+New in 1.7
+----------
+- Logging has been added (error and dcc)
+- VladBot now runs on Ultrix (thanx Richie :)
+- Lots of bugfixes. Massop/kick/ban is still broken
+- Helpfunction is quite complete now (thanx again, richie)
+- More....
+
+Release 1.6 (first public release)
+----------------------------------
+- Three "lists", user - prot and shit. New lists can be added quite easily
+- DCC chat for faster communication
+- DCC send/get for filetransfer
+- (Mass) opping/kicking etc. VladBot was never meant to be a masskick/op bot,
+  I won't add anymore of these features in future releases.
+- Internal liststructures like a channellist by which the bot can recall
+  on which channels it is (usefull if the bot gets kicked).
+
+Bugs/TODO:
+----------
+- Expand the options in ftext, perhaps use some of Skel's code.
+- Clean up the vlad-ons code
+- Add some more protection for protected users (ban, kick)
+- ...
+
+Installation:
+-------------
+Read the file "INSTALLING"
+
+History:
+--------
+VladBot was originally based on HopBot but has changed so much, there is hardly
+any resemblance left. For DCC and other things, I took parts from the ircII 2.2.9
+client. This is (also) why VladBot is released under the GNU Copyright.
+From version 1.6, VladDrac got some help and lots of support and suggestions
+from Richie_B, who runs the bot as NederServ and Uptown.
+
+Copyright:
+----------
+VladBot 2.1 - A service bot for IRC.
+(c) 1993-94 Ivo van der Wijk
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
