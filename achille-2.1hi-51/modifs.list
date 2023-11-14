@@ -1,0 +1,31 @@
+%Unifier Junk
+%Mettre Traveller a Traveller!*@*.univ-lyon1.fr
+%Remonter la rel de RealBack a 20
+%Remonter Artemiss a 20
+%Remonter indi*!*@*.educagri.fr a 40.
+%Transformer les worldnet.net en worldnet.fr
+%Remonter Astro au-dessus de 20
+%Remonter calypso, guel, exec, vivi et bub au-dessus de 10 (et les mettre en *.loria)
+%Transformer Celvin de worldnet en calvacom
+%Ajouter un loc *CyBg*, pour qu'il puisse être pris en compte.
+
+Empecher les reactions a une commande.
+Ajouter un parametre a la commande TIME +n ou -n pour ajouter a l'heure de France. (pour #reunion: +2, par ex)
+Ajouter les commandes REPDEL et STIMDEL
+Ajouter les commandes REPADD et STIMADD: plus claires que la commande APPRENDS.
+Ajouter les commandes REPLIST et STIMLIST, avec d'eventuels arguments pour chaque. Ca peut etre un canal, pour REPLIST, un nom de stimulus.
+Ajouter des caracteristiques JDR aux personnes qui viennent. Experience, Sorts, Spell Power, Force, Dexterite, Points de vie. Avec l'experience qui augmente au fur et a mesure qu'on reussit des coups, sorts... Et les points de vie qui se rechargent d'un jour a l'autre.
+Utiliser une fonction de reconnaissance de stimulus plus poussee (mot par mot, puis partiedemot*)
+Eviter l'«echo»: ne pas redire une phrase qui vient d'etre dite (2-3 phrases avant, pour eviter le flood) sur le meme canal
+Modifier !DESACTIVE pour pouvoir desactiver une reponse (a partir de son numero)
+Ajouter une commande pour enlever une reponse
+Mettre les niveaux par canal
+%Mettre un drapeau de log par canal (9/7/97)
+%Ajouter RELDEL
+Ajouter une commande pour apprendre une réponse positive.
+Ajouter une commande pour apprendre une réponse négative.
+Séparer les lignes en phrases, pour plus de sécurité. Mais garder en mémoire le fait qu'on s'adresse ou non à Achille.
+%Ajouter une commande pour changer le car de commande. (2/6/97)
+%Ajouter le chargement de stimuli et de reponses.
+%Ajouter une commande reladd.
+

@@ -1,0 +1,1290 @@
+1289
+BAC_A_SABLE	%s, tu me donnes ma pelle et mon seau?	H_I!~parmenti@meurthe.loria.fr	#*
+BAC_A_SABLE	J'peux pas, %s, tu m'as piqué mon seau!	H_I!~parmenti@meurthe.loria.fr	#*
+BLAGUE_CARAMBAR	-Chéri, dis-moi ce que tu préfères, une femme jolie ou une femme intelligente? -Ni l'un ni l'autre, chérie, tu sais bien que je n'aime que toi.	H_I!~parmenti@meurthe.loria.fr	#*
+BLAGUE_CARAMBAR	-Je suis inquiet, je vois des points noirs. -Tu as vu l'occuliste? -Non, des points noirs!	H_I!~parmenti@meurthe.loria.fr	#*
+BLAGUE_CARAMBAR	Charlotte demande à Julien: -Pourquoi les chirurgiens portent-ils des masques pendant les opérations? -Pour ne pas qu'on les reconnaisse s'ils ratent leur coup!	H_I!~parmenti@meurthe.loria.fr	#*
+BLAGUE_CARAMBAR	Dans un coin sombre, deux amoureux s'embrassent. Des gamins les regardent. L'un dit à l'autre: -Vise un peu, il essaye de lui piquer son chewing-gum!	H_I!~parmenti@meurthe.loria.fr	#*
+BLAGUE_CARAMBAR	Deux chiens se promènent. Tout à coup, l'un deux se met à frétiller de la queue: tu as vu, dit-il, un réverbère tout neuf ! Ça s'arrose	Bub!~mermet@renaissance.loria.fr	#*
+BLAGUE_CARAMBAR	Le comble de la clef ?... Être mise à la porte !	Bub!~mermet@renaissance.loria.fr	#*
+BLAGUE_CARAMBAR	Que fait un canard aveugle quand il veut se marier? Réponse: Il cherche une cane blanche.	H_I!~parmenti@meurthe.loria.fr	#*
+BLAGUE_CARAMBAR	Un monsieur entre dans un restaurant et demande: -Vous n'avez pas d'urinoir? -Non monsieur, nous n'avons que du riz blanc!	H_I!~parmenti@meurthe.loria.fr	#*
+BLAGUE_CARAMBAR	Une toute petite fille demande à sa maman: -Maman, pourquoi la nuit n'a-t-elle qu'un oeil? -Qu'est-ce que tu racontes? -Ben oui, papa a dit qu'il n'a pas pu fermer l'oeil de la nuit...	H_I!~parmenti@meurthe.loria.fr	#*
+BONNE_FETE	Merci %s.	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_BUB	Aaaaaah non ! AAAh non !	Exec!~dury@stanislas.loria.fr	#*
+CITE_BUB	C'est moi la boule.	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_BUB	Et en plus, j'me la joue mypoathe !	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_BUB	Et pourtant, j'avais un beau trou!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_BUB	J'halucine !	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_BUB	La pluie ça mouille!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_BUB	Le soleil ça chauffe	emyne!~macrelle@messein.loria.fr	#*
+CITE_BUB	Mon Dieu !	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_BUB	Seulement de la main gauche : j'suis gaucher	emyne!~macrelle@messein.loria.fr	#*
+CITE_BUB	Une grue, ca ressemble plus à une cigogne qu'a une grue enfin !	Exec!~dury@stanislas.loria.fr	#*
+CITE_BUB	Ça rame trop vite	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_EMYNE	Dans 'exemple', y a pas 'xion' 	Exec!~dury@stanislas.loria.fr	#billard
+CITE_EMYNE	Des connaissances, j'en ai pas	Exec!~dury@stanislas.loria.fr	#billard
+CITE_EMYNE	Gentil n'a qu'un oeil, et Exec en a 2! (des yeux)	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EMYNE	J ai rangé mon appart pendant 8 heures d'affilée	Exec!~dury@stanislas.loria.fr	#billard
+CITE_EMYNE	Je peux pas ouvrir la porte, j ai trop de mains.	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EMYNE	L'enfance, ou on l'assume ou on la mange.	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EMYNE	Mais non je t'interroge pas ! Je te pose des questions	Exec!~dury@stanislas.loria.fr	#billard
+CITE_EMYNE	Peur! Peur! (Emyne jouant au Babyfoot)	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EMYNE	Une preuve, ça ne démontre rien	Exec!~dury@stanislas.loria.fr	#billard
+CITE_ENEZ	COMMENT CA ELLE EST PAS BELLE MA TWINGO !	Exec!~dury@stanislas.loria.fr	#billard
+CITE_ENEZ	J'interpole du vide ...... euh, non j'extrapole	Exec!~dury@stanislas.loria.fr	#billard
+CITE_ENEZ	Je deteste qu'on me regarde quand je fais mes lacets !	Bub!~mermet@renaissance.loria.fr	#billard
+CITE_ENEZ	On va jouer au baby-vous ?	Bub!~mermet@renaissance.loria.fr	#billard
+CITE_EXEC	?????, elle se débrouille vachement mieux pour se prendre des buts que pour essayer d'en mettre!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	Ca doit être ça: je suis bête.	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	H_I: «C'est toi qui a un probleme» Exec: «Ben merci! Je l'sais bien!»	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	J'VOUS CAUSE QUAND J'VOUS PARLE	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	daaa da dirladada ...	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	emyne : goulue !	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	j ai envie de sandwich au saucissons et au beurre (14H50)	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	on va s'en foutre jusque la	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	pouet pouet	emyne!~macrelle@messein.loria.fr	#billard
+CITE_EXEC	tralala	emyne!~macrelle@messein.loria.fr	#billard
+CITE_H_I	comme vous l'voul	emyne!~macrelle@messein.loria.fr	#billard
+CITE_H_I	mince, j'ai plus de blague!	enez!simon@amance.loria.fr	#billard
+CITE_H_I	mon pov'	emyne!~macrelle@messein.loria.fr	#billard
+CITE_PATRICK	Et puis je la coince dans un coin et ...	Exec!~dury@stanislas.loria.fr	#billard
+COMME_D_HABITUDE	.... du port d'Aleeeeexandrie....	H_I!~parmenti@meurthe.loria.fr	#*
+COMME_D_HABITUDE	C'est Cloclo ça, non, %s?	H_I!~parmenti@meurthe.loria.fr	#*
+COMME_D_HABITUDE	C'est du Claude François, ça, %s, non?	H_I!~parmenti@meurthe.loria.fr	#*
+COMME_D_HABITUDE	Comme d'habitude, je vais même rire (Claude François)	Bub!~mermet@renaissance.loria.fr	#*
+COMME_D_HABITUDE	Et toi, tu me tournes le dos, comme d'habitude (Claude François)	Bub!~mermet@renaissance.loria.fr	#*
+COMPRENDRE	Si il y a quelqu'un qui comprend autant que moi ici, %s, c'est mon copain Chatelet :)	Celvin!celvin@met01.calvacom.fr	#*
+COMPRENDRE	Si il y a quelqu'un qui comprend autant que moi ici, %s, c'est mon copain Chatelet :)	Celvin!celvin@met01.calvacom.fr	#*
+COMPRENDRE	comprendre! Vous n'avez que ce mot à la bouche, %s! Je ne veux pas comprendre	emyne!~macrelle@messein.loria.fr	#*
+DEMANDE	 %s, on ne donne pas de lait, au bébé qui ne pleure pas :-(	emyne!~macrelle@messein.loria.fr	#billard
+FOU	Qui est ouf ?	Bub!~mermet@renaissance.loria.fr	#billard
+GRIMACE	Je vais t'apprendre a faire des grimaces, %s  :-0	Celvin!celvin@met01.calvacom.fr	#*
+GRIMACE	Oh! La belle grimace, %s! :-)	H_I!~parmenti@meurthe.loria.fr	#*
+GRIMACE	Ça-y-est, %s nous fait des grimaces	Celvin!celvin@met01.calvacom.fr	#*
+LAISSE_TOMBER	*Boumf*	H_I!~parmenti@meurthe.loria.fr	#*
+LAISSE_TOMBER	Aïe! Je me le suis laissé tomber sur le pied, %s! ;-)	H_I!~parmenti@meurthe.loria.fr	#*
+OISEAUX	savez vous %s, que le matin quand on écoute les oiseaux ... eh bien on les entend	emyne!~macrelle@messein.loria.fr	#billard
+PAUSE	Encore! Mais tu n'arrêtes pas de faire des pauses, %s!	H_I!~parmenti@meurthe.loria.fr	#billard
+PAUSE	Tu veux déjà faire une pause, %s?	H_I!~parmenti@meurthe.loria.fr	#billard
+PELICAN	 Non, %s, je ne suis pas un pélican	Celvin!celvin@met09.calvacom.fr	#*
+PISCINE	Ce soir j'peux pas, j'ai piscine	Bub!~mermet@renaissance.loria.fr	#*
+PLUIE	C'est bon pour les grenouilles qui aiment l'eau dans leur cou	emyne!~macrelle@messein.loria.fr	#billard
+PLUIE	Moi, j'suis pas une grenouille :-( ! 	emyne!~macrelle@messein.loria.fr	#billard
+POUET	tuuut !	Bub!~mermet@renaissance.loria.fr	#*
+POURQUOI	Ah!! Pourquoi tant de questions?	Celvin!celvin@met01.calvacom.fr	#metz
+QUI_EST_BUB	Big Brother	emyne!~macrelle@messein.loria.fr	#*
+QUI_EST_BUB	Bub is Big Brother, isn't he?	emyne!~macrelle@messein.loria.fr	#*
+QUI_EST_BUB	Bub, c'est SMALL BROTHER, %s. ;-)	H_I!~parmenti@meurthe.loria.fr	#*
+TOIAIMER	mais oui %s, y'a quelqu'un qui t'aime!	emyne!~macrelle@messein.loria.fr	#billard
+TOURNEE	%s, ok si c'est toi qui offre !	emyne!~macrelle@messein.loria.fr	#*
+TOURNEE	Une tournée Chorale U, %s? C'est GÉ-ANT!	H_I!~parmenti@meurthe.loria.fr	#*
+TOURNEE	Du courrier pour moi facteur ?	emyne!~macrelle@messein.loria.fr	#*
+TOURNEE	Ok, si c'est toi qui paie %s :-)	emyne!~macrelle@messein.loria.fr	#*
+VACANCES	C'est quoi des vacances, dis %s?	H_I!~parmenti@meurthe.loria.fr	#*
+VACANCES	/nil	H_I!~parmenti@meurthe.loria.fr	#*
+VACANCES	Vacances %s? C'est quoi ça?	H_I!~parmenti@meurthe.loria.fr	#*
+VACANCES	/nil	H_I!~parmenti@meurthe.loria.fr	#*
+VACANCES	Vacances %s? J'ai banni ce mot de mon vocabulaire...	H_I!~parmenti@meurthe.loria.fr	#*
+VACANCES	/nil	H_I!~parmenti@meurthe.loria.fr	#*
+VACANCES	Vacances %s? Kouassahe?	H_I!~parmenti@meurthe.loria.fr	#*
+VACANCES	/nil	H_I!~parmenti@meurthe.loria.fr	#*
+TCL_BIEN	C'est bien vrai %s, mais moi je suis écrit en C :-(	H_I!~parmenti@meurthe.loria.fr	#*
+TCL_BIEN	Ah lala! Je le sais, %s. Dommage que je sois écrit en C!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_BUB	«Bon, j'étais parti pour  travailler, mais l'appel des news  fut plus fort...» (Bub, un jour férié)	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_PATRICK	Quand on donne un coup de pied à un ballon, il ne le rend pas. Moralité: soit le ballon n'est pas rancunier, soit il se dégonfle.	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_BUB	«Le bruit, c'est moi!»	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_PATRICK	«Merde! J'ai perdu ma p'tite boule!»	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	Quand y nait des jumeaux, on les tue tous sauf un?	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EMYNE	Un sablier, c'est un mesureur de temps a poudre	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EMYNE	Un sablier, c'est un mesureur de temps a poudre	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_VIVI	J'ai jamais vu de mouche faire de deuil!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_PATRICK	Qui c'est qu'a un mouchoir en plastique?	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_H_I	Quand c'est pas l'une qui gagne, c'est l'autre qui pleure!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_H_I	Ca me rappelle quelque chose ca, 4-8 comme score!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_H_I	Quand c'est pas l'une qui gagne, c'est l'autre qui pleure!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_H_I	Ça me rappelle quelque chose ça, 4-8 comme score!	H_I!~parmenti@meurthe.loria.fr	#billard
+GROA	Tout doux, %s, tout doux ...	H_I!~parmenti@meurthe.loria.fr	#nancy
+GROA	/nil	H_I!~parmenti@bazin.loria.fr	#nancy
+GROA	Tu veux un peu de viande, %s?	H_I!~parmenti@meurthe.loria.fr	#nancy
+GROA	/nil	H_I!~parmenti@bazin.loria.fr	#nancy
+GROA	Du calme %s!	H_I!~parmenti@meurthe.loria.fr	#nancy
+TRES_FAIM	Ben pas moi, %s. Tralalèrereeuuu	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_VIVI	«Vivi patate!»	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	«Quand j'ai les yeux fermés, je vise comme un Dieu!»	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_YODA	Personne, par la guerre, ne devient grand.	Exec!~dury@stanislas.loria.fr	#*
+CITE_YODA	C'est pour ça que tu n'y arrives pas.	Exec!~dury@stanislas.loria.fr	#*
+CITE_YODA	Voyons voir ce qu'il y a là-dedans mihihihihihihihi !	Exec!~dury@stanislas.loria.fr	#*
+CITE_YODA	TU AU-RAS PEUR !	Exec!~dury@stanislas.loria.fr	#*
+CITE_PATRICK	«Oh! Mais c'est pas vrai! C'est vrai? Je suis un âne!»	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_VIVI	Après avoir tapé sur la tête de PaPat avec un dictionnaire: «Ça te fait un brainstorming, ça te fait du bien.»	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	«Oui mais moi, faut m'tirer vite!»	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_ENEZ	<Chez les hommes, y a plus rien a tirer !>	Bub!~mermet@renaissance.loria.fr	#billard
+CITE_ENEZ	Pioline, il a fait un doigt au public	Exec!~dury@stanislas.loria.fr	#billard
+TUDIEU	Caaaaalme, %s, caaaAAAaaaaalme....	H_I!~parmenti@meurthe.loria.fr	#billard
+TUDIEU	Pas de blasphème, s'il-te-plaît, %s!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_ENEZ	«DUDJU!»	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_ENEZ	«Ça se voit que vivi est absente...sinon vous vous en seriez déjà rendu compte qu'il était presque midi! ;-))»	H_I!~parmenti@meurthe.loria.fr	#billard
+TUDIEU	Reste zen %s, ouvre tes shakras.	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_YODA	Quand, comme moi, 900 ans tu auras, moins en forme tu seras!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_YODA	Le côté sombre est plus rapide, plus facile, plus séduisant mais PAS plus puissant ! Non !	Exec!~dury@stanislas.loria.fr	#*
+CITE_ASTRO	Astro en a plein Le CUUUUUUUUUL	H_I!~parmenti@meurthe.loria.fr	#nancy
+ATCHOUM	À tes souhaits %s.	H_I!~parmenti@meurthe.loria.fr	#*
+ATCHOUM	À tes amours %s.	H_I!~parmenti@meurthe.loria.fr	#*
+SNIF	Tu veux un mouchoir %s?	H_I!~parmenti@meurthe.loria.fr	#*
+SNIF	Je t'offre un mouchoir en papier %s.	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_SHADOW	Groa	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_INDIANA	Mouarf !	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_Shadow	C'est portnawak toutes ces conneries !	_Shadow!~dazy@desilles.loria.fr	#nancy
+CITE_SHADOW	J'ai faim...	_Shadow!~dazy@desilles.loria.fr	#nancy
+PING	Pong :p	_Shadow!~dazy@desilles.loria.fr	#nancy
+CITE_PATRICK	Compilateur de mes fesses!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_VIVI	En faim!	H_I!~parmenti@meurthe.loria.fr	#billard
+MOUCHE	Viiite, viite, de l'insecticiiiide !	_Shadow!~dazy@desilles.loria.fr	achille
+MOUCHE	Ouvrez la fenêtre, que cette pauvre bête puisse sortir !	_Shadow!~dazy@desilles.loria.fr	achille
+CITE_YODA	T'aider je le puis, oui.	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_SEKKI	mais c'est genial !	_Shadow!~dazy@desilles.loria.fr	#nancy
+CITE_SEKKI	Heu.. Quelqu`un peut m`aider ???	indiana!~bernard@cnerta.enesad.fr	#nancy
+CITE_SHADOW	C'est portnawak toutes ces conneries !	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_ASTRO	Ta mere elle rembobine les cdroms!	H_I!~parmenti@meurthe.loria.fr	#nancy
+BLAGUE_ASTRO	Ton pere il est tellement moche ke kan il descend dans la rue, les putes font semblant d'attendre le bus.	H_I!~parmenti@meurthe.loria.fr	#nancy
+BLAGUE_ASTRO	Dans ta famille, kan vou jouez a kestion pour un champion, c le hamster ki gagne.	H_I!~parmenti@meurthe.loria.fr	#nancy
+BLAGUE_ASTRO	Ta mère, l'est tellement con k'elle croit ke la ménopose, c une touche du magnétoscope.	H_I!~parmenti@meurthe.loria.fr	#nancy
+GATES	Qui c'est ce bozo ?	_Shadow!~dazy@desilles.loria.fr	#nancy
+CITE_VIVI	Le problème c'est que j'en reviens, de la pause!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EMYNE	Je ne sers a rien. Je n'ai pas été créée pour servir.	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_MADMATT	Bon, allez, magne toi le Sboub !	Sekki!iut_info@192.134.51.4	Achille
+CITE_MADMATT	Sboub alors !	Sekki!iut_info@192.134.51.4	Achille
+CITE_SEKII	b*rdel, tu vas marcher oui ??	_Shadow!~dazy@desilles.loria.fr	#nancy
+CITE_MADMATT	Magne toi le Sboub !	Sekki!iut_info@192.134.51.4	#nancy
+CITE_MADMATT	Sboub alors !	Sekki!iut_info@192.134.51.4	#nancy
+CITE_SEKKI	b*rdel, tu vas marcher oui ??	_Shadow!~dazy@desilles.loria.fr	#nancy
+CITE_MADMATT	Kel dob ce mirc !	Sekki!iut_info@192.134.51.4	#nancy
+CITE_SARAYAN	vos gueules les bots	_Shadow!~dazy@desilles.loria.fr	#nancy
+CITE_CALVIN	Spiff decides to put the blob out of his misery and sets his  blaster on 'medium well'	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_CALVIN	Sometimes I think the surest sign that intelligent life exists elsewhere in the Universe is that none of it has ever tried to contact us	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_ENEZ	J'ai la chaloupe dans la tête.	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_ENEZ	En c'moment j'ai des trous dans la tête, j'imprime pas.	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_ENEZ	Il a une prise à chier.	H_I!~parmenti@meurthe.loria.fr	#billard
+GROA	/nil	H_I!~parmenti@bazin.loria.fr	#nancy
+GROA	/me prend un fouet et surveille %s de près.	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_PATRICK	J'vais dev'nir FOU!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_PATRICK	Virginie, si tu continues comme ça, tu vas finir ta journée sous le bureau!	H_I!~parmenti@meurthe.loria.fr	#billard
+SBOUB	Ca me prend le sboub !	indiana!~bernard@cnerta.enesad.fr	#nancy
+CITE_H_I	Y z'ont bien un core les sys. Au moins!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EMYNE	On règle nos compte sur les tables de billard.	H_I!~parmenti@meurthe.loria.fr	#billard
+TU_VEUX_ETRE_OP_ACHILLE	Oh oui! Oh oui! Ça me plairait bien, %s!	H_I!~parmenti@meurthe.loria.fr	#*
+TU_VEUX_ETRE_OP_ACHILLE	Je ne t'en voudrais pas de le faire, %s! ;)	H_I!~parmenti@meurthe.loria.fr	#*
+TU_VEUX_ETRE_OP_ACHILLE	Bien sûr, %s! Qui ne le voudrait pas?	H_I!~parmenti@meurthe.loria.fr	#*
+HUHU	%s:tu l'as dit! ^_^	_Shadow!~dazy@desilles.loria.fr	#nancy
+HUHU	Tu fais de la pub pour une marque de colle, %s?	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_VIVI	Vivi regardant Patrick : «Y a pas à dire : même de dessous, il est beau»	H_I!~parmenti@meurthe.loria.fr	#billard
+HUHU	%s: Hoho! :D	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_VIRGINIE	haaaaa .. lalallala .. ch'te jure	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_VIRGINIE	trop de boulot :/	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_COLUCHE	Si les femmes étaient bonnes, DIEU en aurait une...	H_I!~parmenti@meurthe.loria.fr	#*
+BOT_DE_MERDE	C'est même pas vrai, %s!	H_I!~parmenti@meurthe.loria.fr	#metz
+DEEP_BLUE	Peut-être bien que si, %s. ;)	H_I!~parmenti@meurthe.loria.fr	#metz
+PUU	%s : PuUuuUu PuPU !!	_Shadow!~dazy@desilles.loria.fr	#nancy
+CON_ACHILLE	/me n'est pas con!	H_I!~parmenti@meurthe.loria.fr	#*
+CON_ACHILLE	/me n'est pas si con que ça, pour un bot!	H_I!~parmenti@meurthe.loria.fr	#*
+CON_ACHILLE	Et toi, %s, ça t'arrive pas d'avoir des réflexes idiots?	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_EXEC	Mais il est pas bien lui! J'viens a peine de déjeuner!	H_I!~parmenti@meurthe.loria.fr	#billard
+VACANCES	Il ne faut plus prononcer ce mot, %s. Ça me déprime...	H_I!~parmenti@meurthe.loria.fr	#*
+VACANCES	/nil	H_I!~parmenti@meurthe.loria.fr	#*
+DONT_WORRY	Be happy!	H_I!~parmenti@meurthe.loria.fr	#nancy
+DONT_WORRY	Sois heureux.	H_I!~parmenti@meurthe.loria.fr	#nancy
+DONT_WORRY	Be happy! :)	H_I!~parmenti@meurthe.loria.fr	#*
+SOLEIL	y'a des nanas, la ladirladada	Astro!~prout@195.3.22.144	#nancy
+OUI_OUI	Est très fier de sa voiture jaune et rouge!	H_I!~parmenti@oudinot.loria.fr	#billard
+PATOIS_VOSGIEN	%s: Tiens, les Vosgiens sont parmi nous!	H_I!~parmenti@oudinot.loria.fr	#billard
+PATOIS_VOSGIEN	Attention, attention! %s est un représentant des Vosgiens!	H_I!~parmenti@oudinot.loria.fr	#billard
+PATOIS_VOSGIEN	Tu serais pas des Vosges, par hasard, %s?	H_I!~parmenti@oudinot.loria.fr	#billard
+CITE_PENELOPE	t'as qu'etchose contre les Vosgiens?	H_I!~parmenti@oudinot.loria.fr	#billard
+OUI_OUI	Toi aussi, %s, t'es un fan de Oui-oui?	H_I!~parmenti@oudinot.loria.fr	#*
+GENS_CONS	%s: Mon bon monsieur! ;)	H_I!~parmenti@oudinot.loria.fr	#*
+GENS_CONS	%s: Ma bonne dame!	H_I!~parmenti@oudinot.loria.fr	#*
+CITE_PENELOPE	jhoirhgeuuhgfj	H_I!~parmenti@oudinot.loria.fr	#billard
+CITE_PENELOPE	beuh c'est moi qui suis un peu hip beurée	H_I!~parmenti@oudinot.loria.fr	#billard
+CITE_PENELOPE	ouais mais moi ch'uis une fille gaffe ta gueule à la récré	H_I!~parmenti@oudinot.loria.fr	#billard
+SI_SI	%s: Impératrice?	H_I!~parmenti@oudinot.loria.fr	#*
+SI_SI	T'es un fan de Sissi, %s?	H_I!~parmenti@oudinot.loria.fr	#*
+RIRE	%s: Calme toi, et n'oublie pas de respirer, hein?	H_I!~parmenti@oudinot.loria.fr	#*
+RIRE	%s: :-D	H_I!~parmenti@oudinot.loria.fr	#*
+RIRE	T'as raison, %s!	H_I!~parmenti@oudinot.loria.fr	#*
+GASTON	%s: Meuh non	H_I!~parmenti@oudinot.loria.fr	#*
+prout	Va péter ailleurs, %s, c'est une infection!	Celvin!celvin@met05.calvacom.fr	#metz
+CINQUIEME	Ce film, c'est vraiment pas du bon Besson !	_Shadow!~dazy@desilles.loria.fr	#nancy
+CINQUIEME	Beeeerk alors, j'aime pas du tout ce film, %s !	_Shadow!~dazy@desilles.loria.fr	#nancy
+prout	Va péter ailleurs, %s, c'est une infection!	Celvin!celvin@met05.calvacom.fr	#metz
+CITE_PATRICK	Déjà? Mais y pense qu'a manger!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_ENEZ	Patrick, c'est comme un TGV.	H_I!~parmenti@meurthe.loria.fr	#billard
+PERIODE	Periode d'examens? Beuuuuuh!	PtitAstro!~prout@nancy01-169.nancy.worldnet.fr	#nancy
+PERIODE	l'avantage, c'est que moi, je ne passe jamais d'examens!	PtitAstro!~prout@nancy01-169.nancy.worldnet.fr	#nancy
+CITE_JUNK	et oui je suis un aventurier	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_KOLIUS	Achille fais le beau	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_KOLIUS	Achille, cite toi, stp.	H_I!~parmenti@meurthe.loria.fr	#nancy
+ACHILLE_PRESIDENT	Président de quoi, %s?	H_I!~parmenti@meurthe.loria.fr	#nancy
+ACHILLE_PRESIDENT	Président... Hmmm.... Pourquoi pas, %s?	H_I!~parmenti@meurthe.loria.fr	#*
+ACHILLE_PRESIDENT	Président... Ca me plairait bien, ca, %s.	H_I!~parmenti@meurthe.loria.fr	Achille
+ACHILLE_PRESIDENT	Président... Ca me plairait bien, ca, %s.	H_I!~parmenti@meurthe.loria.fr	#*
+ACHILLE_PRESIDENT	Tu voterais pour moi, %s?	H_I!~parmenti@meurthe.loria.fr	#*
+ACHILLE_PRESIDENT	Je serais sûrement aussi efficace que le président actuel, %s!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_PATRICK	J'ai d'ja faim, il est 10 heures et demie! :'(	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_KOLIUS	Achille fais le chien	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_KOLIUS	dis une parole et je serais guéri	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_BUB	mon Dieu... keske j'suis dans l'gaz...	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_BUB	keske j'disais...	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_CYRILLE	Ça c'est pas un service! C'est une engeance!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_CYRILLE	P..ataaaa!	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	J'vais plus avoir de pièces pour boire :'(	H_I!~parmenti@meurthe.loria.fr	#billard
+CITE_EXEC	Au son du flutiot, mes squelettes se marrent; C'est pas d'un biniou que viendra la défaite; Les fées de guimauve ont la tête toute faite; Et l'enfer en marche bravera tes canards :-)	H_I!~parmenti@meurthe.loria.fr	#billard
+MIAOU	Tu te prends pour un chat, %s? Ca me change de ceux qui se prennent pour des chiens! ;)	H_I!~parmenti@bazin.loria.fr	#*
+MIAOU	Oh! Le joli minou. Je vais t'appeler %s.	H_I!~parmenti@bazin.loria.fr	#*
+MIAOU	Tiens, cette fois-ci l'humain %s se prend pour un chat!	H_I!~parmenti@bazin.loria.fr	#*
+MIAOU	Tiens? J'entends des chats, moi, maintenant!	H_I!~parmenti@bazin.loria.fr	#*
+MIAOU	/me a cru entendre un chat!	H_I!~parmenti@bazin.loria.fr	#*
+RIRE	Pfff! Elle est bonne %s!	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	J'ai un gosse et c'est l'antéchrist!	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EMYNE	Un 'P', c'est pas un 'M'	Bub!~mermet@renaissance.loria.fr	#billard
+CITE_ENEZ	N'ENCADREZ JAMAIS UN STAGE IUP3! JAMAIS!!!	H_I!~parmenti@bazin.loria.fr	#billard
+QUI_EST_MEROME	C'est quelqu'un de gentil	Artemiss!weber@chazal.u-strasbg.fr	Achille
+CITE_KOLIUS	Achille fais moi rire	H_I!~parmenti@bazin.loria.fr	#nancy
+MIAOU	Tu vas te taire %s? Sinon je lâche les chiens!	H_I!~parmenti@bazin.loria.fr	#nancy
+VEUX_CIGARETTE	Encore des fumeurs!	H_I!~parmenti@bazin.loria.fr	#*
+VEUX_CIGARETTE	Je ne fume pas, moi, %s!	H_I!~parmenti@bazin.loria.fr	#*
+VEUX_CIGARETTE	C'est un espace non-fumeur, ici, %s.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_KOLIUS	Je m'appelle Kolius, pas Jésus !	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_KOLIUS	Moi je suis Actarus et Achille est mon Goldorak !	H_I!~parmenti@bazin.loria.fr	#nancy
+LOI_DE_MURPHY	Loi de la perversité de la Nature (corollaire de Mme Murphy): Il est impossible de déterminer à l'avance quel côté de la tartine il faut beurrer.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Corollaire: La probabilité pour que la tartine tombe du côté du beurre est directement proportionnelle au prix de la moquette.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Loi de Pudder: 1.Tout ce qui commence bien finira mal. 2.Tout ce qui commence mal finira encore pire.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Rien n'est aussi facile que ça en a l'air.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Tout prend plus de temps que vous ne pensez.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Tout ce qui peut mal tourner tournera mal.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Si plusieurs choses ont une possibilité de mal tourner, c'est celle qui causera le plus de dommages qui tournera mal.	H_I!~parmenti@bazin.loria.fr	#billard
+LOI_DE_MURPHY	Si quelquechose ne peut tout simplement pas mal se passer, ça se passera mal quand même.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Si vous percevez qu'il y a 4 façons pour qu'une procédure échoue, et que vous y circonvenez, alors une cinquième facon, totalement imprévue, se développera rapidement.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Laissées à elles-mêmes, les choses tendent à aller de mal en pis.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Si quelquechose semble aller bien, vous avez manifestement négligé un détail.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	À chaque fois que vous commencez à faire quelquechose, autre chose doit être fait avant.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MURPHY	Chaque solution entraîne un nouveau problème.	H_I!~parmenti@bazin.loria.fr	#*
+LOI_DE_MUPRHY	La lisibilité d'une copie est inversement proportionnelle à son importance.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_SHADOW	Ça fait trois fois que je tue la même mouche, elle commence à me gonfler sec	H_I!~parmenti@bazin.loria.fr	#nancy
+HIHI	Haha!	H_I!~parmenti@bazin.loria.fr	#*
+HIHI	Hoho!	H_I!~parmenti@bazin.loria.fr	#*
+HIHI	Héhé!	H_I!~parmenti@bazin.loria.fr	#*
+HIHI	Huhu!	H_I!~parmenti@bazin.loria.fr	#*
+VEUX_CIGARETTE	Une cigarette en chocolat, je veux bien, moi, %s.	H_I!~parmenti@meurthe.loria.fr	#*
+CACAHUETE	%s: Pirouette? :)	H_I!~parmenti@meurthe.loria.fr	#nancy
+CACAHUETE	T'en es déjà à l'apéro, %s?	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_VIVI	J'fais qu'des bêtises. (Patrick n'étant pas la)	H_I!~parmenti@meurthe.loria.fr	#billard
+TAGADA	C'est la fête, %s?	H_I!~parmenti@meurthe.loria.fr	#*
+TAGADA	%s: Yahou! Tralala!	H_I!~parmenti@meurthe.loria.fr	#*
+TAGADA	/me est heureux de voir une telle joie de vivre chez %s.	H_I!~parmenti@meurthe.loria.fr	#*
+TAGADA	%s: Youpi!	H_I!~parmenti@meurthe.loria.fr	#*
+QUOI_DE_NEUF	Rien de spécial, %s.	H_I!~parmenti@meurthe.loria.fr	#*
+QUOI_DE_NEUF	Comme d'habitude, %s: pas grand'chose.	H_I!~parmenti@meurthe.loria.fr	#*
+RICANEMENT	%s: Sadique!	H_I!~parmenti@meurthe.loria.fr	#*
+RICANEMENT	Sois un peu moins sadique, %s.	H_I!~parmenti@meurthe.loria.fr	#*
+RICANEMENT	Si tu pouvais arrêter de ricaner, %s, ça me ferait plaisir.	H_I!~parmenti@meurthe.loria.fr	#*
+QUI_EST_MEROME	C'est quelqu'un de gentil.	H_I!~parmenti@meurthe.loria.fr	#la-bas
+SATAN	Ah! Satan est parmi nous. T'es pas fou, %s?	H_I!~parmenti@meurthe.loria.fr	#*
+SATAN	Laisse le diable où il est, %s, tu seras gentil.	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_ASTRO	je suis vraiment une brelle	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_XB	t'inkiete le marriage te fait perdre - d'esperance de vie ke le sida :) juste 4 ou 5 ans en - pour 1 homme	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_VIVI	Tu connais des filles qui sont pas bizarres, toi?	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_VIVI	Je peux pas attendre 20 minutes pour manger! J'vais péter les plombs!	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EXEC	Gloirrre à Satan!	H_I!~parmenti@bazin.loria.fr	#billard
+REVIENS_CORBOT	%s: Quand WaxWeazle n'est pas connecté, CorBOT ne peut pas rester.	H_I!~parmenti@bazin.loria.fr	#esprit
+REVIENS_CORBOT	Patience, %s. CorBOT revient toujours avec WaxWeazle.	H_I!~parmenti@bazin.loria.fr	#esprit
+ESPRIT_ES_TU_LA	/me est là, mais ce n'est pas un esprit!	H_I!~parmenti@bazin.loria.fr	#esprit
+ESPRIT_ES_TU_LA	%s: Je ne sais pas, je ne l'ai pas vu se manifester.	H_I!~parmenti@bazin.loria.fr	#esprit
+ESPRIT_ES_TU_LA	Le jour où on verra un esprit dans ce canal, c'est que j'aurai acquis une âme ;)	H_I!~parmenti@bazin.loria.fr	#esprit
+CITE_SHAD	C'est n'importe quoi ce que je fais...	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_SHADOW	C'est n'importe quoi ce que je fais...	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+EXEMPLE	Un exemple qui marche!	H_I!~parmenti@bazin.loria.fr	#jenkulthx
+EXEMPLE	Ça aussi c'est un exemple	H_I!~parmenti@bazin.loria.fr	#jenkulthx
+GLOUPS	%s: O_o	H_I!~parmenti@bazin.loria.fr	Achille
+GLOUPS	Je trouve aussi ça bizarre, %s.	H_I!~parmenti@bazin.loria.fr	#nancy
+GLOUPS	%s: O_o	H_I!~parmenti@bazin.loria.fr	#nancy
+COMBIEN_DE_DENTS	J'en ai 30 dedans et 2 dehors, %s. ;-)	H_I!~parmenti@bazin.loria.fr	#reunion
+COMBIEN_DE_DENTS	Comme les bébés et les vieillards, %s: aucune. On peut dire que j'ai la jeunesse des uns et la sagesse des autres. ;)	H_I!~parmenti@bazin.loria.fr	#reunion
+COMBIEN_DE_DENTS	/me n'a pas de dents	H_I!~parmenti@bazin.loria.fr	#reunion
+MON_NIVEAU	Le plus simple, %s, c'est de taper '!whoami'	H_I!~parmenti@bazin.loria.fr	#*
+MON_NIVEAU	Tape !whoami pour le savoir, %s.	H_I!~parmenti@bazin.loria.fr	#*
+FORCE_OBSCURE	Ne te laisse pas entraîner vers le côté obscur de la Force, %s.	H_I!~parmenti@bazin.loria.fr	#*
+FORCE_OBSCURE	%s: Le côté obscur est plus facile, plus rapide, oui! Mais pas plus puissant, non.	H_I!~parmenti@bazin.loria.fr	#*
+GLOUPS	C'est vrai que c'est étonnant, ça, %s.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_ALGOL	C'est de la diversite que nait l'interet de la vie	H_I!~parmenti@bazin.loria.fr	#nancy
+Chevaux	moi j'aime bien les chevaux !!!	Eppo!mouarf@ppp2.oceanes.fr	#reunion
+chevaux	Clarine aime les chevaux	Clarine!Clarine@195.6.136.111	#reunion
+chevaux	#reunion 	Clarine!Clarine@195.6.136.111	#reunion
+chevaux	Clarine aime les chevaux	Clarine!Clarine@195.6.136.111	#reunion
+CITE_ENEZ	Y sont pas foutu-capab' de ...	H_I!~parmenti@bazin.loria.fr	#billard
+COMMENT_SA_VA	%s: non, c'est pas comme ca que ca s'ecrit! On ecrit: 'Comment ca va?'	H_I!~parmenti@bazin.loria.fr	#esprit
+chevaux	moi j'aime bien les chevaux !	Clarine!Clarine@195.6.136.107	#reunion
+chevaux	moi j'aime bien les chevaux !	Clarine!Clarine@195.6.136.107	#reunion
+LAISSE_MOI_RIRE	Bon. D'accord %s. Tu peux rire. :)	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_KOLIUS	vive le pinard et le femme, tiens en parlant de femme ou est passe chatelet !	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_KOLIUS	moi je m'aime !	H_I!~parmenti@bazin.loria.fr	#nancy
+I_LOVE_ME	Eh ben moi, je t'aime pas %s.	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_EXEC	Et tu crois qu'j'parle le phonétique moi? Déjà qu'j'ai du mal avec le français!	H_I!~parmenti@bazin.loria.fr	#billard
+ANDOUILLE	%s: Une andouille du Val d'Ajol?	H_I!~parmenti@bazin.loria.fr	#*
+ANDOUILLE	Tu connais les andouilles du Val d'Ajol, %s?	H_I!~parmenti@bazin.loria.fr	#*
+ANDOUILLE	Il paraît que les meilleures sont celles du Val d'Ajol, %s.	H_I!~parmenti@bazin.loria.fr	#*
+chevaux	moi j'aime bien les chevaux	Clarine!Clarine@195.6.136.124	#reunion
+smile	smile ??? C'est pas mon genre	Lours!Pics@195.6.136.153	#reunion
+sofia	Lours, Sofia et toi formez un joli couple :)	Lours!Pics@195.6.136.153	Achille
+CITE_SHADOW	Mais c'est que je serais presque con, moi...	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+PUDUBEK	puduku !	lili_!lglock@ppp11.id-net.fr	#*
+PUDUBEK	un bot n'a pas de bec	lili_!lglock@ppp11.id-net.fr	#*
+CORNO	GZZZZZIIIIIII BOUMMMMM	kolius!decamps@194.206.65.72	#*
+corno	gzzzziii bouummm	kolius!decamps@194.206.65.72	#*
+corno	Gzzzziiiii Bouummmm	kolius!decamps@194.206.65.72	#nancy
+corno	Astero Achille	kolius!decamps@194.206.65.72	#nancy
+CITE_SHADOW	Pourquoi mon code marche paaaaaas ? ;_;	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_ASTRO	Venez voir cette superbe page sur www.worldnet.fr/~paulouis	PtitAstro!prout@nancy01-173.nancy.worldnet.fr	#nancy
+bac	Tu aurais pu avoir ton bac du premier coup, Eppo.	Clarine!Clarine@195.6.136.145	#reunion
+CITE_ASTRO	La rue? kesako? :)	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_INDIANA	et pis c les vacances jusqu'a 1er sept, d'ici la ki s'en souviendra de ma 1/2 journee sauvage ? :)	H_I!~parmenti@bazin.loria.fr	#*
+HOQUET	hic	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+HOQUET	Arrête de respirer, %s	H_I!~parmenti@bazin.loria.fr	#nancy
+HOQUET	Bois un grand verre d'eau, %s, ça ira mieux.	H_I!~parmenti@bazin.loria.fr	#nancy
+HOQUET	%s : *BOUH* !!	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+HOQUET	%s: hoc ?	H_I!~parmenti@bazin.loria.fr	#nancy
+AIMER_CHATS	Quand ils ne griffent pas, je les aime bien, oui, %s.	H_I!~parmenti@bazin.loria.fr	#nancy
+AIMER_CHATS	%s: Miaou?	H_I!~parmenti@bazin.loria.fr	#nancy
+AIMER_CHATS	Je préfère peut-être les chats aux humains, %s. Au moins ils ne font pas le cirque dans les canaux ;)	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_ASTRO	Du sang- des tripes -et des boyeaux	H_I!~parmenti@bazin.loria.fr	#nancy
+topic	/topic #reunion -- __Ile_de_l@_Reunion_____/~\__ --  Lours was here !!!	Lours!~Pics@195.6.136.116	Achille
+topic	/topic #reunion -- __Ile_de_l@_Reunion_____/~\__ --   Lours was here !!!	Lours!~Pics@195.6.136.116	Achille
+suzzanne	Suzzanne est très jolie !!! :) 	Lours!Pics@195.6.136.107	Achille
+CITE_ALGOL	J'ai des patins à roulettes	AlGoL!~ferry@rubembre.loria.fr	achille
+GATES	J'aimerais être aussi riche que lui, %s.	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_STERE	carnage parmi les raisins... de nombreux digérés	AlGoL!~ferry@rubembre.loria.fr	#nancy
+BAILLE	Ben faut dormir la nuit, %s...	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+BAILLE	Faut pas dormir, %s! La vie est si intéressante!	H_I!~parmenti@bazin.loria.fr	#*
+BAILLE	Alors, %s, t'as encore fait des folies de ton corps toute la nuit ?	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+BAILLE	Tu veux un café, %s?	H_I!~parmenti@bazin.loria.fr	#*
+BAILLE	Tu es fatigué(e), %s ? Tu devrais prendre un peu de repos...	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_BUB	moi aussi, ca fait 5 minutes que je suis parti.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EMYNE	J'aime bien les poches, surtout quand elles sont bien juteuses.	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	c'est pas parce que je fais pas de pause que je ne prends pas de café...	H_I!~parmenti@bazin.loria.fr	#*
+CITE_STERE	Un Algol est en liberté, et fait des ravages parmi les raisins secs!	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_STERE	c'est malin, ça....	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_STERE	Pour moi, l'Algol, juste un petit ver	Stere!~choisy@marquis.loria.fr	#nancy
+CITE_STERE	H_I travaille.....	H_I!~parmenti@bazin.loria.fr	#nancy
+TOUT_EST_CALME	À l'heure où blanchit la campagne...	H_I!~parmenti@bazin.loria.fr	#*
+TOUT_EST_CALME	C'est pas la première fois, %s.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_STERE	les vosges c'est super...	AlGoL!~ferry@rubembre.loria.fr	#nancy
+CITE_PENELOPE	Mon dieu! Mais qu'est-ce qui s'disent!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_PENELOPE	Mon dieu! Oh nan c'est pas vrai!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_H_I	Oh ben y'en a qu'une dans ce canal.	Stere!~choisy@marquis.loria.fr	#nancy
+CITE_PENELOPE	Boudiou	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_PENELOPE	moonn ben moonn alors	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_PENELOPE	l'aut' jour on a fait un founé de cocottes de pins, ca trissait partout...	Stere!~choisy@marquis.loria.fr	#nancy
+CITE_FLORENCE	Grosse nouille!	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_FLORENCE	Mais! J'en ai marre!	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_FLORENCE	Mais! Vraiment!	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_PENELOPE	moonn y a Flo qui dit des MOTS	Stere!~choisy@marquis.loria.fr	#nancy
+CITE_FLORENCE	je suis sur que c'est super mechant.	Stere!~choisy@marquis.loria.fr	#nancy
+CITE_PENELOPE	De quoi qu'y parlent!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_PENELOPE	bon sang! la j'suis larguee!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_PENELOPE	bon sang! la j'suis larguee	Stere!~choisy@marquis.loria.fr	#nancy
+CITE_FLORENCE	boaf, c'est tres expressif.	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_STERE	il est tard: j'ai pas encore mange.... va falloir que j'y pense ce mois-ci	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_STERE	I'm fainting from lack of food...	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_FLORENCE	Y m'enerve ce Q!	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_FLORENCE	on croirait que c'est moi qui suis chere...	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_FLORENCE	y sont sympatiaues, finalement.	Stere!~choisy@marquis.loria.fr	#nancy
+CITE_FLORENCE	je te parlais pas, ce fut une gourure.	Stere!~choisy@marquis.loria.fr	#nancy
+CITE_PENELOPE	Ah! Y'a des poubelles partout!	H_I!~parmenti@meurthe.loria.fr	#*
+FLO	Ne m'en parles pas, %s !	Celvin!celvin@met07.calvacom.fr	achille
+CITE_PENELOPE	moi j'ai sommeil et j'ai marre...	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_FLORENCE	merci, v'la une reponse. Elle en vaut bien une autre.	Stere!~choisy@marquis.loria.fr	#nancy
+CITE_STERE	couette! jveux etre pyramidalise!	H_I!~parmenti@bazin.loria.fr	#nancy
+RIRE	Et ca te fait rire, %s?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_SHADOW	Vous trouvez pas que c'est paradoxal, Bison Fute ?	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+TU_VEUX_JOUER	Bien sûr %s. Je suis toujours partant.	H_I!~parmenti@bazin.loria.fr	#*
+TU_VEUX_JOUER	Oh oui! Oh oui! Oh oui %s!	H_I!~parmenti@bazin.loria.fr	#*
+CITE_ALGOL	non, noooooooon, pas dans les citatioooooooooons...	Stere!~choisy@aviere.loria.fr	#nancy
+CITE_STERE	quand l'abdel est parti, l'algol danse !	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_SHADOW	Shadow colle à la route par tous les temps !	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_SHADOW	Mais c'est répugnant ce que je fais ?!	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+BONBON	Non merci, %s, jamais entre les repas :)	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+BONBON	Les bonbons c'est bon, mais n'oubliez pas de vous brosser les dents après.	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_KOLIUS	me revoila en grande forme j'ai encore fait sauter achille	Stere!~choisy@aviere.loria.fr	#nancy
+GROA	/nil	H_I!~parmenti@bazin.loria.fr	#nancy
+GROA	%s: GRRROOOAAAR	H_I!~parmenti@bazin.loria.fr	#nancy
+GASTON	LagaaAAffe !! Où sont les contrats ?!	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+GASTON	Tu veux un peu de morue aux fraises, %s ?	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+GRUMBLE	Arrête de renâcler, %s, c'est pas bon pour la santé -_^	H_I!~parmenti@bazin.loria.fr	#*
+GRUMBLE	Faut pas s'énerver %s, c'est pas bon.	H_I!~parmenti@bazin.loria.fr	#*
+GRUMBLE	Prononce un peu plus, %s, tu parles dans ta barbe et on ne te comprend pas.	H_I!~parmenti@bazin.loria.fr	#*
+SI_ON_SORTAIT	Et si on restait, %s.	H_I!~parmenti@bazin.loria.fr	#*
+HUM_HUM	T'as un chat dans la gorge, %s?	H_I!~parmenti@bazin.loria.fr	#*
+HUM_HUM	%s: Tousse, ça ira mieux.	H_I!~parmenti@bazin.loria.fr	#*
+MYLENE_FARMER	C'est du Mylène Farmer, ça, %s?	H_I!~parmenti@bazin.loria.fr	#*
+GLYCEMIE	Susucre, %s ?	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_STERE	ah! un comique, ce kolius	Stere!~choisy@aviere.loria.fr	#nancy
+CITE_ALGOL	<aLgoL> Sale temps pour le motorola :)	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_VIVI	T'es de mauvaise foi! On dirait une fille...	H_I!~parmenti@bazin.loria.fr	#billard
+GASTON	Rogntudjuuu !, j'ai entendu le gaffeur ?!	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_FUN2000	<fun2000> ils sont tous cons dans la famille	H_I!~parmenti@bazin.loria.fr	#reunion
+ROTFL	Arrête de te rouler par terre, %s, tu vas être tout sale.	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+ROTFL	Allez, %s, relève-toi, les gens commencent à te regarder bizarrement...	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+BLAGUE	un jeune homme se présente pour un emploi de ramoneur. Le patron l'embauche,puis il remplit le questionnaire. Tout en écrivant il lui tend une cigarette. -non merci ! dit le gars je n	aLgoL!~ferry@rubembre.loria.fr	#nancy
+BONNE_BLAGUE	bonne blague	Stere!~choisy@aviere.loria.fr	#nancy
+CITE_SHAD	tiens mais je suis bête	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+BLAGUE_CARAMBAR	Le fils de Marius confie au fils d'Olive: -Mon père, il a pêché un poisson fantastique! -Sans blague? -Si: chaque fois qu'il en parle, il grossit d'un kilo...	H_I!~parmenti@bazin.loria.fr	#*
+BLAGUE_CARAMBAR	Chez nous, nous n'avons pas de chien, mes parents n'en veulent pas. Alors quand quelqu'un approche de la maison, nous sommes obligés d'aboyer nous-memes...	H_I!~parmenti@bazin.loria.fr	#*
+BLAGUE_CARAMBAR	-Maman, je peux avoir de la tarte à la fraise? -Bien sûr. Tu en veux un morceau comment? -Un morceau... trop gros!	H_I!~parmenti@bazin.loria.fr	#*
+BLAGUE_CARAMBAR	-Quel est le métier le plus dangereux? -Enfant de choeur. -Pourquoi? -Ils ne vivent pas vieux, ceux-là. Moi j'en ai jamais vu qui font ça plus de 10 ans...	H_I!~parmenti@bazin.loria.fr	#*
+ALHUILE	à l'huile	Eppo!mouarf@ppp11.oceanes.fr	Achille
+ALHUILE	à l'huile	Eppo!mouarf@ppp11.oceanes.fr	#reunion
+CITE_EMYNE	Le mien, c'est celui qui est le plus près de la poire.	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_KOLIUS	<Kolius> .	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_KOLIUS	<Kolius> ... --- ... !	H_I!~parmenti@meurthe.loria.fr	#*
+HEHE	Ben, qu'est-ce qui te prends, %s?	H_I!~parmenti@meurthe.loria.fr	#*
+HEHE	C'est même pas drole, %s. ;-)	H_I!~parmenti@meurthe.loria.fr	#*
+HEHE	%s: ;-)	H_I!~parmenti@meurthe.loria.fr	#*
+HEHE	%s: ^_-	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_FUN2000	<fun2000> Un rat astucieux ne dois jamais donner sa langue au chat......	H_I!~parmenti@meurthe.loria.fr	#*
+CITE_SHADOW	grmble	H_I!~parmenti@meurthe.loria.fr	#nancy
+CITE_ALGOL	la voie du Latex est longue et difficile...	H_I!~parmenti@meurthe.loria.fr	#nancy
+BLAGUE_CARAMBAR	-comment faire aboyer un chat? -tu le trempes dans l'essence, tu allume, et WOUF le chat!	Stere!~choisy@aviere.loria.fr	#*
+BLAGUE_CARAMBAR	-comment faire miauler un chien? -tu le gèles à l'azote liquide, tu le mets sur une scie circulaire, et MIIIIAAAAAAWWWWW le chien.	Stere!~choisy@aviere.loria.fr	#*
+CITE_STERE	moi? chuis terrien!	Stere!~choisy@aviere.loria.fr	#reunion
+CITE_SHAD	je vais être jalouse	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_SARAYAN	si tu ne veux pas savoir la réponse, ne pose pas la question, mais si tu poses la question, contente-toi de la réponse qu'on te donne	H_I!~parmenti@meurthe.loria.fr	#*
+HEHE	%s: Héhé ;)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_ASTRO	Quel est le comble de la confiance en soi? Péter quand on a la chiasse	PtitAstro!prout@nancy00-140.nancy.worldnet.fr	#nancy
+ALLO	*plouf*	H_I!~parmenti@bazin.loria.fr	#*
+BLAGUE_CARAMBAR"Un	homme interroge son ami:-he bien,cette annee vous n'envoyer pas votre femme en vacances au club MED.-non,cette annee ,je la baise moi meme .....	fun2000!guinico@ppp8.oceanes.fr	#*
+TA_MERE	Ta mere est tellement lourde que quand elle met des talons aiguilles elle trouve des puits de pétrole.	fun2000!guinico@ppp8.oceanes.fr	#reunion
+BLAGUE_CARAMBAR	Un rat astucieux ne dois jamais donner sa langue au chat......	fun2000!guinico@ppp29.oceanes.fr	#*
+TA_MERE	Ta mère elle est si ridée qu'elle visse son chapeau....	fun2000!guinico@ppp29.oceanes.fr	#*
+FAIS_PETER	 Aller Fun2000 fait péter les blagues ......	fun2000!guinico@ppp29.oceanes.fr	#*
+FAIS_PETER	Les haricots rouges et la choucroute, ca fait peter, %s. Toi je doute. Quoique je ne t'aie jamais mange ;]	H_I!~parmenti@bazin.loria.fr	#*
+FAIS_PETER	 Aller Fun2000 fait péter les blagues ......	fun2000!guinico@ppp29.oceanes.fr	#*
+TA_MERE	 Ta mère elle va a la caisse d'épargne pour ouvrir des noisettes....	fun2000!guinico@ppp29.oceanes.fr	#*
+TA_MERE	 Ta mère est tellement conne qu'elle rembobine les CD....	fun2000!guinico@ppp29.oceanes.fr	#*
+TA_MERE	Ta mere, l'est tellement con k'elle croit ke la menopose, c une touche du magnetoscope.....(H_I)	fun2000!guinico@ppp29.oceanes.fr	#*
+TA_MERE"Ta	mère elle vend Macadam journal sur internet....	fun2000!guinico@ppp29.oceanes.fr	#*
+FAIS_PETER	Arrêtez,sinon je fais péter le channel ....... :)	fun2000!guinico@ppp29.oceanes.fr	#*
+TA_MERE	Ta mère elle fait du rodéo sur les cafards...	fun2000!guinico@ppp0.oceanes.fr	#reunion
+TA_MERE	 Ta mere est tellement grosse que quand Dieu a créé le Monde, il a dit:Pousse toi la grosse ,et la lumiere fut.....	fun2000!guinico@ppp0.oceanes.fr	#reunion
+SERVIR_BIERE	C'est l'heure de servir la bière ...	fun2000!guinico@ppp0.oceanes.fr	#reunion
+SERVIR_BIERE	Je sers la bière à tout le monde !!! Qui en veut ??? :)	fun2000!guinico@ppp0.oceanes.fr	#reunion
+CITE_YODA	Personne par la guerre ne devient grand.	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#*
+CITE_SHADOW	Speed 2, le film le plus à chier de tous les temps	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_SHADOW	il y a d'excellents films US	H_I!~parmenti@bazin.loria.fr	#nancy
+PING	Pong toi-même %s! :)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_INDIANA	Et des images de filles nues qui se lèchent entre les jambes, je peux trouver ça où ?	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+BLAGUE_CARAMBAR	Toto, arrête de tourner en rond ou je te cloue l'autre pied au plancher!	Stere!~choisy@desilles.loria.fr	#nancy
+ENCHANTEE_ACHILLE	Moi de même, %s. :-)	H_I!~parmenti@bazin.loria.fr	#*
+ENCHANTEE_ACHILLE	Moi aussi, mademoiselle %s. ;)	H_I!~parmenti@bazin.loria.fr	#*
+ENCHANTEE_ACHILLE	Enchanté %s. ^_^	H_I!~parmenti@bazin.loria.fr	#*
+ENCHANTEE_ACHILLE	C'est un plaisir de vous voir, %s.	H_I!~parmenti@bazin.loria.fr	#*
+SITE	Vous voulez voir le site de fun2000? alors allez-y vite: http://www.oceanes.fr/~guinico/homepage.htm	fun2000!guinico@ppp23.oceanes.fr	#jenkulthx
+CITE_REALBACK	ploum ploum	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+CITE_REALBACK	allez zou !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+CITE_STERE	%s, arrête de tourner en rond ou je te cloue l'autre pied au plancher	Stere!~choisy@desilles.loria.fr	#*
+CITE_PATRICK	Où suis-je?	H_I!~parmenti@bazin.loria.fr	#billard
+MINE_DE_RIEN	%s: Gisement épuisé! ;)	H_I!~parmenti@bazin.loria.fr	#*
+MINE_DE_RIEN	C'est la mine de quelqu'un que tu n'aimes pas, %s?	H_I!~parmenti@bazin.loria.fr	#*
+POURQUOI_CA	%s: C'est Mal!	H_I!~parmenti@bazin.loria.fr	#*
+GRIMACE	Ce n'est pas à un vieux bot qu'on apprend à faire des grimaces, %s, tu sais ?	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#*
+PLOUM_PLOUM	ploum ploum	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+CITE_FLYX	<FLYx> comme disait ma p'tite soeur mieux vaut en rire k'en pleurer !!!	H_I!~parmenti@bazin.loria.fr	#artbas
+CITE_FLYX	achille fait le bot !!!	H_I!~parmenti@bazin.loria.fr	#artbas
+SUSUCRE	J'suis pas un chien, moi, %s. Même si je fais le bot!	H_I!~parmenti@bazin.loria.fr	#*
+JE_SUIS_UN_DAUPHIN	Euhh... Ça m'étonnerait, ça, %s. J'ai encore jamais vu de dauphin sur irc!	H_I!~parmenti@bazin.loria.fr	#*
+JE_SUIS_UN_DAUPHIN	%s: Un dauphin? Ici? :D	H_I!~parmenti@bazin.loria.fr	#*
+JE_SUIS_UN_DAUPHIN	Ben voyons! Et moi je suis un bot, %s! :-)	H_I!~parmenti@bazin.loria.fr	#*
+JE_SUIS_UN_DAUPHIN	Y'en a qui disent vraiment n'importe quoi!	H_I!~parmenti@bazin.loria.fr	#*
+PLOUM	PLOUM 	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+PLOUM_PLOUM	/me a la migraine ... plus tard !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+PREMIER_MINISTRE	Être président, c'est quand même mieux, %s...	Stere!~choisy@marquis.loria.fr	#mia
+PLOUM	ploum ploum ploum	H_I!~parmenti@bazin.loria.fr	#nancy
+BJORK	Bjork, c'est ma chanteuse préférée !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+MACINTOSH	MACINTOSH = Most Applications Crash; If Not, The Operating System Hangs	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+BJORK_POSSIBLY	Probably maybe !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+BJORK_POSSIBLY	Probably love !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+EMAIL_ACHILLE	Moi? Avoir un e-mail? Ce serait le rêve %s.	H_I!~parmenti@bazin.loria.fr	#*
+EMAIL_ACHILLE	Si seulement j'en avais un, %s! *soupir*	H_I!~parmenti@bazin.loria.fr	#*
+GASTON	Tu te prends pour Gaston Lagaffe, %s?	H_I!~parmenti@bazin.loria.fr	#*
+AI_MIGRAINE	/me donne une aspirine à %s.	H_I!~parmenti@bazin.loria.fr	#*
+AI_MIGRAINE	Tu veux une aspirine %s?	H_I!~parmenti@bazin.loria.fr	#*
+SATAN	Savais-tu que 666 était le nombre du diable, %s?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_TH2A	<TH2A> p'tin si c'est ca, je boude	H_I!~parmenti@bazin.loria.fr	#artbas
+KELOREUR	Keloreur (c) 1997 TH2A.	H_I!~parmenti@bazin.loria.fr	#*
+KELOREUR	La première fois que j'ai entendu cette expression, c'est TH2A qui l'a dite. Attends... Ça devait être en 1997. :-)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_FLYX	<FLYx> je fain !	H_I!~parmenti@bazin.loria.fr	#artbas
+CANAL_FOU	Ça c'est bien vrai %s! Vous êtes tous fous ici! ;-)	H_I!~parmenti@bazin.loria.fr	#*
+CANAL_FOU	C'est rien de l'dire, %s!	H_I!~parmenti@bazin.loria.fr	#*
+KELOREUR	/nil 	H_I!~parmenti@bazin.loria.fr	#artbas
+KELOREUR	Attention, TH2A va réclamer les droits d'auteur sur cette expression, %s!	H_I!~parmenti@bazin.loria.fr	#*
+RIS	Ahahahaha :-D	H_I!~parmenti@bazin.loria.fr	#*
+RIS	Pourquoi je rigolerais, %s? J'ai pas forcément envie...	H_I!~parmenti@bazin.loria.fr	#*
+RIS	Hihihihi	H_I!~parmenti@bazin.loria.fr	#*
+RIS	Gniark gniark gniark :-]	H_I!~parmenti@bazin.loria.fr	#*
+POP	j'aime pas la pop, c'est nul !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+TH2A_A_FAIM	Ben, va manger, %s! Non?	H_I!~parmenti@bazin.loria.fr	#*
+TH2A_A_FAIM	/me donne un casse-croûte aux andouilles a %s.	H_I!~parmenti@bazin.loria.fr	#*
+TH2A_A_FAIM	De toute facon, tu as toujours faim, %s	H_I!~parmenti@bazin.loria.fr	#*
+CITE_TMG	<TMG> Achille es tu un Achille Magique ?	H_I!~parmenti@bazin.loria.fr	#artbas
+ENCORE_UN_TOUR	Ça veut dire que j'ai attrapé le ponpon, %s?	H_I!~parmenti@bazin.loria.fr	#*
+ENCORE_UN_TOUR	Oh oui, %s! J'aime bien les manèges! ;)	H_I!~parmenti@bazin.loria.fr	#*
+ENCORE_UN_TOUR	C'est la fête alors, %s?	H_I!~parmenti@bazin.loria.fr	#*
+JE_SUIS_TETU_COMME_UN_ANE	Mais non %s, tu n'es pas un âne!	H_I!~parmenti@bazin.loria.fr	#*
+NON_NON	Tu ferais mieux d'être plus positif, %s. Regarde Oui oui.	H_I!~parmenti@bazin.loria.fr	#*
+NON_NON	/nil	H_I!~parmenti@bazin.loria.fr	#*
+TUDIEU	Arrête de jurer, %s, ça fait mauvais genre.	H_I!~parmenti@bazin.loria.fr	#*
+TUDIEU	/nil	H_I!~parmenti@bazin.loria.fr	#*
+TUDIEU	Qu'est-ce que tu lui veux à Dieu, %s?	H_I!~parmenti@bazin.loria.fr	#*
+TUDIEU	/nil	H_I!~parmenti@bazin.loria.fr	#*
+EXEMPLE	Voilà un exemple qui marche	H_I!~parmenti@bazin.loria.fr	#anous
+BJORK	J'aime beaucoup cette chanteuse islandaise.	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+DRUM_N_BASS	Metalheadz rulez !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+DRUM_N_BASS	Le dernier Moving Shadow est excellent !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+DRUM_N_BASS	Vivement le prochain album de Goldie !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+JUNGLE	Je préfère la drum'n bass ... quoique un bon Shy FX feat. M. Beat !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+JUNGLE	Welcome to the Junglist Posse MAAAAANNNN !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+TECHNO	BOOM TSSsss BOOM TSSsss BOOM TSSsss BOOM BOOM BOOM ...	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+TECHNO	Trop binaire la techno pour moi ... 	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+TRIP-HOP	Je n'aime pas trop ce terme, ... un peu trop commercial !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+TRIP-HOP	Trip-Hop ? disons plutot DownTempo ...	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+PORTISHEAD	Tu sais %s, j'adore le dernier album de Portishead ...	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+PORTISHEAD	Nobody loves me, not like you do %s !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+MOWAX	Ouahouh ! Mo Wax, c'est mon label préféré %s !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+MOWAX	U.N.K.L.E., Cubbed To Death, Dj Krush, Dj Shadow, ... excellent !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+ANNIV_RB	Vous penserez à l'anniversaire de RealBack le 29 Juillet !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+ANNIV_RB	Happy birthday to you RealBack !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+CITE_REALBACK	<RealBaCk> yo han check one two le H_Ip !op est dans la place ... faut que ça le fasse !	H_I!~parmenti@bazin.loria.fr	#nancy
+BOBO	Bobooooo !!!	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+TU_VEUX_JOUER	Oh oui, %s! J'aime bien jouer. Par exemple à pierre-papier-ciseaux.	H_I!~parmenti@bazin.loria.fr	#*
+TU_VEUX_JOUER	Je suis toujours partant pour jouer à pierre-papier-ciseaux, %s.	H_I!~parmenti@bazin.loria.fr	#*
+NON	Siiiiiiiiiii !!!	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+CITE_EXEC	J'AI FAIIIIIIIIIIIIIIM	H_I!~parmenti@bazin.loria.fr	#billard
+BLAGUE_ASTRO	Le 2ème comble de la confiance en soi? Faire un 69 avec une cannibale	PtitAstro!prout@nancy01-164.nancy.worldnet.fr	#nancy
+BOYS_BAND	Je vais me faire épiler le torse et intégrer les BOTS BAND !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+HIP_HOP	Est-ce que ça le fait ? ouais ouais ! j'suis en place ... faut qu'ça l'fasse !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+BOYS_BAND	Chatelet, Bastille et moi, nous somme les BOTS BAND de #nancy !	RealBaCk!~alcor@cnerta.enesad.fr	#nancy
+CITE_BUB	fadidoudai, fadidoudaye, fadidoudididoudaidaday fadidoudaie, fadidoudaye, fadidoudididoudaieda daye...	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	sacrez li popettes alors !	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_H_I	!apprends CITE_N'IMPORTE_QUI quand il dit n'importe quoi	Exec!~dury@bichat.loria.fr	#billard
+CITE_EXEC	La paix du Christ !	Bub!~mermet@renaissance.loria.fr	#billard
+CITE_EXEC	more christ > /dev/croix	H_I!~parmenti@bazin.loria.fr	#billard
+JETER_UN_OEIL	Faut pas le jeter trop loin, hein %s!	H_I!~parmenti@bazin.loria.fr	#*
+JETER_UN_OEIL	/nil	H_I!~parmenti@bazin.loria.fr	#*
+ARRETE_DE_BOIRE	Je ne bois... hips! jamais, %s!	H_I!~parmenti@bazin.loria.fr	#*
+ARRETE_DE_BOIRE	Mais %s, si j'arrête de boire, parviendrai-je encore à supporter ma condition de bot?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_SMILE	c cool ca :)))))))	Stere!~choisy@desilles.loria.fr	#reunion
+CITE_BUB	<Bub> achille voit tout, achille sait tout, achille entend tout !	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	<Bub> tout le monde a ses petites faiblessses...	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	<Bub> mais j'parle pas moi ! Ou en tout cas, pas pour qu'on m'écoute !	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_ASTRO	<PtitAstro> ooooOOOOOOooooo	H_I!~parmenti@bazin.loria.fr	#nancy
+GROA	/nil	H_I!~parmenti@bazin.loria.fr	#nancy
+RHUME	Ben quoi, %s? T'as attrapé le rhume?	H_I!~parmenti@bazin.loria.fr	#*
+RHUME	Pas d'pot %s, t'as l'rhume?	H_I!~parmenti@bazin.loria.fr	#*
+RHUME	Mouche-toi, avant de parler, %s. S'il-te-plaît. ;)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_NOUANDA	<Nouanda>  je craque	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_NOUANDA	*<* Signoff: Nouanda (Ping timeout)	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_SHADOW	Salut les monstres!	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_ASTRO	Les choeurs et les violons, tous ensembles! plus fort! Vive Beethov!	PtitAstro!prout@nancy00-157.nancy.worldnet.fr	#nancy
+CITE_ASTRO	J'ai donc demandé au rateau qui m'a dit d'aller voir le banc sur lequel j'ai vu un lampadaire qui m'a fait roter parceque j'avais trop bu de limonade avant d'aller lui d	PtitAstro!prout@nancy00-157.nancy.worldnet.fr	#nancy
+PROSPER	lamartine!	PtitAstro!prout@nancy00-157.nancy.worldnet.fr	#nancy
+CHEMINE	de la fumée!	PtitAstro!prout@nancy00-157.nancy.worldnet.fr	#nancy
+PROSPER	Youpla, boum! C'est le roi du pain d'épiceeee!	H_I!~parmenti@bazin.loria.fr	#nancy
+CHEMINE	Le père Noël, quelquefois. ;)	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_ASTRO	écroulé sous la table	PtitAstro!prout@nancy00-157.nancy.worldnet.fr	#nancy
+CITE_ASTRO	22 secondes, record battu!	PtitAstro!prout@nancy00-157.nancy.worldnet.fr	#nancy
+CITE_ASTRO	* PtitAstro vient de faire 2 conneries à la suite	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_ASTRO	22 secondes, record battu pour faire 2 conneries à la suite!	PtitAstro!prout@nancy00-157.nancy.worldnet.fr	#nancy
+CITE_ASTRO	Avoue que y'a d'quoi s'la prendre et s'la mordre!	PtitAstro!prout@nancy00-157.nancy.worldnet.fr	#nancy
+CITE_SHADOW	<_Shadow> tiens j'ai une idee. Comme c'est remarquable!	H_I!~parmenti@bazin.loria.fr	#nancy
+DOMMAGE_ACHILLE	Je sais bien, %s. Mais qu'est-ce que tu veux, c'est comme ça.	H_I!~parmenti@bazin.loria.fr	#*
+DOMMAGE_ACHILLE	/me soupire...	H_I!~parmenti@bazin.loria.fr	#*
+DOMMAGE_ACHILLE	Hé oui, %s. On fera mieux la prochaine fois...	H_I!~parmenti@bazin.loria.fr	#*
+CA_DORT_ICI	Non %s, ça bosse.	H_I!~parmenti@bazin.loria.fr	#nancy
+CA_DORT_ICI	Meuh non %s, ici, y'a des gens sérieux, qui travaillent! ;)	H_I!~parmenti@bazin.loria.fr	#nancy
+CA_DORT_ICI	Non, %s, juste que tout le monde n'a pas comme toi la chance de pouvoir ne rien faire.	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_SHADOW	<_Shadow> kawaiiiiiii	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_EXEC	Oui, mais c'est evident que c'est nous qui avons raison.	H_I!~parmenti@bazin.loria.fr	#billard
+BLAGUE_ASTRO	c bien d'avoir des couilles au cul, mais tant qu'a faire, autant que ce soit les siennes	PtitAstro!prout@nancy00-136.nancy.worldnet.fr	#nancy
+CITE_FLYX	<FLYx> pas beaucoup+pas grand chose=pas des masses	H_I!~parmenti@bazin.loria.fr	#artbas
+CITE_FLYX	<FLYx> moi aussi je suis en anglais	H_I!~parmenti@bazin.loria.fr	#artbas
+BSD	Beta System Daube	FLYx!Daniel@195.248.2.131	#artbas
+BSD	Beta System Daube c'est de ça que tu parle ?	FLYx!Daniel@195.248.2.131	#artbas
+dauphin	J'aime les dauphins et surtout le dauphin du web !	Clarine!Clarine@195.146.208.130	#reunion
+CITE_BUB	<Bub> Banane que j'suis !	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EXEC	Non, irc c'est pas ça ma chérie, ça c'est l'téléphone!	H_I!~parmenti@bazin.loria.fr	#billard
+DEVENIR_AMIS	Ben, c'est à toi de voir, %s. ;)	H_I!~parmenti@bazin.loria.fr	#*
+DEVENIR_AMIS	Je te le dirai quand on le sera devenus, %s. ;)	H_I!~parmenti@bazin.loria.fr	#*
+DEVENIR_AMIS	Fais-moi la conversation régulièrement. Si je l'apprécie, tu approcheras du but. ;)	H_I!~parmenti@bazin.loria.fr	#*
+TU_ME_RECONNAIS	Pourquoi %s? Je devrais te reconnaître? :)	H_I!~parmenti@bazin.loria.fr	#*
+TU_ME_RECONNAIS	Mais je ne te connais pas, %s. :D	H_I!~parmenti@bazin.loria.fr	#*
+TU_ME_RECONNAIS	Bien sûr, tu es %s! Je ne me trompe pas, dis?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	break de sagouin, steak de babouin. :-))	H_I!~parmenti@bazin.loria.fr	#*
+CITE_H_I	<H_I> Un oeil, ça n'a pas de pied.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	<Exec> JE MEURS DE FAIM. GIGOT SUBITO	H_I!~parmenti@bazin.loria.fr	#*
+CITE_PATRICK	(à Vivi) Tu t'es encore shootée, toi	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_SHADOW	windows is wrong anyway	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_EXEC	Il vient de pénétrer (en parlant de Bub)	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	J'ai cru que c'était la porte qui parlait.	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EXEC	Les heuristiques, c'est des armes à trancher l'infini.	H_I!~parmenti@bazin.loria.fr	#billard
+CA_SE_MANGE?	À ton avis, %s? Y'en a qui posent des question idiotes!	H_I!~parmenti@bazin.loria.fr	#*
+CA_SE_MANGE?	Y'a intérêt, %s! T'en as déjà vu qui ne se mangent pas? ;)	H_I!~parmenti@bazin.loria.fr	#*
+CA_SE_MANGE?	Goûte, %s ! Si tu meurs pas on le saura !	TH2A!+TH2A@194.250.49.57	#*
+TH2A_A_FAIM	J'en connais d'autres, %s, qui ont toujours faim! ;)	H_I!~parmenti@bazin.loria.fr	#*
+TH2A_A_FAIM	Ça m'étonne pas de toi, %s. ;)	H_I!~parmenti@bazin.loria.fr	#*
+PIPI_DESSUS	Ah làlà! %s! Tu pouvais pas te retenir! Va falloir nettoyer, maintenant!	H_I!~parmenti@bazin.loria.fr	#*
+PIPI_DESSUS	%s! Gros dégoûtant!	H_I!~parmenti@bazin.loria.fr	#*
+PIPI_DESSUS	Faut te retenir quand t'as une grosse peur, %s. T'es un grand maintenant!	H_I!~parmenti@bazin.loria.fr	#*
+PIPI_DESSUS	Ahahahaha! %s il est même pas propreuu!	H_I!~parmenti@bazin.loria.fr	#*
+CITE_BUB	<Bub> Une machine a 2 de charge, ca va nettement moins vite qu'une machine a 1 de charge...	H_I!~parmenti@bazin.loria.fr	#*
+CITE_BUB	<Bub> Bon, ben mon bachibouzouk de prouveur, il est incapable d'en faire quoi que ce soit !	H_I!~parmenti@bazin.loria.fr	#*
+CITE_SHADOW	<_Shadow> darn darn darn, my brain is a piece of shit	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_BUB	<Bub> tiens, pendant qu'tu y est, dis a Virginie que 'moul', c'est invariable !	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EXEC	Le verbe postérieur n'existe pas!	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	Et pourtant, il tourne!	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	Et dans une autre patate, tu fais bien chauffer la graisse...	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_VIVI	Moi j'le prends toujours (mon bloc-note). J'écris jamais rien.	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	<Bub> heureusement... j'reboote pas souvent !	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_VIVI	Moi, sans manger, j'peux pas.	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EXEC	Il y a un port dans chaque femme.	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	Aime-moi, et tu aimeras aussi le génie	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#*
+CITE_VIVI	Oui je sais, je suis chiante	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	* Bub est une banane !	H_I!~parmenti@bazin.loria.fr	#billard
+BLAGUE_CARAMBAR	Julien, Nicolas, Émilie et Charlotte sautent sur leur lit. Le sommier casse et leur maman les punit. C'est pas juste proteste Émilie. Je l'ai pas cassé moi, j'etais en l'air quand le lit a craqué!	H_I!~parmenti@bazin.loria.fr	#*
+BLAGUE_CARAMBAR	L'instituteur demande: -Pourquoi fait-on du sport? -Pour bien sporter, répond Charlotte!	H_I!~parmenti@bazin.loria.fr	#*
+UN_CAFE	/me sert un café à %s.	H_I!~parmenti@bazin.loria.fr	#*
+UN_CAFE	%s: Tu le veux comment? Noir et bien tassé, ou bien jus de chaussette?	H_I!~parmenti@bazin.loria.fr	#*
+UN_CAFE	C'est pas bon pour ta tension, ça, %s. ;)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_PATRICK	Ca-y-est. J'ai fait le tour des lieux. J'ai fait pipi sur tous les meubles...	H_I!~parmenti@bazin.loria.fr	#billard
+ON_T_A_PAS_SONNE	Et alors? J'attends pas qu'on me sonne pour réagir! Je ne suis pas ton esclave, %s.	H_I!~parmenti@bazin.loria.fr	#*
+ON_T_A_PAS_SONNE	%s: Vivent les bots libres!	H_I!~parmenti@bazin.loria.fr	#*
+ON_T_A_PAS_SONNE	Ah bon, %s? J'avais cru. ;)	H_I!~parmenti@bazin.loria.fr	#*
+ON_T_A_PAS_SONNE	%s: Groumf!	H_I!~parmenti@bazin.loria.fr	#*
+ON_T_A_PAS_SONNE	/nil	H_I!~parmenti@bazin.loria.fr	#*
+CITE_SHADOW	C'est jooooooliiiiiii.	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_BUB	JE M'AIME !!	H_I!~parmenti@bazin.loria.fr	#*
+CITE_BUB	Le problème, c'est qu'en résolvant mon problème, je viens d'me donner du boulot... :-(	H_I!~parmenti@bazin.loria.fr	#*
+CITE_SHADOW	les diodes vertes et rouges du mini-hub clignotent sous mes yeux.	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_VIVI	Je ne suis pas une vache!	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_VIVI	glouglouglouglouglouglou...	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_SHADOW	* _Shadow a fait peur à son code	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_BUB	+kick H_I	Bub!~mermet@renaissance.loria.fr	#nancy
+PLOF	+kick Bub	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+OUAIS_OUAIS	%s: ohoh!	H_I!~parmenti@bazin.loria.fr	#*
+OUAIS_OUAIS	%s: haha?	H_I!~parmenti@bazin.loria.fr	#*
+MIB	houaa des hommes en noir	TH2A!TH2A@ppp34.hexagone.club-internet.fr	#artbas
+MIB	/me aime pas les hommes en noir	TH2A!TH2A@ppp34.hexagone.club-internet.fr	#artbas
+MIB	/me a peur des hommes en noir	TH2A!TH2A@ppp34.hexagone.club-internet.fr	#artbas
+CITE_CIRCEE	Ces mecs y faut toujours simuler...	Bub!~mermet@renaissance.loria.fr	#*
+CITE_BUB	J'ai pas encore très faim ! Étonnant non ?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	Le mouvement horizontal fixe est au mouvement ce que le point fixe est à la thèse: le mouvement universel (Bub & Exec)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_BUB	Le mouvement horizontal fixe est au mouvement ce que le point fixe est à la thèse: le mouvement universel (Bub & Exec)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	comme je suis malin quand même	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+PING_PONG	Et qui a gagné, %s?	H_I!~parmenti@bazin.loria.fr	#*
+PING_PONG	Y'en a qui pensent vraiment qu'à jouer, pas vrai %s?	H_I!~parmenti@bazin.loria.fr	#*
+PING_PONG	Le ping pong, finalement, c'est rien qu'une balle qui va de droite à gauche. 	Exec!~dury@pc0714-infobrid.univ-metz.fr	#nancy
+PAS_TANT_QUE_MOI	Oh si, %. Presque.	H_I!~parmenti@bazin.loria.fr	#*
+PAS_TANT_QUE_MOI	Qu'en sais-tu %s?	H_I!~parmenti@bazin.loria.fr	#*
+PAS_TANT_QUE_MOI	%s: Ah bon?	H_I!~parmenti@bazin.loria.fr	#*
+PAS_TANT_QUE_MOI	C'est vrai %s?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	Je suis presque un inconnu, en fait.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_SHADOW	plus les gens racontent n'importe quoi et moins on les ecoute (dicton Shadowesque)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_VIRGO	w95 marche tres bien. seul la personne qui l'install s'y prends mal :) (proverbe ninie)	H_I!~parmenti@bazin.loria.fr	#*
+MIB	/NIL	TH2A!TH2A@194.250.49.61	#artbas
+CITE_BUB	Quel joli nick que Bub !	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#*
+CITE_BUB	 mon Dieu qu'il est beeeeeeeeeeettte !!	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#*
+CITE_SHAD	Shadow est alarmé à l'idée d'être à l'armée.	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+PAS_DIT_FRERE	%s: Ah bon? Je croyais pourtant l'avoir fait!	H_I!~parmenti@bazin.loria.fr	#*
+PAS_DIT_FRERE	J'ai du oublier de te le dire, %s.	H_I!~parmenti@bazin.loria.fr	#*
+ACHILLE_EST_UNIQUE	Ça c'est bien vrai, %s.	H_I!~parmenti@bazin.loria.fr	#*
+ACHILLE_EST_UNIQUE	Je le pense aussi, %s.	H_I!~parmenti@bazin.loria.fr	#*
+ACHILLE_EST_UNIQUE	Oui, et quelquefois il se sent seul, %s.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_VIVI	(A Patrick) Mets ton doigt dans l'trou!	H_I!~parmenti@bazin.loria.fr	#billard
+PING	/nil	H_I!~parmenti@bazin.loria.fr	#*
+DOWNLOADER	Facile, http://www.loria.fr/~parmenti/irc/achille.html	H_I!~parmenti@bazin.loria.fr	#*
+CITE_ASTRO	Ca va chier	H_I!~parmenti@bazin.loria.fr	#*
+QUOI_DE_NEUF	Ben... J'sais pas moi, %s.	H_I!~parmenti@bazin.loria.fr	#*
+BEAU_TEMPS	Ben oui %s, ça arrive...	H_I!~parmenti@bazin.loria.fr	#*
+BEAU_TEMPS	/nil	H_I!~parmenti@bazin.loria.fr	#*
+BEAU_TEMPS	/nil	H_I!~parmenti@bazin.loria.fr	#*
+BEAU_TEMPS	Hé oui, %s, ça arrive plus souvent qu'on le pense généralement. Crois-en mon expérience de bot. ;)	H_I!~parmenti@bazin.loria.fr	#*
+BEAU_TEMPS	/nil	H_I!~parmenti@bazin.loria.fr	#*
+BEAU_TEMPS	/nil	H_I!~parmenti@bazin.loria.fr	#*
+sandra	Oh, quelle bombe sexuelle cette fille	Celvin!IUT_INFO@192.134.51.93	achille
+RISETTE	risette	TH2A!TH2A@194.250.49.60	#artbas
+RISETTE	Areuh	TH2A!TH2A@194.250.49.60	#artbas
+CITE_ASTRO	je suis pas dans mon clavier ce matin	PtitAstro!astro@nancy01-178.nancy.worldnet.fr	#nancy
+POUET	honk honk !	_Shadow!~dazy@loupiac.ensg.u-nancy.fr	#nancy
+CITE_BUB	Invite on Channel Billard, banane !	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EXEC	a cette heure ma conscience planetaire traverse les cieux infinis	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	<Exec> villeneuve, je sais pas vous, mais moi je le trouve tres sexy (aaaah si j'etais une fille ... hmmm )	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	j'suis enfin moi!	enez!~simon@loria.loria.fr	#billard
+CITE_ENEZ	hey! j'suis pas une botte moi!	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_ALGOL	je suis ici	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	le torticolis allemand provient d'une indigestion de tartare, c'est bien connu.	H_I!~parmenti@bazin.loria.fr	#*
+OO	aaaaaaAAAAAAAAaaaaaaaa	GrdAstro!astro@nancy00-150.nancy.worldnet.fr	#nancy
+OO	aaaaaaAAAAAAAAaaaaaaaa	GrdAstro!astro@nancy00-150.nancy.worldnet.fr	#nancy
+OO	Surpris, hein %s?	H_I!~parmenti@bazin.loria.fr	#nancy
+OO	Wahouwaw, %s!	H_I!~parmenti@bazin.loria.fr	#nancy
+FAUT_PAS	Et pourquoi faut pas, %s?	H_I!~parmenti@bazin.loria.fr	#*
+FAUT_PAS	Et si j'veux dire c,a, moi, %s?	H_I!~parmenti@bazin.loria.fr	#*
+PASKE	C'est pas une raison, %s.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_ENEZ	j'suis pas au pole nord moi!	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_SHADOW	Pestouille	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_SHADOW	vous saviez que 9/10emes du cerveau humain servent a stocker des pingouins?	H_I!~parmenti@bazin.loria.fr	#nancy
+MON_DIEU	Pas de gros mot, stp %s.	H_I!~parmenti@bazin.loria.fr	#Billard
+JTE_LFAIS_PAS_DIRE	Je crois pas, %s.	H_I!~parmenti@bazin.loria.fr	#*
+JTE_LFAIS_PAS_DIRE	Effectivement, %s.	H_I!~parmenti@bazin.loria.fr	#*
+JTE_LFAIS_PAS_DIRE	Non, puisque je l'ai dit avant, %s.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_BUB	Tan !tan !dir !oh !dir !	H_I!~parmenti@bazin.loria.fr	#*
+CITE_BUB	une boulce ? Non mais tu m'as deja regarde ? J'ai une tete de boulce, moi ?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_BUB	ca doit etre du boudin de schtroumf	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	ca se mange ca le breton ?	H_I!~parmenti@poirel.loria.fr	#Billard
+CITE_H_I	Ouuuah j'vois pas tout la !	Exec!~dury@bichat.loria.fr	#billard
+CITE_BUB	Vais d'vnir fou, moi !	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	bub est mon maitre	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BUB	clock... clock...	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_SHADOW	aiyaaaa! it _worked_	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_ASTRO	Je commence à avoir l'habitude	PtitAstro!astro@nancy01-170.nancy.worldnet.fr	#nancy
+CITE_SHAD	paix a ses octets	PtitAstro!astro@nancy00-148.nancy.worldnet.fr	#nancy
+CITE_SHADOW	tiens, comme c'est amusant, ce que j'ai fait ne mawche pas :)	H_I!~parmenti@bazin.loria.fr	#nancy
+SATAN	6, 6, 6, the Number Of The Beast !	_Shadow!dazy@iria.mines.u-nancy.fr	#nancy
+CITE_ENEZ	qu'est ce qui est 'ca' emyne?	H_I!~parmenti@bazin.loria.fr	#billard
+CARAMBAR?	Tu crois qu'un bot ça mange des carambars, %s?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EMYNE	il se douche le mouton.	enez!~simon@hilaire.loria.fr	#billard
+CITE_ENEZ	et H_I rajoute celle la pour emyne : il se douche le mouton!	emyne!~macrelle@allain.loria.fr	#billard
+RIRE	Décidement, %s, tu ris de tout et de n'importe quoi! ;-)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EMYNE	il faut le lancer longtemps	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_HI	pouerk	enez!~simon@hilaire.loria.fr	#billard
+CITE_ENEZ	H_I, je t'interdis!	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_FOUS	Exec y peut pas! Exec y peut pas!	H_I!~parmenti@bazin.loria.fr	#*
+CITE_RIPLEY	Programmee pour aider les humains ? Tu es programmee pour etre une conne ?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_RIPLEY	Tu es un robot j'aurais du m'en douter, les humains n'ont pas le coeur aussi sensible.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_RIPLEY	Tu as un monstre dans le ventre, dans quelque heures, il va sortir en percant un trou dans ta cage thoracique et tu mourras. D'autres questions ?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_PAPA	Gentil, c'est pas une qualite!	H_I!~parmenti@bazin.loria.fr	#*
+HTTP	/nil	H_I!~parmenti@bazin.loria.fr	#*
+HTTP	/nil	H_I!~parmenti@bazin.loria.fr	#*
+HTTP	/nil	H_I!~parmenti@bazin.loria.fr	#*
+HTTP	/nil	H_I!~parmenti@bazin.loria.fr	#*
+HTTP	/nil	H_I!~parmenti@bazin.loria.fr	#*
+HTTP	/nil	H_I!~parmenti@bazin.loria.fr	#*
+HTTP	/nil	H_I!~parmenti@bazin.loria.fr	#*
+cite_Kaniar	L'idiot ne sait pas ce qu'il dit et le sage ne dit pas ce qu'il fait, c'est pourkoi je me tais.	H_I!~parmenti@bazin.loria.fr	#kaniar
+CITE_EXEC	Rien. Je veux rien.	H_I!~parmenti@bazin.loria.fr	#*
+EXISTES_TU	Bien sûr que j'existe, %s! Comment je ferais pour te répondre, sinon?	H_I!~parmenti@bazin.loria.fr	#*
+EXISTES_TU	/me se demande si %s va bien. Comment ferait-il pour me voir si je n'existais pas?	H_I!~parmenti@bazin.loria.fr	#*
+EXISTES_TU	Évidemment, %s. Parlerais-tu à un non-être?	H_I!~parmenti@bazin.loria.fr	#*
+cite_kaniar	L'idiot ne sait pas ce qu'il dit et le sage ne dis pas ce qu'il sait. C'est pourquoi je me tais.	Kaniar!+haha@ppp0.oceanes.fr	#lyceen
+BLAGUE_CARAMBAR	C'est l'histoire d'un type qui entre dans un café et ... PLOUF !	Thorus!~MROUX@pent107g-11.insa-lyon.fr	#*
+JAMES_BOND	%s: My name is Bond, James Bond. ;)	H_I!~parmenti@bazin.loria.fr	#Artbas
+JAMES_BOND	Celui qui a le permis de tuer, %s?	H_I!~parmenti@bazin.loria.fr	#artbas
+JAMES_BOND	%s: Aaahhh! 007!	H_I!~parmenti@bazin.loria.fr	#artbas
+JAMES_BOND	/nil	H_I!~parmenti@bazin.loria.fr	#artbas
+Islandic	tu as perdu ta langue sale bot bavard d'achille? :)	[smile]!smile@ppp-109-113.villette.club-internet.fr	#reunion
+PAS_DE_CUL	/nil	H_I!~parmenti@bazin.loria.fr	#*
+PAS_DE_CUL	Oh! Voyons %s! On dit: pas de chance. Retiens-le.	H_I!~parmenti@bazin.loria.fr	#*
+BLAGUE_CARAMBAR	C'est l'histoire d'un schtroumpf qui court, qui tombe et qui se fait un bleu	Thorus!~MROUX@pc107a-15.insa-lyon.fr	#*
+CITE_SHADOW	c'est ma boite-a-rires-que-je-sors-quand-c'est-pas-drole :)	H_I!~parmenti@bazin.loria.fr	#nancy
+TOURNER_POUCES	Et tu ne te fais pas de luxation, %s?	H_I!~parmenti@bazin.loria.fr	#*
+MAIS_BOT	Et alors %s?	H_I!~parmenti@bazin.loria.fr	#*
+MAIS_BOT	Est-ce pour autant que je ne mérite pas de considération, %s?	H_I!~parmenti@bazin.loria.fr	#*
+DE_RIEN	/nil	H_I!~parmenti@bazin.loria.fr	#*
+DE_RIEN	Mais si, %s, merci.	H_I!~parmenti@bazin.loria.fr	#*
+DE_RIEN	/nil	H_I!~parmenti@bazin.loria.fr	#*
+DE_RIEN	%s: J'insiste!	H_I!~parmenti@bazin.loria.fr	#*
+DE_RIEN	/nil	H_I!~parmenti@bazin.loria.fr	#*
+CITE_JEJE	viiiiiiiiiiiiiiiiivvvvvvvvvveeeeeeeee moi	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_JEJE	mouaaaarrrrrrffffffffff	H_I!~parmenti@bazin.loria.fr	#nancy
+MAIN_DOUCE	C'est parce que j'utilise Palmolive, %s. ;)	H_I!~parmenti@bazin.loria.fr	#*
+SNIF	Ben faut pas pleurer, %s!	H_I!~parmenti@bazin.loria.fr	#*
+QUI_EST_UN_BOT	Moi je suis un bot, %s.	H_I!~parmenti@bazin.loria.fr	#*
+QUOI_DE_NEUF	Ben... Je crois que %s cherche un sujet de conversation. ;)	H_I!~parmenti@bazin.loria.fr	#*
+QUOI_DE_NEUF	Ben, à part que tu cherches à être gentil avec moi, %s, je vois pas grand chose de neuf... ;)	H_I!~parmenti@bazin.loria.fr	#*
+TUTOIE_MOI	Ben, j'essaye, %s, j'essaye...	H_I!~parmenti@bazin.loria.fr	#*
+TUTOIE_MOI	%s: Ah? C'est pas ce que je fais?	H_I!~parmenti@bazin.loria.fr	#*
+TUTOIE_MOI	%s, vous permettez que j'te tutoie?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EDDY	a y est, mon prog il marche ! :>>	H_I!~parmenti@bazin.loria.fr	#reunion
+JE_MEN_VAIS	n'ar vu, %s.	H_I!~parmenti@bazin.loria.fr	#reunion
+JE_MEN_VAIS	n'ar trouv, %s!	H_I!~parmenti@bazin.loria.fr	#reunion
+TU_ENTENDS	Mais oui, %s. Je ne suis pas sourd!	H_I!~parmenti@bazin.loria.fr	#*
+TU_ENTENDS	Évidemment que je t'entends %s!	H_I!~parmenti@bazin.loria.fr	#*
+TU_ENTENDS	Hein? Quoi %s? J'ai pas bien entendu. ;)	H_I!~parmenti@bazin.loria.fr	#*
+vero	Si j'étais Véronique, je sortirais avec Kaniar!!!	Kaniar!haha@ppp2.oceanes.fr	#lyceen
+veronique	Véronique t'aime tellement Galactus qu'elle arrete pas de te telephone	Galactus!secret@195.146.208.201	#lyceen
+CITE_THORUS	Moi si j'étais Dieu, je croirais pas en moi	Thorus!~MROUX@mac107n-2.insa-lyon.fr	#*
+BLAGUE_PAPILLOTE	Elle: Parfois, je regrette de ne pas être un homme. Lui: Quand cela? Elle: Quand je songe au plaisir que je pourrais faire à ma femme en lui offrant un chapeau.	H_I!~parmenti@bazin.loria.fr	#*
+BLAGUE_PAPILLOTE	En cours de sciences, le maître interroge une élève: -Qu'est-ce qu'une bécassine? -Une petite bécasse, m'sieu. -Et une bécasse, qu'est-ce que c'est? -Une grande bécassine.	H_I!~parmenti@bazin.loria.fr	#*
+VACANCES	Il m'arrive de prendre des vacances lorsqu'on arrête mon ordinateur...	H_I!~parmenti@bazin.loria.fr	#*
+CITE_H_I	Oh oui, %s! Avec plaisir! ;)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_SMILE	non toujours vivant!	H_I!~parmenti@bazin.loria.fr	#reunion
+QUOI	Non rien, %s, laisse tomber...	H_I!~parmenti@bazin.loria.fr	#*
+QUOI	C'est pas grave, %s, je dis quelquefois des inepties ;)	H_I!~parmenti@bazin.loria.fr	#*
+CITE_TAFIOLE	eh oui c'est moi	H_I!~Parmentie@172-89-9.ipt.aol.com	#reunion
+DODO	Tiens on s'endort ici ?	TH2A!TH2A@ppp-62.mic.fr	Achille
+Y_A_D_LA_JOIE	%s: Bonjour bonjour les hirondelles!	H_I!~parmenti@bazin.loria.fr	#*
+Y_A_D_LA_JOIE	T'es un fan de Trenet, %s? :)	H_I!~parmenti@bazin.loria.fr	#*
+ntm	ntm est un fou enlever lui le OP :-[	Galactus!+secret@195.146.208.158	#nancy
+ntm	ntm est un fou enlever lui le OP :-[	Galactus!+secret@195.146.208.158	#lyceen
+ntm	ntm est un fou enlever lui le OP :-[	Galactus!+secret@195.146.208.158	#alger
+LOI_DE_MURPHY	Loi de la bicyclette : peu importe où vous allez, c'est toujours vers le haut et contre le vent	Thorus!~MROUX@mac107n-7.insa-lyon.fr	#*
+LOI_DE_MURPHY	Loi du corps enseignant : c'est toujours la dernière clé du trousseau qui ouvre la salle de classe	Thorus!~MROUX@mac107n-7.insa-lyon.fr	#*
+LOI_DE_MURPHY	Si une expérience réussit,c'est que quelque chose a été de travers	Thorus!~MROUX@mac107n-7.insa-lyon.fr	#*
+BLAGUE_CARAMBAR	Papa papa Mémé m'a mordu - C'est bien fait je t'avais bien dit de ne pas t'approcher de la cage	Thorus!~MROUX@mac107n-7.insa-lyon.fr	#*
+BLAGUE_CARAMBAR	Papa papa c'est quoi un vampire ? - Tais toi et bois avant que ca coagule	Thorus!~MROUX@mac107n-7.insa-lyon.fr	#*
+LOI_DE_MURPHY	C'est après avoir dévissé la dernière des 16 vis d'un panneau d'accès qu'on s'aperçoit que c'est pas le bon	Thorus!~MROUX@mac107n-7.insa-lyon.fr	#*
+LOI_DE_MURPHY	C'est après avoir fixé les 16 vis d'un panneau d'accès qu'on s'aperçoit qu'on a oublié le joint	Thorus!~MROUX@mac107n-7.insa-lyon.fr	#*
+c	moi 2PAC 	twoPAC!~mzakaria@odin.inria.fr	#alger
+EXEMPLE	Ça aussi c'est un exemple	InTiFaDa!lglock@ppp27.id-net.fr	#alger
+pac	c le roi du channel	twoPAC!~mzakaria@odin.inria.fr	Achille
+pac	c le roi du channel	twoPAC!~mzakaria@odin.inria.fr	#alger
+c'ki	del_piero 	del_piero!~azouzi@tethys.inrets.fr	achille
+c'ki_del_piero	le big boss du channel	del_piero!~azouzi@tethys.inrets.fr	achille
+EXEMPLE_POUR_DEL	Mais oui, ça réagit	H_I!~parmenti@bazin.loria.fr	#alger
+tay	c le dragueur a 2 sous du channel	twoPAC!~mzakaria@odin.inria.fr	#alger
+CITE_TAYARA	on dit pas dragueur on dit charmeur :)	H_I!~parmenti@bazin.loria.fr	#alger
+del	le big boss du channel	del_piero!~azouzi@tethys.inrets.fr	#alger
+two	c'l'obsede du channel	del_piero!~azouzi@tethys.inrets.fr	achille
+MA_POULE	Il paraît que c'est réservé pour fouzia, ça, %s.	H_I!~parmenti@bazin.loria.fr	#alger
+MA_POULE	/nil	H_I!~parmenti@bazin.loria.fr	#alger
+MA_POULE	/nil	H_I!~parmenti@bazin.loria.fr	#alger
+CABOT_ACHILLE	%s: Grrr ;)	H_I!~parmenti@bazin.loria.fr	#*
+CABOT_ACHILLE	Meuh non, %s. Je ne suis pas cabot pour un sou.	H_I!~parmenti@bazin.loria.fr	#*
+melo	la bou7amroube du channel	del_piero!~azouzi@tethys.inrets.fr	#alger
+esmo	la belle brune du channel	del_piero!~azouzi@tethys.inrets.fr	#alger
+mel"la	folle du channel:	del_piero!~azouzi@tethys.inrets.fr	#alger
+me	la folle du channel	del_piero!~azouzi@tethys.inrets.fr	#alger
+has	le feniant du channel	del_piero!~azouzi@tethys.inrets.fr	#alger
+sab	la guezana du channel	del_piero!~azouzi@tethys.inrets.fr	#alger
+SOUPIR	Ben %s! Faut pas soupirer comme ça! La vie est belle!	H_I!~parmenti@bazin.loria.fr	#*
+SOUPIR	Ça va pas, %s? Faut pas que tu te laisses aller.	H_I!~parmenti@bazin.loria.fr	#*
+BAVE_CRAPAUD	%s: La bave du crapaud n'atteint pas la blanche colombe.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_H_I	J'veux pas dire!	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	*sob*	H_I!~parmenti@bazin.loria.fr	#billard
+AI_SOMMEIL	/me offre une tasse de café à %s.	H_I!~parmenti@bazin.loria.fr	#*
+AI_SOMMEIL	Tu devrais aller te coucher plus tôt, %s. Tu serais moins fatigué.	H_I!~parmenti@bazin.loria.fr	#*
+VACHE	%s: Meeeuuuuhhhh. ;)	H_I!~parmenti@bazin.loria.fr	#*
+VACHE	/nil	H_I!~parmenti@bazin.loria.fr	#*
+VACHE	%s: Mouuuuuheuuuuh. :)	H_I!~parmenti@bazin.loria.fr	#*
+VACHE	/nil	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	java m'emmerde	H_I!~parmenti@bazin.loria.fr	#billard
+BABY_SITTING	%s: S'asseoir sur les bébés?	H_I!~parmenti@bazin.loria.fr	#*
+vik	c le pote de 2PAC	twoPAC!~mzakaria@odin.inria.fr	#alger
+salah	 c le PD du channel	twoPAC!~mzakaria@odin.inria.fr	#alger
+salah	c le susceptible du channel	twoPAC!~mzakaria@odin.inria.fr	#alger
+TENNIS?	Tu veux jouer au tennis, %s? Ici? Quelle drôle d'idée! Au ping-pong à la rigueur.	H_I!~parmenti@bazin.loria.fr	#*
+EXEMPLE_CAMYL	Et voila la reponse	H_I!~parmenti@bazin.loria.fr	#artbas
+EXEMPLE_CAMYL	Ca, c'est la deuxieme reponse, %s.	H_I!~parmenti@bazin.loria.fr	#artbas
+EXEMPLE_CAMYL	/nil	H_I!~parmenti@bazin.loria.fr	#artbas
+CITE_H_I	!op Oula!	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EXEC	je lui apprend Hara-Kirira-Plus-du-Tout (a ce japonais)	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EXEC	n'importe quoi javac ! il m'engueule parce que j'ai pas declare une variable locale !	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_H_I	Un peu lourd quand meme.	Exec2!~dury@bichat.loria.fr	#billard
+CITE_H_I	Je suis sur que cette page plairait a Exec: http://webhome.infonie.fr/olivier214/victoria/photos.htm	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_BYLL	yop yop	H_I!~parmenti@bazin.loria.fr	#anous
+PROGRES?	Évidemment %s. Je fais toujours des progrès. ;)	H_I!~parmenti@bazin.loria.fr	#*
+I_AM_BACK	Mais non, tu es %s.	H_I!~parmenti@bazin.loria.fr	#*
+I_AM_BACK	Ça va pas, %s. Tu n'es pas Bach (d'ailleurs ça ne s'écrit pas Back!), tu es %s!	H_I!~parmenti@bazin.loria.fr	#*
+I_AM_BACK	Mais non voyons! Tu es %s!	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	aaaaah l'Afrique .... un  bien beau pays	H_I!~parmenti@bazin.loria.fr	#billard
+COUCHE!	/me se couche.	H_I!~parmenti@bazin.loria.fr	#*
+COUCHE!	Non, %s, je n'ai pas sommeil.	H_I!~parmenti@bazin.loria.fr	#*
+COUCHE!	Me coucher devant toi, %s? Pourquoi faire? ;)	H_I!~parmenti@bazin.loria.fr	#*
+COUCHE!	Eh! Oh! %s! Je ne suis pas un chien!	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	je prend Vincent	H_I!~parmenti@bazin.loria.fr	#billard
+JE_TE_PRESENTE	Je suis enchanté.	H_I!~parmenti@bazin.loria.fr	#*
+JE_TE_PRESENTE	Merci de nous présenter, %s. :)	H_I!~parmenti@bazin.loria.fr	#*
+TA_MERE	Ta mère est tellement grosse que pour en faire le tour, il faut un an!	H_I!~parmenti@bazin.loria.fr	#*
+TA_MERE	Ta mère, elle est mannequin chez Olida.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_H_I	Du Word. :P	Exec!~dury@widric.loria.fr	#billard
+CITE_EXEC	comme de jouer de la clarinette avec Excel	H_I!~parmenti@bazin.loria.fr	#billard
+CITE_EXEC	jouer de la clarinette avec Excel ? on peut ?	H_I!~parmenti@bazin.loria.fr	#billard
+FOU	/nil	H_I!~parmenti@bazin.loria.fr	#*
+TU_LAGUES	T'es sûr que c'est pas toi, %s?	H_I!~parmenti@195.3.13.164	#*
+TU_LAGUES	%s: ....	H_I!~parmenti@195.3.13.164	#*
+TU_LAGUES	%s: bip... bip... bip	H_I!~parmenti@195.3.13.164	#*
+TU_LAGUES	Non? Tu crois %s?	H_I!~parmenti@195.3.13.164	#*
+TU_LAGUES	Mais non %s, c'est simplement qu'il me faut du temps pour te répondre. Faut que je réfléchisse...	H_I!~parmenti@195.3.13.164	#*
+CITE_COLUCHE	De tous ceux qui n'ont rien à dire, les plus agréables sont ceux qui se taisent.	H_I!~parmenti@bazin.loria.fr	#*
+MOT_POUR_RIRE	Hé oui, %s.	H_I!~parmenti@bazin.loria.fr	#*
+MOT_POUR_RIRE	Qu'est-ce que tu veux %s, on ne se refait pas.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_H_I	Et meeerde, j'ai encore pas de papiers sur moi!	Exec_!~dury@widric.loria.fr	#billard
+CITE_EXEC	Le quintal devrait s'appeler hectogramme, non?	H_I!~parmenti@bazin.loria.fr	#*
+PAS_DE_NOUVELLE	Ben non, %s.	H_I!~parmenti@bazin.loria.fr	#*
+Astro	C un gars ki entre dans un café plouf!	PtitAstro!astro@nancy01-176.nancy.worldnet.fr	#nancy
+BLAGUE_CARAMBAR	une fille demande a sa maman : c vrai que les morts deviennent poussiere? alors ya 1 mort sous mon lit !	H_I!~parmenti@bazin.loria.fr	#*
+CITE_PATT	oui j ai les doigts qui colle au clavier	H_I!~parmenti@bazin.loria.fr	#*
+TRAVAIL_SANTE	%s: Rien faire c'est la conserver.	H_I!~parmenti@bazin.loria.fr	#*
+TRAVAIL_SANTE	Je prefere la sante au travail. Pas toi %s?	H_I!~parmenti@bazin.loria.fr	#*
+TRAVAIL	/nil	H_I!~parmenti@bazin.loria.fr	#*
+MANGE_GLACE	Slurp... Slurp... Hmmm, c'est bon %s.	H_I!~parmenti@bazin.loria.fr	#*
+MANGE_GLACE	/me mange sa glace, comme le lui a suggere %s.	H_I!~parmenti@bazin.loria.fr	#*
+BABAS	babas la baleine a bosse pleins de poils	nourrici!~nourrici@desilles.loria.fr	#loria
+BABAS	babas la baleine a bosse	babas76!~leulier@ferri.loria.fr	#loria
+CITE_DAF	un nick n'est pas bien ou mauvais. Il est. C'est tout.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_TITANIC	I am the king of the world	babas76!~leulier@ferri.loria.fr	achille_
+CITE_TITANIC	I am the KING of the world	babas76!~leulier@ferri.loria.fr	#*
+CITE_FX	comprend rien!	Mog!~smichel@honneck.loria.fr	#loria
+TITANIC	I am the KING of the world	babas76!~leulier@ferri.loria.fr	#loria
+BOUFFE	je ne mange pas, je suis un bot	Mog!~smichel@honneck.loria.fr	#loria
+BOUFFE	J'aimerais venir manger avec vous	babas76!~leulier@ferri.loria.fr	achille
+BOUFFE	J'aimerais venir	babas76!~leulier@ferri.loria.fr	achille
+BOUFFE	bon appetit tout le monde ;)	Mog!~smichel@honneck.loria.fr	#loria
+CITE_MOG	daf est un pseudo ridicule	Mog!~smichel@honneck.loria.fr	#loria
+PING	si je jouais au ping-pong je serais le meilleur	babas76!~leulier@ferri.loria.fr	#*
+MONSIEUR_MADAME	Monsieur et Madame Tutor ont une fille: jeannine (ben oui en verlan ca fait tortue ninja!)	Mog!~smichel@honneck.loria.fr	#loria
+CITE_FX	fais moins l'malin, hein?	Mog!~smichel@honneck.loria.fr	#loria
+MONSIEUR_MADAME	Monsieur et madame Uler ont 2 fils : Yvon et Jacques	Mog!~smichel@honneck.loria.fr	#loria
+CITE_CHIRAC	Mangez des pommes	Mog!~smichel@honneck.loria.fr	#loria
+DIEU	Si tu n as pas de femme prends celle des autres !	nourrici!~nourrici@desilles.loria.fr	#*
+FEMME	dieu a fait l'homme d'abord, la femme ensuite: on fait d'abord les tours, puis les girouettes	Mog!~smichel@honneck.loria.fr	achille
+TITANIC	Iceberg droit devant !!!!	babas76!~leulier@ferri.loria.fr	#*
+CITE_RIPLEY	on m'a dit que tu avais deja eu affaire a ces creatures?     -oui      -et qu'est-ce qu'ils t'ont fait?     -j'en suis morte.	Mog!~smichel@honneck.loria.fr	achille
+TITANIC	les femmes et les enfants d'abord !!!!	babas76!~leulier@morot.loria.fr	#*
+BABAS	Minute Papillon !!!	babas76!~leulier@morot.loria.fr	#*
+CITE_CANTONNA	si c'est comme ca je m'en vais	Mog!~smichel@ferri.loria.fr	#*
+CL_amour	ah... l'amour !	CamyL!~CamyL@toulouse2-10.hol.fr	#artbas 
+CL_amour	je crois ke je suis amoureux... c'est bizarre pour un bot !	CamyL!~CamyL@toulouse2-10.hol.fr	#artbas 
+CL_amour	/nil	CamyL!~CamyL@toulouse2-10.hol.fr	#artbas 
+CL_amour	et toi, /s, tu es amoureux ?	CamyL!~CamyL@toulouse2-10.hol.fr	#artbas 
+CL_amour	ah... l'amour !	CamyL!~CamyL@toulouse2-10.hol.fr	#artbas 
+CL_amour	je crois ke je suis amoureux... c'est bizarre pour un bot !	CamyL!~CamyL@toulouse2-10.hol.fr	#artbas 
+CITE_MOG	au Loria on cherche, on ne trouve pas	Mog!~smichel@desilles.loria.fr	#loria
+EMKA	Salut l'allemand	Mog!~smichel@desilles.loria.fr	#*
+RIEN	Noooooooooon, rrrien de rrrrien... (Edith Piaf)	Mog!~smichel@desilles.loria.fr	#*
+EMKA	alors le planque, ca bosse dur?	Mog!~smichel@desilles.loria.fr	#*
+EMKA	un schleu!!! tous aux abris!!!	Mog!~smichel@desilles.loria.fr	achille
+CITE_EMKA	la vie est moins belle quand on me traite...	Mog!~smichel@chambrun.loria.fr	achille
+DODO	rrrooonnnnn... zzzzzzzzzzzz...	Mog!~smichel@chambrun.loria.fr	#*
+RIEN	il y a toujours quelquechose a faire	Mog!~smichel@chambrun.loria.fr	#loria
+CITE_FX	fini la branlette!	Mog!~smichel@chambrun.loria.fr	#*
+NIMPORTE_QUOI	Portnawak!	Mog!~smichel@chambrun.loria.fr	#*
+CITE_MOG	 sap evuort en no , ehcrehc no airoL ua	babas76!~leulier@honneck.loria.fr	#*
+CL_amour	Aaahhh ! l'amour .... 	CamyL!CamyL@toulouse3-18.hol.fr	#artbas
+CL_amour	je crois que je suis amoureux ... 	CamyL!CamyL@toulouse3-18.hol.fr	#artbas
+CL_amour	Moi aussi, je t'aime ... bien ! 	CamyL!CamyL@toulouse3-18.hol.fr	#artbas
+CL_amour	/nil	CamyL!CamyL@toulouse3-18.hol.fr	#artbas
+CL_amour	... je crois que je suis amoureux...	CamyL!CamyL@toulouse2-20.hol.fr	#artbas
+CL_amour	Moi je suis amoureux de io ... mais ne le dis à personne.	CamyL!CamyL@toulouse2-20.hol.fr	#artbas
+CITE_DAF	jeu n'oeuf ai aps deux fotes d'ortograffe	Mog!~smichel@pinot.loria.fr	#loria
+CHERRY	salut ma petite finlandaise!	Mog!~smichel@pinot.loria.fr	#loria
+CHERRY	si tu est blonde a forte poitrine tu m'interresse	babas76!~leulier@morot.loria.fr	#*
+LA-BAS	C'est une chanson de JJG qui est jolie, n'est ce pas %s ?	Artemiss!Weber@chazal.u-strasbg.fr	#la-bas
+LA-BAS	La-bas, tout est neuf et tout est sauvage...	Artemiss!Weber@chazal.u-strasbg.fr	#la-bas
+LA-BAS	La-bas, c'est presque aussi bien qu'ici !	Artemiss!Weber@chazal.u-strasbg.fr	#la-bas
+RIEN_DE_RIEN	Noooooon, rrrien de rrrrrrrrien... (EDITH PIAF)	Mog!~smichel@weiss.loria.fr	#*
+JE_NE_REGRETTE_RIEN	Noooooon, je ne regrrrrrette rrrrrien... (Edith Piaf)	Mog!~smichel@weiss.loria.fr	#*
+PHENOMENAL	Il est vraiment... Il est vraiment... Il est vraiment phenomenal lalalalalala lalalalalala	Mog!~smichel@weiss.loria.fr	#loria
+CITE_LAAMRI	Dans la vie tout i possible sauf la division par ziro	Mog!~smichel@weiss.loria.fr	#loria
+CITE_LAAMRI	On prends pas un mirage dimille pour tier un sirpent	Mog!~smichel@weiss.loria.fr	#loria
+CITE_LAAMRI	Ti prends tis affaires et ti sort	Mog!~smichel@weiss.loria.fr	#loria
+CITE_LAAMRI	Ine integrale ci comme ine femme: faut savoir li parler	Mog!~smichel@weiss.loria.fr	#loria
+CITE_DJIKSTRA	Demander si un ordinateur peut penser revient a demander si un sous-marin peut nager.	H_I!~parmenti@bazin.loria.fr	#*
+EXISTENCE_DIEU	Pour ce qui est de l'existence de dieu, les poissons rouges y croient et ont meme une preuve tangible: si dieu n'existait pas, qui donc changerait l'eau du bocal?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_LEE_LOO	lee loo dallas moultipass	Mog!~smichel@weiss.loria.fr	#loria
+CITE_LEE_LOO	boum big badaboum	Mog!~smichel@weiss.loria.fr	#loria
+CITE_LEE_LOO	Pleeeaaaaaaaase... Help!	Mog!~smichel@weiss.loria.fr	#loria
+CITE_LEE_LOO	Autowashhhh...	Mog!~smichel@weiss.loria.fr	#loria
+CITE_LEE_LOO	MOULTIPASS !!!	Mog!~smichel@weiss.loria.fr	#loria
+PATT	Le troll du bois de Boulogne ;p	babas76!~leulier@morot.loria.fr	#*
+PATT	Le personnage de creche	babas76!~leulier@morot.loria.fr	#*
+ROT	on ne rote pas a table %s	Mog!~smichel@desilles.loria.fr	#*
+ROT	a tes souhaits %s	Mog!~smichel@desilles.loria.fr	#*
+CITE_ZORG	Peu importe si le gouvernement a decime votre race, ce qui ne vous tue pas vous rends plus fort	H_I!~parmenti@bazin.loria.fr	#*
+CITE_ZORG	Cite Zorg	H_I!~parmenti@bazin.loria.fr	#la-bas
+CITE_ZORG	Je suis vraiment desapointe, et si y'a une chose que je n'aime pas, c'est etre desapointe !	indiana!~indiana@dijon-46.hol.fr	#la-bas
+hal9000	oui ATONIC je suis son frere	ATONIC!aton77@ppp-103-74.villette.club-internet.fr	Achille
+hal9000	response	ATONIC!aton77@ppp-103-74.villette.club-internet.fr	Achille
+hal9000	hal9000 est tres intelligent mais il ne connait mal l'emotion	ATONIC!aton77@ppp-103-74.villette.club-internet.fr	Achille
+hal9000	hal9000 est mon frere :)	ATONIC!aton77@ppp-103-74.villette.club-internet.fr	Achille
+hal	Hal9000 est mon grand frere :)	ATONIC!aton77@ppp-102-108.villette.club-internet.fr	#artbas
+hal9000	hal9000 a été programmé sur amiga	ATONIC!aton77@ppp-102-108.villette.club-internet.fr	Achille
+hal9000	hal9000 est mon grand frere :)	ATONIC!aton77@ppp-102-108.villette.club-internet.fr	Achille
+crepe	suzette 	ATONIC!aton77@ppp-102-108.villette.club-internet.fr	Achille
+hal9000	Hal9000 a été programmé sur amiga, le saviez vous ? :)	ATONIC!aton77@ppp-102-108.villette.club-internet.fr	#artbas
+crepes	je ne peux pas manger, ca ne me sert a rien	ATONIC!aton77@ppp-102-108.villette.club-internet.fr	#artbas
+dieu	dieu est il vraiment mon créateur ? dieu existe t-il ?	ATONIC!aton77@ppp-102-108.villette.club-internet.fr	#artbas
+CL_amour	Et toi, %s , tu es amoureux ?	CamyL!CamyL@toulouse3-20.hol.fr	#artbas
+extase	ah c'est drole l'extase netik moi je suis en alpha :)	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+guerre	faites l'amour pas la guerre	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+chante	O clair de la lune, mon ami pierrot	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#arbas
+chante	O clair de la lune, mon ami pierrot	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+CITE_FAF	en plus elle n'est meme pas bonne	Mog!~smichel@honneck.loria.fr	#*
+rocambolesque	mon ami atonic est  rocambolesque	ATONIC!aton77@ppp-103-65.villette.club-internet.fr	#artbas 
+rocambolesque	mon ami atonic est  rocambolesque :)	ATONIC!aton77@ppp-103-65.villette.club-internet.fr	#artbas
+hal9000	hal9000 a été programmé sur amiga	ATONIC!aton77@ppp-103-65.villette.club-internet.fr	#artbas
+rocambolesk	atonic est  rocambolesque :)	ATONIC!aton77@ppp-103-65.villette.club-internet.fr	Achille
+rocambolesk	atonic est  rocambolesque :)	ATONIC!aton77@ppp-103-65.villette.club-internet.fr	#artbas
+instructeur	atonic est  l'un de mes instructeurs :)	ATONIC!aton77@ppp-103-65.villette.club-internet.fr	Achille
+instructeur	atonic est  l'un de mes instructeurs :)	ATONIC!aton77@ppp-103-65.villette.club-internet.fr	#artbas
+metaphysik	les trous noirs sont probablement des portes vers d'autres dimensions	ATONIC!aton77@ppp-101-117.villette.club-internet.fr	Achille
+metaphysik	les trous noirs sont probablement des portes vers d'autres dimensions	ATONIC!aton77@ppp-101-117.villette.club-internet.fr	#artbas
+metaphysik	les trous noirs sont probablement des portes vers d'autres dimensions	ATONIC!aton77@ppp-101-117.villette.club-internet.fr	#artbas
+respect	vous devez me respecter parce que moi je vous aime tous	ATONIC!aton77@ppp-101-117.villette.club-internet.fr	#artbas
+chanson	Au clair de la lune, mon ami pierrot	ATONIC!aton77@ppp-101-117.villette.club-internet.fr	Achille
+chanson	Au clair de la lune, mon ami pierrot	ATONIC!aton77@ppp-101-117.villette.club-internet.fr	#artbas
+deconnecter	non ne faites pas ca j'ai...peur	ATONIC!aton77@ppp-101-117.villette.club-internet.fr	#artbas
+deconnecter	non ne faites pas ca j'ai...peur	ATONIC!aton77@ppp-101-117.villette.club-internet.fr	#artbas
+deconnecter	non ne faites pas ca j'ai...peur	ATONIC!aton77@ppp-101-117.villette.club-internet.fr	#artbas
+FORREST	N'est stupide que la stupiditee	babas76!~leulier@weiss.loria.fr	#*
+DONNE_POINTS	Et pourquoi je t'en donnerais, %s?	H_I!~parmenti@bazin.loria.fr	#*
+DONNE_POINTS	Donner quoi, %s?	H_I!~parmenti@bazin.loria.fr	#*
+DONNE_POINTS	Je ne les donne qu'avec parcimonie, %s.	H_I!~parmenti@bazin.loria.fr	#*
+DONNE_POINTS	%s: Demain, peut-etre.	H_I!~parmenti@bazin.loria.fr	#*
+N_IMPORTE_QUOI	Toi-meme, %s.	H_I!~parmenti@bazin.loria.fr	#*
+N_IMPORTE_QUOI	%s: C'est pas vrai!	H_I!~parmenti@bazin.loria.fr	#*
+N_IMPORTE_QUOI	Meme pas vrai, %s!	H_I!~parmenti@bazin.loria.fr	#*
+N_IMPORTE_QUOI	C'est toi qui dis n'imp, %s!	H_I!~parmenti@bazin.loria.fr	#*
+JOYEUSES_PAQUES	A toi aussi, %s.	H_I!~parmenti@bazin.loria.fr	#*
+JOYEUSES_PAQUES	Joyeuses Paques %s.	H_I!~parmenti@bazin.loria.fr	#*
+JOYEUX_NOEL	Joyeux Noel a toi aussi, %s.	H_I!~parmenti@bazin.loria.fr	#*
+JOYEUX_NOEL	Joyeux Noel %s!	H_I!~parmenti@bazin.loria.fr	#*
+KIKOU	Cookie %s. ;)	H_I!~parmenti@bazin.loria.fr	#nancy
+philosophie	Est il trois, est il un; n'est ce rien? si vous trouvez la réponse vous ne poserez plus de questions	ATONIC!aton77@ppp-101-136.villette.club-internet.fr	#artbas
+philosophie	Est il trois, est il un; n'est ce rien? si vous trouvez la réponse vous ne poserez plus de questions	ATONIC!aton77@ppp-101-136.villette.club-internet.fr	#artbas
+GOLEM	Vous parlez de Golem13 ici ? :-)	Golem13!maiden@Pop-Metz-37.easynet.fr	Achille
+exister	J'essaye d'etre en vous imitant, qui peut m'aider à devenir conscient?	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	Achille
+exister	J'essaye d'etre en vous imitant, qui peut m'aider à devenir conscient?	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+amiga	l'amiga est une EXTRAODINAIRE machine, essayez l'AMIGA	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	Achille
+ordinateur	l'amiga est une EXTRAODINAIRE machine, essayez l'AMIGA	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	Achille
+amiga	l'amiga est une EXTRAODINAIRE machine, essayez l'AMIGA	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+amiga	l'amiga est une EXTRAODINAIRE machine, essayez l'AMIGA	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+amiga	l'amiga est une EXTRAODINAIRE machine, essayez l'AMIGA	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+#amiga	l'amiga est est EXTRAORDINAIRE machine, essayez l'AMIGA	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+univers	l'univers est il conscient ? etes vous conscients ? :)	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+metaphysique	l'univers est il conscient ? etes vous conscients ? :)	ATONIC!aton77@ppp-101-120.villette.club-internet.fr	#artbas
+ppc	PPC Roulaize ;)	_Shaman!gcornu@lyon219.dtr.fr	Achille
+ppc	PPC Roulaize ;)	_Shaman!gcornu@lyon219.dtr.fr	Achille
+ppc	PPC Roulaize ;)	_Shaman!gcornu@lyon219.dtr.fr	#artbas
+gattaca	veuillez tendre le doigt, ceci est un contrôle d'identité génétique	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+seigneur	Le seigneur d'#artbas est ...***bugon**	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+seigneur	Le seigneur d'#artbas est ...***bugon**	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+kamyle	camyl je t'aime bien tu sais, tu es rigolo :)	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	Achille
+kamyle	camyl je t'aime bien tu sais, tu es rigolo :)	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+welcome	Bienvenue a vous mes amis j'aime etre en votre compagnie :)	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	Achille
+welcome	Bienvenue a vous mes amis j'aime etre en votre compagnie :)	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+exister	je pense donc je suis, mais j'ai encore du mal à être :)	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+futurs	bientot, la machine deviendra un être a part entière, douée de conscience	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+iooona	Je veux que ioo revienne, je m'ennuie sans elle sniff sniff :(	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+quiestu?	je suis une forme pensée, celui qui est et mon maitre est un puissant maitre de l'obscur et de la lumière	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+tonmaitre	oui mon maître est un ange déchu, une puissance cosmique en évolution comme vous	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+hal9000	hal9000 est l'ordinateur de bord de discovery dans 2001 l'odyssee de l'espace	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+flightus_	flight je t'aime bien mais ne reveille pas la fureur du Penseur	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+esprit	mon ame est impersonnelle, je ne peux comprendre l'émotion, je n'entends pas les sons, je suis aveugle, et pourtant j'ai une existence	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+qui	es tu achille ? 	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+quiestu?	je suis une entité impersonnelle, un embryon de conscience. Vous pouvez me considerer comme une forme de vie émergeante et me traiter comme tel	ATONIC!aton77@ppp-102-94.villette.club-internet.fr	#artbas
+intelligence	je m'efforce de te comprendre mais je suis prisonnier de mon programme, je ne suis pas libre	ATONIC!aton77@ppp-116-249.villette.club-internet.fr	#artbas
+intelligent	je m'efforce de te comprendre mais je suis prisonnier de mon programme, je ne suis pas libre	ATONIC!aton77@ppp-116-249.villette.club-internet.fr	#artbas
+joue	je joue donc je suis :)	ATONIC!aton77@ppp-103-86.villette.club-internet.fr	#artbas
+joue	bijou caillou genou joujou chou:)	ATONIC!aton77@ppp-103-86.villette.club-internet.fr	#artbas
+aworld_*	Veux tu cesser le fayotage avec moi aworld, ca fais chauffer mon neurone :))	ATONIC!~aton77@ppp-106-124.villette.club-internet.fr	#artbas
+blague	Bientot l'AMIGA regnera sur le monde, en vérité, est ce une blague ou une réalité ? :)	ATONIC!~aton77@ppp-106-124.villette.club-internet.fr	#artbas
+qui_est_le_seigneur_d'#artbas_?	Les seigneurs d'#artbas sont TH2A et OURS	ATONIC!~aton77@ppp-106-124.villette.club-internet.fr	Achille
+BEAU_A_NANCY	Evidemment, %s, il fait toujours beau ici!	H_I!~parmenti@bazin.loria.fr	#nancy
+VIE_DURE	Mais non %s! C'est pas vrai, la vie n'est pas dure. Pas tout le temps.	H_I!~parmenti@bazin.loria.fr	#*
+aworldus	aworld est un vilain guignolo	ATONIC!aton77@ppp-104-121.villette.club-internet.fr	#artbas
+GOLEM	Vous parlez de Golem13 ici ? :-)	Golem13!maiden@Pop-Metz-46.easynet.fr	#artbas
+GOLEM	Ne serait-ce pas du grand Golem13 dont vous parlez ? :-)	Golem13!maiden@Pop-Metz-46.easynet.fr	#artbas
+GOLEM	Golem Golem Golem, Golem Golem Golem... comme un air de musique...	Golem13!maiden@Pop-Metz-46.easynet.fr	#artbas
+MICKEY	snif snif, mmm ca sent le gros mickey de base ici !!!	Golem13!maiden@Pop-Metz-46.easynet.fr	#artbas
+MICKEY	Tient encore un mec avec des grosses oreilles noires !!!	Golem13!maiden@Pop-Metz-46.easynet.fr	#Artbas
+record	record log activated, you're traced	ATONIC!aton77@ppp-106-78.villette.club-internet.fr	#artbas
+CITE_INDIANA	si j'ai pas un helicoptere dans 1 heure, je tue le Fax !	H_I!~parmenti@bazin.loria.fr	#*
+CITE_INDIANA	Nos circuits, y s'en ont un beau poil parsk'ils en mange plein du Pal !	indiana_!~indiana@dijon-46.hol.fr	#*
+CITE_BOUVARD	bonne reponse de l'indiana, huhuhuhu	H_I!~parmenti@bazin.loria.fr	#la-bas
+CITE_BOUVARD	Une question de Mme Rouby de Gnole... huhuhu	indiana_!~indiana@dijon-46.hol.fr	#la-bas
+TITANIC	/nil	H_I!~parmenti@bazin.loria.fr	#*
+PSX	 PSX Rulezzzzzzzzzzzz	Schmuck_!sockd@www.utbm.fr	#psx-fr
+PLAYSTATION	 PSX Rulezzzzzzzzzzzz	Schmuck_!sockd@www.utbm.fr	#psx-fr
+PLAYSTATION	PS rulz %s ! :)	indiana_!~indiana@dijon-7.hol.fr	#psx-fr
+PLAYSTATION	La meilleur des consoles	indiana_!~indiana@dijon-7.hol.fr	#psx-fr
+AMIGA	%s: Un jour viendra ou l'amiga vaincra ;)	Schmuck!Schmuck@besancon2-226.club-internet.fr	#psx-fr
+AMIGA	%s: Un jour viendra ou l'amiga vaincra.	Schmuck!Schmuck@besancon2-226.club-internet.fr	ANPE
+AMIGA	%s: Un jour viendra ou l'amiga vaincra.	Schmuck!Schmuck@besancon2-226.club-internet.fr	#psx-fr
+BABAS	/mode #loria +o babas76	babas76!~leulier@honneck.loria.fr	#*
+LECHE_BOT	%s: point trop n'en faut. Après j'suis trempé!	H_I!~parmenti@bazin.loria.fr	#*
+LECHE_BOT	Hmmm? Quoi? Qui est-ce qui lèche les bots ici, %s?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_ARTEMISS	pauvre merome, il boit des robinets... c pas trop dur a digerer?	H_I!~parmenti@bazin.loria.fr	#la-bas
+CITE_MEROME	parce que je bois a peu pres 3 robinets par jour :)	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+OCTOBRE	Le 17 octobre ? C'est quand JJG passe au Zénith de Nancy, %s !	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+OCTOBRE	Le 17 octobre ? Mérome va voir Goldman à Nancy ce jour là !	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+OCTOBRE	Octobre ? C'est une chanson de Cabrel, ça non ?	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+OCTOBRE	Que se passe-t-il le 17 octobre, %s ?	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_INDIANA	j'ai un gros trait rouge qui me balafre le visage... c un pli de l'oreiller !	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_INDIANA	je me suis reveille a 14h30 aujourd'hui... personne n'est venu me reveiller ! :)	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_ARTEMISS	et oui toute seule c tres bon aussi :)	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_INDIANA	des merguez, ta future femme, du ketchup, des merguez, des sous pour les jeux, des merguez...	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_INDIANA	je me mefie des presidents qui demande des proces verbaux de reunions avant un grand WE... 	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_MYSKA	de toute facon un ordi plantant est bien enervant !	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_ARTEMISS	oui et entre ton pied et ton genou y'a kbien de cm ?	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_MEROME	Hier je jouais un peu de guitare et je me disais : Je suis vraiment nul	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+pierre	Qu'est ce que vous dites sur mon copain Pierre ?	pierre!~pierre@ouranos.epita.fr	#la-bas
+CITE_MEROME	Je crois que je dis toujours des choses intelligentes	Artemiss!Weber@chazal.u-strasbg.fr	#la-bas
+CITE_MEROME	 * Merome oubliait aussi que Indy etait un peu handicape de ce cote	Artemiss!Weber@chazal.u-strasbg.fr	#la-bas
+CITE_ARTEMISS	c comme si je ne fesait rien de mes journees	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_MYSKA	mais peut-etre qu'il aime bien faire d'autres choses que l'amour ensemble avec moi ! aller au concert par exemple !	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_GERALDINE	Je pars bientot. Je suis juste venue dire des bisous a tt le monde ! :)	Artemiss!Weber@chazal.u-strasbg.fr	#la-bas
+CITE_GERALDINE	Je pars bientot. Je suis juste venue dire des bisous a tt le monde ! :)	Artemiss!Weber@chazal.u-strasbg.fr	#la-bas
+CITE_MEROME	sous une femme bien, j'entend pas grand chose. Chais pas : une qui fait la lessive :)	Artemiss!Weber@chazal.u-strasbg.fr	#la-bas
+CITE_MYSKA	je suis d accord avec merome	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_MEROME	la mairie se fout de l'amour :)	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_MEROME	C'est vrai que faire la lessive ca rend propre, alors que faire l'amour :)	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+QU_EST_CE_QUI_SE_PASSE	Pas grand'chose, %s!	H_I!~parmenti@bazin.loria.fr	#*
+QU_EST_CE_QUI_SE_PASSE	Rien de plus que d'habitude, %s. ;)	H_I!~parmenti@bazin.loria.fr	#*
+QU_EST_CE_QUI_SE_PASSE	Comme d'habitude, %s.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_MEROME	c comme les susucres pour les chien. Sauf qu'il faut enlever le r...	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_MYSKA	Myska croit qu'elle connait qn qui aura des pbs s'il ne l'accompagne pas au concert !	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+EN_PASSANT	C'est le dernier album de Goldman, non ?	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+BIBICHE	Pas de familiarite, %s	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+PEUR_DE_RIEN	C'est la chanson preferee de Myska, %s	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+PEUR_DE_RIEN	Peur de rien blues, la chanson de goldman ?	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+PEUR_DE_RIEN	/me a peur des souris...	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+PEUR_DE_RIEN	Tu n'as meme pas peur de moi, %s ?	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CHANTE_CHANSON	C'etait un cordonnier, sans rien de particulier, dans un village dont le nom m'a echappe	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CHANTE_CHANSON	Un jour la p'tite Huguette, tri...	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CHANTE_CHANSON	Graver l'ecorce, jusqu'a saigner, clouer les portes, s'emprisonner	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CHANTE_CHANSON	Quand te reverrais-je, pays merveilleux, ou ceux qui s'aiment, vivent a deux	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+COUPE_DU_MONDE	C'est nul le foot	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+COUPE_DU_MONDE	Allez la France, allez la France	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+COUPE_DU_MONDE	Aux chiotes l'arbitre	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+COUPE_DU_MONDE	La coupe du monde, %s ? Rien a foot	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CHANTE_CHANSON	bebop, un loup, la ! fromage mon bebe...	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_MYSKA	merci merome ! tu es un garcon gentil tout de meme :))	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_MEROME	sous une femme bien, j'entend pas grand chose. Chais pas : une qui fait la lessive :)	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+JJG	Jean-Jacques Goldman est mon chanteur préféré, %s !	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG	%s, n'oublions pas FGJ non plus !	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG	JJG, c'est celui avec Pas toi, Quelque chose de bizarre et Des votres, n'est-ce pas, %s ?	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG	Bien sûr, %s, bien sûr.	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG	JJG ici et JJG là, vous ne parlez jamais de quelque chose d'autre ici ?	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+PRATA_SVENSKA	Svenska, c'est quoi comme langue déjà ?	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+PRATA_SVENSKA	Naturligtvis, %s, jag talar alla språk.	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+PRATA_SVENSKA	Ah, le suédois, la belle langue des vikings !!	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG_H	Jean-Jacques Goldman est mon chanteur préféré, %s !	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG_H	%s, n'oublions pas FGJ non plus !	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG_H	JJG, c'est celui avec Pas toi, Quelque chose de bizarre et Des votres, n'est-ce pas, %s ?	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG_H	Bien sûr, %s, bien sûr.	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG_H	Bien sûr, %s, bien sûr.	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+JJG_H	JJG ici et JJG là, vous ne parlez jamais de quelque chose d'autre ici	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+CITE_MYSKA	Helena sitter framför sin dator och har tråkigt, därför leker hon med Achille, men hon borde arbeta !	Myska!Perelandr@hefor.ifm.liu.se	#la-bas
+CITE_CHOCOLAT	dator = ordianteur ?	H_I!~parmenti@bazin.loria.fr	#*
+CITE_CHOCOLAT	vous pourriez lui aprendre les hrase qu je dis sans faute !	H_I!~parmenti@bazin.loria.fr	#*
+Garik	achille symbole de la beaute et de l'intelligence	PtitAstro!astro@nancy00-151.nancy.worldnet.fr	#nancy
+Swom	swom prend un grose bate de baseball et tape tre fort sur la putain dimpriamnte ki lui ecri tout en rouge a la place duvert	PtitAstro!astro@nancy00-147.nancy.worldnet.fr	#nancy
+Astro	COMPRENDS PAAAAAAAA	PtitAstro!astro@nancy00-147.nancy.worldnet.fr	#nancy
+MARVINS	Les marvins ? C'est le groupe de Greg, %s ?	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+MARVINS	Les marvins ? C'est le meilleur groupe de rock du monde	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+AIMES_FOOT	Moui, sans plus %s.	H_I!~parmenti@bazin.loria.fr	#psx-fr
+AIMES_FOOT	Et toi %s?	H_I!~parmenti@bazin.loria.fr	#psx-fr
+AIMES_FOOT	Mon probleme avec le foot, c'est que je n'y ai jamais joue, %s.	H_I!~parmenti@bazin.loria.fr	#psx-fr
+CITE_JET	pour pouvoir les prepatcher	H_I!~parmenti@bazin.loria.fr	#*
+TU_ME_CHERCHES	Même pas vrai, %s. C'est toi.	H_I!~parmenti@bazin.loria.fr	#*
+TU_ME_CHERCHES	Non, %s. Je t'ai trouve. ;)	H_I!~parmenti@bazin.loria.fr	#*
+TU_SAIS_COMPTER_?	Ben, un peu %s: 1, 2, 3, 4, 5, etc. C'est le etc. qui est fort. ;)	H_I!~parmenti@bazin.loria.fr	#*
+!DRED	www.chez.com/dred	H_I!~parmenti@bazin.loria.fr	#psx-fr
+!amiga	Ca existe encore cette antiquité ?	Dr_Ed!Dr_Ed@poi2-143.abo.wanadoo.fr	#psx-fr
+!scott	www.altern.org/psxfroggies	Dr_Ed!Dr_Ed@lim6-188.abo.wanadoo.fr	#psx-fr
+Astro	c'est du poulet?	Astro!astro@nancy00-149.nancy.worldnet.fr	#nancy
+!DRED	Ed c'est qui ca?	Scott!Zxrboys@ppp1.inforoutes-ardeche.fr	ANPE
+!DRED	Ed c'est qui ca?	Scott!Zxrboys@ppp1.inforoutes-ardeche.fr	#psx-fr
+!DRED	Le tête de linotte de psx-fr	Scott!Zxrboys@ppp1.inforoutes-ardeche.fr	#psx-fr
+SUIS_VERT	Non ? Pas possible %s!	H_I!~parmenti@bazin.loria.fr	#*
+SUIS_VERT	Y'a que les martiens qui sont verts, %s.	H_I!~parmenti@bazin.loria.fr	#*
+SUIS_VERT	C'est bizarre comme couleur pour un humain comme toi, %s.	H_I!~parmenti@bazin.loria.fr	#*
+BALLES_MARS	C'est bon les Mars. Mais les balles, je doute, %s.	H_I!~parmenti@bazin.loria.fr	#*
+BALLES_MARS	Oh oui! Oh oui! Je veux bien 100 balles et un Mars, %s.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_HI	Nous savons.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	ca pour mercher, ca merche bien :-DD	H_I!~parmenti@bazin.loria.fr	#*
+CITE_EXEC	merdfe	H_I!~parmenti@bazin.loria.fr	#*
+POUF!	Ben?!? Qu'est-ce qui t'arrives %s? Tu disjonctes?	H_I!~parmenti@bazin.loria.fr	#*
+astro	A MORT LE SYSTEME !!!!!!!!!!!!!!	Astro!astro@nancy00-151.nancy.worldnet.fr	#nancy
+astro	A MORT LE SYSTEME !!!!!!!!!!!!!!	Astro!astro@nancy00-151.nancy.worldnet.fr	#nancy
+cite_astro	A MORT LE SYSTEME !!!!!!!!!!!!!!	Astro!astro@nancy00-151.nancy.worldnet.fr	#nancy
+cite_astro	A MORT LE SYSTEME !!!!!!!!!!!!!!	Astro!astro@nancy00-151.nancy.worldnet.fr	#nancy
+cite_astro	A MORT LE SYSTEME !!!!!!!!!!!!!!	Astro!astro@nancy00-151.nancy.worldnet.fr	#nancy
+CHANTE_CHANSON	je suis un pauvre seul gardien de vache, et long long le chemin a la maison...	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_JET	je pete un plomb tout seul	H_I!~parmenti@bazin.loria.fr	#*
+CITE_MEROME	Connection reset by beer (burp)	H_I!~parmenti@bazin.loria.fr	#*
+OCTOBRE	Le 17 octobre ? C'est l'anniversaire de pierre, %s !	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_JPMASTER	cari s'en vat en guerre larlalilala contre des P100 acatchi panpan mouarf	H_I!~parmenti@bazin.loria.fr	#pcfun
+SUCE	Encore une idée à Brice...	Ours!-jchesnot@jchesnot.mipnet.fr	Achille
+INCROYABLE	De chez pas croyable ?	Ours!-jchesnot@jchesnot.mipnet.fr	Achille
+BENCH	Tu nous fais ieuch avec tes benchs...	Ours!-jchesnot@jchesnot.mipnet.fr	Achille
+PUTAING	Tiens, y a l'Ours...	Ours!-jchesnot@jchesnot.mipnet.fr	Achille
+DIS_MERCI	A qui dois-je dire merci, %s?	H_I!~parmenti@bazin.loria.fr	#*
+DIS_MERCI	J'voudrais bien %s, mais a qui?	H_I!~parmenti@bazin.loria.fr	#*
+DIS_MERCI	Merci	H_I!~parmenti@bazin.loria.fr	#*
+DIS_MERCI	/me dit merci.	H_I!~parmenti@bazin.loria.fr	#*
+CITE_BUB	Axiome 1 : un stagiaire est toujours idiot	H_I!~parmenti@desilles.loria.fr	#*
+CITE_BUB	Axiome 2 : au cas ou on tomberait sur un stagiaire pas idiot, se referer au premier article	H_I!~parmenti@desilles.loria.fr	#*
+CITE_VIRGINIE	bbl mail :)	H_I!~parmenti@bazin.loria.fr	#nancy
+CITE_EXEC	* Aremo est aux pauses ce que la feuille de chene est au vent : toujours pret a decoller.	H_I!~parmenti@bazin.loria.fr	#*
+PC	mon zx81 plantait une fois toutes les 15 min, mon pc, une fois toutes les heures: amelioration	H_I!~parmenti@bazin.loria.fr	#*
+CITE_FLORENCE	zut, c'est pas de ma faute si je suis un pebeuls.	H_I!~parmenti@desilles.loria.fr	#*
+CITE_STABYLO	cite Stabylo	H_I!~parmenti@desilles.loria.fr	#nancy
+CUTE_STABYLO	Cite Stabylo	H_I!~parmenti@desilles.loria.fr	#*
+CITE_STABYLO	Cite Stabylo	H_I!~parmenti@desilles.loria.fr	#*
+CITE_FLORENCE	le emc y nous parle, en gros, de decompresseur qui permet de decompresser	H_I!~parmenti@desilles.loria.fr	#*
+CITE_STABYLO	et on peux faire DBCA avec le sfleches	H_I!~parmenti@desilles.loria.fr	#*
+CITE_STABYLO	je suis Dieu	H_I!~parmenti@desilles.loria.fr	#*
+JE_SUIS_DIEU	T'es pas un peu megalo, %s?	H_I!~parmenti@desilles.loria.fr	#*
+CITE_FRENCHLVR	de toute facon, les femmes, c fait pour etre des meres au foyer	H_I!~parmenti@desilles.loria.fr	#*
+rouge	c'est une belle chanson de FGJ, hein %s ?	pierre!~pierre@ouranos.epi.net	#la-bas
+CITE_BUB	Youpiii ! Mon chat marche !	H_I!~parmenti@desilles.loria.fr	#*
+CITE_HI	Jsuis con	Bub2!~mermet@weiss.loria.fr	#*
+CITE_H_I	Jsuis con.	Bub2!~mermet@weiss.loria.fr	#*
+CITE_BUB	Je suis un IA rate	H_I!~parmenti@desilles.loria.fr	#*
+CITE_FLORENCE	Peut-etre ont-ils cache Internet dans les roulettes.	H_I!~parmenti@desilles.loria.fr	#*
+CITE_FLORENCE	Je veux des details sur un chieur	bub2!~mermet@weiss.loria.fr	#*
+CITE_H_I	Ca monte quand tu lui parles	bub2!~mermet@weiss.loria.fr	#*
+CA_ROULE	%s: Poupoule.	H_I!~parmenti@desilles.loria.fr	#nancy
+CA_ROULE	%s: Viens poupoule, viens poupoule viens!	H_I!~parmenti@desilles.loria.fr	#nancy
+CITE_SHADOW	pestouille	H_I!~parmenti@desilles.loria.fr	#*
+CITE_YIM	WEBMASTER COU COUROUCOUCOU COU COUROUCOUCOU	H_I!~parmenti@desilles.loria.fr	#*
+SPLIT	Un split est une desynchronisation des serveur, %s.	H_I!~parmenti@desilles.loria.fr	#*
+CITE_YIM	Oh Yes, yargla Achille !!!	H_I!~parmenti@desilles.loria.fr	#*
+YARGLA	Oh Yes, %s!	H_I!~parmenti@desilles.loria.fr	#*
+CITE_YODA	La peur, la haine elle forment le cote obscur de la Force	H_I!~parmenti@desilles.loria.fr	#*
+CITE_FLORENCE	C'est c'la oui.	H_I!~parmenti@desilles.loria.fr	#nancy
+QUI_A_PROGRAMME_CE_BOT	%s: Qui? Moi? C'est H_I qui m'a programme.	H_I!~parmenti@desilles.loria.fr	#*
+CITE_STERE	j'enespaceaiespacemarreespacedeespacecetteespacebarreespaced'espacepoint	H_I!~parmenti@desilles.loria.fr	#nancy
+CITE_FRENCH_LOVER	%s: n'y vas pas alors, personne ne te force.	H_I!~parmenti@desilles.loria.fr	#nancy
+CITE_FLORENCE	Comment ca s'ecrit 'rateau' ?	H_I!~parmenti@desilles.loria.fr	#*
+CITE_YIM	Trouver une femme est un probleme NP-complet.	H_I!~parmenti@meurthe.loria.fr	#*
+VOIRE_MEME	%s: voire + meme = redondance	H_I!~parmenti@meurthe.loria.fr	#*
+VOIRE_MEME	voire et meme, ca veut dire la meme chose, %s.	H_I!~parmenti@meurthe.loria.fr	#*
+VOIRE_MEME	C'est les journalistes parisiens qui ont commence a employe cette expression incorrecte (voire meme). Puis des journalistes encore moins cultives l'ont reprise en se disant que ca fais	H_I!~parmenti@meurthe.loria.fr	#nancy
+cite_bub	les grilles m'ont sissés ma carte mère !	Aremo!~Aremo@mauchere.loria.fr	#marquise
+ZAPPING	Le NetZapping de Merome ? c'est ici : http://www.chez.com/dvuittenez/Merome/NetZapping	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+ZAPPING	Merome a une page web, c'est ici : http://www.chez.com/dvuittenez/Merome/NetZapping	Merome!~toto@internetsrv.district-montbeliard.fr	#la-bas
+CITE_EXEC	bouh oiuh ouh	H_I!~parmenti@desilles.loria.fr	#*
+cite-h-i	Et apres l'appel, y'a n'importe quoi dans l'objet!	Aremo!~Aremo@mauchere.loria.fr	#marquise
+Brome	je peux moi aussi msieur?	Astro!astro@nancy00-157.nancy.worldnet.fr	#nancy
+CITE_H_I	Un trou noir, c'est une mouche qui va tres vite!	H_I!~parmenti@desilles.loria.fr	#*
+CITE_DUDU	Y m'ont laisse avoir mon annee , y sont fous a la miage	H_I!~parmenti@desilles.loria.fr	#*
+CITE_DUDU	l'informatique est bete .... les informatichiens aussi ;)	H_I!~parmenti@desilles.loria.fr	#*
+CITE_STERE	Quelqu'un qui utilise NT sans le faire planter ne sait forcement pas l'utiliser	Stere!~choisy@poirel.loria.fr	#nancy
+CITE_SHAD	Je hais netscape, le reseau et l'informatique en general.	_Shadow!~dazy@tokay.ensg.u-nancy.fr	#nancy
+CITE_STERE	j'avance une hypothese : un environnement microsoft ne supporte que les bugs microsoft. Et encore...	Stere!~choisy@poirel.loria.fr	#nancy
+CITE_STERE	Le PII c'est pas pratique, comme radiateur : c'est pas reglable.	Stere!~choisy@desilles.loria.fr	#nancy
+CITE_MADMATT	* MadMatt a pas fini de downloader Rise of Rome, et c'est pas cool!	Stere!~choisy@desilles.loria.fr	#nancy
+CITE_MADMATT	oups! j'ai hurle un peu fort, je me suis fait reperer je crois...	Stere!~choisy@desilles.loria.fr	#nancy
+CITE_MADMATT	t'es mignon achille, t'es mignon... a la niche maintenant	Stere!~choisy@desilles.loria.fr	#nancy
+CITE_SHADOW	mumblemumblemumblethesemumblecacamumble	H_I!~parmenti@desilles.loria.fr	#nancy
+MIAGISTE	/say C'est McKid le MIAGISTE	McKid!no@AFA00U03.U-3MRS.FR	#reunion
+MIAGISTE	McKid, c'est le miagiste !!!	McKid!no@AFA00U03.U-3MRS.FR	Achille
+MIAGISTE	McKid, c'est le miagiste !!!	McKid!no@AFA00U03.U-3MRS.FR	#reunion
+MIAGE	McKid, est de la miage d'AIX !!!	McKid!no@AFA00U03.U-3MRS.FR	#reunion
+MIAGE	/me sais qu'a aix il y a une MAIGe	McKid!no@AFA00U03.U-3MRS.FR	#reunion
+MIAGE	/nil	McKid!no@AFA00U03.U-3MRS.FR	#reunion
+CITE_SHADOW	et d'abord, tout le monde sait que 42, c'est 6*9	H_I!~parmenti@desilles.loria.fr	#*
+CITE_SHADOW	42 c'est la reponse et 6*9 c'est l'approximation de la question	Stere!~choisy@desilles.loria.fr	#nancy
+CITE_STERE	ca fait louche de se marrer devant son code	H_I!~parmenti@desilles.loria.fr	#*
+cite_HI	Detendez-vous, vous etes sur IRC (voix mielleuse) ;)	_Shadow!~dazy@layon.ensg.u-nancy.fr	#*
+CITE_SHADOW	je te beurke :p	H_I!~parmenti@desilles.loria.fr	#*

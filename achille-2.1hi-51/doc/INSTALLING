@@ -1,0 +1,29 @@
+How to install VladBot
+----------------------
+From version 2.0 it's no longer needed to edit the config.h file
+for configuring, all the important settings can be defined at 
+runtime in the configuration file. For more information look at 
+the distributed configuration files in doc/ and change ont of them
+to your needs.
+
+It's still needed to create your own userlist, shitlist and 
+protlist. For a simple startup, all you need to do is create these
+three files with the names "user.list", "shit.list" and "prot.list"
+(unless you named them differently in the configfile) and put a
+pattern in it that matches your nickname!user@host.domain.
+Usually, this pattern will look like "*!*user@*.domain"
+In the userlist, put "150" after the pattern. In the protfile
+"100" and in the shitlist "0".
+
+After you (hopefully succesfully) compiled the source by typing "make"
+in the vladbot directory and you created all the needed files, you 
+should be ready to run the bot!
+
+Where to find more information:
+- Information about the configuration file can be found in the
+  file "sample.cfg", which should be distributed with the botpackage.
+  The other two files are just examples, they don't show any real info.
+- Information about Commands and userlists can be found in the file
+  "help.bot". Read it using your favorite filebrowser or use the
+  "helpread" program which should be created when "make-ing" the bot.
+  And of course, /msg YourBot !help

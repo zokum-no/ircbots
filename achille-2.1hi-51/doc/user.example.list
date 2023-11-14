@@ -1,0 +1,13 @@
+###################
+# Some ppl seem to have trouble setting up these lists.
+# here are some examples:
+###################
+#
+# Add me (VladDrac) with level 100 (useradd etc.)
+*!*irvdwijk@*.cs.vu.nl		100
+# Give everyone op
+*!*@*				50
+# Blurb!foo@unix1.bar.com is superuser
+*!*foo@*.bar.com		150
+#
+# That's it!
