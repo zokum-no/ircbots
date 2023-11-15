@@ -1,0 +1,106 @@
+#########################################################
+##  RockBot    Globals                 settings file   ##
+#########################################################
+#The USER key defines the bots start out nick.
+NICK RockBot
+#
+# The USERID key is what the username will be if ident fails.
+USERID rockbot
+#
+# The SERVER key is a server the bot should use. Multiple SERVER keys are ok.
+# Syntax: SERVER <server> <port> [password]
+SERVER agora.rdrop.com 6667 
+#
+# The IRCNAME key is the 'realname' field on irc.
+IRCNAME !) Alpha RockBot 6 (!
+#
+# The OWERNICK key is what nick the bot will save for the HN command.
+OWNERNICK Rubin
+#
+# The OWERMASK key is a way for the bot to know you, when it has no userlist yet.
+OWNERMASK *!*rubin@*.orst.edu
+#
+# The CMDCHAR key tells the bot what command charactor to use.
+CMDCHAR !
+#
+# The DOWNDIR key is what directory the files to download are in.
+DOWNDIR /home/rubin/irc/RockBot6/download/
+#
+# The CHANNEL key tells the bot to read in a channel data file and join a channel
+# CHANNEL <name>
+# CHANNEL #genealogy-native
+#
+# The TOPIC key defines the channels default topic
+TOPIC This is the default topic for new channels
+#
+# The ENFMODES key is a string defining the default modes to be enforced.
+ENFMODES +nt-spimkl
+#
+# The USER key Defines the channel's(or global) users.
+# hostmask   = nick!user@host with standard * and ? as wild cards.
+# handle     = This is the persons 'normal' name. If a person has multiple
+#               hosts, setting each hosts handle the same makes dealing with
+#              the userlist much simpler.
+# pass       = This can be set to * to disable the need, or if set to anything
+#              else the bot will require you to authenticate first.
+# userlevel  = 01-10:Peon 
+#               11-20:ChanOp 
+#              21-30:ChanHelper 
+#              31-40:ChanCoOwner 
+#              41-60:ChanOwner 
+#              61-80:BotCoOwner 
+#              81-100:BotOwner
+# protectlev = 0:none
+#              1:unban/reop but dont punish
+#              2:unban/reop & deop perpitrator
+#              3:unban/reop & kick perpitrator
+#              4:unban/reop & kickban perpitrator
+#              5:unban/reop & screwban perpitrator
+# autoop     = 0:dont auto-op
+#              1:auto-op
+# info       = The bot will say this in the chan when you join
+#
+# Syntax: USER <hostmask> <handle> <pass> <userlevel> <protectlevel> <autoop> <announce info line>
+#         HOST <additional hostmask>
+USER *!*rubin@*.rdrop.com Rubin defaultpass 100 5 1 0 Thine Creator!
+HOST *!*rubin@*.afternet.org 1
+HOST *!*rubin@*.teleport.com 1
+HOST *!*rubin@*.europa.com 1
+HOST *!*rubin@*.ORST.EDU 0
+HOST *!*rubin@128.193.* 0
+#
+# BAN defines bans for either a channel or over all global.
+# hostmask = nick!user@host with standard * and ? as wild cards.
+# level    = What level of ban (0 - 5)
+# bywho    = nick!user@host of the person who set the ban.
+# when     = timestamp the ban was set
+# expire   = timestamp the ban should be removed (0 for none)
+# reason   = duh. .
+#
+# Syntax: BAN <hostmask> <level> <bywho> <when> <expiretime> <reason>
+#
+# The SETTING key defines one of the set options, and its value.
+# SETTING <Set name> <value>
+SETTING LOGGING 1
+SETTING AUTOOP 3
+SETTING PROTECTION 1
+SETTING SHITPROT 1
+SETTING ENFM 1
+SETTING IDLEKICK 0
+SETTING CLONEKICK 0
+SETTING FLOODKICK 0
+SETTING RIDEPROT 0
+SETTING STRICTOP 0
+SETTING WM 1
+SETTING PUBSEEN 0
+SETTING TALKING 0
+SETTING MASSPROT 0
+SETTING KSLEVEL 1
+SETTING MPLEVEL 1
+SETTING PUBTOGGLE 1
+SETTING CCREQ 1
+SETTING PMLOG 1
+#
+# End of Globals config file ./Ender/global.dat.
+
+

@@ -1,0 +1,9 @@
+Welcome to RockBot!
+   To unzip your new rockbot, and get started, download the latest 
+version to your unix shell acount, and type the following:
+
+gunzip RockBot4.0x.tar.gz           (fill the x in with the current version)
+tar -xf RockBot4.0x.tar             (this makes a 'RockBot4.0x' directory)
+cd RockBot4.0x                      (change to the RockBot directory)
+more RockBot.Guide                  (read the instruction file for step by
+                                     step instructions..)

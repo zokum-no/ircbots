@@ -1,0 +1,5 @@
+*.o
+*~
+core
+Makefile
+setup.h

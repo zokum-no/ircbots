@@ -1,0 +1,31 @@
+################ RockBot Version 4.x ##################
+###### Written By: rubin!rubin@agora.rdrop.com ########
+#######################################################
+# This file contains the replies the bot gives        #
+# in certain cases.  If you modify these, make sure   #
+# the comments are in the correct order, using the    #
+# comments supplied to make sure.  Leave the line     #
+# blank, if you'd like no reply                       #
+#######################################################
+### Command not recognized:
+I'm sorry Sir that command is unknown to me.
+### Not enough access:
+Access Denied !!
+### Net split reaction:
+Net split detected.
+### Noone specified for commands like: access, add
+Sir, please specify someone by <Nick>
+### User is protected warning:
+That was a protected user Sir.
+### Bot can't message itself:
+That was a nice try anyway (:
+### Mass modes detected
+Attention! mass modes detected! Run for cover!
+### No nick specifed with "NICK"
+Specify A Nick please sir.
+### No level specifed
+Specify A Level please sir.
+### Specify a channel name
+Specify The Channel Name please sir.
+### I'm not on that channel
+I'm sorry sir, but i'm not on that channel.

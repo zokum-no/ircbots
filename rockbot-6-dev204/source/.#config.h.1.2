@@ -1,0 +1,208 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#ifdef PYTHON
+#include "Python.h"
+#endif
+
+/* Define this to hide the bot as a pirch client 
+#define VERSION "PIRCH:MS Windows/WIN95:Beta Version 0.76: 96.04.05 c191452"
+*/
+#define VERSION "RockBot 6 (Dev version) [build 200]"
+#define HOMEDIR "RockBot"
+
+/* #define SETTINGSFILE "RockBot.Set" */
+#define WELCOMEFILE  "welcome.dat"
+#define USERHOSTFILE "userhost.dat"
+#define HELPFILE     "help.dat"
+#define FILELISTFILE "files.dat"
+#define REPLYFILE    "replies.dat"
+
+/* Files larger then this (in bytes) will be refused.. since rockbot doesn't accept
+   dcc's this is kinda curious... maybe it'll be added some day.
+*/
+#define DCC_MAXFILESIZE 2000000
+
+/* define this to use the kerbos ticket system.  This is most likely broken because
+   it hasn't been tested ever in the existance of RockBot.  It might work.. someone
+   let me know.  If you don't know what kerbos is, you can ignore this.
+
+#define KINIT
+*/
+
+/* define this if you have python installed and want to use it.
+   This enables the python script capabilities in rockbot
+
+#define PYTHON 
+*/
+
+/* 
+ * Virtual host users need to define this, and set the const vhost to there hostname.
+ * Set this to an IP address, not a hostname.  If your having trouble getting DCC
+ * to work, try defining this to the IP address clients connect to you by.
+
+#define VHOST "10.10.10.4"
+ */
+//#define VHOST "128.193.141.239"
+
+#define IRCPORT 6667
+#define OWNERLEVEL  100
+#define ASSTLEVEL   90
+#define MASSLEVEL   95
+#define PROTLEVEL   60
+#define MAXPROTLEVEL 5
+#define MAXSHITLEVEL 5
+#define validenforced_modes "inmlkspt"
+#define DEFAULTMODES "nt"
+#define SPACER "       ----------        \n"
+#define Reg1 register
+
+/* Octal codes that are handy to have around.. mostly for reference */
+#define BOLD \002          /* ^B  */
+#define DCC  \001          /* ^A  */
+#define NOCOLOR \017       /* ^O  */
+#define INVERSE \026       /* ^V  */
+#define UNDERLINE \037     /* ^_  */
+
+
+#define WAIT_SEC	40	/* How long to wait for input before timeout */
+#define WAIT_MSEC	0
+
+/*
+ * Number of seconds idle time before dcc-connections are closed
+ * 20 minutes should be 'nuff for idle dcc's. 90 secs is plenty for
+ * responding
+ */
+#define DCC_IDLETIMEOUT 2400
+#define DCC_WAITTIMEOUT 90
+#define AUTO_DCC
+
+/* How often should i check if inactive but authorized people
+ * are still online? (in seconds)  2 minutes is good i think. Too short
+ * a value could cause lag.. too long is less secure.*/
+#define AUTHCHECKTIME 120
+
+/* * Define this is you want noisy debugging info */
+ 
+#undef DBUG		
+#define DBUG
+
+/* Defining this makes the bot use the IP address the server tells it it has, instead of
+   the one the system reports.  This can be very handy if you run from behind a firewall
+   or in a situation where remote users cant get DCC's to work when the bot tells them
+   the local (unreal) IP address.  I'm going to leave this on by default because
+   I cant think of any reason not to use it.  If your sure the real IP is better, 
+   disabling it might be a good idea... i doubt you'll be able to tell the difference.
+*/
+#define PPP
+
+
+/* Define this if your trying to compile with cygnus' gnu-win32 in win95 or NT 
+   It should clean up anything such as fork() calls to keep it from running right.
+
+#define WIN95
+*/
+
+/* Define this if you have an O:line (operator) on the server.  Use at your
+   own risk!  currently the bot wont automaticaly use O: line powers for
+   anything..  but beware if someone gets access to the bot @ level 99 
+   they are effectively an ircop...
+
+#define OLINE
+*/
+
+/* * Define this for Console output not all that dislike irc itself (obsolete) */
+/*
+#undef CONMODE
+
+#undef EMAIL
+*/
+
+/*
+ * Standard stuff... change only if you know what your doing..
+ * usualy modifying these causes segfaults and things.
+ */
+#define MAXLEN		255
+#define INBUFFSIZE      1024
+#define FNLEN           150
+#define WAYTOBIG 	1024
+#define BIG_BUFFER	1024
+#define MAXNICKLEN	35
+
+/* Some defines to make code more readable */
+#define null(type) (type) 0L
+#define US       1
+#define THEM     2
+#define FAIL    0
+#define SUCCESS 1
+
+/* Used in some strtok functions as deliniators.. */
+#define SEPERATORS  ".,;\n "
+
+
+#ifndef NULL
+#define NULL(type) (type)0;
+#endif
+
+/* These are handy to have around... */
+#ifndef TRUE
+#define TRUE     1
+#define FALSE    0
+#endif
+
+#ifndef true
+#define true     1
+#define false    0
+#endif
+
+#define T        1
+#define F        0
+
+/* The debug output levels */
+#define DBGNOTICE   10
+#define DBGINFO     20
+#define DBGWARNING  30
+#define DBGERROR    40
+#define DBGSEVERE   50
+
+
+/* The userlevel defines... */
+#define BotOwner      81
+/*        BotOwner      81-100   Owns the bot.  This person can
+                               make it send raw stuff to the server
+                               execute arbitrary script, delete files
+                               anything.. 
+*/
+#define BotCoOwner    61
+/*        BotCoOwner    61-80    This person can make it join/part channels
+                               send msgs .. do almost anything pre-programmed.
+*/
+#define ChanOwner     41
+/*        ChanOwner     41-60    This person owns a channel, and 60 is the
+                               highest command available on a chan userlist.
+                               He can add permbans, add other chan users,
+                               make the bot say thing sin his channel ownly, etc.
+*/
+#define ChanCoOwner   31
+/*
+        ChanCoOwner   31-40    This person cant make the bot talk in the channel,
+                               or anything too raw, but can add bans/ops etc.
+*/
+#define ChanHelper    21
+/*        ChanHelper    21-30    These people can add bans, set modes, add ops, etc
+*/
+#define ChanOp        11
+/*        ChanOp        11-20    These people get auto-opped and can make the bot
+                               do kicks n stuff but thats about it.
+*/
+#define Peon            1
+/*        Peon          01-10    These people cant do anything or get ops, except
+                               this access clears them to get info from the bot,
+                               etc.  By default anyone who msgs the bot whos
+                               not known, might be auto-added as level 1.
+*/
+#define All           0
+
+#endif /* CONFIG_H */
+
+

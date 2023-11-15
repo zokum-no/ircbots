@@ -1,0 +1,72 @@
+#RockBot
+
+SHELL = /bin/sh
+VPATH = @srcdir@
+
+top_srcdir = @top_srcdir@
+srcdir = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+# use a good ANSI-C compiler
+CC = @CC@
+RM = @RM@ -f
+CP = @CP@ -r
+INSTALL = @INSTALL@
+DEFINES = 
+
+# CFLAGS: debug:-g optomization:-02
+CFLAGS = -g 
+#libs: memorychecking:-lefence sockets:-lsocket
+LIBS = 
+DEFINES =
+
+INSTALL_DIR = ..
+INSTALL_NAME = RockBot
+
+OBJECTS = main.o rockbot.o parse.o commands.o conv.o oper.o function.o\
+	  misc.o send.o match.o ctcp.o infobot.o\
+	  server.o channel.o chanuser.o userlist.o dcc.o ftext.o log.o
+
+all: bot
+
+bot: ${OBJECTS}
+	${CC} ${CFLAGS} ${DEFINES} -o ${INSTALL_NAME} ${OBJECTS} ${LIBS}
+	cp -f ${INSTALL_NAME} ${INSTALL_DIR}
+	rm -f ${INSTALL_NAME}
+
+%.o:%.c
+	${CC} ${CFLAGS} ${PYFLAGS} ${DEFINES} -c $<
+
+#This needs to be kept up to date for make to rebuild correctly.
+RockBot:
+channel.o: 	channel.c chanuser.h config.h channel.h userlist.h 
+chanuser.o: 	chanuser.c chanuser.h config.h 
+ctcp.o: 	ctcp.c ctcp.h config.h 
+dcc.o: 		dcc.c dcc.h config.h misc.h 
+ftext.o: 	ftext.c config.h 
+log.o: 		log.c config.h
+main.o: 	main.c config.h userlist.h channel.h chanuser.h parse.h
+match.o: 	match.c 
+misc.o: 	misc.c misc.h config.h 
+parse.o: 	parse.c parse.h commands.h channel.h chanuser.h config.h misc.h 
+send.o: 	send.c config.h 
+server.o: 	server.c config.h
+userlist.o: 	userlist.c userlist.h config.h 
+oper.o:	oper.c oper.h config.h
+commands.o: 	commands.c function.o config.h channel.h chanuser.h userlist.h dcc.h \
+		ftext.h misc.h commands.h conv.h infobot.h
+conv.o:		conv.c conv.h config.h
+infobot.o:	send.c
+rockbot.o: 	rockbot.c channel.h chanuser.h config.h 
+
+clean:
+	rm -f *.o ${INSTALL_NAME}
+
+install: all
+	$(INSTALL) -D $(INSTALL_NAME) $(prefix)/$(INSTALL_NAME)
+
+distclean: clean
+	$(RM) -f Makefile
+
+

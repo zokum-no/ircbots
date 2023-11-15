@@ -1,0 +1,28 @@
+NOTE: The database format has changed slightly from release 101r to 103!
+
+this means you cannot use the same data files you were previously using.  There
+is only manual conversion available at this point, here is an example:
+
+Old format:
+USER *!*captain@*.rdrop.com Captain * 61 2 1 *
+USER *!*rubin@*.rdrop.com Rubin mypass 100 5 1 Thine Creator!
+HOST *!*rubin@*.anotherhost.com
+
+New format:
+USER *!*captain@*.rdrop.com Captain * 61 2 1 0 *
+USER *!*rubin@*.rdrop.com Rubin mypass 100 5 1 0 Thine Creator!
+HOST *!*rubin@*.anotherhost.com 0
+
+
+Note the additional paramiter added to both HOST and USER.  You can
+add it as a "0" in your existing data files, or just delete and re-create them.
+
+You will also need to delete the UPDIR and BOTDIR lines from global.dat. They
+are no longer needed and will cause an error.
+
+I appologize for the change but there didnt seem to be enough users of the dev releases
+to justify the energy to write a conversion utility.
+
+
+	-Rubin
+

@@ -1,0 +1,1002 @@
+#############################################################
+############# RockBot Helpfile               ################        
+############# Written By: Alex Schumann      ################
+############# (rubin@agora.rdrop.com)        ################
+############# Helpfile rev 3.0               ################
+#############################################################        
+
+INDEX, RockBot help Index
+    Command    What it does
+---------------------------------------------------------------
+    TOPICS   - Catigorized help for eaisier viewing.
+    INDEX    - This list.  (/set hold_mode on for best results)
+    SETTINGS - A Help list for changable vars of the bot.
+    TOGGLES  - A Help list for changeable toggles of the bot.
+    8BALL    - Magic 8 ball.
+    ACCESS   - Tells you what your access level is.
+    CNU      - Create New User.
+    ADDHOST  - Add a new host to a handle.
+    AKSC     - Add a channel to the kicksay list.
+    AUTH     - Authenticate your identity to the bot.
+    B        - Bans a user.
+    CHACCESS - Change the level required to do a command.
+    CHANNELS - Tells what channels the bot is on currently.
+    CHAT     - Asks the bot to send you a /DCC chat request.
+    CKS      - Removes ALL kicksays.
+    CKSC     - Removes all Channels from the kicksay list.
+    CLVL     - Change a users access level.
+    CMDCHAR  - Change the bots command char.        
+    CYCLE    - Makes the bot leave and rejoin a channel.
+    DCCLIST  - Shows what /DCC connections the bot currently has.    
+    DEOP     - Deops someone.
+    DISPLAY  - Lists a file to the user.        
+    DO       - Used to send RAW irc data to the server.
+    DOWN     - Deop yourself.
+    ENFMODES - Enforce modes on a channel.
+    FILES    - List files available for DCC.
+    FLIST    - List files available for DCC.
+    FUCK     - FuckBan a user.
+    FUCK2    - Screw Kick-Bans a user.
+    GETCH    - Look at the bots current channel.
+    KEEPS    - Save the SHIT list to disk.
+    KEEPU    - Save the USER list to disk.
+    HELP     - Get this help Index, or help with a command.
+    HN       - Hold the nick for the bot owner.
+    INFO     - Gives some information on the bot.
+    INVITE   - Invite someone to a channel.
+    JOIN     - Has the bot join a channel.
+    K        - Kicks a user from a channel.
+    KB       - Kick-Bans a user from a channel.
+    KINIT    - Re-initalizes the Kerby Ticket system.
+    KS       - Add a Kick-Say (banned word).
+    LAST10   - List the last 10 commands and who issued them.
+    LEAVE    - Leave a channel.
+    LKS      - List active KickSays.
+    LKSC     - List active Channels for Kicksays.
+    LOCK     - Locks the bot from use with a password.
+    LOADUSERS- Re-load the userlist.
+    LOADSHIT - Re-load the shitlist.
+    LOGCHAT  - Loggs a channels activity to a file.
+    MDEOP    - Mass De-Ops users.
+    MDEOPNU  - Mass deops everybody not in the userlist.
+    ME       - Makes the bot do an ACTION.
+    MK       - Mass Kick.
+    MKB      - Mass Kick-Ban.
+    MKNU     - Mass Kicks people not in the userlist.
+    MOP      - Mass OP everybody.
+    MOPU     - Mass ops everybody in the userlist.
+    MSG      - Has the bot send a /msg.
+    NEXTSERVER Changes to the next server in the .serverlist.
+    NICK     - Change the bots nick.
+    OP       - Op someone.
+    OPEN     - Opens the channel (no key, no +i no ban on you, etc).
+    PING     - The bot responds with "PONG" for a lag detector.
+    PROT     - Protect a user.
+    PROTLIST - Show the protected users list.
+    RAOP     - Remove a users Auto-Op.
+    RESETUH  - Reset the User-Host memory.
+    RHN      - Stop holding the owners nick.
+    RKS      - Remove a kicksay.
+    RKSC     - Remove a channel from the kicksay list.
+    RLOGCHAT - Stop logging channels activity.
+    RPROT    - Remove protection from a user.
+    REREAD   - Re-reads info from RockBot.Set.
+    RSHIT    - Remove shitlisting on a user.
+    RSPY     - Stop spying on a channel.
+    RSPYMSG  - Stop sending msgs to the bot, to you.
+    RSTEAL   - Stop trying to steal a channel.
+    RUH      - Remove all the nick!user@host memory for a user.
+    SAVEUH   - Save the nick!user@host memory to file.
+    SAVE     - Save the userhost, userlist, and shitlist to disk.
+    SLEEP    - Save and shut down the bot.
+    SAY      - Makes the bot say something.
+    SB       - Site ban a user.
+    SCREW    - Screw-Ban a user.
+    SEEN     - Find out when someone was on last.
+    SEND     - Send a file via /DCC.
+    SERVER   - Change servers.
+    SETHANDLE- Change a users userlist handle.
+    SETSECURITY- Mark a host as secure or insecure.
+    SHIT     - Adds a user to the shitlist.
+    SHITLIST - Displays the Shitlist.
+    SHOWUSERS- Shows the users on a channel.
+    SKB      - Site kickbans a user.
+    SPAWN    - Makes a new bot. (fork)
+    SPY      - Spys on a channel.
+    SPYLIST  - Show whos spying on a channel.
+    SPYMSG   - Redirect msgs to the bot, to you.
+    STATS    - Show access, shit, and prot levels for a user.
+    STEAL    - Steal a channel.
+    TIME     - Show the current time.
+    TOPIC    - Sets the topic on a channel.
+    TOPTEN   - Shows the top 10 oppers with the most kills.
+    TOTSTATS - Shows complete stats for a nick.
+    UB       - Unbans a person.
+    UBA      - Unbans everybody on a channel.
+    UBM      - Unbans YOU.
+    UNLOCK   - Unlocks the bot from a LOCK command.
+    UP       - Op you on the current channel.
+    USERHOST - Returns a userhost in memory for a nick.
+    USERLIST - Shows the current userlist.
+Try "Help TOPICS" for a more dynamic listing.
+You can enable page pausing by typeing:
+'/set hold_mode on' to read the entire text.
+
+TOPICS, Help topics available:
+USAGE: help <topic>
+    Topic    - Description
+-----------------------
+    INDEX    - List of all commands (BIG!)
+    TOGGLES  - Things to turn on and off.
+    SETTINGS - How much, how often, how many etc...
+    USERS    - Things to do with the Userlist and Shitlist.
+    CHANNEL  - Stuff to do with channels.
+    KICKS    - Kicks and Bans.
+    BANS     - Kicks and Bans.
+    MASS     - Mass kick, ban, op, etc.
+    KICKSAYS - Baned word list administration.
+    SPYING   - Spying on channels and messages.
+    TOYS     - Fun stuff i can do
+
+TOYS, Fun stuff I can do.
+    Command  - Description
+--------------------------
+    HEART    - Show someone you care.
+    8BALL    - Magic 8 ball.
+    SEEN     - Shows when ppl have been on last.
+    PING     - See if i'm paying attention.
+    INFO     - Uptime, etc.
+    LOCK     - Locks the bot from use with a password.
+    UNLOCK   - Unlocks the bot from LOCK command.
+
+KICKSAYS, RockBot kicksay help
+    Command    What it does
+-------------------------------
+    AKSC     - Add a channel to the kicksay list.
+    CKSC     - Removes all Channels from the kicksay list.
+    RKSC     - Remove a channel from the kicksay list.
+    LKSC     - List active Channels for Kicksays.
+    KS       - Add a Kick-Say (banned word).
+    RKS      - Remove a kicksay.
+    LKS      - List kicksays.
+
+KICKS, Kicking and banning
+    Command    What it does
+-------------------------------
+    K        - Kicks a user from a channel.
+    KB       - Kick-Bans a user from a channel.
+    B        - Bans a user.
+    SB       - Site ban a user.
+    SKB      - Site kick ban.
+    SCREW    - A nasty ban with lots of * and ?'s.
+    UB       - Unban a user
+    UBA      - Unbans everyone on a channel.
+    UBM      - Unbans me.
+
+BANS, Kicking and banning
+    Command    What it does
+-------------------------------
+    K        - Kicks a user from a channel.
+    KB       - Kick-Bans a user from a channel.
+    B        - Bans a user.
+    SB       - Site ban a user.
+    SKB      - Site kick ban.
+    SCREW    - A nasty ban with lots of * and ?'s.
+    UB       - Unban a user
+    UBA      - Unbans everyone on a channel.
+    UBM      - Unbans me.
+
+CHANNEL, Do stuff to a channel
+    Command    What it does
+----------------------
+    CHANNELS - Tells what channels the bot is on currently.
+    GETCH    - Look at the bots current channel.
+    JOIN     - Has the bot join a channel.
+    LEAVE    - Has the bot leave a channel.
+    REMCHAN  - Has the bot leave and delete a channel.
+    CYCLE    - Makes the bot leave and rejoin a channel.
+    TOPIC    - Sets the topic on a channel.
+    INVITE   - Invite someone to a channel.
+    STEAL    - Try to steal a channel.
+    RSTEAL   - Stop trying to steal a channel.
+    OPEN     - Opens the channel (no key, no +i, no ban on you, etc)
+    UP       - Ops you.
+    DOWN     - Deops YOU.
+    OP       - Ops a user.
+    DEOP     - Makes the bot deop someone on a channel.
+    ME       - Makes the bot do an action in the current channel.
+    SAY      - Makes the bot say something on a channel.
+    LOGCHAT  - Logs a channels activity.
+    RLOGCHAT - Stops loggin a channel.
+
+USERS, User and Shit list functions
+    Command    What it does
+----------------------
+    USERLIST - Shows the current userlist.
+    SHITLIST - Shows the current shitlist.
+    PROTLIST - Shows the current protection list.
+    ACCESS   - Shows a users current access level.
+    STATS    - Shows Userlevel, ProtectLevel, ShitLevel, and Auto-Op status.
+    TOTSTATS - Shows Total user stats including kicks, bans and kills.
+    CNU      - Add a user to the userlist.
+    ADDHOST  - Add another host to a handle.
+    CLVL     - Change a users level in the userlist.
+    SETHANDLE- Change a users userlist handle.
+    SETSECURITY-Mark a host as secure or insecure.
+    REM      - Delete a user from the bot.
+    PROT     - Change a users protection level.
+    RPROT    - Set a users protection level to 0.
+    AOP      - Enable auto-op for a user.
+    RAOP     - Remove auto-op of a user.
+    SHIT     - Add a user to the shitlist.
+    RSHIT    - Removes a user from the shitlist.
+    KEEPU    - Saves the Userlist
+    KEEPS    - Saves the Shitlist.
+    LOADUSERS- Re-load the userlist.
+    LOADSHIT - Re-load the shitlist.
+
+MASS, Do things to multiple people at once
+    Command    What it does
+----------------------
+    MDEOP    - Mass De-Ops users.
+    MDEOPNU  - Mass deops everyone not in the userlist.
+    MK       - Mass Kick.
+    MKB      - Mass Kick-Ban.
+    MKNU     - Mass Kicks people not in the userlist.
+    MOP      - Mass Op.
+    MOPU     - Mass Op people in the userlist.
+
+SPYING, Spying on messages and channels.
+    Setting    What it does
+----------------------
+    SPY      - Spys on a channel.
+    RSPY     - Stops spying on a channel.
+    SPYLIST  - Shows whos spying on a channel.
+    SPYMSG   - Redirects messages to the bot, to you.
+
+ACCESS, format: access [nick or user@host]
+------------------------------------------
+    Shows the access level of a person...if no argument is given,
+    it shows the access of the one who called it.
+    see also: STATS, TOTSTATS
+
+CNU, format: cnu <handle> <*!*host@*mask> <level> [protect] [autoop]
+             cnu <nick> <level> [protect] [autoop]
+------------------------------------------------------------
+    CNU Adds a user to a userlist, either global userlist
+    or a local channel userlist.  CNU has two formats,
+    one with a nickname, the other with a hostmask and a 
+    handle.  Handle is a sort of global name a person
+    is known by under all there hosts and nicknames.
+    <handle>        - A string (up to 10 chars) designating the person.
+    <nick>          - The users nick (they must be online and in a channel
+                      with the bot).
+    <*!*host@*mask> - The users hostmask (E.G. *!*rubin@*.rdrop.com).
+    <level>         - The level. see the command LEVELS for a list of 
+                      possible levels.  You can spesify a number, or 
+                      a word (as seen in LEVELS).
+    [protect]       - Protection Level. Can be a number (0-5) or a word
+                      such as Kick,ban,kickban,deop,none etc.
+    [autoop]        - If the user gets autooped. Accepted values are 0,1,yes,no,true,false.
+    see also: REM, ACCESS, USERLIST
+
+SETSECURITY, format: setsecurity <hostmask> <insecure/secure>
+-------------------------------------------------------------
+    Marks a host as "secure" or "insecure".  Insecure hosts
+    require password authentication before commands are
+    accepted.  <hostmask> is the users hostmask to modify,
+    and the second paramiter is the word "secure" or "insecure".
+    see also: AUTH
+
+AUTH, format: auth <handle> <password>
+--------------------------------------
+    Authenticates you to the bot, in case your host
+    is marked as insecure.
+    see also: PASS, SETSECURITY
+
+SETHANDLE, format: sethandle <nick> <newhandle>
+--------------------------------------------
+    Changes the "handle" of a userlist account.
+    A handle is a nice way to keep track of
+    ALL of an individuals different hosts under
+    one easy to remember name.  Each person
+    should be assigned one handle in the userlist
+    and additional hosts added with ADDHOST.
+    Handles should be kept short to avoid
+    truncation in the userlist printout.
+    see also: ADDHOST, USERLIST
+
+AKSC, format: aksc <channel>        
+----------------------------
+    Adds a channel to the list on which
+    to auto-kick for kicksays...
+    The default is '*' (All Channels)
+
+ADDHOST, format: addhost <handle> [password] [userhost]
+-------------------------------------------------------
+    Adds another host to your userlist 
+    account "handle".  If you are currently
+    unrecignized by the bot, password is required.
+
+B, format: b [channel] <nick or user@host>        
+------------------------------------------
+    Bans a person on current channel or
+    the channel specified
+
+CHACCESS, format: chaccess <command> <level>        
+--------------------------------------------
+     Changes the access needed to do a certain
+     bot command
+
+CHANNELS, format: channels        
+--------------------------
+    The bot returns the channels it's on with
+    activity/topics.
+    see also: JOIN, LEAVE, UNREG
+
+CHAT, format: chat
+------------------
+    Makes the bot send you a dcc chat request
+
+CKS, format: cks        
+----------------
+    Removes all kicksays
+
+CKSC, format: cksc
+------------------
+    Removes all channels from the list on
+    which to auto-kick for kicksays
+
+CLVL, format: clvl <handle> <level>
+---------------------------------
+    Changes the access level of a user
+
+CMDCHAR, format: cmdchar <char>        
+-------------------------------
+     Sets the command character to the first
+     character after "cmdchar"
+
+CYCLE, format: cycle [channel]
+------------------------------
+    Makes the bot leave and rejoin the
+    current channel or the channel specifed
+
+DCCLIST, format: dcclist        
+------------------------
+    Shows the dcc connections the bot has
+
+DEOP, format: deop [channel] <nick>        
+-----------------------------------
+    DeOps a nick on current channel or
+    the channel specified
+
+DIE, see "SLEEP"
+
+SLEEP, format: sleep <msg>
+----------------------
+     Makes the bot save all information and quit irc...
+
+DISPLAY, format: display [file]
+-------------------------------
+     When you don't specify a file, display lists
+     the files that it can display.  Specifying a
+     file will display you that file
+
+DO, format: do <stuff>
+----------------------
+     Sends <stuff> to the server
+
+DOWN, format: down [channel]
+----------------------------
+    Has the bot deop you on current channel or
+    the channel specified
+
+ENFMODES, format: enfmodes <channel> [modes]        
+--------------------------------------------
+     Enforce modes on a channel...
+
+FILES, format: files
+--------------------
+     Lists the files that are in the fileslist
+     (RockBot.filelist) that's in the download
+     directory.  Use SEND to get a file.
+
+FLIST, format: flist
+--------------------
+     Lists the files that are in the fileslist
+     (RockBot.filelist) that's in the download
+     directory.  Use SEND to get files.
+
+FUCK, FUCKING, ETC... 
+---------------------
+     If you need help fucking, you must be a
+     real lamer
+
+FUCK2, format: fuck [channel] <nick> [msg]
+-----------------------------------------
+    Screw-kickbans a user on the current
+    channel or the channel specified...A
+    reason can also be given
+
+GETCH, format: getch
+--------------------
+    Returns the bot's current channel
+
+GETMSG, format: getmsg [#]
+--------------------------
+    Shows the current message to you from the message base, or the        
+    message # specified
+
+HEART, format: heart <send to> <name>
+-------------------------------------
+    Sends an ascii heart to <send to> with
+    <name> centered in the middle.
+
+HELP, format: help [command]
+------------------
+    Explains how to receive the helpfile or
+    gives you help with a certain command
+
+HN, format: hn [msg]        
+--------------------
+     Hold's the bot owner's nick when they change nicks
+     or quit irc...it will display [msg] when someone
+     says the botowner's name or someone msg's the bot...
+     Default message is "BotOwner is away..."
+
+INFO, format: info
+------------------
+    Returns information about the bot including
+    author, version, and uptime.
+
+CALC,  format: calc <Math>
+--------------------------
+    Does elementary math for you (+ - / * only)
+    you may combine multiple operations
+    on one line.
+
+8BALL, format: 8ball [yes or no question]
+-----------------------------------------
+    Gives predictions and answers questions.
+
+INVITE, format: invite [channel] [nick]
+---------------------------------------
+    Invites a nick to the current channel
+    or the channel specified...if no nick
+    is given, you are invited
+
+JOIN, format: join <channel>
+----------------------------
+    Makes the bot join, and register if necessary, a channel.
+    its up to the user to then add a ChanOwner (with CNU)
+    and modify the settings (with SET).
+    see also: CNU, SET, USERLIST, CHANNELS, LEAVE, REMCHAN
+
+K, format: k [channel] <nick> [msg]
+-----------------------------------
+    Kicks a nick from the current channel
+    or the channel specified...a reason
+    can also be given
+
+KB, format: kb [channel] <nick> [msg]
+-------------------------------------
+    Kickbans a nick from the current channel
+    or the channel specified...a reason
+    can aslo be given
+
+KILL, see "SLEEP"
+
+KINIT, format: kinit
+--------------------
+     This is for those systems that have kerberos tickets
+     and you need a ticket to the afs or nfs file system
+     Kinit will run a file called "KINIT" in the bot
+     directory...in this file should be:
+     echo "Password" | relogin
+     That should issue new tickets so you can once again
+     save the userslist and so forth...The bot will automatically
+     do this every 10 hrs, but if you need to do it before 10
+     hrs, that's what this command is for
+
+KS, format: ks <text>
+---------------------
+    Adds a kicksay to the list. Whole sentences
+    with wildcards are allowed.
+
+LAST10, format: last10        
+----------------------
+     Shows what the last10 commands done.
+
+LEAVE, format: leave [channel]
+------------------------------
+    Makes the bot leave the current channel
+    or the channel specified. The bot won't
+    leave a channel it is "stealing". Use
+    "rsteal" to make it leave.  This
+     command does NOT delete the data files
+     for the channel, so it can be JOIN'd later
+     and will have the same info.  Use UNREG
+     to totally wipe it from memory.
+     see also: JOIN, UNREG, SLEEP
+
+LKS, format: lks
+----------------
+    Shows the current list of kicksays
+
+LKSC, format: lksc
+------------------
+    Shows the channels that kicksay is active
+    on
+
+LOCK, format: lock <password>
+-----------------------------
+     Shuts down all non-essental functions
+     untill the correct password is givin
+     with the UNLOCK command.
+     NOTE: must be /msg'd.
+     see also: UNLOCK, SLEEP
+
+LOGCHAT, format: logchat <channel>        
+----------------------------------
+     Logs a channel's activity to a file
+
+MDEOP, format: mdeop <channel> [pattern]
+----------------------------------------
+     Massdeops users according to the pattern (wildcards
+     are allowed)...default pattern is: *!*@*
+	
+MDEOPNU, format: mdeopnu [channel]
+----------------------------------
+     Massdeops all users not in the userlist from
+     the current channel or from the channel
+     specified
+
+ME, format: me [channel] <text>
+-------------------------------
+    Makes the bot do an action on the
+    current channel or the channel specified
+
+MK, format: mk <channel> [pattern]
+----------------------------------------
+     Masskicks users according to the pattern (wildcards
+     are allowed)...default pattern is: *!*@*
+	
+MKB, format: mkb <channel> [pattern]
+----------------------------------------
+     Masskickbans users according to the pattern (wildcards
+     are allowed)...default pattern is: *!*@*
+
+MKNU, format: mknu [channel]
+----------------------------
+     Masskicks users not in the userlist from
+     the current channel or from the channel
+     specified
+
+MOP, format: mop <channel> [pattern]
+------------------------------------
+     Massops users according to the pattern (wildcards
+     are allowed)...default pattern is: *!*@*
+
+MOPU, format: mopu [channel]        
+----------------------------
+     Massops all users in the userlist on the
+     current channel or on the channel specified
+
+MSG, format: msg <nick> <message>        
+---------------------------------
+    Makes the bot send a private message (/msg)
+    to a user
+
+NEXTSERVER, format: nextserver        
+------------------------------
+     Makes the bot jump to the next server in the serverlist
+     (BotNick.servers)
+
+NICK, format: nick <nick>        
+-----------------------------
+     Renicks the bot...the bot will continue
+     to use filename according to the original
+     nickname when the bot was started...
+
+OP, format: op [channel] <nick>
+-------------------------------    
+    Ops a nick on current channel or the
+    channel specified
+
+OPEN, format: open <channel>
+----------------------------
+    Removes the +ikspm modes and unbans you
+    on the current channel or on the channel
+    specified
+    
+PING, format: ping
+------------------
+    Has the bot return "Pong" to see how lagged
+    it is
+
+PROT, format: prot <nick or user@host> <level>        
+----------------------------------------------
+     Protects a user...here are the different
+     possible protect levels:
+     1 - Reop/Unban protected user
+     2 - Deop enemy
+     3 - Kick enemy
+     4 - Kickban enemy
+     5 - Screw-kickban enemy
+
+PROTLIST, format: protlist
+--------------------------
+    Shows the protect list
+
+RAOP, format: raop <nick or user@host>
+--------------------------------------
+    Stops auto-opping a user
+
+RESETUH, format: resetuh        
+------------------------
+     Removes all nick!user@hosts from memory...
+     This will kill all stats and will start them over
+
+RHN, format: rhn        
+----------------
+     Stops the holding the bot owner's nick
+
+RKS, format: rks <text>
+-----------------------
+    Removes a kicksay from the list...
+
+RKSC, format: rksc <channel>        
+----------------------------
+    Removes a channel from the list on
+    which to auto-kick for kicksays...
+
+RLOGCHAT, format: rlogchat <channel>
+------------------------------------
+     Stops logging a channel's activity to a file
+
+RPROT, format: rprot <nick or user@host>        
+----------------------------------------
+     Stop protecting a user
+
+REMCHAN, format: remchan #channel
+---------------------------------
+     Delete a channel from data files and part it.
+     see also: LEAVE, JOIN
+
+REREAD, format: reread
+----------------------
+     Rereads changes made to RockBot.Set
+
+RSHIT, format: rshit <nick or user@host>        
+----------------------------------------
+     Removes a user from the shitlist
+
+RSPY, format: rspy <channel>
+----------------------------
+     Stops spying on a channel
+
+RSPYMSG, format: rspymsg
+------------------------
+    Stops redirecting /msgs to the bot
+
+RSTEAL, format: rsteal <channel>        
+--------------------------------
+     Stops stealing a channel
+
+RUH, format: ruh <nick!user@host>
+---------------------------------
+     Removes all stats and data for that
+     nick!user@host from memory...this is so
+     you can delete a nick where more than
+     1 userhost is in memory for it...
+
+KEEPS, format: keeps        
+--------------------------
+     Makes the bot save the shitlist
+
+SAVEUH, format: saveuh        
+----------------------
+     Saves the userhost data to disk
+
+KEEPU, format: keepu        
+----------------------------
+     Makes the bot save the userslist
+
+SAY, format: say [channel] <text>
+---------------------------------
+    Makes the bot say something to the
+    current channel or the channel specifed
+
+SB, format: sb [channel] <nick>
+-------------------------------
+    Site-bans a user on the current channel
+    or the channel specified.
+
+SCANMSG, format: scanmsg
+------------------------
+    Shows a listing of all your messages
+
+SCREW, format: screw [channel] <nick> [num]
+-------------------------------------------
+    Screwbans a user on the current
+    channel or the channel specified
+    1, 2, or 3 bans can be done, depending
+    on [num]
+
+SEEN, format: seen <nick>
+-------------------------
+    Returns the last time the bot saw that nick
+    and where it saw it
+
+SEND, format: send <filename>        
+-----------------------------
+     Sends a file that's in the fileslist (RockBot.filelist)
+     that's in the download directory
+
+SERVER, format: server <servername> [username] [ircname]
+--------------------------------------------------------
+     Makes the bot switch servers, with the option of
+     changing the username or ircname of the bot
+
+SETFL, format: setfl <num>
+--------------------------
+     Sets the flood kick level to a certain
+     number of lines
+
+SETIKL, format: setikl <seconds>
+--------------------------------
+     Sets the number of minutes of idle time
+     the bot will kick on
+
+SETKSL, format: setksl <level>        
+------------------------------
+     Sets the level a user needs in order to not
+     be auto-kicked because of a kicksay...
+
+SETMAL, format: setmal <level>        
+------------------------------
+     Sets the min level that the mass functions
+     of the bot will act upon...Say if this is
+     set at 90, then "mdop" will massdeop people
+     with users less than 90...same thing for
+     masskick, etc...
+
+SETMASS, format: setmass <deoplvl> <banlvl> <kicklvl>        
+-----------------------------------------------------
+     Sets the # of modes allowed during a 10 second
+     period before it's considered massmodes
+
+SETMBL, format: setmbl <level>
+------------------------------
+     Sets the minimum level a user needs to have
+     before they can ban anyone
+
+SETMDOL, format: setmdol <level>        
+--------------------------------
+     Sets the minimum level a user needs to have
+     before they can deop anyone
+
+SETMOL, format: setmol <level>
+------------------------------
+     Sets the minimum level a user needs to have
+     before they can op anyone
+
+SETMPL, format: setmpl <level>        
+------------------------------
+     Sets the mass protection level...this is the
+     level of revenge to take when mass modes are
+     detected...here are the possible levels:
+     1 - Kick user
+     2 - Kickban user
+     3 - Screw-kickban user
+
+SETMUBL, format: setmubl <level>        
+--------------------------------
+     Sets the minimum level a user needs to have
+     before they can unban anyone
+
+SETMUL, format: setmul <level>        
+------------------------------
+     Sets the maximum number of nicks allowed with the
+     same username
+
+SETSBT, format: setsbt [num]
+----------------------------
+    Sets the screwban type...[num] can be
+    either 0, 1 or 2 right now.
+    0 = Screwbans turned off
+    1 = Alternating ?'s
+    2 = Random ?'s and *'s
+
+SHIT, format: shit <nick or user@host> <level> [channels...]
+----------------------------------------------
+     Shitlists a user...here are the different
+     possible shitlist levels:
+     1 - Deop user when opped
+     2 - Kick user on join
+     3 - Kickban user on join
+     4 - Screw-kickban user on join
+     5 - Screw-kickban user and reban if unbanned
+If no channel is specified, all channels are assumed
+
+SHITLIST, format: shitlist
+--------------------------
+    Shows the current shitlist
+
+SHOWUSERS, format: showusers [channel]
+--------------------------------------
+     Shows the users on the current channel
+     or on the channel specified
+
+SKB, format: sbk [channel] <nick> [msg]
+---------------------------------------
+    Site-kickbans a user on the current
+    channel or the channel specified...A
+    reason can also be given
+
+SM, format: sm <nick or nick!user@host> <message>
+-------------------------------------------------
+    Send a message to a user for them to read
+    when they join the channel next...
+
+SPAWN, format: spawn <botnick> [-s server] [-c channel] [-u username]        
+---------------------------------------------------------------------
+     Spawns a new bot with various options...
+
+SPY, format: spy <channel>
+--------------------------
+     Spies on a channel for you
+     (redirects a channels activity)
+
+SPYLIST, format: spylist <channel>
+----------------------------------
+      Shows who is spying on that channel
+
+SPYMSG, format: spymsg
+----------------------
+    Redirects /msgs to the bot to you
+
+STATS, format: stats [nick or user@host]        
+----------------------------------------
+    Shows the full Access level, protection,
+    shitlist, auto-op stats for a user
+
+STEAL, format: steal <channel>
+------------------------------
+     Tries to steal the channel specified...
+     First it joins the channel...it waits for
+     someone to op it...if someone does it massdeops.
+     Or it waits until it's the only one left on a
+     channel then cycles it to get ops...
+
+TIME, format: time [channel]
+----------------------------
+    Returns the current time where the bot 
+    is running...if a channel is given, it
+    shows the time to the channel
+
+TOGAOP, format: togaop        
+----------------------
+    Toggles auto-opping on and off
+
+TOGBK, format: togbk
+--------------------
+    Toggles the kicking of multiple-beepers on
+    and off
+
+TOGCC, format: togcc        
+--------------------
+     Toggles the need for the command character
+     on and off
+
+TOGENFM, format: togenfm
+------------------------
+     Toggles mode enforcement on and off
+
+TOGFLOOD, format: togflood        
+--------------------------
+     Toggles public flood protection on and off
+
+TOGIK, format: togik
+--------------------
+     Toggles idle-kicking on and off
+
+TOGLOG, format: toglog        
+----------------------
+     Toggles logging to the logfile on and off
+
+TOGKLOG, format: togklog        
+------------------------
+     Toggles kill logging to a file on and off
+
+TOGMASS, format: togmass        
+------------------------
+     Toggles mass protection on and off
+
+TOGMUK, format: togmuk        
+----------------------
+     Toggles the kicking of people for a certain number
+     of nicks with the same username
+
+TOGPMLOG, format: togpmlog
+--------------------------
+     Toggles the logging of private message to the
+     bot on or off.  Note that they are automatically
+     logged when the bot is holding the owner's nick
+
+TOGPROT, format: togprot        
+------------------------
+     Toggles protection on and off
+
+TOGPUB, format: togpub
+----------------------
+    Toggles the ability to use public
+    commands on and off
+
+TOGSD, format: togsd        
+--------------------
+     Toggles server-deop on and off
+
+TOGSHIT, format: togshit
+------------------------
+    Toggles shitkicking on and off
+
+TOGSO, format: togso        
+--------------------
+     Toggles strict opping on and off
+     (If on, no one is allowed opped except
+     for users of the bot)
+
+TOGWM, format: togwm
+--------------------
+     Toggles welcome messages on and off
+
+TOPIC, format: topic [channel] <text>
+-------------------------------------
+    Changes the topic on the current channel
+    or on the channel specified
+
+TOPTEN, format: topten
+----------------------
+    Shows the ten opers with the most kills
+	
+TOTSTATS, format: totstats <nick>
+---------------------------------
+    Returns full stats for a certain nick...
+    Shows total # of bans, kicks, deops, ops,
+    and kills for someone...
+
+UB, format: ub [channel] <nick or user@host>        
+--------------------------------------------    
+    Unbans a person on current channel or
+    the channel specified
+
+UBA, format: uba <channel>        
+--------------------------
+     Removes all bans on the current channel or
+     on the channel specified
+
+UBM, format: ubm [channel]
+--------------------------
+    Unbans you from the current channel
+    or the channel specified
+
+UNLOCK, format: unlock <password>
+---------------------------------
+    Unlocks a previous LOCK. Correct password
+    must be supplied.  
+    NOTE: Command requires /msg.
+
+UP, format: up [channel]        
+------------------------
+    Makes the bot op you on the current channel        
+    or the channel you specify
+
+USERHOST, format: userhost <nick>
+---------------------------------
+    Returns the userhosts stored in memory for
+    a certain nick
+
+USERLIST, format: userlist
+--------------------------
+    Shows the current userlist

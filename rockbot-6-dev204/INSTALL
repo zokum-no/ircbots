@@ -1,0 +1,219 @@
+                         __.----.__
+                       /'    /\    `\
+                            /  \
+ ____            _         /    \     ____        _
+|  _ \ ___   ___| | __    /  __  \   | __ )  ___ | |_
+| |_) / _ \ / __| |/ /   /  / /   \  |  _ \ / _ \| __|
+|  _ < (_) | (__|   <   /  / /_    \ | |_) | (_) | |_
+|_| \_\___/ \___|_|\_\ /  | '_ \    \|____/ \___/ \__|
+                 |    /   | (_) |    \    |
+                 .   /     \___/      \   .
+                  \ '------------------' /
+                   \                    /
+                    '.___          ___.'
+
+           http://www.rdrop.com/~rubin/irc/RockBot/
+
+RockBot6 development pre-distribution
+-------------------------------------
+
+Congratulations, and thank you for helping to test RockBot6 during
+its development cycle.  You will need some experiance compiling
+and running things in the unix enviornment to use this bot, and please
+keep in mind many aspects of RockBot6 are not yet finished.
+
+Liscence
+--------
+RockBot is released under the GNU Public liscence. Please see the liscence
+included with the distribution.
+
+Quick install Directions
+------------------------
+cd RockBot
+./configure
+make
+cp -r Demo MyBot
+pico MyBot/global.dat
+./RockBot MyBot
+
+
+Basic Install Instructions
+--------------------------
+Untar the archive (it will make a dir, RockBot/)
+$ tar -xzf RockBot.tgz   #(or whatever your file is called)
+
+Change to the directory RockBot/
+$ cd RockBot
+
+run the configure script (./configure)
+if you want to install somewhere besides here, use the configure
+options, eg ./configure --prefix="/usr/local/rockbot".  
+see ./configure --help 
+when you run the configure script, it will examine your system and build appropreate makefiles for you (hopefully..)
+$ ./configure
+
+Look over source/Makefile and source/config.h make any changes necessary.  
+Run "make" to compile.  If your machine took 
+spesific changes to compile please write up a nice detailed description and
+email it to me (rubin@afternet.org).
+$ make
+
+Rename the "Demo" directory to a directory describing your bot. (each 
+"bot" gets its own directory out of the main RockBot/ directory) Anything 
+works, as long as its diferentiable from other bots you run off the same 
+binary.  (MyBot) for example..   (Its not a good idea to use punctuation though.).
+$ cp -r Demo MyBot
+
+Change into your bots data directory and modify global.dat to reflect your 
+information.  Be carefull not to break the syntax.  See documentation in 
+that file for help. some day i hope to build a script to do this for you.
+$ cd MyBot
+$ pico MyBot/global.dat
+
+Change back to the main RockBot/ directory and execute the bot.  The 
+syntax is "RockBot <dirname>" where <dirname> is the directory the data
+files are in (relitive to the RockBot binary).  Example:> ./RockBot Ender
+$ cd ..
+$ RockBot MyBot
+
+With any luck it will start.. if not you'll have to try to figure it out
+yourself unless you can convince me to take time out of my very busy schedule 
+to offer help.  Try to find me on Afternet (irc.afternet.org:#Afternet)
+
+Things not yet done (that i remember)
+-------------------------------------
+* Need to write a nice friendly first time build-a-new-bot
+  thing, like version 5 had.
+* There are still bugs in the ban system...still.
+* The kick-say kicks arnt working.
+* Help is still badly out of date (although updated somewhat)
+* Several commands are not yet working. I keep working down the list,
+  but theres a lot, and I'm not even necessarily aware of it all. If 
+  you find a bug let me know. 
+* The bot likes to undo peoples bans. It seems to think a ban like *foo*@* matches
+  a users hostmask of *rubin@*.loxxin.net because I could be rubin!foorubin@shoe.loxxin.net.
+  While this is true, the bot needs to only undo bans that actually spesifically match
+  someones hostmask. Not quite sure how to solve this. The matching code claims to solve
+  this problem but apparently not..
+* The nickname code is not quite right. In some cases the bot won't get its wanted
+  nick when it becomes free. 
+
+Update 7/16/01
+--------------
+* I've streamlined the login procedures a bit. If you have the password,
+  the AUTH command will now get you access regarless if you match a host
+  in the bot or not. If not, one will be added that matches you (but marked
+  as insecure, so you'll still need to login for access next time)
+* Added the base of "RESPONDERS" that will let the bot do script-like things,
+  such as login to another bot or service. They arnt functional yet though.
+
+Update 4/17/01
+--------------
+* Installed autconf (./configure) scripts, and rebuilt the makefiles.
+* Built proper header files for each .c file
+* removed all warnings when compiling with -Wall -pedantic
+* Fixed a few bugs in the process
+* Changed the way rockbot sends messages to the server:
+  Now, each message is stored in a queue, with a priority
+  based on what the message is, and who its for/from.
+  The bot can now send you large ammounts of data on irc
+  without interfering with normal processies. higher users
+  can get there output first, so lamers flooding the bot are only
+  annoying themselves.
+* Removed the requirement that long messages be sent in DCC. DCC link
+  with the bot is now optional (the CHAT command). Output on irc is slower
+  then DCC output though, obviously.
+* Fixed a bug with remchan deleting global.dat by mistake.
+* Many bugfixes
+
+Update 2/4/99
+-------------
+* Added virtual host support. Define VHOST in config.h to the IP 
+  you want the bot to bind to and it should bind to it (:
+* Fixed the userhost file save functions to actually save.  This
+  should help the SEEN feature work better *grin*
+
+Update 1/30/99
+--------------
+* The ban system is functional again. Sorry for those bugs, i
+  was adding the "NICK!" part to the userhost twice.
+* The UNBAN system is functional again. The parse function
+  wasnt calling add_ban and delete_ban as it should have been.
+* ADDHOST is now fixed, i decided for simplicity sake it just
+  always requires a password.  I'll make another, different command
+  for admins to add users hosts (addhost will be only for a user
+  to add his or her own hosts).
+* The CALC function was added. This is the first of infobot.c, another
+  file which will hold the infobot functions.
+* the ROLL or D command was fixed to work in private msg correctly.
+* AUTH was modified to default to the global list if local access
+  doesnt exist. (so /msg bot auth without a cmdchar will work.)
+* Modified the ignore system so it shouldnt ignore high bot level
+  users (such as botcoowner and botowner).  I've re-enabled the
+  sometimes annoying message that gets set to you when your being
+  ignored.. mostly for debugging.  Maybe i'll make it into a #define.
+
+Update  1/23/99
+---------------
+* NOTE: Database format change! Do not use dev-101r's data
+  files with dev-103.  See the file README.UPGRADE-TO-103 for
+  more information.
+* Added many commands to help such as addhost, and setsecurity.
+* Fixed a few commands, such as CLVL (now accepts word levels).
+* Password Security system in place. May still be buggy, but its mostly
+  implimented.  New commands: AUTH and SETSECURITY.
+
+Important Changes from RockBot 5.x and lower
+--------------------------------------------
+The data files and memory model were totally
+re-written.  RockBot now uses a multiple-channel
+scheme for keeping track of users, and also
+allows one user to store multiple hostmasks under
+one "handle".  There is also a "global" config that
+controls the default settings for channels and
+high level bot users.  In order to diferentiate
+between global commands and local channel commands
+the following syntax has been implimented:
+(Note: This example assumes CMDCHAR is '!')
+Sent to a channel -> !userlist             = userlist of the channel typed in
+Sent to a channel -> !#mychannel userlist  = userlist of #mychannel
+Sent to a channel -> !!userlist            = global userlist
+---
+Privmsg to bot -> #mychan userlist      = userlist of #mychan
+Privmsg to bot -> !userlist             = global userlist
+---
+When you use JOIN a data file will be created to contain the
+new channels users, settings, topic etc.  The LEAVE command
+parts the bot but does NOT remove the datafiles, however REMCHAN does.
+
+
+An important note about RockBot and DCC
+---------------------------------------
+As always, rockbot has used a very different
+DCC model from bots like eggdrop. In
+RockBot YOU NEVER initiate a DCC chat with
+the bot. In all cases the bot will send you
+a DCC chat request when it needs one due to
+the type of data its returning. If you have 
+trouble with DCC's it may be the bot cannot
+determine its true IP address on the machine.
+Try playing with "#define PPP" in config.h.
+
+UPDATE: I have done a lot of work to make it
+so that rockbot can communicate with NOTICES
+and not get lagged, by using a priority queue
+system. Now that this is done, i have turned
+off the DCC requirement in rockbot!
+You can still get the bot to dcc chat you
+by issuing the CHAT command.
+
+
+Contacting the Author
+---------------------
+RockBot is written by Alex Schumann 
+you can reach me at my email, rubin@afternet.org.
+Also see http://www.loxxin.net/~rubin/
+OR, as always find me on IRC at irc.loxxin.net 
+in channel #Operations.
+
+
