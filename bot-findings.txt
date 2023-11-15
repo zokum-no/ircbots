@@ -2,6 +2,16 @@
 French Vladbot fork from 1996 with added AI code and commands.
 
 
+== Ariela ==
+A fork off of Vladb ot 2.1c with a few minor registered only users tweaks for
+Barron and President. Bot seems to have been in use on Undernet.
+
+
+== Dweebot ==
+A Combot branch. Even though cthe onfig defines identify it as 0.3a, the readme 
+identifies it as 0.6a and lists changes from 0.3a.
+
+
 == HopBot ==
 File: hop1.8.tar.Z
 
