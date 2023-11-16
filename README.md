@@ -30,6 +30,6 @@ Hopbot                         Very basic bot, less than 15kb.
    |       |   +--RockBot            Fixes alleged backdoors in Stel.
    |       |       +--StarBot        Starlink network service bot.
    |       +--EnergyMech             Widely used bot, feature-rich.
-   |           +--Extramech-gudelia 
+   |           +--Extramech-gudelia  Fork with services support and a game.
    Vladbot 3.x branch                No known forks off of this one.
 ```
