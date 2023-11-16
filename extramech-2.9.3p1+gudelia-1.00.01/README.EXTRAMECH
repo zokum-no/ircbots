@@ -1,0 +1,43 @@
+Éste fichero contiene información sobre los añadidos
+por Julio González Obi-Wan en este energymech ampliado.
+
+1. Estadísticas de canales
+2. Defines
+3. Frases
+4. MOTD, CREDITS...
+
+1. Estadísticas de canales
+
+En realidad esta característica no tiene nada de particular, simplemente muestra un letrero publicitando la URL del canal de estadísticas, sacando la URL del fichero extramech.h y "nombredelcanal.html".
+
+Para modificar la URL cambie el define necesario en src/extramech.h
+
+Se activan simplemente activando el logeo de canales (-tog chanlog)
+
+Se visualizan con el comando -cstats
+
+
+2. Defines
+
+Muy simple, por cada canal al que desee activarle los defines cree un directorio con el nombre del canal en defines/
+
+Por cada definición se almacena un fichero de texto en ese directorio.
+
+Para mas informacion vea los comandos -define -defineadd y -definedel
+
+3. Frases
+
+Si un canal no tiene fichero de frases, se toman de randfiles/randphrase.e
+
+Si el canal tiene fichero de frases, este estará en randfiles/phrases/nombrecanal.e
+
+Se añaden las frases en ficheros .e mediante una frase por linea
+
+Para más información vea el comando -phrase
+
+
+4. MOTD, CREDITS...
+
+MOTD muestra un mensaje del dia, que debe definirse con el fichero mech.motd
+
+CREDITS muestra una lista de los programadores originales Energymech y los que participamos en Extramech

@@ -1,0 +1,177 @@
+# Sample EnergyMech configuration file
+# v2.9.1 - endorphin
+#
+# Note - Lines starting with '#' are comments and ignored by the bot.
+
+##### Linking #####
+# EnergyMechs can link(-help LINK) to one another to perform such features
+# as DCC PartyLine, Remote Command Execution (-help CMD), and Ops/Protection
+# (Add linked bots to eachother at level 200). This section is optional,
+# bots running in the same config file are automaticly linked.
+
+# Entity Name: In order to link to other bots, your bot must
+#              have a unique entity name. -CHANGE THIS-
+#ENTITY        emech
+
+# Link Password: A password for linking. -CHANGE THIS-
+#LINKPASS      abc123
+
+# Link Port: A port the bot will listen on for linking, telnet, 
+#            and pipeuser(http://www.energymech.net/docs/pipeuser.html)
+#            This has to be above 1024, and some firewalls, noteably
+#            IP Masquerade/NAT may block this.
+#LINKPORT      49152
+
+# An example link configuration, here you have an ENTITY called ``hismech'' 
+# and its LINKPASS  is ``a1b2c3''. It is running on ``mech.host.net'' and
+# it's LINKPORT is 49152.
+#LINK          hismech a1b2c3 mech.host.net 49152
+
+# Another example, the entity ``hermech'' is not listening on any port
+# (missing or non-working LINKPORT in config), so it does not matter
+# what host it is on as well, thus "0 0" at the end(-help LINK).
+#LINK          hermech abcdefg 0 0
+
+# Automatic Linking: Uncomment this to enable auto-linking. This will
+#                    cause the mech to try and link to all bots in it's
+#                    list, until all are present.
+#AUTOLINK
+
+##### Server List ####
+# Some undernet servers to connect to... You can use server names is you wish, 
+# but putting the IP's here instead of host names speeds up connects (alot).
+# Servers are global, all mechs in the same process uses the same server list.
+#
+SERVER  194.134.7.194   6667    # amsterdam.nl.eu.undernet.org
+SERVER  194.119.238.162 6667    # Flanders.be.eu.undernet.org
+SERVER  193.49.200.16   6667    # caen.fr.eu.undernet.org
+SERVER  195.121.6.196   6667    # diemen.nl.eu.undernet.org
+SERVER  194.119.238.162 6667    # flanders.be.eu.undernet.org
+SERVER  193.110.95.1    6667    # geneva.ch.eu.undernet.org
+SERVER  129.27.3.9      6667    # graz.at.eu.undernet.org
+SERVER  129.27.3.14     6667    # graz2.at.eu.undernet.org
+SERVER  62.250.14.6     6667    # haarlem.nl.eu.undernet.org
+SERVER  213.208.119.11  6667    # london.uk.eu.undernet.org
+SERVER  213.46.223.3    6667    # oslo.no.eu.undernet.org
+SERVER  195.54.102.4    6667    # stockholm.se.eu.undernet.org
+SERVER  213.48.150.1    6667    # surrey.uk.eu.undernet.org
+SERVER  207.96.122.250  6667    # arlington.va.us.undernet.org
+SERVER  199.170.91.114  6667    # austin.tx.us.undernet.org
+SERVER  205.252.46.98   6667    # mclean.va.us.undernet.org
+SERVER  140.99.102.4    6667    # mesa.az.us.undernet.org
+SERVER  132.207.4.32    6667    # montreal.qu.ca.undernet.org
+SERVER  66.100.191.2    6667    # newyork.ny.us.undernet.org
+SERVER  154.11.89.164   6667    # toronto.on.ca.undernet.org
+SERVER  205.188.149.20  6667    # washington.dc.us.undernet.org
+
+# You can also have EnergyMech connect to passworded IRC servers:
+# SERVER  1.2.3.4         6667   ThisIsMyPassword
+
+# Furthermore, using the password feature, you can have EnergyMech connect
+# though various IRC bouncers that support fast connections via the password
+# line. For example, to connect to eu.undernet.org through a BNC 2.6.x 
+# running on 192.168.100.1 port 6669 with a password of moo, you would
+# do:
+# SERVER 192.168.100.1    6669  moo:eu.undernet.org:6667
+# Consult your bouncers documentation for more information.
+
+##### Bot 1 Configuration #####
+# In EnergyMech, you can have multiple bots on IRC from the same config
+# file/process. Traditionaly, the spawn command was used, however, that 
+# command has been removed in 2.8.2 and above due to abuse. You can still
+# specify more than one bot in the config file as shown.
+
+# Nick for the bot.
+NICK          emech
+
+# The file we use to store the userlist. Note you will have to generate
+# this with a command such as ./genuser emech.users
+USERFILE      emech.users
+
+# All commands begin with this character.
+CMDCHAR       -
+
+# Register on IRC with this username (emech@xxxxxxxx). Note that if your
+# machine is running identd, it will always be your username.
+LOGIN         emech
+
+# Display this in the "Real Name" field
+IRCNAME       Have You Tried The Ultimate IRC BOT?
+
+# Authenticate to an IRC service. -CHANGE THIS-
+#SERVICE       x@channels.undernet.org login loginid password
+
+# User modes for the bot
+MODES         +ix-ws
+
+# If you want to run the bot on a virtual host, uncomment
+# the below line and set it.
+#VIRTUAL       my.silly.vanity.domain.com
+
+# If you compiled with SEEN support and decide not to use it, uncomment this.
+#NOSEEN
+
+# Channel-Independant toggles and sets. See the -REPORT command for a full
+# listing.
+HASONOTICE		# Yes for Undernet.
+TOG CC          1       # We want the bot to require command character
+TOG CLOAK       1       # Ignore CTCP's from non-users? Yes.
+TOG SPY         1       # Tell who is executing what in the partyline.
+SET OPMODES     6       # How many modes in a line? 6 on undernet...
+SET BANMODES    6       # How many bans in a line? 6 on undernet...
+SET CTIMEOUT    90      # Server connection timeout
+SET CDELAY      30      # Delay between connection attempts
+
+# Basic channel setup. You can have as many of these as your server
+# supports. See the -REPORT command for a listing.
+CHANNEL         #example       # Channel name
+TOG PUB         1       # Allow public(in-channel) commands? Yes.
+TOG MASS        1       # Do mass-mode/kick/ban checks...
+TOG SHIT        1       # Activate the shitlist for this channel
+TOG PROT        1       # Activate protection of users
+TOG ENFM        0       # Dont enforce channel modes.
+SET MDL         7       # How many -o before killing the guy?
+SET MKL         7       # How many kicks?
+SET MBL         7       # And how many Bans?
+SET MPL         1       # What to do with massmoders?
+#                       0 = nothing,
+#                       1 = kick the bastard,
+#                       2 = kickban 'em,
+#                       3 = kickban & shitlist them.
+##### END BOT 1 #####
+
+##### Bot 2 Configuration #####
+#NICK          othermech
+#USERFILE      othermech.users  # No two bots can have the same user file.
+#CMDCHAR       -
+#LOGIN         othermech
+#IRCNAME       Have You Tried The Ultimate IRC BOT?
+#MODES         +i-ws
+#VIRTUAL       my.other.silly.vanity.domain.com
+#NOSEEN
+
+#HASONOTICE
+#TOG CC         1
+#TOG CLOAK      1
+#TOG SPY        1
+#SET OPMODES    6
+#SET BANMODES   6
+#SET CTIMEOUT   90
+#SET CDELAY     30
+
+#CHANNEL        #example
+#TOG PUB        1
+#TOG MASS       1
+#TOG SHIT       1
+#TOG PROT       1
+#TOG ENFM       0
+#SET MDL        7
+#SET MKL        7
+#SET MBL        7
+#SET MPL        1
+##### END BOT 2 #####
+
+# There are lots of people who do not edit their configuration
+# file. This is here just to keep you paying attention.
+# Comment it out.
+DIE You forgot to edit your configuration file...

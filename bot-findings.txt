@@ -12,6 +12,12 @@ A Combot branch. Even though cthe onfig defines identify it as 0.3a, the readme
 identifies it as 0.6a and lists changes from 0.3a.
 
 
+== Extramech gudelia ==
+WARNING: Sourceforge reported this as possibly including malware. This is a 
+fork of the Energymech bot, with services support and extra documentation in
+spanish.
+
+
 == HopBot ==
 File: hop1.8.tar.Z
 

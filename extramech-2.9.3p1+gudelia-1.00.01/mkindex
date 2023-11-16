@@ -1,0 +1,48 @@
+#!/bin/sh
+
+if [ -z $1 ]; then
+    echo "Usage: $0 <randfile>"
+    exit
+fi
+
+CC=`grep -e "^CC" src/Makefile 2>/dev/null | cut -f2- -d=`
+if [ -z $CC ]; then
+    echo "Run ./configure first"
+    exit
+fi
+
+cat > $$.c << "EOF" 
+#include <unistd.h>
+
+int	eol=0,count=0,offset=0,length=0;
+char	buff;
+
+int main()
+{
+	while (read(STDIN_FILENO,&buff,1) > 0)
+	{
+		if (buff == '\r') buff = '\n';
+		if (!eol && (buff == '\n')) 
+		{
+			length = count-offset;
+			write(STDOUT_FILENO,&offset,sizeof(offset));
+			write(STDOUT_FILENO,&length,sizeof(length));	
+			eol = 1;
+		}
+		if (eol && (buff != '\n'))
+		{
+			eol = 0;		
+			offset = count;
+		}
+		count++;
+	}	
+}
+EOF
+
+$CC -o $$ $$.c
+
+echo Indexing $1... 
+cat $1.e | ./$$ > `echo $1.e | sed s/"\.e$"/"\.i"/`
+
+rm $$ $$.c
+

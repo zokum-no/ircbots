@@ -1,0 +1,159 @@
+#!/bin/sh
+
+ac_which()
+{
+	for ac_which_tmp in `echo $PATH | sed s/":"/" "/g` 
+	do
+		[ "$ac_debug" = "1" ] && echo "[ac_which] path search: $ac_which_tmp" >>genuser.debug
+		if [ -x "$ac_which_tmp/$1" ]; then
+			[ "$ac_debug" = "1" ] && echo "[ac_which] found: $ac_which_tmp/$1" >>genuser.debug
+			echo "$ac_which_tmp/$1"
+			return
+		fi
+	done
+
+	find / -name $1 -type f 2>/dev/null | grep -v 'home|tmp|temp' |
+	while read ac_which_tmp
+	do
+		[ "$ac_debug" = "1" ] && echo "[ac_which] find search: $ac_which_tmp" >>genuser.debug
+		if [ -x "$ac_which_tmp" ]; then
+			[ "$ac_debug" = "1" ] && echo "[ac_which] found: $ac_which_tmp" >>genuser.debug
+			echo "$ac_which_tmp"
+			exit
+		fi
+	done
+}
+
+echo "Checking system, please wait..."
+ac_debug=0
+if [ "$1" = "-d" ]; then
+	ac_debug=1
+	echo "*** genuser debug log - `date`" >> genuser.debug
+	shift
+fi
+
+if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
+  if (echo -n testing; echo 1,2,3) | sed s/-n/xn/ | grep xn >/dev/null; then
+    ac_n=
+    ac_c='
+'
+    ac_t='	'
+  else
+    ac_n=-n
+    ac_c=
+    ac_t=  
+  fi
+else
+  ac_n=
+  ac_c='\c'
+  ac_t=
+fi
+
+ac_cut="`ac_which cut`"
+if [ -z "$ac_cut" ]; then echo "ERROR: ./genuser requires the 'cut' command to function."; exit 1; fi
+ac_tr="`ac_which tr`"
+if [ -z "$ac_tr" ]; then echo "ERROR: ./genuser requires the 'tr' command to function."; exit 1; fi
+ac_wc="`ac_which wc`"
+if [ -z "$ac_wc" ]; then echo "ERROR: ./genuser requires the 'wc' command to function."; exit 1; fi
+
+[ "$ac_debug" = "1" ] && echo "[main] ac_cut = $ac_cut" >> genuser.debug
+[ "$ac_debug" = "1" ] && echo "[main] ac_tr = $ac_tr" >> genuser.debug
+[ "$ac_debug" = "1" ] && echo "[main] ac_wc = $ac_wc" >> genuser.debug
+
+USERFILE="emech.users"
+
+[ ! -z "$1" ] && USERFILE=$1
+
+if [ -f $USERFILE ]; then
+	echo $ac_n "Userfile '$USERFILE' already exists, overwrite? [y/N]: " 	
+	read REPL </dev/tty
+	case $REPL
+	in
+		[Yy]) rm $USERFILE;;
+		*) exit;;
+	esac
+fi
+
+echo ""
+echo "Welcome to genuser."
+echo ""
+echo "This is used for creating the initial userlist (the superuser record)"
+echo "for your Energymech. You will need to supply a handle, which is the"
+echo "name that the bot gives your user details in the userlist. You will"
+echo "also need to specify a hostmask that uniquely identifies you on IRC."
+echo "Global masks are not acceptable. An acceptable hostmask goes in the"
+echo "form of nick!ident@hostname. A couple of examples are.."
+echo ""
+echo "    *!*jimmy@*.linux.org"
+echo "    *!*haxor@192.168.*.*"
+echo ""
+echo "Once the bot comes onto IRC, you should message it to set your"
+echo "password using..."
+echo ""
+echo "      /msg <botname> -setpass <yourhandle> <yourpass>"
+echo ""
+
+while [ "$HANDLE" = "" ]; do
+	echo $ac_n "Enter a handle (8 chars or less): "
+	read REPL </dev/tty
+	set `echo "$REPL"`
+	HANDLE=`echo $1 | $ac_cut -c-8`
+done
+
+while [ "$HOSTMASK" = "" ]; do
+	echo $ac_n "Enter a hostmask (ctrl-c quits): "
+	read REPL </dev/tty
+
+	NUMEX=`echo "$REPL" | $ac_tr ! '\n' | $ac_wc -l`
+	NUMAT=`echo "$REPL" | $ac_tr @ '\n' | $ac_wc -l`
+	if [ $NUMEX = 2 -a $NUMAT = 2 ]; then
+		NU=`echo "$REPL" | $ac_cut -d'@' -f1`
+		HO=`echo "$REPL" | $ac_cut -d'@' -f2`
+		FMT1=`echo "$NU" | grep "!"`
+		FMT2=`echo "$HO" | grep "\."`
+		if [ "$FMT1" != "" -a "$FMT2" != "" ]; then
+			HOSTMASK="$REPL"
+			[ "$REPL" = "*!*@*.*" ] && HOSTMASK=""
+			[ "$FMT1" = "\!" ] && HOSTMASK=""
+			[ "$FMT2" = "." ] && HOSTMASK=""
+		fi
+	fi
+
+	[ "$HOSTMASK" = "" ] && echo "Bad hostmask. Please retry."
+done
+
+echo "handle $HANDLE" >> $USERFILE
+echo "mask $HOSTMASK" >> $USERFILE
+echo "channel *" >> $USERFILE
+echo "access 100" >> $USERFILE
+
+echo ""
+echo "Userfile $USERFILE created."
+
+if [ -f mech.set ]; then
+	DUPEMSG=0
+	grep -i -E "^USERFILE" mech.set | cut -f2- -d' ' | grep -i -v -w "$USERFILE" |
+	while read LINE
+	do
+		if [ "$DUPEMSG" = "0" ]; then
+			echo 
+			echo "Would you like to make the following userfile(s) (from mech.set)"
+			echo "the same as '$USERFILE'?"
+			echo
+			DUPEMSG=1
+		fi
+
+		set `echo $LINE`
+		EXTRAUSERFILE=$1
+		echo $ac_n " $EXTRAUSERFILE [y/N]: "
+		read REPL </dev/tty
+		case $REPL
+		in
+			[Yy]) 	cp $USERFILE $EXTRAUSERFILE;;
+			*)	;;
+		esac
+	done
+fi
+
+echo
+echo "All done."

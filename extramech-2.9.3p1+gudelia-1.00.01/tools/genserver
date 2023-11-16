@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+open(LYNX, "lynx -source http://www.undernet.org/servers.php |");
+
+while (<LYNX>) {
+	find_host(lc($1)) if (/info=.+?\"\>(.+?)\</);
+}
+
+sub find_host {
+	open(HOST, "host @_ |");
+	while(<HOST>) {
+		if (/^(.+?)\.\s+has\s+address\s+(.+)/) {
+			($host,$ip) = ($1,$2);
+			print("SERVER\t$ip\t6667 \t# $host\n");
+		}
+	}
+	close(HOST);
+}
