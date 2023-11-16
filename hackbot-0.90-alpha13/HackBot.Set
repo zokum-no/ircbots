@@ -1,0 +1,63 @@
+####################################################
+####  HACKBOT.SET FILE FOR HACKBOT Version 1.00 ####
+####################################################
+
+Owner=*!*cbehrens@*iastate.edu
+
+Nick=Hack_Bot
+	CmdChar=+
+	Username=cbehrens
+	IrcName=I'm a hacker, so kill me
+
+
+        Channel=#a_WaRm_pLaCe
+                Mode=nt
+        Channel=#PhoneSex
+                Mode=ntm      
+                SDTog=1
+                PubTog=1
+                ProtTog=1
+                ShitTog=1
+                EnfmTog=1
+                AopTog=1
+                MassTog=1
+                IkTog=0
+	Channel=#Sex
+	        IdleTime=1200
+	        Mode=nt
+                SDTog=1
+                PubTog=1
+                ProtTog=1
+                ShitTog=1
+                EnfmTog=1
+                AopTog=1
+                MassTog=1
+                IkTog=0
+ Channel=#TeenSex
+                IdleTime=1200
+                Mode=nt
+                SDTog=1
+                PubTog=1
+                ProtTog=1
+                ShitTog=1
+                EnfmTog=1
+                AopTog=1
+                MassTog=1
+                IkTog=0
+    Channel=#ComStud
+		Topic=The Loser's Own Channel
+		ServerDeop=1
+		Mode=ntis
+                SDTog=1
+                PubTog=1
+                ProtTog=1
+                ShitTog=1
+                EnfmTog=1
+                AopTog=1
+                MassTog=1
+                IkTog=0
+ 
+
+
+
+

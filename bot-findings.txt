@@ -22,6 +22,11 @@ fork of the Energymech bot, with services support and extra documentation in
 spanish. Listed on source forge as irc-world.org. Contains some misc tools.
 
 
+==Hackbot 0.90-alpha 13 ==
+Early version of the hackbot/combot linneage, by Comstud. There is also a 
+slightly older alpha 12 in the archive.
+
+
 == HopBot ==
 File: hop1.8.tar.Z
 
