@@ -15,7 +15,7 @@ identifies it as 0.6a and lists changes from 0.3a.
 == Extramech gudelia ==
 WARNING: Sourceforge reported this as possibly including malware. This is a 
 fork of the Energymech bot, with services support and extra documentation in
-spanish.
+spanish. Listed on source forge as irc-world.org. Contains some misc tools.
 
 
 == HopBot ==
