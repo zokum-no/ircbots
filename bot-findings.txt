@@ -11,8 +11,14 @@ Barron and President. Bot seems to have been in use on Undernet.
 Very early bot, by Peyote Coyote which evolved into Hopbot. The bot.c file
 has the following comment: 11/7/91 - Peyote Coyote. Less advanced than Hopbot.
 
+
+== Combot 1.0.5 ==
+An early version of the Combot. This one comes with the configuration and logs
+from a bot called 'chakal'.
+
+
 == Dweebot ==
-A Combot branch. Even though cthe onfig defines identify it as 0.3a, the readme 
+A Combot branch. Even though the config identify it as 0.3a, the readme 
 identifies it as 0.6a and lists changes from 0.3a.
 
 
@@ -53,6 +59,6 @@ the more hostile channel protection functionality.
 
 
 == VladBot 2.2a-PhB ==
-Looks like a translation fork / personalization of aV ladBot 2.1h. It has a lot of 
+Looks like a translation fork / personalization of a VladBot 2.1h. It has a lot of 
 the replies and commands translated into french. Some command levels have been
 changed.
