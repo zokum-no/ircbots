@@ -1,6 +1,7 @@
 # ircbots
 A comprehensive collection of classic IRC bots, mostly from the Vladbot family.
 
+## Vladbot family tree
 After some research, this is the known family tree for the Vladbot family of irc 
 bots.
 ```
@@ -41,3 +42,9 @@ Hopbot                               Very basic bot, less than 15kb.
    |
    Vladbot 3.x branch                No known forks off of this one.
 ```
+
+## Credits
+Many of the forks removed the credits to earlier authors, giving an incomplete
+view of who did what. All of the bots should credit 'Coyote Peyote' and all but
+the two earliest should credit Ivo and the rest of the Vladbot team.
+
