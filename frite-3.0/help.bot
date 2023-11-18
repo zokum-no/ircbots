@@ -1,0 +1,696 @@
+# Effort to make some sort of more configurable helpfile..
+#
+# Meaning of some commands (start with ) %
+# subject - start a subject
+# end 	  - end it
+#
+# Commands that should be added:
+# level(command, format) i.e. %level(useradd, "(u/s)") -> (100/0)
+# 
+# Available escape sequences:
+# \b \u \i 	- bold, underline, inverse
+# \n		- nickname of bot
+# \v		- bot's versionnumber
+# \\		- \
+# \#		- #
+#
+# I really should update this stuff more often....
+#
+%subject Standard
+---------- \bUpdated Help for \n version \v\b ----------
+These are the subjects about which further help can be requested.
+To get this help, type /msg \n help \b<topic>\b, where <topic> 
+the desired topic is. I.e. /msg \n help commands
+
+	\bCommands\b	- Commands to control the bot
+	\bUsers\b		- Everything you wanted to know about
+		          users, levels an more...
+	\bChannel\b		- What damage can this bot do to a channel?
+	\bFiletransfer\b	- All about \n's options for filetransfer
+	\bServices\b	- More info about services offered by \n
+	\bBot\b		- Some generic information about the bot,
+			  it's writers and where to get it.
+
+%end # Standard
+%subject Commands
+
+Following commands can be used to control the bot. To get more 
+information, try /msg \n help <command>. Notice that when 
+using a command in public, a '!' should preceed the command. 
+Private sent commands don't require a leading '!'.
+
+	ascii		ping		quote
+	lyrics		sing		rap
+	info		time		news
+	op		deop		giveop
+	bonk		bonkon		bonkoff
+	invite		greeton		greetoff
+	topic		logon		logoff
+	mode		spyon		spyoff
+	last10		heart		lastlog
+	say		me		msg
+	do		die		fork
+	rereadbonk
+
+%end # Commands
+%subject Users
+
+Well... here it is.. all the commands available to manage userlists 
+et all.
+
+	nuseradd	nprotadd	nshitadd
+	useradd		protadd		shitadd
+	userdel		protdel		shitdel
+	userlist	protlist	shitlist
+	userwrite	protwrite	shitwrite
+	showusers	whoami		whois
+	nwhois
+
+%end # Users
+%subject Channel
+
+This bot can be a real danger to a channel. These are the disasters 
+available
+
+	join		leave		open
+	unban		banuser		massunban
+	massop		massdeop	masskick
+	showusers	kickban
+Quite something, huh?
+
+%end # Channel
+%subject Filetransfer
+
+Yeah, some usefull options are available too. Amazing!
+
+	files		chat		send
+	flist		listdcc		dcc
+	ls		get		mget
+	cd		pwd		ftp
+	
+You can make \bfiletransfer\bs with me without any quota.
+The transfers are done by using \bdcc\b. All up and downloads are
+logged for statistic purposes. Don't transfer if you don't like
+this policy. 
+And if you think you got something interesting to share with the 
+internet community, uploading is also possible, just dcc it 
+to me, i.e. /dcc send \n \busefull_file\b
+
+%end # Filetransfer
+%subject Services
+Some "usefull" things I can do are:
+
+	note		time		chat
+	send		files		invite
+	unban		open		info		
+
+%end # Services
+%subject Bot
+
+\n is based on \iVladBot\i, a C-bot written by VladDrac 
+\b(irvdwijk@cs.vu.nl)\b who has had lots of help from Richie_B
+\b(richie@morra.et.tudelft.nl)\b
+
+A copy of \iVladBot\i can be found at \iNederServ\i, the Dutch service bot.
+do /msg NederServ files to see what the latest version is, and get it
+by typing /msg NederServ send <latest_version>
+
+To get some statistic info, type /msg \n \binfo\b
+
+%end # Bot
+%subject Test
+
+# display some combinations of \b \u and \i
+       	        \bbold\b       	\iinverse\i       	\uunderlined\u
+  bold 		Test       	\b\iTest\i\b		\b\uTest\u\b 
+  \iinverse\i     	\i\bTest\b\i		Test		\i\uTest\u\i 
+  \uunderlined\u  	\u\bTest\b\u		\u\iTest\i\u		Test 
+
+	\b\u\iBoldUnderlineInvers\i\u\b
+
+Nick = \n, Version = \v
+
+%end # Test
+#
+# Those were the "Basic" topics.. now let's describe some real commands
+#
+%Subject Whoami
+
+\bWHOAMI\b shows you your current levels (user, shit and protlevel)
+This command wil work with any userlevel.
+
+\bSee also:\b USERLIST, PROTLIST, SHITLIST, WHOIS, 
+          NWHOIS levels, getting_access
+
+%end
+%Subject Info
+
+\bINFO\b gives some information about \n
+(Actually, just the uptime :)
+
+%end
+%Subject Time
+
+\bTIME\b gives you the current time at the place \n was started
+
+%end
+%Subject Say
+
+\bSAY\b makes me say something :)
+Requires user/shitlevel 150/0.
+
+\bSee also:\b levels
+
+%end 
+%Subject Me
+
+\bME\b makes me perform an action :)
+Requires user/shitlevel 150/0.
+
+\bSee also:\b levels
+
+%end 
+%Subject Bonk
+
+\bBONK\b makes me bonk someone with a random object.
+To add objects, talk to OffSpring.
+Requires user/shitlevel 0/0.
+
+\bSee also:\b levels
+
+%end
+%Subject ReReadBonk
+
+\bREREADBONK\b rereads the list of things to bonk ppl with.
+Requires user/shitlevel 150/0.
+
+\bSee also:\b levels, BONK
+
+%end
+%Subject BonkOff
+
+\bBONKOFF\b turns the \bBONK\b command off. Useful to stop zonk wars. =)
+Requires user/shitlevel 125/0.
+
+\bSee also:\b levels, BONK, REREADBONK, BONKON
+
+%end
+%Subject BonkOn
+
+\bBONKON\b turns the \bBONK\b command on after it has been turned off.
+Requires user/shitlevel 125/0.
+
+\bSee also:\b levels, ZONK, REREADBONK, BONKOFF
+
+%end
+%Subject Greetings
+
+If you have the required levels for Auto-oping, you will be greeted by \n.
+
+\bSee also:\b GREETOFF, GREETON
+
+%end
+%Subject GreetOff
+
+\bGREETOFF\b turns the greeting function off.
+Requires user/shitlevel 125/0.
+
+\bSee also:\b greetings, GREETON
+
+%end
+%Subject GreetOn
+
+\bGREETON\b turns the greeting function on.
+Requires user/shitlevel 125/0.
+
+\bSee also:\b greetings, GREETOFF
+
+%end
+%Subject Ascii
+\bASCII\b lets you view some ascii pics, while online.
+For a list of Ascii Pics:
+/msg \n ASCII LIST
+To Upload Ascii Pic:
+/dcc send \n <filename>
+%end
+%Subject Quote
+\bQUOTE\b sends you a discordian quote. Lots of Fun. :)
+%end
+%Subject Heart
+\bHEART\b sends a heart to a channel or Person.
+To send a heart:
+/msg \n HEART <#channel/nick> <nick of person you love>
+%end
+%Subject Do
+
+\bDO\b makes the me do something. It will be 'quoted' to the server
+Remember that 2.8.* servers require a ':' sometimes, i.e.
+/msg \n DO PRIVMSG #blah :Hey friends!
+
+This requires correct user/shitlevel setings (150/0)
+
+\bSee also:\b levels
+ 
+%end
+%Subject Op
+
+\bOP\b makes me try to give you op if you have the right
+user/shitlevel settings. (50/0)
+This command won't work if you're already channeloperator
+
+\bSee also:\b GIVEOP, levels
+
+%end
+%Subject Giveop
+
+\bGIVEOP\b wil give a maximum of three people operatorstatus at once.
+This requires correct user/shitlevel setings (50/0)",
+
+\bSee also:\b OP, levels
+
+%end Giveop 
+%Subject Diedie
+
+\bDIEDIE\b makes me signoff. This should be used with care.
+Any changes in the user/shit/protlist will be written to
+disk first. Requires user/shitlevel 150/0.
+
+%end
+%Subject Useradd
+
+\bUSERADD\b adds a user with a specified level to the userlist
+For this operation, a user/shitlevel of (150/0) is required
+
+\bSEE ALSO:\b USERLIST, USERDEL, NUSERADD, 
+          patterns, levels, getting_access
+
+%end
+%Subject Nuseradd
+
+\bNUSERADD\b adds a user with a specified level to the userlist,
+just like \bUSERADD\b, only here you only need to specify the nick.
+The person who should be added must be one of the channels I'm on.
+For this operation, a user/shitlevel of (150/0) is required
+
+\bSEE ALSO:\b USERLIST, USERDEL, USERADD, 
+          patterns, levels, getting_access
+
+%end
+%Subject Userdel
+
+\bUSERDEL\b can be used to remove someone from the userlist.
+This requires a user/shitlevel of (150/0)
+
+\bSEE ALSO:\b USERLIST, USERADD, NUSERADD, 
+          levels, getting_access
+
+%end 
+%Subject Userlist
+
+\bUSERLIST\b will show a list of all registred users. For this
+operation, a user/shitlevel of (0/0) is required
+
+\bSEE ALSO:\b USERDEL, USERWRITE, levels, getting_access
+
+%end
+%Subject Userwrite
+
+\bUSERWRITE\b will write the userlist to disk. For this operation
+a user/shitlevel of (150/0) is required
+
+\bSEE ALSO:\b USERLIST, USERADD, NUSERADD, USERDEL, levels
+
+%end
+%Subject Shitadd
+
+\bSHITADD\b adds a user with a specified level to the shitlist
+For this operation, a user/shitlevel of (150/0) is required
+
+\bSEE ALSO:\b SHITLIST, SHITDEL, NSHITADD, 
+          patterns, levels, getting_access
+
+%end
+%Subject Nshitadd
+
+\bNSHITADD\b adds a user with a specified level to the shitlist,
+just like \bSHITADD\b, only here you only need to specify the nick.
+The person who should be added must be one of the channels I'm on.
+For this operation, a user/shitlevel of (150/0) is required
+
+\bSEE ALSO:\b SHITLIST, SHITDEL, SHITADD, 
+          patterns, levels, getting_access
+
+%end
+%Subject Shitdel
+
+\bSHITDEL\b can be used to remove someone from the shitlist.
+This requires a user/shitlevel of (150/0)
+
+\bSEE ALSO:\b SHITLIST, SHITADD, NSHITADD,
+          levels, getting_access
+
+%end
+%Subject Shitlist
+
+\bSHITLIST\b will show a list of all users in the shitlist. For
+this operation, a user/shitlevel of (0/0) is required
+
+\bSEE ALSO:\b SHITDEL, SHITWRITE, levels, getting_access
+
+%end
+%Subject Shitwrite
+
+\bSHITWRITE\b will write the shitlist to disk. For this operation
+a user/shitlevel of (150/0) is required
+
+\bSEE ALSO:\b SHITLIST, SHITADD, NSHITADD, SHITDEL, levels
+
+%end
+%Subject Protadd
+
+\bPROTADD\b adds a user with a specified level to the protectionlist
+For this operation, a user/shitlevel of (150/0) is required
+
+\bSEE ALSO:\b PROTLIST, PROTDEL, NPROTADD, 
+          patterns, levels, getting_access
+
+%end
+%Subject Nprotadd
+
+\bNPROTADD\b adds a user with a specified level to the protlist,
+just like \bPROTADD\b, only here you only need to specify the nick.
+The person who should be added must be one of the channels I'm on.
+For this operation, a user/shitlevel of (150/0) is required
+
+\bSEE ALSO:\b PROTLIST, PROTDEL, PROTADD, 
+          patterns, levels, getting_access
+
+%end
+%Subject Protdel
+
+\bPROTDEL\b can be used to remove someone from the protectionlist.
+This requires a user/protlevel of (150/0)
+
+\bSEE ALSO:\b PROTLIST, PROTADD, NPROTADD, 
+          levels, getting_access
+
+%end
+%Subject Protlist
+
+\bPROTLIST\b will show a list of all users in the protectionlist.
+For this operation, a user/shitlevel of (0/0) is required
+
+\bSEE ALSO:\b PROTDEL, PROTWRITE, levels, getting_access
+
+%end
+%Subject Protwrite
+
+\bPROTWRITE\b will write the protectionlist to disk. For this
+operation, a user/shitlevel of (150/0) is required
+
+\bSEE ALSO:\b PROTLIST, PROTADD, NPROTADD, PROTDEL, levels
+
+%end
+%subject FORK
+
+\bFORK\b is used to create a new bot (when you want to start a new bot,
+or when a bot has died). It inherits all channels and servers from it's 
+father, except for nickname, username and ircname, which can be defined.
+
+SYNTAX: !fork nickname [username [ircname]]
+Example: !fork VladBot vladbot /msg VladBot !help
+
+%end
+%Subject WHOIS
+
+\bWHOIS\b can be used to see someone else's user/shit/protlevel.
+Ass this command requires a full nick!user@host.domain, it may be
+a little inconvienient. \bNWHOIS\b will only require the nick.
+
+\bSEE ALSO:\b NWHOIS, USERLIST, PROTLIST, SHITLIST, WHOAMI
+
+%end
+%Subject NWHOIS
+
+\bNWHOIS\b will show the user/shit/protlevel of the specified nick
+(if (s)he is on one of the channels I'm on).
+
+\bSEE ALSO:\b WHOIS, USERLIST, PROTLIST, SHITLIST, WHOAMI
+
+%end
+%Subject Open
+
+\bOPEN\b <channel> will cause me (if I am able) to open up the
+<channel> so you can join it. Actually, all I do is try to make
+the channel -i, -k, -s, -p. -l and unban you.
+You need to have user/shit levels of 100/0 for this command.
+
+\bSEE ALSO:\b INVITE, UNBAN, getting_access
+
+%end
+%Subject Invite
+
+\bINVITE <channel>\b will cause me (if I am able) to invite you
+to the \b<channel>\b. This might be usefull when the \b<channel>\b is an
+invite only channel. You need user/shit levels of 50/0 for this
+operation to succeed.
+
+\bSEE ALSO:\b OPEN, getting_access
+
+%end
+%Subject Send
+
+\bSEND <file>\b will cause me to send \b<file>\b to you. In order
+to receive \b<file>\b, you will need to type the following line:
+/dcc get \n <file>
+I will ask you to type this after I prepared the connection.
+
+\bSEE ALSO:\b FILES, dcc, filetransfer
+
+%end
+%Subject Chat
+
+\bCHAT\b will cause me to request a fast dcc chat connection
+between you and me. In order to establish this connection, you
+can also type the following line instead of \bCHAT\b:
+/dcc chat \n
+
+\bSEE ALSO:\b dcc
+
+%end
+%Subject Files
+
+\bFILES\b will show you a short listing of the available files.
+An optional parameter can be used to specify a topic.
+
+\bSEE ALSO:\b SEND, filetransfer
+
+%end
+%Subject Dcc
+
+\bDcc\b stands for \bd\birect \bc\blient to \bc\blient, and is used for fast
+connections between two IRC clients. There are various types of
+dcc-connections. \bDcc-chat\b is used for fast (and safe) text
+transfer, \bdcc-get\b and \bdcc-send\b are used for client-to-client
+data transfer. In order to establish a dcc connection, both
+parties will need to request the connection. If you request any
+dcc connection to me, I will respond to it.
+Dcc connections are requested by typing:
+/dcc <dcc-type> <nick-of-party> <additional-parameters>
+In order to close a dcc connection, type:
+/dcc close <dcc-type> <nick-of-party>
+
+\bSEE ALSO:\b SEND, CHAT, filetransfer, /help dcc
+
+%end
+%Subject Levels
+
+\bLevels\b are used to determine which users can make me do what.
+The most important use of the levels are:
+\buserlevel\b >=  50 : user will be made channel operator by me
+\buserlevel\b >= 100 : user has access to channel functions
+\buserlevel\b >= 125 : The user may use certain "special" commands.
+\buserlevel\b >= 150 : user may use all my functions
+\bshitlevel\b >=  50 : user won't be opped, and cannot modify
+                 : the various list, regardless of the userlevel.
+                 : I also will not allow this user to be opped by
+                 : someone else
+\bshitlevel\b >= 100 : user will be kicked and banned when the
+                 : channel is joined
+\bprotlevel\b == 100 : I will not massdeop or masskick these users.
+                 : if a user with level 100 is deopped, I will reop him/her
+
+\bSEE ALSO:\b WHOAMI, WHOIS, NWHOIS, USERADD, 
+          SHITADD, PROTADD, getting_access
+
+%end
+%Subject Getting_access
+
+\bgetting_access:\b To get any level > 0, you need to contact
+someone who has a level >= 100. Use USERLIST to get a list
+of users.
+
+\bSEE ALSO:\b USERLIST
+
+%end
+%Subject Patterns
+
+\bPattern\b strings should have the pattern: nick!user@host.domain
+Please use wildcards so the person is always recognized.
+Beware that people often use different machines, and different
+nicks. Due to the 2.8.x servers, add a "*" before the username.
+
+Example: *!*richie@*.chem.tue.nl
+
+\bSEE ALSO:\b USERLIST
+
+%end
+%subject Note
+
+\bNote\b Is a prefix command. Without any parameters, it 
+will show all waiting notes. When followed by a 
+notecommand, the notecommand will be executed.
+Available notecommands are:
+
+	create		delete		del
+	show		read		view
+	addline		addl		delline
+	dell		replaceline	repl
+	list		send		done
+
+(most of these commands are just aliases)
+
+All these commands work with minimal priviliges.
+
+To get more information about these command, type
+/msg \n !help note.<command>, i.e.
+/msg \n !help note.send
+This to prevent conflicts
+%end
+%subject note.create
+
+\bCreate\b is used to create a new note.
+
+Syntax:  !NOTE CREATE receiver subject
+Example: !NOTE CREATE *!*irvdwijk@*.cs.vu.nl Bug in \v
+
+Use the PUBLIC address to make the note readable for everyone,
+i.e. !NOTE CREATE PUBLIC To everyone...
+
+After this command, you can add lines to the note by typing
+\b/msg \n ADDL a line of text\b
+until you use the !NOTE SEND command
+
+The CREATE command will return a note-id. This id can be used to 
+delete the note before sending it (i.e. if you change your mind :)
+
+\bSEE ALSO:\b note.ADDLINE, note.SEND, note.DELETE
+%end
+%subject note.Send
+
+\bSend\b is used to finish a note. After the send command, 
+modification or viewing of the note is not possible, and 
+note note can be read by the recipent.
+
+Syntax:  !NOTE SEND
+
+Warning: Send should be prefixed by the Note command!
+
+\bSEE ALSO:\b note.CREATE, note.ADDLINE
+%end
+%subject note.Addl
+
+\bADDLINE\b (or \bADDL\b) is used to add lines to a note.
+
+Example: !NOTE ADDLINE Some text to add to the note
+Warning: \bADDLINE\b should be prefixed by the notecommand
+
+\bSEE ALSO:\b note.CREATE note.SEND
+%end
+%subject note.Addline
+
+\bADDLINE\b (or \bADDL\b) is used to add lines to a note.
+
+Example: !NOTE ADDLINE Some text to add to the note
+Warning: \bADDLINE\b should be prefixed by the notecommand
+
+\bSEE ALSO:\b note.CREATE note.SEND
+%end
+%subject note.List
+\bLIST\b will show a list of waiting notes. Notes from this
+list can be read using the !NOTE READ command. To delete a
+note, use the !NOTE DELETE command (PUBLIC notes cannot be
+deleted by a non-operator)
+
+\bSEE ALSO:\b note.READ note.DELETE
+%end
+%subject note.Delete
+\bDELETE\b is used to delete a note from the notelist. 
+The \bDELETE\b command expects a note-id.
+
+\bSEE ALSO:\b note.LIST
+%end
+%subject note.Read
+\bREAD\b enables you to read a note from the notelist.
+The \bREAD\b command expects a note-id
+
+\bSEE ALSO:\b note.DELETE note.LIST
+%end
+
+# End of the note-commands. Now the global commands (very short)
+
+%subject GLOBAL
+\bGLOBAL\b is a prefix command, it should be followed by a subcommand. 
+Available subcommands are:
+
+LIST/INFO [botname]	Show botlist or info on botname
+DIE [bot]		Kill bot or all bots
+DEBUG lvl		Set debug to level lvl (0..2)
+
+The DIE and DEBUG commands require operator levels (125 or higer)
+%end
+
+# Some misc commands
+%subject REHASH
+\bREHASH\b kills all bots, re-reads the configfile and restarts
+the bots. Changed userlists will be saved.
+%end
+# Blah.. I hate this mess...
+%subject ftp
+\bFTP\b isn't a bot command, it's a set of commands that simulate
+filetransfer as know with the unix "ftp" programm. These commands 
+are:
+
+	ls		get		mget
+	cd		pwd
+
+Further help is available for each of these commands.
+%end
+%subject ls
+\bLS\b simulates the ls commando. 
+
+It shows a list of files in the current working directory (cwd) 
+and shows a files permissions, it's size in 1024 byte blocks, 
+it's last change time and the file's name. Switches are not 
+implemented (and will be ignored).
+
+Wildcards or filenames are allowed as paramter.
+%end
+%subject mget
+\bGET\b and \bMGET\b are exactly the same command as \bSEND\b.
+
+It will send you the specified file(s) which are entered as parameter.
+Wildcards are allowed.
+%end
+%subject get
+\bGET\b and \bMGET\b are exactly the same command as \bSEND\b.
+
+It will send you the specified file(s) which are entered as parameter.
+Wildcards are allowed.
+%end
+%subject cd
+\bCD\b changes directory
+%end
+%subject pwd
+\bPWD\b print the current working directory
+%end

@@ -1,0 +1,91 @@
+# Publics data file for fRitE
+%n "*how*are*y*" 4 1
+%r 1
+	s Oh .. I'm doing ok ..
+%r 1
+	a feels tired ..
+%r 1
+	s I'm just great \n! :)
+%r 1
+	a needs a vacation .. :)
+%n "*thank*" 4 1 
+%r 1
+	s S'ok \n!
+%r 1
+	s Anytime \n ..
+%r 1
+	s Don't mention it \n!
+%r 1
+	s No problemo \n ..
+%n "*hi*" 2 1
+%r 1
+	s Yo \n!!
+%r 1
+	a waves to \n ..
+%n "*hey*" 2 1
+%r 1
+	s 'allo \n ..
+%r 1
+	s \n!
+%n "*lo *" 2 1
+%r 1
+	s 'allo \n!
+%r 1
+	s 'lo \n ..
+%n "*lollipop*" 1 1
+%r 3
+	a gets a lollipop.
+	a gives it to \n.
+	s There ya go!
+%n "*beer*" 1 1
+%r 3
+	a looks in the fridge and finds a beer ..
+	a tosses it to \n ..
+%n "*kiss*" 2 1
+%r 1
+	s *blush*
+%r 1
+	a blushes ..
+%n "*offers* *sex*" 1 1
+%r 1
+	s oh my god.... *faint*
+%n "*sex*" 1 1
+%r 2
+	s Sex?? Where??
+	a looks around...
+%n "*hug*" 3 1
+%r 1
+	a hugs \n back :)
+%r 1
+	a gets a sly look in his eye.... *TICKLEHUG* :)
+%r 1
+	a feels warm and fuzzy all over ..
+%n "*tickles*" 1 1
+%r 2
+	a rolls around on the floor in helpless laughter.
+	s hehhhe Stop! hehehee Please! hehehe *gasp*
+%n "*good*bot*" 2 1
+%r 1
+	s *pant* *puppydogeyes*
+%r 1
+	s :P
+%n "*smooch*" 2 1
+%r 1
+	s *smile* .. hehe *smooch back*
+%r 1
+	a giggles .. *blush*
+%n "*love*" 1 1
+%r 1
+	s Aww .. I love you too \n ..
+%n "*hit*" 3 1
+%r 1
+	a beats the crap out of \n ..
+%r 1
+	a cries ..
+%r 1
+	a *sighs* .. :(
+%n "*kick*" 2 1
+%r 1
+	a hits \n over the head with a baseball bat .. *PoK*
+%r 1
+	s Oww .. dat hurted ..

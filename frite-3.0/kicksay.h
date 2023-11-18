@@ -1,0 +1,9 @@
+void do_addks(char *from, char *to, char *rest);
+void do_addksc(char *from, char *to, char *rest);
+void do_clrks(char *from, char *to, char *rest);
+void do_clrksc(char *from, char *to, char *rest);
+void do_delks(char *from, char *to, char *rest);
+void do_delksc(char *from, char *to, char *rest);
+void do_listks(char *from, char *to, char *rest);
+void do_listksc(char *from, char *to, char *rest);
+void do_delksc(char *from, char *to, char *rest);

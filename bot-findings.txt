@@ -28,6 +28,16 @@ fork of the Energymech bot, with services support and extra documentation in
 spanish. Listed on source forge as irc-world.org. Contains some misc tools.
 
 
+== fRitE 3.0 ==
+A  modified Vladbot, version 3.0. Originally by VladDrac, (fRitE) heavily 
+modded by PosterBoy. Code also included by TheFuture, and Holocaine. Official 
+Ascii Bot of the UnderNet.
+
+
+== fRitE 4.0 alpha ==
+Source has been cleaed up, war functions were added. Many other additions,
+
+
 ==Hackbot 0.90-alpha 13 ==
 Early version of the hackbot/combot linneage, by Comstud. There is also a 
 slightly older alpha 12 in the archive.

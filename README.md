@@ -29,8 +29,10 @@ Hopbot                               Very basic bot, less than 15kb.
    |     +--Patrocle
    |
    VladBot 2.10
-   | +--fRitE
-   |     +--fRitE      +             Continuation by a new author.
+   | +--fRitE 3.0                    Forked by Offspring.
+   |    |
+   |    fRitE 4.0.x
+   |    +--fRitE                     Continuation by a new author.
    |
    VladBot 2.x
    +--HackBot                        Coded by ComStud.

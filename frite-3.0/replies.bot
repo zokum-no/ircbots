@@ -1,0 +1,27 @@
+#################### fRitE v1.7b #####################
+## Written By: OffSpring!aporter@cati.csufresno.edu ##
+######################################################
+# This file contains the replies the bot gives       #
+# in certain cases.  If you modify these, make sure  #
+# the comments are in the correct order, using the   #
+# comments supplied to make sure.  Leave the line    #
+# blank, if you'd like no reply                      #
+######################################################
+### Command not recognized:
+Invalid Command.
+### Need higher userlevel:
+Userlevel too low.
+### Need lower shitlevel:
+Yeah Right! Your shitted!
+### No one is specified for command
+You need to give me a nick.
+### User is protected warning:
+Sorry, That user is protected.
+### User is shitted warning:
+Sorry, That user is shitted.
+### If NO_OPS is defined.
+Did I say you could do that?
+### Specify a channel name
+I need a channel name.
+### Ping Reply
+You're not lagged .. I'm just ignoring you .. :)
