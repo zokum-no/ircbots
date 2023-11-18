@@ -2,10 +2,12 @@
 A comprehensive collection of classic IRC bots, mostly from the Vladbot family.
 
 ## Vladbot family tree
-After some research, this is the known family tree for the Vladbot family of irc 
+After some research, this is the known family tree for the Vladbot family of irc
 bots.
 ```
 Bot 0.01                             Early version of Hopbot, same author.
+|
+PCBot 0.01                           Intermediate between bot and hopbot.
 |
 Hopbot                               Very basic bot, less than 15kb.
 +--VladBot 1.x                       Only got the source for 1.9

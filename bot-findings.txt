@@ -40,6 +40,12 @@ File: hop1.8.tar.Z
 [ strcasestr ] NOT used. I just pulled it out of Sagebot for possible future use.
 
 
+== PC Bot 0.01 ==
+This seems to be an intermediate step between Bot 0.01 and Hopbot. It has much 
+more  functionality than Bot did. Hopbot has much of the same functionality, 
+but it has been organzed better, into more source files. 
+
+
 == Vladbot 1.9m ==
 File: vladbot-1.9m.tar.gz
 
