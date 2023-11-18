@@ -1,0 +1,18 @@
+commands.c:extern int pubtoggle, idlelimit, idletoggle, sdtoggle, prottoggle, seentoggle;
+commands.c:int pubseen = 0;
+commands.c:	{ "TOGPUB",   do_togpub,     70,     0,   FALSE,     TRUE },
+commands.c:	if (ischannel(to) && (*command == cmdchar) && !pubtoggle)
+commands.c:	  on_public(from, to, command);
+commands.c:void on_public( char *from, char *to, char *rest )
+commands.c:			pubseen = 1;
+commands.c:			pubseen = 0;
+commands.c:	if (!*rest && !pubseen)
+commands.c:		if (!pubseen)
+commands.c:	if (!pubseen)
+function.c:extern int pubtoggle, idlelimit, idletoggle;
+main.c:int pubtoggle = 1;
+toggles.c:extern int pubtoggle, idlelimit, idletoggle, sdtoggle, prottoggle;
+toggles.c:void do_togpub(char *from, char *to, char *rest)
+toggles.c:  if (pubtoggle)
+toggles.c:		pubtoggle = 0;
+toggles.c:		pubtoggle = 1;

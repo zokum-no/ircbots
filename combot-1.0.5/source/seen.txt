@@ -1,0 +1,25 @@
+commands.c:extern int pubtoggle, idlelimit, idletoggle, sdtoggle, prottoggle, seentoggle;
+commands.c:int pubseen = 0;
+commands.c:/*	{ "SEEN",     do_seen,       10,   100,   FALSE,     TRUE },
+commands.c:	{ "TOGSEEN",  do_togseen,    90,     0,   FALSE,     TRUE },
+commands.c:/*	if (seentoggle && (strcasestr(rest, "seen ") &&
+commands.c:	    temp = strcasestr(rest, "seen");
+commands.c:			pubseen = 1;
+commands.c:			do_seen(from, to, temp);
+commands.c:			pubseen = 0;
+commands.c:void do_seen(char *from, char *to, char *rest)
+commands.c:	if (!*rest && !pubseen)
+commands.c:		if (!pubseen)
+commands.c:		    send_to_user(from, "   \x2Last seen %s on %s\x2",
+commands.c:		      sendprivmsg(to, "\x2%s\x2 There are more userhosts for that nick...To see the whole seen data do: %cseen <nick>", getnick(from), cmdchar);
+commands.c:			sendprivmsg(to, "\x2%s:\x2 I've seen %s", getnick(from), temp->name);
+commands.c:	if (!pubseen)
+commands.c:	  sendprivmsg(to, "\x2%s:\x2 I haven't seen %s",getnick(from), rest);
+main.c:int seentoggle = 0;
+toggles.c:extern int klogtoggle, mutoggle, seentoggle, beeptoggle;
+toggles.c:void do_togseen( char *from, char *to, char *rest)
+toggles.c:  if (seentoggle)
+toggles.c:      send_to_user( from, "\x2Public seen now disabled\x2");
+toggles.c:      seentoggle = 0;
+toggles.c:      send_to_user( from, "\x2Public seen now enabled\x2");
+toggles.c:      seentoggle = 1;

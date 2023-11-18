@@ -1,0 +1,31 @@
+################ ComBot Version 1.50 ##################
+######## Written By: ComStud!cbehrens@iastate.edu #####
+#######################################################
+# This file contains the replies the bot gives        #
+# in certain cases.  If you modify these, make sure   #
+# the comments are in the correct order, using the    #
+# comments supplied to make sure.  Leave the line     #
+# blank, if you'd like no reply                       #
+#######################################################
+### Command not recognized:
+You think I understand that command?
+### Not enough access:
+You need a higher access level for this command
+### Net split reaction:
+
+### Noone specified for commands like: access, add
+Specify someone
+### User is protected warning:
+
+### Bot can't message itself:
+
+### Mass modes detected
+
+### No nick specifed with "NICK"
+Well, what's my nick then???
+### No level specifed
+Well, what's the level???
+### Specify a channel name
+I need a channel name
+### I'm not on that channel
+I'm not on that channel

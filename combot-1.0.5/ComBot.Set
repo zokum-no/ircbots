@@ -1,0 +1,83 @@
+################ ComBot Version 1.10 ##################
+######## Written By: ComStud!cbehrens@iastate.edu #####
+#######################################################
+### Default Bot Nick ###
+Chakal
+### Default Server ###
+irc.math.ufl.edu
+### Default LOGIN ###
+chakal
+### Default IRCNAME ###
+you know the drill
+### Bot-Owner's NickName ###
+Grimlaf
+### Bot-Owner's User@Host --- Needs the *! at the beginning...
+*!*band1t@deepthot.cybernetics.net
+### Default Startup Channel(s) --- DON'T PUT a '#' for the first
+#                                  channel specified...
+ChAt2,#chat
+### Default Command Char
+!
+### Default Logging (0 or 1)
+0
+### Default Logging of Kills (0 or 1)
+0
+### Default Auto-Op Toggle (0 or 1)
+1
+### Default Protection toggle (0 or 1)
+1
+### Default ShitKick Toggle (0 or 1)
+1
+### Default Mode Enforcement Toggle (0 or 1)
+1
+### Default IdleKick (Default 300 seconds) Toggle (0 or 1)
+1
+### Default Protection against too many nicks with same User@ (0 or 1)
+### NOTE: Default value is 1 max user@ per channel...
+1
+### Public Flood Protection (Default 6 lines) Toggle (0 or 1)
+1
+### Default Server Deop Toggle (0 or 1)
+1
+### Don't let non-users opped? (0 = let's them be opped, 1 = deops them)
+0
+### Default Welcome Messages Toggle (0 or 1)
+0
+### Default Mass Protection Toggle (0 or 1)
+1
+##### ALL THE FOLLOWING LIMITS ARE BASED ON THE # DONE IN 10 SECONDS #####
+### Default Mass-Ban Limit
+4
+### Default Mass-Deop Limit
+4
+### Deault Mass-Kick Limit
+4
+### Screwban Type (1 = Alt ?'s, 2 = Random ?'s and *'s)
+2
+### Default Lowest level that will NOT be kick-say kicked
+90
+### Default Lowest Level that mass functions will NOT operate on
+20
+### Default Mass Protection Level (0-2)
+2
+### Default Min Op Level
+0
+### Default Min Deop Level
+0
+### Default Min Ban Level
+0
+### Default Min Unban Level
+0
+### Default Bot Directory  -- PUT ENDING / !!!!
+/user/chakal/ComBot/
+### Default Upload Directory  -- PUT ENDING / !!!!
+/user/chakal/ComBot/upload/
+### Default Download Directory  -- PUT ENDING / !!!!
+/user/chakal/ComBot/download/
+
+
+
+
+
+
+
