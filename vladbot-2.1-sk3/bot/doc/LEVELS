@@ -1,0 +1,43 @@
+Short info on levels
+--------------------
+VladBot supports three different userlists, with each their own levels:
+- opperlist: The name is kinda misleading. A better name would be accesslist
+             or userlist (latter will sometimes be used, but internally, this
+	     list is still called opperlist)
+	     Levels available are:
+	     0	 -	No priviliges. Only simple commands like NOTE, TIME,
+	     		WHOAMI etc. can be used (see on_msg_commands in 
+			vlad-ons.c)
+	     50  - 	User will be opped, can ask the bot to INVITE him/her
+	     		and can make the bot GIVEOP to people.
+	     100 -	User is allowed to modify userlists (using NUSERADD,
+	     		NSHITADD and NPROTADD), can make the bot "OPEN" the
+			channel (remove bans, keys and limit), make the bot
+			UNBAN him/her.
+	     125 -	User has semi-operator access. All commands except DO,
+	     		QUIT, GLOBAL DIE, REHASH and FORK can be accessed
+	     150 -	Operator level, user can do anything
+	     		
+- shitlist:  The shitlist restricts certain users from accessing the bot/channel
+	     0   -	Nothing happens (equal to not being shitted)
+	     50  -	User cannot access any commands except a few (see 
+	     		on_msg_command in vlad-ons.c). The bot won't allow
+			this user to be opped.
+	     100 - 	User is not allowed to join the channel and will be
+	     		kicked+banned when trying to.
+
+- protlist:  The protlist makes the bot protect certain users:
+	     0   -	No protection
+             50  -      Protection against kicking (?) and banning(?) but
+			not against deopping
+	     100 -	Full protection against deopping (in future also against
+	     		kicking and banning)
+
+These settings can be changed by changing the on_msg_commands table in vlad-ons.c,
+which has the following structure:
+
+"COMMAND_NAME", function, u_lvl, s_lvl, FORCE_DCC
+u_lvl 		= minimum required userlevel
+s_lvl 		= maximum allowed shitlevel
+r_lvl		= minimum required rellevel
+FORCE_DCC	= If true, a dcc-chat conenction is required for this command.

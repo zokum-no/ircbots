@@ -17,6 +17,12 @@ An early version of the Combot. This one comes with the configuration and logs
 from a bot called 'chakal'.
 
 
+== Combot 2.0.6 ==
+The last version I could find. Has many additions, cleaned up source, no
+documentation other than the help file. Supports 'ccc' a system to replicate
+list changes to another bot.
+
+
 == Dweebot ==
 A Combot branch. Even though the config identify it as 0.3a, the readme 
 identifies it as 0.6a and lists changes from 0.3a.
@@ -34,8 +40,8 @@ modded by PosterBoy. Code also included by TheFuture, and Holocaine. Official
 Ascii Bot of the UnderNet.
 
 
-== fRitE 4.0 alpha ==
-Source has been cleaed up, war functions were added. Many other additions,
+== fRitE 4.1 alpha ==
+Source has been cleaed up, war functions were added. Many other additions.
 
 
 ==Hackbot 0.90-alpha 13 ==
@@ -69,9 +75,14 @@ Copyright:
     (c) 1993 Ivo van der Wijk
 
 
-== Vladbot-2.1h-hip ==
+== Vladbot 2.1h-hip ==
 A few memory fixes, vladbomb removal, added two commands and removed some of 
 the more hostile channel protection functionality.
+
+
+== Vladbot 2.1-sk3 ==
+Partially translated to french. FTP-DCC functionality commented out, some new
+list types were added. Used to run a bot called Patrocle.
 
 
 == VladBot 2.2a-PhB ==

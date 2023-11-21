@@ -13,7 +13,7 @@ Hopbot                               Very basic bot, less than 15kb.
 +--VladBot 1.x                       Only got the source for 1.9
    |
    VladBot 2.1.c
-   | +---Ariela                      A few very minor modifications.
+   | +---Vladbot 2.1.c-ariela        A few very minor modifications.
    |
    VladBot 2.1.g
    | +--ChRoniCBot                   Stricter on channel security.
@@ -25,13 +25,14 @@ Hopbot                               Very basic bot, less than 15kb.
    Vladbot 2.1.h
    | +--Vladbot-pHb-Nefertari        French translation.
    | +--HipBot                       Stripped away some features.
+   | +--Vladbot-2.1.h-m              Removed note support.
    | +--Achille
-   |     +--Patrocle
+   |     +--Vladbot 2.1-sk3          The Patrocle bot
    |
    VladBot 2.10
    | +--fRitE 3.0                    Forked by Offspring.
    |    |
-   |    fRitE 4.0.x
+   |    fRitE 4.1.x
    |    +--fRitE                     Continuation by a new author.
    |
    VladBot 2.x
@@ -52,3 +53,30 @@ Many of the forks removed the credits to earlier authors, giving an incomplete
 view of who did what. All of the bots should credit 'Coyote Peyote' and all but
 the two earliest should credit Ivo and the rest of the Vladbot team.
 
+### Bot, PCBot, HopBot
+Coyote Peyote
+
+### Vladbot
+Ivo 'VladDrac'van der Wijk, Richard 'Richie\_B' van der Berg, President, mozgy + HopBot author.
+AIX port: Dathes
+
+### Ariela
+H\_I (parmenti@loria.fr) + Vladbot authors.
+
+### ChroniC Bot
+Robert 'BadCRC' Alto, The-Black, Adrian 'MeGALiTH' Cable, Brian 'Wendigo' Hess + Vladbot authors.
+
+### Incubot
+Incubus, Eggdrop team + ChroniC bot authors.
+
+### Revbot
+Revzoot + Incubot authors.
+
+### Mikribot
+Kim Roar 'Zokum' Foldøy Hauge, Reep, Colin 'cph' Phipps + Incubot authors.
+
+### Hackbot & Combot
+Christopher 'Comstud' Behrens + Vladbot authors.
+
+### Energy Mech 2.x
+Energy Mech Team, Mong (RoverBot code), Pup (LamerBawt code) + Combot authors

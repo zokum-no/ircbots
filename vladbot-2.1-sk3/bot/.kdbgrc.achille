@@ -1,0 +1,73 @@
+[Breakpoint 0]
+Condition=strcmp(command,"PING")
+Enabled=false
+File=parse.c
+Line=389
+Temporary=false
+
+[Breakpoint 1]
+Enabled=false
+File=vlad-ons.c
+Line=3619
+Temporary=false
+
+[Breakpoint 2]
+Enabled=false
+File=vlad-ons.c
+Line=4981
+Temporary=false
+
+[Breakpoint 3]
+Enabled=false
+File=vlad-ons.c
+Line=5111
+Temporary=false
+
+[Breakpoint 4]
+Enabled=false
+File=vlad-ons.c
+Line=5127
+Temporary=false
+
+[Breakpoint 5]
+Enabled=false
+File=vlad-ons.c
+Line=5146
+Temporary=false
+
+[Breakpoint 6]
+Enabled=false
+File=vlad-ons.c
+Line=1393
+Temporary=false
+
+[Breakpoint 7]
+Enabled=false
+Temporary=false
+Text=show_nwhois
+
+[Breakpoint 8]
+Enabled=false
+Temporary=false
+Text=show_whois
+
+[General]
+DebuggerCmdStr=
+DriverName=GDB
+FileVersion=1
+OptionsSelected=
+ProgramArgs=-f /home/seki/cvsroot/achille/infile.cfg
+TTYLevel=7
+WorkingDirectory=/home/seki/cvsroot/achille
+
+[Memory]
+ColumnWidths=80,0
+NumExprs=0
+
+[Watches]
+Expr0=currentbot
+Expr1=TableDesReponses
+Expr2=to_utf8
+Expr3=utf8
+Expr4=latin0
+Expr5=from_utf8
