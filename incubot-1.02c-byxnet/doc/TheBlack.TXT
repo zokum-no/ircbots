@@ -1,0 +1,53 @@
+IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+With the addition of the message center 6 new .lists have been created every
+user with have an entry in each file that they have access to..ie
+level 100 users have entries in the 100.list,75.list,50.list and the number
+there represents the number of messages they've read from the message
+database. Also currently you MUST run the bot from the directory where
+these lists are stored..in future versions I will fix this limitation.
+
+In this version the above problem is FIX, be sure to look at the NEW
+infile.cfg which shows how to specify where these .list files are.
+
+
+
+Ok..file explanations:
+
+access.list:  
+
+format:  command level
+
+purpose:  Change the access level for <command> without having to recompile
+the code
+
+
+nick.list:
+
+format:  nick
+
+purpose:  List of nicks to use with the !nickch command
+
+
+
+shit.list2:
+
+format: nick!user@host reason
+
+purpose:  Shitlevel description for kick ban
+
+
+passwd.list:
+
+format: nick!user@host password
+
+purpose:  The password for user to gain access to channel commands
+
+
+New additions not in the help file:
+!one command allows you to be authed for one comand
+
+!one <passwd> <command>
+
+!readaccess command reads the access.list file
+
+

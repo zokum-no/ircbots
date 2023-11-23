@@ -35,37 +35,37 @@ PCBot 0.01                           Intermediate between bot and hopbot.
 Hopbot                               Very basic bot, less than 15kb.
 +--VladBot 1.x                       Only got the source for 1.9
    VladBot 2.1.c
-   | +---Vladbot 2.1.c-ariela        A few very minor modifications.
+   +--Vladbot 2.1.c-ariela           A few very minor modifications.
    VladBot 2.1.g
-   | +--ChRoniCBot                   Stricter on channel security.
-   |    +--IncuBot                   The branch incubus worked on.
-   |        +--Incubot-Byxnet        Compiler fixes, minor bug fixes.
-   |        +--Revbot                Revzoot's branch for #quake.   
-   |        +--Mikribot              My branch.
+   +--ChRoniCBot                     Stricter on channel security.
+   |  +--IncuBot 1.02c               The branch incubus worked on.
+   |  |  +--Incubot-1.02c-Byxnet     Compiler fixes, minor bug fixes.
+   |  +--Mikribot                    My branch.
+   |  +--Revbot                      Revzoot's branch for #quake.   
    Vladbot 2.1.h
-   | +--Vladbot-pHb-Nefertari        French translation.
-   | +--HipBot                       Stripped away some features.
-   | +--Vladbot-2.1.h-m              Removed note support.
-   | +--Achille
+   +--Vladbot-pHb-Nefertari          French translation.
+   +--HipBot                         Stripped away some features.
+   +--Vladbot-2.1.h-m                Removed note support.
+   +--Achille
    |     +--Vladbot 2.1-sk3          The Patrocle bot
    VladBot-2.10
-   | +--fRitE 3.0                    Forked by Offspring.
-   |    fRitE 4.1.x
-   |    +--fRitE+                    Continuation by a new author.
+   +--fRitE 3.0                      Forked by Offspring.
+   |  fRitE 4.1.x
+   |  +--fRitE+                      Continuation by a new author.
    VladBot 2.x                      
-   | +--Johbot                       Binary + config/lists only
-   | +--HackBot 0.9-alpha 13         Coded by ComStud.
-   |    | +--TnT2 5.7                Docs only, also has code from Johbot.
-   |    Hackbot 
-   |    +--ComBot                    Coded by ComStud.
-   |    |   +--DweeB0t
-   |    |   +--StelBot               StealthBot.
-   |    |   |   +--RockBot           Fixes alleged backdoors in Stel.
-   |    |   |       +--StarBot       Starlink network service bot.
-   |    |   +--EnergyMech            Widely used bot, feature-rich.
-   |    |       +--Extramech-gudelia Fork with services support and a game.
-   |    +--Divbot 2.0a               Binary only
-   |       Divbot 4.0                Binary only
+   +--Johbot                         Binary + config/lists only
+   +--HackBot 0.9-alpha 13           Coded by ComStud.
+   |  +--TnT2 5.7                    Docs only, also has code from Johbot.
+   |  Hackbot 
+   |  +--ComBot                      Coded by ComStud.
+   |  |  +--DweeB0t
+   |  |  +--StelBot                  StealthBot.
+   |  |  |  +--RockBot               Fixes alleged backdoors in Stel.
+   |  |  |     +--StarBot            Starlink network service bot.
+   |  |  +--EnergyMech               Widely used bot, feature-rich.
+   |  |     +--Extramech-gudelia     Fork with services support and a game.
+   |  +--Divbot 2.0a                 Binary only
+   |     Divbot 4.0                  Binary only
    Vladbot 3.x branch                No known forks off of this one.
 ```
 

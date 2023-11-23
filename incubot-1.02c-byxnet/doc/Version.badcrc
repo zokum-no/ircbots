@@ -1,0 +1,566 @@
+Version Information for badcrc's ChRoniCbot
+========================================================================
+asc][ kept begging for me to make a file containing changes I make, so
+here it is.  I will try to keep this updated as I make changes but
+there is no guarantee.  Basically since I started this file on version
+1.13, anything before that is pretty hard to remember.    -- badcrc
+
+Note: config.h changes in every version, because thats where the version
+      info is.  If config.h appears as a changed file below, that change
+      is in addition to the version change.  Also anytime a new command
+      is added that also changes vlad-ons.c(on_msg_commands).
+------------------------------------------------------------------------
+In the works for a future version
+=================================
+- BOTNet party lines that looks a lot like irc type chatting.
+  The bot will now look for other bots (OTHER_BOT_LEVEL defined in
+  config.h) and start a BOTNet chat with them.  This can be used to
+  replace wallops, keep communication with other ops during splits,
+  or for general lag free chat.  All the levels for BOTNet commands
+  are defined in botnet.c.
+  Files Changed: dcc.c(delete_client parse_dcc) misc.c(msend_to_user)
+                 parse.c(parse_352) tb-ons.c(checkalarms check_ops)
+                 vlad-ons.c(on_msg)
+
+- Time stamping on userlist modifications.
+- List syncing via BOTNet.
+
+Changes in 1.03
+===============
+- Made some minor changes to the ban/flood functions.
+  Files Changed: channel.c(check_numbans check_channel_bans
+                           check_channel_clones)
+
+Changes in 1.02
+===============
+- The bot will now detect CTCP floods.
+  Files Changed: config.h cfgfile.h cfgfile.c(set_floodprot_ctcp)
+                 ctcp.c(on_ctcp) chanuser.h chanuser.c(add_user)
+                 channel.c(check_channel_flood check_channel_clones
+                           check_channel_bans)
+                 crc-ons.c(check_for_kicks) parse.c(parse_nick)
+                 vlad-ons.c(on_msg)
+
+- Made a minor change to !massunban.
+  Files Changed: vlad-ons.c(do_massunban)
+
+- Made a minor change to the event mail function.
+  Files Changed: crc-ons.c(mail_list_events)
+
+Changes in 1.01
+===============
+- Fixed spylog from logging ALL ctcps even when spylog was off (oops).
+  Files Changed: ctcp.c(on_ctcp)
+
+Changes in 1.0
+==============
+Note: With this version, this bot is pretty far from the original
+      vladbot, so its been named ChRoniCbot and will start with version
+      1.0.
+
+- Added a !accesswrite command that will write all the current command
+  userlevels to access.list.  This allows high ops to permanently change
+  the access for commands without having to login to the bots account.
+  For example, to change !say to level 150 permanently, you would do
+  !chaccess say 150, then !accesswrite.
+  Files Changed: tbs-ons.c(do_accesswrite) vlad-ons.c(on_msg_commands)
+
+- Added a !fp command (flood prot) that will toggle the clone bot, nick,
+  and public flood prot on or off.  The number of public lines and nick
+  changes before kicking a user, and their intervals are set in config.h.
+  Also, you can permanently enable/disable the flood prot for each either
+  in config.h or in infile.cfg.  See those files for details.
+  Files Changed: cfgfile.h
+                 cfgfile.c(floodprot_clone floodprot_nick floodprot_public)
+                 channel.h
+                 channel.c(check_channel_clones check_channel_flood)
+                 parse.c(parse_nick) vlad-ons.c(on_msg)
+
+- Added a !mailevents command that will mail the event list manually.
+  Files Changed: crc-ons.h crc-ons.c(do_mail_list_events)
+                 vlad-ons.c(on_msg_commands)
+
+- Added a !nhuseradd command that will add a user with full host and
+  domain name.  Example: Instead of adding yossman@yoss.canweb.net as
+  *!*yossman@*canweb.net, it will add him as *!*yossman@yoss.canweb.net.
+  If its an ip address, it would add it as *!*yossman@123.123.123.123.
+  Files Changed: crc-ons.h crc-ons.c(do_nhuseradd)
+                 vlad-ons.c(on_msg_commands)
+
+- Added a !passwdadd command that lets high ops change passwords of
+  other users.  This is also handy to change the passwords of bots so
+  they can auto-op each other.
+  Files Changed: crc-ons.h crc-ons.c(do_passwdadd)
+                 vlad-ons.c(on_msg_commands)
+
+- Added a !passwddel command that lets high ops delete password entries
+  from the password list.  This is useful for removing similar entries.
+  Files Changed: crc-ons.h crc-ons.c(do_passwddel)
+                 vlad-ons.c(on_msg_commands)
+
+- Added a !passwdlist command that will list all the usermasks in the
+  password list.
+  Files Changed: crc-ons.h crc-ons.c(show_password_list)
+                 vlad-ons.c(on_msg_commands)
+
+- Added a !passwdop command that will authenticate and op you in one
+  command.  Syntax is: /msg <bot> passwdop <password> [channel]
+  Files Changed: crc-ons.h crc-ons.c(do_passwdop)
+                 vlad-ons.c(do_op on_msg_commands)
+
+- Added a !serverlist command that will show all the servers in memory
+  and their corresponding numbers.  Arcademan's idea.
+  Files Changed: crc-ons.c(show_serverlist) vlad-ons.c(on_msg_commands)
+
+- Changed !server command so it now accepts a server name and an
+  optional port number.  If the server/port combination isn't already
+  in memory, it adds it to the server list in memory.  If port isn't
+  specified, it defaults to 6667.  Syntax: !server <number|name> [port]
+  Files Changed: vladbot.c(find_server) vlad-ons.c(do_server)
+
+- Added another secure level that won't deop people who aren't in the
+  userlist.  This is useful if you want your bot opped in a channel but
+  not deop other bots or ops.  Refer to infile.cfg for details.
+  Files Changed: tb-ons.c(check_ops)
+                 vlad-ons.c(on_join on_mode do_giveop)
+
+- Changed !showhacks so if you specify a parameter, it will show ALL
+  logged nethacks.  This could be very big ;).
+  Files Changed: crc-ons.c(show_nethacks)
+
+- Changed !unlock so it now accepts a nick or a usermask.
+  Files Changed: tb-ons.c(do_unlock)
+
+- Changed all the user/shit/prot/exclude commands so they will check
+  to see if a match exists already in the userlist before adding.  Also
+  changed the user deletion commands so they will delete entries from
+  the prot list that match the user being deleted.
+  Files Changed: userlist.h userlist.c(find_userhost find_excludehost)
+                 crc-ons.c(do_excludeadd do_excludedel)
+                 vlad-ons.c(do_nprotadd do_protadd do_nuseradd
+                            do_useradd do_nshitadd do_shitadd)
+
+- Totally rewrote all the "seen" code.  All the code is now located
+  in crc-ons.c.  The number of seen records the bot maintains at one
+  time is configurable via config.h MAX_SEEN.  Once MAX_SEEN records
+  are in use, the bot will delete an old record for every new one that
+  gets added.
+  Files Changed: channel.c vlad-ons.c(on_msg_commands)
+                 crc-ons.h crc-ons.c(add_seen do_seen do_showseen
+                                     get_ctime search_seen new_seen)
+
+- The bot will now check to see if the maximum ban limit of a channel
+  has been reached (set in config.h MAX_CHANNEL_BANS) when a shitted
+  user joins.  If it has, the bot will clear the last channel ban in
+  its banlist before ban kicking the shitted user.
+  Files Changed: config.h channel.h channel.c(check_numbans
+                 add_channelmode del_channelmode)
+                 vlad-ons.c(on_join)
+
+- The bot will now kick users who are in the channel ban list.  Users
+  who are excluded or in the bots userlist will not be kicked even if
+  banned.
+  Files Changed: tb-ons.c(check_ops)
+
+- The bot can now be configured to only respond to CTCP replies after
+  a certain time has elapsed since the last CTCP it replied to.  This
+  will help prevent flooding of the bot if you want it to respond to
+  everyone's CTCP replies.  The interval is set in config.h
+  REPLY_CTCP_INTERVAL.
+  Files Changed: config.h ctcp.c(on_ctcp)
+
+- The bot now uses the !passwdop command to get opped by other bots.
+  Files Changed: crc-ons.c(request_ops)
+
+- Changed the ban calls so they also deop the user (-o+b nick
+  userhost).
+  Files Changed: parse.c(parse_nick) vlad-ons.c(ban_user on_join)
+
+- Changed the way the shit kick msgs are displayed.
+  Files Changed: tb-ons.c(do_whyshitted)
+                 vlad-ons.c(do_shitadd do_nshitadd)
+
+- Changed some commands so they won't send a notice to a user unless
+  they have a dcc chat.
+  Files Changed: vlad-ons.c(do_send show_cwd)
+
+- Changed !chaccess so you can do !chaccess say or !chaccess !say
+  (yippee).  This confused a few people who kept saying it wasn't
+  working when they used the prefix character.
+  Files Changed: tb-ons.c(do_chaccess)
+
+- Added the current server name to the code that logs the bot's signoff.
+  Files Changed: parse.c(parse_error)
+
+- Made some minor changes to the !info reply.
+  Files Changed: vlad-ons.c(show_info)
+
+- Made some minor changes to email and nick checking functions.
+  Files Changed: crc-ons.c(check_email check_nick)
+
+- Made a minor change to the spy code and changed spylog so it will
+  now log ctcp msgs.
+  Files Changed: crc-ons.h crc-ons.c(do_spy do_spylog search_dcc_chat)
+                 parse.c(on_ctcp)
+
+- Changed some registration info.
+  Files Changed: send.c(sendregister)
+
+- Changed a few things in checkalarms().
+  Files Changed: tb-ons.c(checkalarms)
+
+- Changed some more talk stuff.
+  Files Changed: crc-ons.c(do_crctalk) vlad-ons.c(on_join)
+
+- Modified the Makefile so it has UnixWare settings.  Thanks to
+  Reichert (it better work since I can't test it ;)
+  Files Changed: Makefile
+
+Changes in 1.22 (Addendum)
+==========================
+- Added !emaillist command which shows email addresses and the nicks
+  they belong to.
+  Files Changed: crc-ons.h crc-ons.c(show_email_list)
+                 vlad-ons.c(on_msg_commands)
+
+- Fixed readnick() so it works with nicks that have strange characters.
+  This fixes !deop, !giveop, and any other function that called
+  readnick().
+  Files Changed: parsing.c(readnick)
+
+- Changed !masskick and !massnk to accept channel parameters and send
+  results of the kick back to the user.
+  Files Changed: channel.h channel.c(channel_masskick)
+                 crc-ons.h crc-ons.c(do_massnk channel_mass_nk)
+                 vlad-ons.c(do_masskick)
+
+Changes in 1.22
+===============
+- Many, many changes in this version.  I definitely won't be able to
+  list them all here since many were just minor changes.  The most major
+  change is that I moved most of the new functions I've written into
+  crc-ons.c.
+  Files Changed: crc-ons.h crc-ons.c vladbot.h vlad-ons.c
+
+- Wendigo updated help.bot again, wewp!
+  Files Changed: help.bot
+
+- Added nickname and email addresses to the user.list file.  The file
+  must be in this format before running the bot.  Format is:
+  <nick!user@host> <level> <email> <nick>
+  The first field is 40 characters right justified, the second field
+  is 3 characters right justified, then the email and nickname fields.
+  You can convert old lists by running:
+  sed 's/$/ None None/' user.list >newuser.list
+
+  Commands that use the above changes are:
+  !myemail, !mynick, !showemail, !emaillist, !emailadd, !nickadd
+
+  Files Changed: file.h file.c userlist.h userlist.c vlad-ons.c
+                 crc-ons.h crc-ons.c vladbot.h vladbot.c
+                 (probably others)
+
+- Added !mailpasswd <nick|usermask> that will mail a persons password
+  to the address they have specified with !myemail.
+  Files Changed: crc-ons.h crc-ons.c(do_mailpasswd)
+
+- Added exclude code that will exclude an address from shits.  Excluded
+  users can use !exunban from off channel to get unbanned (i.e.,
+  /msg quakejnky exunban #quake).
+
+  Exclude commands: !exadd, !exdel, !exlist, !exwhois, !exwrite,
+                    !exunban
+
+- Changed the way the bot mails.  Instead of mailing on each add,
+  delete, or shit, the bot now mails once a day.  The time it mails and
+  the file it logs events to is set in config.h EVENTLOG and MAIL_EVENTS.
+  Good idea dunno.
+  Files Changed: crc-ons.h crc-ons.c tb-ons.c(checkalarms)
+
+- Added a !showhacks command that will show nethackers who nethacked ops
+  that day. Note: bot loglevel must be set to 3.  Mynx's cool idea.
+  Files Changed: main.c(main) crc-ons.h crc-ons.c(show_nethacks)
+                 vlad-ons.c(on_msg_commands)
+
+- Fixed a bug in the do_unban that caused a SIGSEGV when a user did
+  "/msg <bot> one <passwd> unban".  Arcademan found this one.
+  Files Changed: vlad-ons.c(do_unban)
+
+- Totally revamped the !spy command.  Now more than one user can spy at
+  a time.
+  Files Changed: vladbot.h vladbot.c(add_bot)
+                 vlad-ons.c(on_msg_commands on_msg)
+
+- Change !secure so now there is 4 levels of security. See infile.cfg
+  for details.
+  Files Changed: vlad-ons.c(on_join on_mode)
+
+- Added a mass non-op kick command !massnk.  That will kick everyone
+  who isn't in the userlist.  Example: "!massnk *" will kick EVERYONE
+  who isn't in the userlist, "!massnk *root*" will kick everyone with
+  "root" in their address who aren't in the userlist.
+  Files Changed: crc-ons.c(channel_mass_nk) crc-ons.c(do_massnk)
+                 vlad-ons.c(on_msg_commands)
+
+- The bot will now check if someone is already an op and someone ops
+  them, ignore it.  yossman found this originally, then drwilco.
+  Files Changed: vlad-ons.c(on_mode)
+
+- The bot will now locate and request ops from other bots when its
+  deopped.  Also, the bot will no longer de-authenticate opped bots.
+  Files Changed: crc-ons.h crc-ons.c(reop_after_deop)
+                 vlad-ons.c(do_op on_mode)
+
+- Renamed !showcmdaccess to !cmdaccess.
+  Files Changed: vlad-ons.c(on_msg_commands)
+
+- Fixed the !masskick so it won't kick other bots or itself if
+  someone specifies an idiotic usermask.
+  Files Changed: channel.c(channel_masskick)
+
+- Changed all the !whois type commands so they work with the new lists.
+  Files Changed:  vlad-ons.c(show_nwhois show_userlist show_protlist
+                             show_shitlist show_whoami show_whois)
+
+- Fixed up some of the nick add/prot/shit functions.
+  Files Changed: crc-ons.c(do_nprotdel do_nuserdel)
+                 vlad-ons.c(do_nprotadd do_nshitadd do_nuseradd
+                            do_useradd do_userdel)
+
+- Changed some of the talk code.
+  Files Changed: crc-ons.c(do_crctalk) vlad-ons.c(on_msg)
+
+- Removed all the !seen code pending rewrite.  Its buggy.
+  Files Changed: tb-ons.h tb-ons.c channel.c vlad-ons.c
+ 
+Changes in 1.21
+===============
+- Changed some talk stuff.
+  Files Changed: tb-ons.c(do_crctalk)
+
+- Changed the !op kick messages.
+  Files Changed: vlad-ons.c(on_msg)
+
+- Changed !nuseradd, !nuserdel, !nprotadd, !nprotdel to check for
+  identd.  If a user has identd the bot will add as *!username@*domain.
+  If the user doesn't have identd, it adds as *!*username@*domain.
+  Files Changed: vlad-ons.c(do_nuseradd do_nuserdel do_nprotadd
+                 do_nprotdel)
+
+- Changed the bot auto-ops so instead of the opped bots opping level
+  105 level bots when they join, the bots will message THEIR password
+  and "op" to bots that are opped and level 105 in the userlist.
+  Files Changed: parse.c(parse_352)
+
+- Made !spylog configurable from infile.cfg, so the bot will spylog on
+  startup if desired.  See infile.cfg for details.
+  Files Changed: config.h cfgfile.h cfgfile.c(set_spylog)
+                 vlad-ons.c(do_spylog on_msg)
+
+- Changed !talk to be more like !secure..since they both have several
+  levels now, and are not just toggles.
+  Files Changed: tb-ons.c(do_ctalk)
+
+- Added an auto nickban-kick for nicks like "mode" and "irc".
+  Files Changed: parse.c(parse_nick) vlad-ons.c(on_join)
+ 
+- Added a #define OTHER_BOT_LEVEL to config.h and changed every occurrence
+  of "105" to "OTHER_BOT_LEVEL".  This is the level of other
+  bots.  This should be more configurable if it ever needs to be changed.
+  Files Changed: config.h vlad-ons.c
+
+- Made CTCP PING, FINGER, and VERSION replies configurable from infile.cfg.
+  The default is to only respond to ops.  See infile.cfg for details.
+  Files Changed: cfgfile.h ctcp.c config.h
+                 cfgfile.c(set_replyping set_replyversion set_replyfinger)
+
+- The bot will now wallop the current channel when someone floods him.
+  Files Changed: ctcp.c(on_ctcp) vlad-ons.c(on_msg)
+                 session.h session.c(check_session check_flood)
+
+- Added code that won't allow a person to be opped who isn't
+  authenticated.  This is only on level 2 secure.  Level 0 is very little
+  security with auto-ops, level 1 is authentication security, and level 2
+  doesn't allow auto-ops of anyone unless authenticated.
+  Files Changed: cfgfile.c(set_secure) tb-ons.c(checkauth do_secure)
+                 vlad-ons.c(on_mode)
+
+- DOH! I changed do_protadd so 100 users could get 100 prot, but not
+  do_nprotadd in 1.20.  Works now.
+  Files Changed: vlad-ons.c(do_nprotadd)
+
+Changes in 1.20
+===============
+- Changed the prot code so it lets 100 level users give themselves 100
+  prot.
+  Files Changed: vlad-ons.c(do_protadd)
+
+- Made the buffer size larger for the spylog command. (doh! don't i feel
+  dumb, thanks for helping me find it ascii).
+  Files Changed: vlad-ons.c(on_msg)
+
+- Changed some more talk stuff.
+  Files Changed: tb-ons.c(do_crctalk)
+
+- Changed all the rand() functions to lrand48().
+  Files Changed: tb-ons.c(do_seen do_crc_talk) vlad-ons.c(on_join do_die)
+
+Changes in 1.19
+===============
+- Changed !whois so it finds EVERY occurrence that fits the mask you use
+  with it.
+  Files Changed: userlist.h userlist.c(show_lvllist_pattern)
+                 vlad-ons.c(show_whois)
+
+- Made a cosmetic change in showpasswd function so it shows the address
+  who's account is locked, not the mask you sent to the command.
+  Files Changed: tb-ons.c(do_showpasswd)
+
+- Added some commands to on_msg_commands that are more CDC compliant ;).
+  Files Changed: vlad-ons.c(on_msg_commands)
+
+- Made some small changes to the !buy command.
+  Files Changed: vlad-ons.c(do_buy)
+
+Changes in 1.18
+===============
+- Made more changes to the crctalk stuff.
+  Files Changed: tb-ons.c(do_crctalk)
+
+- Added some random quit messages.
+  Files Changed: vlad-ons.c(do_die)
+
+- Made some cosmetic changes to the list display functions.
+  Files Changed: userlist.c(show_lvllist)
+                 vlad-ons.c(show_nwhois show_whois show_whoami)
+
+Changes in 1.17
+===============
+- Wendigo updated help.bot again, thanks Wend.
+
+- Moved all my talk mods to tb-ons.c(do_crctalk) and added several
+  random talk functions.
+  Files Changed: tb-ons.c(do_crctalk) vlad-ons.c(on_msg)
+
+- Added a new talk level 4.  Its the same as talk 3 except it tells
+  users they have new messages waiting when they join.  Also changed
+  the level for when the bot says "Greetings master..." to 4.
+  Files Changed: config.h(MAXTALK) vlad-ons.c(on_join)
+
+- Renamed !SHOWPASSWD to !NSHOWPASSWD, renamed do_showpasswd to
+  do_nshowpasswd, and wrote a new do_showpasswd function that works on
+  user address masks, not nicks.  !NSHOWPASSWD will be used for nicks
+  as that is now the old !SHOWPASSWD.
+  Files Changed: tb-ons.h tb-ons.c(do_showpasswd do_nshowpasswd)
+                 vlad-ons.c(on_msg_commands)
+
+Changes in 1.16
+===============
+- Changed !say so it checks for channel parameters.  If the bot is in
+  more than one channel, you can do /msg <bot> say <channel> <msg>.
+  Files Changed: vlad-ons.c(do_say)
+
+- Changed !op so it checks for channel parameters.  If the bot is in
+  more than one channel, you can do /msg <bot> op <channel>.
+  Files Changed: vlad-ons.c(do_op)
+
+- Changed some of the talk stuff.
+  Files Changed: vlad-ons.c(on_join on_msg on_mode)
+
+- Changed !talk userlevel required to 125.
+  Files Changed: vlad-ons.c(on_msg_commands) help.bot
+
+- Fixed the set_talk function to allow talk level 0 when reading from
+  infile.cfg.
+  Files Changed: cfgfile.c(set_talk)
+
+- Fixed a bug in the wallop functions that would cause a SIGSEGV if
+  someone tried to wallop in a channel the bot wasn't in.
+  Files Changed: tb-ons.c(do_wallop do_bwallop)
+
+Changes in 1.15
+===============
+- Updated help.bot file thanks to Wendigo.
+
+- Added command !showcmdaccess which shows the level needed for a
+  command.
+  Files Changed: tb-ons.c(do_showcmdaccess) tb-ons.h
+                 vlad-ons.c(on_msg_commands)
+
+- Changed userlevel required for massunban, nwhois, and whois to 50,
+  and changed userlevel required for masskick to 75.
+  Files Changed: vlad-ons.c(on_msg_commands)
+
+Changes in 1.14
+===============
+- Fixed a bug in the parse routine that gets bans on join.
+  Files Changed: parse.c(parse_367)
+
+- Made a small change to !massunban.
+  Files Changed: vlad-ons.c(do_massunban) channel.c(channel_massunban)
+
+- Changed userlevel required for masskick and massunban from 125 to 100.
+  Files Changed: vlad-ons.c(on_msg_commands)
+
+- Made some small changes to vlad-ons.c in the talk stuff.
+  (I need to move this stuff into a separate function sometime)
+  Files Changed: vlad-ons.c(on_msg)
+
+- Duh, removed an used variable from the ban function.
+  Files Changed: vlad-ons.c(ban_user)
+
+Changes in 1.13
+===============
+- Fixed !wall and !bwallop from noticing individual users, to noticing
+  all chops at once via NOTICE nick1,nick2,nick3 <WallMsg>, so the bot
+  won't get flooded off when someone is shitted and there is a lot of
+  ops.
+  Files Changed: tb-ons.c(do_wallop do_bwallop)
+
+- Added !bk command (e.g., !bk arcademan wewp)
+  Files Changed: vlad-ons.h vlad-ons.c(on_msg_commands do_bk)
+
+- Added !bewt command (same as !kick)
+  Files Changed: vlad-ons.c(on_msg_commands)
+
+- Added !buy command (e.g., !buy arcademan beer)
+  Files Changed: vlad-ons.h vlad-ons.c(on_msg_commands do_buy)
+
+- Added PING and VERSION replies, and removed FINGER reply.
+  Files Changed: ctcp.c(ctcp_ping ctcp_version)
+
+- Made some changes to the ban function used in shits, etc.
+  Files Changed: vlad-ons.c(ban_user)
+
+Changes in 1.12
+===============
+hmm..things hard to remember here.
+
+- Fixed a backdoor in vlad-ons.c (thus the NB 1.0 version)
+
+- Added a crude !spy and !spylog commands.  !spy will show the
+  person who runs the command all text sent to the bot, even in
+  DCC chats.  !spylog is the same, but instead of sending to a 
+  user, it logs to spy.log.
+
+- Added some crude code to mail users when someone is added or
+  deleted or when a shit is added or deleted.  Addresses are
+  stored in useradd.notify.  All other notify files are
+  linked to useradd.notify by default.
+
+- Fixed all the user adding and deleting commands to add or
+  delete ip addresses and addresses with no host name
+  (i.e., ward@escape.com) correctly.
+
+- Added !nuserdel and !nprotdel, which delete the same masks
+  added by !nuseradd and !nprotadd.
+
+- Added 150 level shits (site shits).
+
+- Made level 105 reserved for other bots only.  Any mask in the
+  userlist at level 105 gets auto-opped on join and is assumed
+  to be another bot.
+
+Lots of other stuff I may remember and put in here 10 years from
+now.
+

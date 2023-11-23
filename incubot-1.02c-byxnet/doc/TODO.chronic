@@ -1,0 +1,8 @@
+TODO List for ChRoniCbot
+========================
+- Get the damn BOTNet working good!
+- Use BOTNet to sync lists.
+- Daily/Total stats (kicking/opping/joins/parts)?
+- Figure out whats up with the !mailpasswd which used to work.  Could be
+  just another FreeBSD weirdality.
+- Put the talk code into its own file and a table.

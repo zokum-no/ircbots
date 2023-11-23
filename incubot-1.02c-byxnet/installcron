@@ -1,0 +1,40 @@
+#!/bin/sh
+user=`whoami`
+botname="incubot.new"
+echo "#!/bin/sh" > botcheck
+if [ -z "`grep USE_PIDFILE source/config.h | grep '#' |grep undef`" ]
+then
+	echo "USE_PIDFILE is defined. Using new non-ps-based botcheck script..."
+else
+	echo "USE_PIDFILE is not defined. Using old ps-based botcheck script..."
+	echo if [ -z '"`'ps auxwww\|grep $user\|grep $botname\|grep -v grep'`"' ] >> botcheck
+	echo then >> botcheck
+fi
+	echo cd `pwd` >> botcheck
+	echo ./incubot.new '>' /dev/null '&' >> botcheck
+if [ ! -z "`grep USE_PIDFILE source/config.h | grep '#' |grep undef`" ]
+then
+	echo echo ['`'date'`'] Bot is dead, restarting. '>>' botcheck.log >> botcheck
+	echo fi >> botcheck
+fi
+chmod 700 botcheck
+cronentry="0,5,10,15,20,25,30,35,40,45,50,55 * * * * `pwd`/botcheck"
+#cronentry="$cronentry `pwd`/botcheck"
+echo "Do you want me to add a cron entry for the bot? (WARNING: This will kill"
+echo "any existing cron entries you have!)"
+read docron
+case $docron in
+	y|Y)
+		echo "0,5,10,15,20,25,30,35,40,45,50,55 * * * * " `pwd`/botcheck > crontemp
+		crontab crontemp
+		rm crontemp
+		echo "Cron entry installed."
+		;;
+	*)
+		echo  "No cron entry added. If you want to do this manually, type '"'crontab -e'"' and"
+		echo "add this line:"
+		echo "0,5,10,15,20,25,30,35,40,45,50,55 * * * * "`pwd`/botcheck 
+		;;
+esac
+
+ 

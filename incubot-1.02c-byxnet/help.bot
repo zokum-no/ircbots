@@ -1,0 +1,2178 @@
+# Available escape sequences:
+# \b        - bold, underline, inverse
+# \n            - nickname of bot
+# \v            - bot's versionnumber
+# \\            - \
+# \#            - #
+# \l            - Current level of the command.
+#
+%subject Standard
+The \n User's Manual - Main Index                        
+
+--- \bBasic Help for \n version \v\b
+These are the subjects about which further help can be requested.
+To get this help, type /msg \n help \b<topic>\b, where <topic>
+the desired topic is. To start with, try \b/msg \n help commands\b.
+
+        \bCommands\b            - Basic commands available to control 
+                                the bot
+        \bUsers\b               - User/shit/protlevl/email/nick commands
+        \bChannel\b             - Powerful, channel-based commands
+        \bFiletransfer\b        - \n's file transfer commands
+        \bPersonality\b         - \n is alive! Trick newbies! 
+                                Annoy your friends!   
+        \bMessages\b            - Commands for the Message Center
+        \bPrivileged\b          - 100+ commands that have to do with
+                                bot maintenance
+        \bLevels\b              - What different userlevels allow you 
+                                to do
+        \bAccess\b              - Which userlevels have access to
+                                specific commands
+        \bBot\b                 - Some generic information about the 
+                                bot, the author and where to get it.
+
+%end # Standard
+%subject help
+The \n User's Manual - The !help Command                 
+
+\bUsage:\b !help <command>
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!help\b prints out online help for the specified
+command or topic. But, uhm, you should know that already,
+considering you used that command to display this screen. =]
+
+%end
+%subject Commands
+The \n User's Manual - Basic Commands                    
+
+The following commands can be used to control the bot. To get more
+information, try /msg \n help <command>. Notice that when
+using a command in public, a '!' should precede the command.
+Private sent commands don't require a leading '!'.
+
+        whoami          info            help
+        time            chat            listdcc
+        op              passwd          chpasswd
+        giveop          deop            one
+        passwdop
+
+%end # Commands
+%subject Users
+The \n User's Manual - Access Level Maintenence          
+
+Well... here it is... all the commands available to manage
+userlists, nicks, etc.
+
+ nuseradd        nprotadd        nshitadd        exadd
+ useradd         protadd         shitadd         exdel
+ nuserdel        protdel         shitdel         exlist
+ chuserlevel     protwrite       shitwrite       exwrite
+ nchuserlevel    protlist        shitlist        exwhois
+ userdel         passwd          npewpadd        exunban
+ userlist        passwdop        pewpadd         emailadd
+ userwrite       passwdadd       whyshitted      showemail
+ showusers       passwdwrite     whoshitted      myemail
+ whois           showpasswd      whenshitted     emaillist
+ nwhois          nshowpasswd     chshitmask      mynick
+ whoami          mailpasswd      chshitreason    nickadd
+ seen            nlock           chwhenshitted   expireadd
+ showseen        showlocked      chwhoshitted    expiredel
+ userinfo        unlock          chshitlevel     expirelist
+ nuserinfo       nshowauth                       expirewrite
+%end
+%subject Channel
+The \n User's Manual - Channel-Based Commands            
+
+This bot can be a menace to the channel. These are the disasters
+available:
+
+        join            leave           open
+        unban           banuser         massunban
+        massop          massdeop        masskick
+        invite          kick            bewt
+        bk              massnk          showhacks
+
+%end # Channel
+%subject Messages
+The \n User's Manual - Message Center           
+
+The bot also has an advanced message center controlled by these
+commands:
+
+        addmsg          showmsgs        showallmsgs
+%end
+%Subject Shitwrite
+The \n User's Manual - The !shitwrite Command            
+
+\bUsage:\b !shitwrite
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!shitwrite\b will write the shitlist to disk.
+
+\bSee also:\b SHITLIST, SHITADD, NSHITADD, SHITDEL, WHYSHITTED
+
+%end
+%subject showusers
+The \n User's Manual - The !showusers Command            
+
+\bUsage:\b !showusers [channel]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!showusers\b makes me show you a list of all the
+users on the channel specified, their user/shit/prot levels and
+their modes. If no channel is specified, it'll show a list of
+users on the channel you're currently on.
+
+\bSee also:\b CHANST, SHOWBANS
+
+%end
+%subject Access
+The \n User's Manual - Commands dealing with access levels 
+
+These commands have to do with which userlevels have access to
+specific commands
+
+        chaccess        readaccess      showaccess
+        cmdaccess       accesswrite
+
+%end
+%subject Bot
+The \n User's Manual - Information About This Bot        
+
+\n is based on VladBot, a C-bot written by VladDrac
+\b(irvdwijk@cs.vu.nl)\b who has had lots of help from Richie_B
+\b(richie@morra.et.tudelft.nl)\b. Cool new features and commands
+added by The-Black \b(starks@cs.ucdavis.edu)\b and further
+\bextensively\b modified by BadCRC \b(ralto@kendaco@telebyte.com)\b.
+On-line docs written by MeGALiTH \b(acable@sound.demon.co.uk)\b and
+appended/kept up to date by Wendigo \b(bhess@widomaker.com)\b.
+
+A copy of VladBot can be found on QuakeJnky, the \#quake service bot.
+Just /msg QuakeJnky files to see what the latest version is, and get it
+by typing /msg QuakeJnky send <latest_version>
+
+To get some statistic info, type /msg \n \binfo\b
+
+%end # Bot
+%Subject Whoami
+The \n User's Manual - The !whoami Command               
+
+\bUsage:\b !whoami
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!whoami\b shows you your current levels (user, shit
+and protlevel).
+
+\bSee also:\b USERLIST, PROTLIST, SHITLIST, WHOIS, NWHOIS,
+          Levels
+
+%end
+%Subject Info
+The \n User's Manual - The !info Command                 
+
+\bUsage:\b !info
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!info\b gives some information about \n.
+
+%end
+%Subject One
+The \n User's Manual - The !one Command                 
+
+\bUsage:\b !one <passwd> <command>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!one\b  Allows you to send a command that requires
+password validation as well as the passwd all in one command.
+
+%end
+%Subject Time
+The \n User's Manual - The !time Command                 
+
+\bUsage:\b !time
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!time\b gives you the current time, local to \n.
+
+%end
+%Subject Say
+The \n User's Manual - The !say Command                  
+
+\bUsage:\b !say <text to say>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!say\b makes me say something to the channel.
+
+\bSee also:\b ME, DESC
+
+%end
+%Subject Do
+The \n User's Manual - The !do Command                   
+
+\bUsage:\b !do <server command>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!do\b makes the me do something (wow! :). It will be
+'quoted' directly to the server. Remember that 2.8.* servers require
+a ':' sometimes, i.e. /msg \n DO PRIVMSG #blah :Hey friends!
+
+%end
+%Subject Op
+The \n User's Manual - The !op Command                   
+
+\bUsage:\b !op [channel]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!op\b makes me try to give you ops on the specified
+channel, or the channel that I'm on if no channel is given. This
+command won't work if you're already opped.
+
+\bSee also:\b GIVEOP, DEOP, AWP
+
+%end
+%Subject Awp
+The \n User's Manual - The !awp Command                   
+
+\bUsage:\b !awp
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!awp\b makes me try to give you ops on the channel that
+I'm on. This command won't work if you're already opped.  This is the
+/<-Rad 31337 version of \b!op\b.
+
+\bSee also:\b GIVEOP, DEOP
+
+%end
+%Subject Deop
+The \n User's Manual - The !deop Command                 
+
+\bUsage:\b !deop <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!deop\b causes me to deop the nick specified. I'm a
+bit thick, really, because I'll even deop protted users, only to
+re-op them immediately afterwards.
+
+\bSee also:\b OP, GIVEOP, AWP
+
+%end
+%Subject Giveop
+The \n User's Manual - The !giveop Command               
+
+\bUsage:\b !giveop <nick1> [nick2] [nick3]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!giveop\b will make me op between 1 to 3 people at
+once. I'm a bit thick, really, because I'll op people who are
+already opped, and I'll even op people who are shitted or have
+userlevel 0, only to instantly deop them again.
+
+\bSee also:\b OP, DEOP, AWP
+
+%end
+%Subject Diedie
+The \n User's Manual - The !diedie Command               
+
+\bUsage:\b !diedie
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!diedie\b makes me signoff. This should be used with care.
+Any changes in the user/shit/protlist will be written to disk first.
+This command is synonymous with !die.
+
+\bSee also:\b DIE, QUIT
+
+%end
+%Subject Die
+The \n User's Manual - The !die Command                  
+
+\bUsage:\b !die
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!die\b makes me signoff. This should be used with care.
+Any changes in the user/shit/protlist will be written to disk first.
+This command is synonymous with !diedie.
+
+\bSee also:\b DIEDIE, QUIT
+
+%end
+%Subject Useradd
+The \n User's Manual - The !useradd Command              
+
+\bUsage:\b !useradd <nick!user@host> <userlevel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!useradd\b adds a user with the specified level to the
+userlist. You cannot add a user with a highuser userlevel than yours.
+Masks may be included, i.e. *!*jhess2@*gmu.edu.
+
+\bSee also:\b USERLIST, USERDEL, NUSERADD, NHUSERADD, NUSERDEL,
+              CHUSERMASK
+%end
+%Subject Nuseradd
+The \n User's Manual - The !nuseradd Command          
+
+\bUsage:\b !nuseradd [switch] <nick> <userlevel> [email] [nick]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nuseradd\b adds a user with a specified level to
+the userlist, just like \bUSERADD\b, only here you only need to
+specify the nick, and not the whole usermask. The person who
+should be added must be on one of the channels I'm on.
+
+[switch] = -minhost or -fullhost
+   -minhost: If used, the resulting mask will always be
+   "*!*username@*blah2.blah1".
+   -fullhost: If used, the resulting mask have the person's
+   full host mask.
+
+\bSee also:\b NHUSERADD, USERLIST, USERDEL, USERADD, NUSERDEL, Levels
+              CHUSERMASK
+%end
+%Subject Nuserdel
+The \n User's Manual - The !nuserdel Command             
+
+\bUsage:\b !nuserdel <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nuserdel\b deletes a user just like \bUSERDEL\b,
+only here you only need to specify the nick, and not the whole
+usermask. The person to be deleted must be on one of the channels
+that I'm currently on.
+
+\bSee also:\b USERLIST, USERDEL, USERADD, Levels
+
+%end
+%Subject userdel
+The \n User's Manual - The !userdel Command              
+
+\bUsage:\b !userdel <mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!userdel\b can be used to remove someone from the
+userlist. Wildcards can be included in the mask. You cannot delete a
+user with a higher userlevel than you.
+
+\bSee also:\b USERLIST, USERADD, NUSERADD, NUSERDEL,
+              Levels, CHUSERMASK
+
+%end
+%Subject Userlist
+The \n User's Manual - The !userlist Command             
+
+\bUsage:\b !userlist [[-mask|-nick|-email|-level] [pattern/level]]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!userlist\b will show a list of all users on my
+userlist. If a switch is used, only the users matching the
+pattern or level specified will be shown.
+
+\bSee also:\b USERADD, NUSERADD, NUSERDEL, USERDEL, USERWRITE,
+          NUSERINFO, Levels
+
+%end
+%Subject Userwrite
+The \n User's Manual - The !userwrite Command            
+
+\bUsage:\b !userwrite
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!userwrite\b will write the userlist to disk.
+
+\bSee also:\b USERLIST, USERADD, NUSERADD, USERDEL, NUSERDEL
+
+%end
+%Subject exadd
+The \n User's Manual - The !exadd Command              
+
+\bUsage:\b !exadd <usermask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!exadd\b adds a user to the excludelist. 
+If added, the user can enter the channel even if his site
+has been shitted.
+
+\bSee also:\b EXDEL, EXLIST, EXWRITE, EXUNBAN, EXWHOIS
+
+%end
+%Subject exdel
+The \n User's Manual - The !exdel Command              
+
+\bUsage:\b !exdel <mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!exdel\b used to remove someone from the excludelist.
+
+\bSee also:\b EXADD, EXLIST, EXWRITE, EXUNBAN, EXWHOIS
+
+%end
+%Subject exlist
+The \n User's Manual - The !exlist Command             
+
+\bUsage:\b !exlist
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!exlist\b will show a list of all users on my
+excludelist. 
+
+\bSee also:\b EXADD, EXDEL, EXWRITE, EXUNBAN, EXWHOIS
+
+%end
+%Subject exwrite
+The \n User's Manual - The !exwrite Command            
+
+\bUsage:\b !exwrite
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!exwrite\b will write the excludelist to disk.
+
+\bSee also:\b EXADD, EXDEL, EXWHOIS, EXUNBAN
+
+%end
+%Subject Shitadd
+The \n User's Manual - The !shitadd Command              
+
+\bUsage:\b !shitadd [-expire <days>] <mask> <shitlevel> [reason]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!shitadd\b adds a user with a specified level to
+the shitlist.  If [-expire <days>] is specified, the shitmask
+will delete itself after the number of days specified.
+
+\bSee also:\b SHITLIST, SHITDEL, NSHITADD, PEWPADD, NPEWPADD
+              SHITWRITE, EXPIREADD, EXPIREDEL, EXPIRELIST
+%end
+%Subject Pewpadd
+The \n User's Manual - The !pewpadd Command              
+
+\bUsage:\b !pewpadd <mask> <shitlevel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!pewpadd\b is the CDA compliant version of !shitadd, 
+whichadds a user with a specified level to the shitlist.
+
+\bSee also:\b SHITADD, SHITLIST, SHITDEL, NSHITADD, NPEWPADD
+
+%end
+%Subject Npewpadd
+The \n User's Manual - The !npewpadd Command             
+
+\bUsage:\b !npewpadd <nick> <shitlevel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!npewpadd\b adds a user with a specified level to the
+shitlist, just like \bSHITADD\b, only here you only need to specify
+the nick, not the usermask. The person who is to be added must be
+on one of the channels I'm on.  This is the CDA compliant version of
+!nshitadd
+
+\bSee also:\b NSHITADD, SHITLIST, SHITDEL, SHITADD, Levels
+
+%end
+%Subject Nshitadd
+The \n User's Manual - The !nshitadd Command             
+
+\bUsage:\b !nshitadd <nick> <shitlevel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nshitadd\b adds a user with a specified level to the
+shitlist, just like \bSHITADD\b, only here you only need to specify
+the nick, not the usermask. The person who is to be added must be
+on one of the channels I'm on.
+
+\bSee also:\b NPEWPADD, PEWPADD, SHITLIST, SHITDEL, SHITADD, Levels
+
+%end
+%Subject Shitdel
+The \n User's Manual - The !shitdel Command              
+
+\bUsage:\b !shitdel <mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!shitdel\b can be used to remove someone from the
+shitlist.
+
+\bSee also:\b PEWPADD, NPEWPADD, SHITLIST, SHITADD, NSHITADD
+
+%end
+%Subject Shitlist
+The \n User's Manual - The !shitlist Command             
+
+\bUsage:\b !shitlist [switch pattern/level]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!shitlist\b will show a list of all users in
+the shitlist.
+\bSwitches:\b
+   -mask <pattern>: show all entries with masks that match
+      <pattern>
+   -level <level>: show all entries with a level of <level>
+   -whoshitted <pattern>: show entries with whoshitted info that
+      match <pattern>
+   -reason <pattern>: show entries with reasons that match
+      <pattern>
+   -whyshitted <pattern>: show entries with whyshitted info that
+      match <pattern>
+
+\bSee also:\b SHITDEL, SHITWRITE, WHYSHITTED, Levels
+%end
+%Subject emaillist
+The \n User's Manual - The !emaillist Command             
+
+\bUsage:\b !emaillist
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!emaillist\b shows a list of email addresses
+and the nicks they belong to.
+
+\bSee also:\b USERLIST, SHITLIST, PROTLIST
+
+%end
+%Subject fp
+The \n User's Manual - The !fp Command                   
+
+\bUsage:\b !fp <type> [new setting]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!fp\b sets the action that will be taken for
+the various flood prots.  If no setting is given, the
+current setting for <type> is displayed.
+\uTYPES:\u        \uSettings:\u
+ CLONE          OFF
+ PUBLIC         KICK
+ NICK           BANKICK              
+ CTCP           TBK (5 minute bankick)
+ OP
+ AWP
+%end
+%Subject Protadd
+The \n User's Manual - The !protadd Command              
+
+\bUsage:\b !protadd <mask> <protlevel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!protadd\b adds a user with a specified protlevel to
+the protlist.  Note that the only valid protlevels are 50 (for 100s)
+and 100 (for 125s/150s).
+
+\bSee also:\b PROTLIST, PROTDEL, NPROTADD, NPROTDEL, Levels
+
+%end
+%Subject Nprotadd
+The \n User's Manual - The !nprotadd Command             
+
+\bUsage:\b !nprotadd <nick> <protlevel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nprotadd\b adds a user with a specified level to the
+protlist, just like \bPROTADD\b, only here you only need to specify the
+nick, not the usermask. The person who is to be added must be on one
+of the channels I'm on. A userlevel 100 is required to !nprotadd at 50,
+and 125 is required to !nprotadd to 100.
+
+\bSee also:\b PROTLIST, PROTDEL, PROTADD, NPROTDEL, Levels
+
+%end
+%Subject Nprotdel
+The \n User's Manual - The !nprotdel Command             
+
+\bUsage:\b !nprotdel <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nprotdel\b deletes a user from the protlist just like
+\bPROTDEL\b, only here you only need to specify the nick, not the
+usermask. The person who is to be deleted must be on one of the channels
+I'm on.
+
+\bSee also:\b PROTLIST, PROTDEL, PROTADD, NPROTDEL, Levels
+
+%end
+%Subject Protdel
+The \n User's Manual - The !protdel Command              
+
+\bUsage:\b !protdel <mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!protdel\b can be used to remove someone from the
+protlist.
+
+\bSee also:\b PROTLIST, PROTADD, NPROTADD, Levels
+
+%end
+%Subject Protlist
+The \n User's Manual - The !protlist Command             
+
+\bUsage:\b !protlist
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!protlist\b will show a list of all users in the
+protlist.
+
+\bSee also:\b PROTDEL, PROTWRITE, Levels
+
+%end
+%Subject Protwrite
+The \n User's Manual - The !protwrite Command            
+
+\bUsage:\b !protwrite
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!protwrite\b will write the protlist to disk.
+
+\bSee also:\b PROTLIST, PROTADD, NPROTADD, PROTDEL, Levels
+
+%end
+%subject FORK
+The \n User's Manual - The !fork Command                 
+
+\bUsage:\b !fork <new nickname> [new username] [new ircname]
+
+\bExample:\b !fork CTim2 ctim2 /msg CTim2 help
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!fork\b is used to create a new bot (when you want to
+start a new bot, or when a bot has died). It inherits all channels and
+servers from its father, except for nickname, username and ircname,
+which can be defined.
+
+%end
+%Subject WHOIS
+The \n User's Manual - The !whois Command                
+
+\bUsage:\b !whois <mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!whois\b can be used to see someone else's user/shit/
+protlevel. As this command requires a full nick!user@host address, it
+may be a little inconvenient. \bNWHOIS\b requires only the nick.
+
+\bSee also:\b NWHOIS, USERLIST, PROTLIST, SHITLIST, WHOAMI
+
+%end
+%Subject NWHOIS
+The \n User's Manual - The !nwhois Command               
+
+\bUsage:\b !nwhois <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nwhois\b will show the user/shit/protlevel of the
+specified nick if he is on one of the channels I'm on.
+
+\bSee also:\b WHOIS, USERLIST, PROTLIST, SHITLIST, WHOAMI
+
+%end
+%Subject exwhois
+The \n User's Manual - The !exwhois Command               
+
+\bUsage:\b !exwhois <usermask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!exwhois\b can be used to see someone else's
+exclude level. 
+
+\bSee also:\b EXADD, EXDEL, EXLIST, EXUNBAN
+
+%end
+%Subject Open
+The \n User's Manual - The !open Command                 
+
+\bUsage:\b !open <channel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!open\b will cause me (if I am able) to open up the
+channel specified so you can join it. Actually, all I do is try to
+make the channel -i, -k, -s, -p, -l and unban you.
+
+\bSee also:\b INVITE, UNBAN
+
+%end
+%Subject Invite
+The \n User's Manual - The !invite Command               
+
+\bUsage:\b !invite <channel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!invite\b will cause me (if I am able) to invite you to
+the channel specified. This might be useful when the channel is an
+invite-only channel (+i).
+
+\bSee also:\b OPEN
+
+%end
+%Subject Send
+The \n User's Manual - The !send Command                 
+
+\bUsage:\b !send <file>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!send\b will cause me to send the file specified to
+you. In order to receive the file, you will need to type the
+following line: /dcc get \n <file>
+
+I will ask you to type this after I have prepared the connection.
+
+This command is synonymous with GET and MGET.
+
+\bSee also:\b FILES, GET, MGET, LS, CD, PWD
+
+%end
+%Subject Get
+The \n User's Manual - The !get Command                  
+
+\bUsage:\b !get <file>
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!get\b will cause me to send the file specified to
+you. In order to receive the file, you will need to type the
+following line: /dcc get \n <file>
+
+I will ask you to type this after I have prepared the connection.
+
+This command is synonymous with SEND and MGET.
+
+\bSee also:\b FILES, SEND, MGET, LS, CD, PWD
+
+%end
+%Subject Mget
+The \n User's Manual - The !mget Command                 
+
+\bUsage:\b !mget <file>
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!mget\b will cause me to send the file specified to
+you. In order to receive the file, you will need to type the
+following line: /dcc get \n <file>
+
+I will ask you to type this after I have prepared the connection.
+
+This command is synonymous with GET and SEND.
+
+\bSee also:\b FILES, GET, SEND, LS, CD, PWD
+
+%end
+%Subject Chat
+The \n User's Manual - The !chat Command                 
+
+\bUsage:\b !chat
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!chat\b will cause me to request a fast DCC chat
+connection between you and me, into which you can type commands. In
+order to establish this connection, you can also type the following
+line instead of using !chat: /dcc chat \n
+
+%end
+%Subject Files
+The \n User's Manual - The !files Command                
+
+\bUsage:\b !files [topic]
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!files\b will show you a short listing of the
+available files. An optional parameter can be used to specify a
+topic.
+
+\bSee also:\b SEND, LS, CD, PWD
+
+%end
+%subject DCC
+The \n User's Manual - The DCC Commands                  
+
+\bDCC\b stands for \bD\birect \bC\blient to \bC\blient, and is used for fast
+connections between two IRC clients. There are various types of
+DCC connections. \bDCC chat\b is used for fast (and safe) text
+transfer, \bDCC GET\b and \bDCC SEND\b are used for client-to-client
+data transfer. In order to establish a DCC connection, both
+parties will need to request the connection. If you request any
+DCC connection to me, I will respond to it.
+DCC connections are requested by typing:
+\b/dcc <dcc-type> <nick-of-party> <additional-parameters>\b
+In order to close a DCC connection, type:
+\b/dcc close <dcc-type> <nick-of-party>\b
+
+\bSee also:\b SEND, CHAT, FILES, LS, CD, PWD
+
+%end
+%Subject Levels
+
+\bLevels\b are used to determine which users can make me do what.
+The most important use of the levels are:
+\buserlevel\b ==   0 : user not allowed to be opped by someone else.
+\buserlevel\b >=  50 : user will be made channel operator by me.
+\buserlevel\b >=  75 : same as 50 but a few more commands.
+\buserlevel\b >= 100 : user may modify user/shit/prot lists.
+\buserlevel\b >= 105 : Reserved for bots.
+\buserlevel\b >= 125 : The user may use certain "special" commands.
+\buserlevel\b >= 150 : user may use all my functions.
+
+\bshitlevel\b >=  50 : user won't be opped, and cannot modify
+                 : the various lists, regardless of the userlevel.
+                 : I also will not allow this user to be opped by
+                 : someone else. The user will not be able to use
+                 : most commands.
+\bshitlevel\b >= 100 : user will be kicked and banned when they
+                 : join the channel.
+\bshitlevel\b == 101 : user will be kicked, banned and have a
+                 : shotgun stuck up their ass when they join the
+                 : channel.
+\bshitlevel\b == 150 : user will be kicked, and have their site
+                 : banned upon entering the channel.
+
+\bprotlevel\b >=  50 : User will be automatically reopped by me if
+                 : he is deopped by someone else.
+\bprotlevel\b >= 100 : If user is kicked, I will kick the person who
+                 : kicked him.
+
+\bSee also:\b WHOAMI, WHOIS, NWHOIS, USERADD,
+          SHITADD, PROTADD
+
+%end
+%subject emailadd
+The \n User's Manual - The !emailadd Command          
+
+\bUsage:\b !emailadd <nick/usermask> <addresss>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!emailadd\b  Changes the email address in
+the userlist of the nick/usermask specified.
+
+\bSee also:\b MAILPASSWD, MYEMAIL, USERINFO
+%end
+
+%subject global
+The \n User's Manual - The !global Command             
+
+\bUsage:\b !global <subcommand>
+
+\bUserlevel required:\b \l
+
+\b\uSubcommand\u  \uReq'd Level\u   \uDescription\u\b
+list        0             Displays info on all running bots
+info        0             Displays info on all running bots
+die         150           Shuts down all bots
+debug       150           Sets debugging status
+%end
+%Subject Patterns
+
+\bPattern\b strings should have the pattern: nick!user@host.domain
+Please use wildcards so the person is always recognized.
+Beware that people often use different machines, and different
+nicks. Due to the 2.8.x servers, add a "*" before the username.
+
+Example: *!*bhesse@*.widomaker.com
+
+\bSee also:\b USERLIST
+
+%end
+%subject rehash
+The \n User's Manual - The !rehash Command               
+
+\bUsage:\b !rehash
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!rehash\b kills all bots, re-reads the config file
+and restarts the bots. Changed userlists will be saved.
+
+%end
+%subject ftp
+\bFTP\b isn't a bot command, it's a set of commands that simulate
+file transfer as know with the UNIX FTP program. These commands
+are:
+
+        ls              get             mget
+        cd              pwd
+
+Further help is available for each of these commands.
+
+%end
+%subject ls
+The \n User's Manual - The !ls Command                   
+
+\bUsage:\b !ls
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!ls\b simulates the FTP ls command. It shows a list
+of files in the current working directory (cwd) and shows a file's
+permissions, its size in 1024 byte blocks, its last change time and
+the file's name. Switches are not implemented (and will be ignored).
+Wildcards or filenames are allowed as paramter.
+
+\bSee also:\b SEND, CHAT, FILES, CD, PWD
+
+%end
+%subject cd
+The \n User's Manual - The !cd Command                   
+
+\bUsage:\b !cd <directory>
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!cd\b changes directory. It simulates the FTP cd
+command.
+
+\bSee also:\b SEND, CHAT, FILES, LS, PWD
+
+%end
+%subject flist
+The \n User's Manual - The !flist Command                
+
+\bUsage:\b !flist
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!flist\b shows all the files offered by \n. It is
+synonymous with FILES.
+
+\bSee also:\b FILES, dcc, Filetransfer
+
+%end
+%subject pwd
+The \n User's Manual - The !pwd Command                  
+
+\bUsage:\b !pwd
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!pwd\b prints the current working directory. It
+simulates the FTP pwd command.
+
+\bSee also:\b SEND, CHAT, FILES, LS, CD
+
+%end
+%subject queue
+The \n User's Manual - The !queue Command                
+
+\bUsage:\b !queue
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!queue\b shows a list of all the files currently
+in \n's DCC queue.
+
+\bSee also: \bdcc\b, Filetransfer
+
+%end
+%subject banuser
+The \n User's Manual - The !banuser Command              
+
+\bUsage:\b !banuser <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!banuser\b causes me to ban the user specified. 
+using the mask *!*uname@*host.  I am dumb enough to ban someone
+with 100 prot only to unban them a second later.
+
+\bSee also:\b UNBAN, KICK, BEWT, BK
+
+%end
+%subject unban
+The \n User's Manual - The !unban Command                
+
+\bUsage:\b !unban
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!unban\b will make me attempt to unban you from all
+the channels that I'm on.
+
+\bSee also:\b BANUSER, KICK, BEWT, BK
+
+%end
+%subject exunban
+The \n User's Manual - The !exunban Command                
+
+\bUsage:\b /msg <bot> exunban <chan>
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!exunban\b removes any bans that prevent you from
+entering the channel if you are on the exclude list.
+
+Ex. "/msg \n exunban #quake" 
+
+\bSee also:\b EXADD, EXDEL, EXLIST, EXWHOIS
+
+%end
+%subject kick
+The \n User's Manual - The !kick Command                 
+
+\bUsage:\b !kick <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!kick\b makes me kick the specified nick from all
+the channels that I'm on.
+
+\bSee also:\b BANUSER, BEWT, UNBAN, BK
+
+%end
+%subject bewt
+The \n User's Manual - The !bewt Command                 
+
+\bUsage:\b !bewt <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!bewt\b is the 31337 version of !bk.  It makes me kick then
+ban the user specificed from all channels using the mask *!*uname@*host.
+
+\bSee also:\b BANUSER, KICK, UNBAN, BK
+
+%end
+%subject bk
+The \n User's Manual - The !bk Command                 
+
+\bUsage:\b !bk <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!bk\b makes me kick then ban the user specificed
+from all channels using the mask *!*uname@*host.
+
+\bSee also:\b BANUSER, BEWT, UNBAN, KICK, TBK
+
+%end
+%subject join
+The \n User's Manual - The !join Command                 
+
+\bUsage:\b !join <channel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!join\b makes me join the channel specified on the
+command line.
+
+\bSee also:\b LEAVE
+
+%end
+%subject leave
+The \n User's Manual - The !leave Command                
+
+\bUsage:\b !leave <channel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!join\b makes me leave the channel specified on the
+command line.
+
+\bSee also:\b JOIN
+
+%end
+%subject nick
+The \n User's Manual - The !nick Command                 
+
+\bUsage:\b !nick <nickname>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nick\b makes me change my nickname to what is
+specified on the command line. This can be useful if some lamer is
+attempting to collide-kill me.
+
+\bSee also:\b NICKCH
+
+%end
+%subject channels
+The \n User's Manual - The !channels Command             
+
+\bUsage:\b !channels
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!channels\b shows you a list of all the channels I'm
+currently on.
+
+%end
+%subject newstuff
+The \n User's Manual - New Commands and Features         
+
+\bNew Commands:\b
+chuserlevel   nchuserlevel  whoshitted    whenshitted
+chshitmask    chshitreason  chwhenshitted chwhoshitted
+chshitlevel   nuserinfo     nshowauth     chanst
+tbk           showbans      expireadd     expiredel
+expirelist    expirewrite   sendbotlist   nhuseradd
+cmdhistory    chusermask    readfp        fpwrite
+voice
+
+\bAltered Commands:\b
+shitadd       nshitadd      pewpadd       npewpadd
+useradd       nuseradd      whois         nwhois
+desc          userinfo      shitlist      userlist
+showseen      seen
+%end
+%subject massop
+The \n User's Manual - The !massop Command               
+
+\bUsage:\b !massop <mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!massop\b makes me op all the users on the channels
+I'm on whose nick!user@host address fit the mask specified.
+Excessive (or unnecessary) use of this command may lag the bot or
+throw the channel out of sync.
+
+\bSee also:\b MASSDEOP, MASSKICK, MASSUNBAN
+
+%end
+%subject massdeop
+The \n User's Manual - The !massdeop Command             
+
+\bUsage:\b !massdeop <mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!massdeop\b makes me deop all the users on the
+channels I'm on whose nick!user@host address fit the mask
+specified. Excessive (or unnecessary) use of this command may lag
+the bot or throw the channel out of sync.
+
+\bSee also:\b MASSOP, MASSKICK, MASSUNBAN, MASSNK
+
+%end
+%subject masskick
+The \n User's Manual - The !masskick Command             
+
+\bUsage:\b !masskick <mask> [channel]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!masskick\b makes me kick all the users whose 
+nick!user@host address fit the mask specified. You can specify 
+which channel that I'm on they're to be kicked from but if it's
+left out I will kick them from my default channel.  Masskick 
+will never kick other bots, regardless of prot level.
+
+\bSee also:\b MASSOP, MASSDEOP, MASSUNBAN, MASSNK
+
+%end
+%subject massnk
+The \n User's Manual - The !massnk Command             
+
+\bUsage:\b !massnk <mask> [channel]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!massnk\b Makes me kick all users who are not
+in the userlist who match the usermask specified. You can specify 
+which channel that I'm on they're to be kicked from but if it's
+left out I will kick them from my default channel. 
+
+Ex. "!massnk *!*@*.for.nau.edu"
+
+\bSee also:\b MASSOP, MASSDEOP, MASSUNBAN, MASSKICK
+
+%end
+%subject massunban
+The \n User's Manual - The !massunban Command            
+
+\bUsage:\b !massunban <mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!massunban\b makes me unban all the users on the
+channels I'm on whose nick!user@host address fit the mask
+specified. Excessive (or unnecessary) use of this command may lag
+the bot or throw the channel out of sync.
+
+\bSee also:\b MASSOP, MASSKICK, MASSDEOP, MASSNK
+
+%end
+%subject server
+The \n User's Manual - The !server Command               
+
+\bUsage:\b !server <server number>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!server\b makes me change servers. There are a 
+couple of servers up that are suitable for my presence: to switch
+to server number 7, for instance, you would use \b!server 7\b. This
+command is useful if the server the bot is currently on is split,
+to switch to a new, unsplit server temporarily.
+
+%end
+%subject loglevel
+The \n User's Manual - The !loglevel Command             
+
+\bUsage:\b !loglevel <loglevel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!loglevel\b sets the bot's logging level to the
+value specified on the command line. A higher value results in more
+of the bot's actions being logged.
+
+%end
+%subject quit
+The \n User's Manual - The !quit Command                 
+
+\bUsage:\b !quit
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!quit\b causes all active copies of \n to
+terminate.
+
+\bSee also:\b DIE, DIEDIE
+
+%end
+%subject cycle
+The \n User's Manual - The !cycle Command                
+
+\bUsage:\b !cycle [channel]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!cycle\b makes me leave and rejoin either the channel
+I'm currently on if no parameters are specified, or the channel
+specified on the command line.
+
+%end
+%subject seen
+The \n User's Manual - The !seen Command                 
+
+\bUsage:\b !seen <nick|mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!seen\b shows you what time, date and address the
+nick specified on the command line was last on one of the channels
+I'm on. If a mask is given, the first (if any) entry with a nick
+that matches the mask will be shown.
+
+\bSee also:\b SHOWSEEN
+
+%end
+%subject showseen
+The \n User's Manual - The !showseen Command             
+
+\bUsage:\b !showseen [-mask] [pattern]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!showseen\b shows a list of all users currently in
+my SEEN list. If a pattern is given, only those entries with nicks
+that match the pattern will be shown. If -mask and pattern are
+given, only those entries with nick!user@hosts that match the
+pattern will be shown.
+
+\bSee also:\b SEEN
+
+%end
+%subject passwd
+The \n User's Manual - The !passwd Command               
+
+\bUsage:\b /msg \n passwd <password>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b/msg \n passwd\b is used to authenticate yourself
+to enable you to access commands that require a userlevel of 50+.
+Specify your password on the command line.
+
+\b** IMPORTANT NOTICE!! **\b Do \bnot\b use this command in the form
+!passwd <password>. Doing so will lock your account. This is for a
+security reason: !passwd will broadcast your password to all users
+on the current channel, compromising the security of your account.
+
+\bSee also:\b CHPASSWD, PASSWDWRITE, SHOWPASSWD, NSHOWPASSWD
+
+%end
+%subject chpasswd
+The \n User's Manual - The !chpasswd Command             
+
+\bUsage:\b /msg \n chpasswd <old password> <new password>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b/msg \n chpasswd\b is used to change your password.
+Although you may change your password with a userlevel 20, you will
+not be able to authenticate yourself until you are upgraded to 50.
+
+\b** IMPORTANT NOTICE!! **\b Do \bnot\b use this command in the form
+!chpasswd <old password> <new password>. Doing so will lock your
+account. This is for a security reason: !chpasswd will broadcast your
+password to all users on the current channel, compromising the
+security of your account.
+
+\bSee also:\b PASSWD, PASSWDWRITE, SHOWPASSWD, NSHOWPASSWD
+
+%end
+%subject passwdwrite
+The \n User's Manual - The !passwdwrite Command          
+
+\bUsage:\b !passwdwrite
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!passwdwrite\b writes the password list out to disk.
+
+\bSee also:\b PASSWD, CHPASSWD, SHOWPASSWD, SHOWLOCKED, NSHOWPASSWD
+
+%end
+%subject showpasswd
+The \n User's Manual - The !showpasswd Command           
+
+\bUsage:\b !showpasswd <mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!showpasswd\b shows you all passwds matching the mask
+specifed.
+
+\bSee also:\b PASSWD, CHPASSWD, PASSWDWRITE, SHOWLOCKED, NSHOWPASSWD
+
+%end
+%subject nshowauth
+The \n User's Manual - The !nshowauth Command             
+
+\bUsage:\b !nshowauth <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nshowauth\b shows you whether <nick> is
+authenticated.
+%end
+%subject showlocked
+The \n User's Manual - The !showlocked Command           
+
+\bUsage:\b !showlocked <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!showlocked\b shows the unlocked password of the
+locked nick specified on the command line.
+
+\bSee also:\b PASSWD, CHASSWD, PASSWDWRITE, SHOWPASSWD,
+          NLOCK, UNLOCK
+
+%end
+%subject nlock
+The \n User's Manual - The !nlock Command                
+
+\bUsage:\b !nlock <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nlock\b locks the password of the nick specified,
+preventing authentication.
+
+\bSee also:\b UNLOCK
+
+%end
+%subject unlock
+The \n User's Manual - The !unlock Command               
+
+\bUsage:\b !unlock <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!unlock\b unlocks the password of the nick specified,
+re-allowing authentication.
+
+\bSee also:\b NLOCK
+
+%end
+%subject chaccess
+The \n User's Manual - The !chaccess Command             
+
+\bUsage:\b !chaccess <command> <userlevel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!chaccess\b changes the userlevel required to use
+a certain command. For example, to allow !say to be used by 50'ers,
+the command \b!chaccess say 50\b would be used.
+
+\bSee also:\b READACCESS, SHOWACCESS, CMDACCESS, ACCESSWRITE
+
+%end
+%subject readaccess
+The \n User's Manual - The !readaccess Command             
+
+\bUsage:\b !readaccess 
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!readaccess\b Re-reads access.list and changes the
+current access settings to match it.
+
+\bSee also:\b CHACCESS, SHOWACCESS, CMDACCESS
+
+%end
+%subject showaccess
+The \n User's Manual - The !showaccess Command             
+
+\bUsage:\b !showaccess <userlevel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!showaccess\b Shows a list of commands that
+require <userlevel> to perform them.
+
+\bSee also:\b READACCESS, CHACCESS, CMDACCESS
+
+%end
+%subject cmdaccess
+The \n User's Manual - The !cmdaccess Command             
+
+\bUsage:\b !cmdaccess <command> 
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!cmdaccess\b Shows the userlevel required
+to access the command specified.
+
+\bSee also:\b READACCESS, SHOWACCESS, CHACCESS
+
+%end
+%subject bwallop
+The \n User's Manual - The !bwallop Command              
+
+\bUsage:\b !bwallop <text>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!bwallop\b noticess the specified text to all ops on all
+channels that I'm on using the format 
+\b[BWallOP:<chan>:<yournick>]\b <text>
+
+\bSee also:\b SAY, ME, BUY, DESC, WALL
+
+%end
+%subject wall
+The \n User's Manual - The !wall Command              
+
+\bUsage:\b !wall <text>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!wall\b notices the specified text to all ops on all
+channels that I'm on using the format \b[WallOp]\b <text>.
+
+\bSee also:\b SAY, ME, BUY, DESC, BWALLOP
+
+%end
+%subject nickch
+The \n User's Manual - The !nickch Command               
+
+\bUsage:\b !nickch <seconds>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nickch\b causes me to automatically change my nick
+every couple of seconds. The number of seconds between automatic
+nick changes is specified on the command line, and has to be above
+20. This command is very useful if some lamer is attempting to
+collide-kill me.
+
+\bSee also:\b NICK
+
+%end
+%subject me
+The \n User's Manual - The !me Command                   
+
+\bUsage:\b !me <action>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!me\b causes me to output the specified action to the
+channel. It is equivalent to the ircII /me and /action commands.
+
+\bSee also:\b SAY, DESC, BUY, WALL
+
+%end
+%subject desc
+The \n User's Manual - The !desc Command                 
+
+\bUsage:\b !desc <nick> <action>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!desc\b causes me to output the specified action to
+the specified nick. It is equivalent to the ircII /describe command.
+
+\bSee also:\b SAY, ME, BUY, WALL
+
+%end
+%subject buy
+The \n User's Manual - The !buy Command                 
+
+\bUsage:\b !buy <nick> <item>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!buy\b will cause me to /describe to <nick> with the
+format * \n buys you <item>, compliments of <yournick>.  This function
+was added in honor of Beeper the barbot.
+
+\bSee also:\b SAY, ME, WALL
+
+%end
+%subject listdcc
+The \n User's Manual - The !listdcc Command                 
+
+\bUsage:\b !listdcc
+
+\bUserlevel required:\b 0
+
+\bPurpose:\b \b!listdcc\b causes me to show you information on all
+my current DCC connections - what type they are, who they are with,
+what time they were started, and so on.
+
+%end
+%subject talk
+The \n User's Manual - The !talk Command                 
+
+\bUsage:\b !talk <talk level>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!talk\b causes me to respond to various text
+strings in the channel in an effort to simulate a real person.
+I respond to greetings and certain phrases.  Valid talk levels are
+0-3. The talk levels are as follows:
+  0 = Sssssh! No Talking.
+  1 = Responds to commands and notices on illegal activity
+  2 = Responds to greetings and parts
+  3 = Becomes fairly obnoxious, responing to key strings randomly
+  4 = Same as 3 but greets 150s on join and announces msgs waiting
+
+%end
+%subject secure
+The \n User's Manual - The !secure Command               
+
+\bUsage:\b !secure <secure level>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!secure\b Changes security level. Valid security
+levels are 0-3.  The security levels are as follows:
+  0 = No functions require authentication and high ops are
+      autopped.
+  1 = Bots require a passwd to op and perform important
+      functions.
+  2 = Bots do not allow ops to op other users, but they
+      autoop other bots.
+  3 = Bots do not allow ops to op other users, they must op
+      themselves by using the bots.
+
+%end
+%subject addmsg
+The \n User's Manual - The !addmsg Command               
+
+\bUsage:\b !addmsg <level> <message>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!addmsg\b add a message to the database for
+<level> users.  <level> users will be notified upon joining of
+waiting messages if talk level 1 is enabled.
+
+\bSee also:\b SHOWMSGS SHOWALLMSGS, CHECKMSGS
+%end
+%subject showmsgs
+The \n User's Manual - The !showmsgs Command             
+
+\bUsage:\b !showmsgs <level>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!showmsgs\b Read all new messages for <level>
+users and mark them read.
+
+\bSee also:\b ADDMSG SHOWALLMSGS, CHECKMSGS
+%end
+%subject showallmsgs
+The \n User's Manual - The !showallmsgs Command          
+
+\bUsage:\b !showallmsgs <level>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!showallmsgs\b Read all messages for <level> 
+users, even old ones.
+
+\bSee also:\b SHOWMSGS, ADDMSG, CHECKMSGS
+%end
+%subject checkmsgs
+The \n User's Manual - The !checkmsgs Command          
+
+\bUsage:\b !checkmsgs
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!checkmsgs\b Displays the number of msgs waiting
+for each userlevel without displaying the msgs.
+
+\bSee also:\b SHOWMSGS, ADDMSG, SHOWALLMSGS
+
+%end
+%subject spy
+The \n User's Manual - The !spy Command          
+
+\bUsage:\b !spy
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!spy\b  I will open a DCC chat with you and 
+relay all commands sent to me through it.
+
+\bSee also:\b SPYLOG
+%end
+%subject spylog
+The \n User's Manual - The !spylog Command          
+
+\bUsage:\b !spylog
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!spy\b  Logs all commands sent to me to spy.log
+
+\bSee also:\b SPY
+%end
+%subject mailpasswd
+The \n User's Manual - The !mailpasswd Command          
+
+\bUsage:\b !mailpasswd <nick/usermask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!mailpasswd\b  Mails the passwd of the specified
+nick/usermask to the email address specified in their entry.
+This is used to make sure that when someone forgets their passwd
+you're actually sending it to them and not some bastard faker.
+
+\bSee also:\b MYEMAIL, EMAILADD, USERINFO, SHOWEMAIL
+%end
+%subject myemail
+The \n User's Manual - The !myemail Command          
+
+\bUsage:\b !myemail <your email address>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!myemail\b  Changes your email address in the userlist.
+
+\bSee also:\b MAILPASSWD, EMAILADD, USERINFO, SHOWEMAIL
+%end
+%subject showemail
+The \n User's Manual - The !showemail Command          
+
+\bUsage:\b !showemail <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!myemail\b  Displays the email address field in the 
+userlist of the nick specified.
+
+\bSee also:\b MAILPASSWD, EMAILADD, USERINFO, MYEMAIL
+%end
+%subject nickadd
+The \n User's Manual - The !nickadd Command          
+
+\bUsage:\b !nickadd <nick/usermask> <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nickadd\b  Changes the nick field in
+the userlist of the nick/usermask specified.
+
+\bSee also:\b MYNICK, USERINFO
+%end
+%subject userinfo
+The \n User's Manual - The !userinfo Command          
+
+\bUsage:\b !userinfo [-email|-mask] <mask> [all]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!userinfo\b  search for a nick and email
+entries in the userlist. If only a mask is given,
+!userinfo searches the userlist until it finds an entry
+with a matching nick field. If -the email option is
+used, !userinfo matches the email field. If the -mask
+option is used, !userinfo matches the usermask and
+returns the mask, nick, and email fields. If the "all"
+option is used, ALL matching entries are listed, not
+just the first one.
+
+\bSee also:\b NUSERINFO, MYEMAIL, MYNICK, EMAILADD,
+NICKADD, SHOWEMAIL
+%end
+%subject mynick
+The \n User's Manual - The !mynick Command          
+
+\bUsage:\b !mynick <your nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!myemail\b  Changes your nick in the nick field
+of the userlist.
+
+\bSee also:\b USERINFO NICKADD
+%end
+%subject showhacks
+The \n User's Manual - The !showhacks Command          
+
+\bUsage:\b !showhacks
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!myemail\b  Shows all nethacks that have happened on
+that day from the nethack log file.
+
+\bSee also:\b Channel
+%end
+%subject whoshitted
+The \n User's Manual - The !whoshitted Command         
+
+\bUsage:\b !whoshitted <shitmask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!whoshitted\b  Shows the nick!user@host of the person
+who added the specified shitmask.
+
+\bSee also:\b Users WHYSHITTED WHENSHITTED CHWHOSHITTED
+%end
+%subject whenshitted
+The \n User's Manual - The !whenshitted Command        
+
+\bUsage:\b !whenshitted <shitmask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!whenshitted\b  Shows the date a shitmask was added.
+
+\bSee also:\b Users WHYSHITTED WHOSHITTED CHWHENSHITTED
+%end
+%subject chshitmask
+The \n User's Manual - The !chshitmask Command         
+
+\bUsage:\b !chshitmask <old shitmask> <new shitmask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!chshitmask\b  Changes the shitmask for an existing
+shitlist entry.
+
+\bSee also:\b Users CHSHITREASON CHWHENSHITTED CHWHOSHITTED CHSHITLEVEL
+%end
+%subject chshitreason
+The \n User's Manual - The !chshitreason Command       
+
+\bUsage:\b !chshitreason <shitmask> <new reason>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!chshitreason\b  Changes the kick message for shitlist
+entries.
+
+\bSee also:\b Users CHSHITMASK CHWHENSHITTED CHWHOSHITTED CHSHITLEVEL
+%end
+%subject chwhenshitted
+The \n User's Manual - The !chwhenshitted Command      
+
+\bUsage:\b !chwhenshitted <shitmask> <mm/dd/yy>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!chwhenshitted\b  Changes the date a shitmask was added.
+
+\bSee also:\b Users CHSHITMASK CHSHITREASON CHWHOSHITTED CHSHITLEVEL
+%end
+%subject chwhoshitted
+The \n User's Manual - The !chwhoshitted Command       
+
+\bUsage:\b !chwhoshitted <shitmask> <nick!user@host>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!chwhoshitted\b  Changes the whoshitted info for a
+shitmask.
+
+\bSee also:\b Users CHSHITMASK CHSHITREASON CHSHITLEVEL CHWHENSHITTED
+%end
+%subject chshitlevel
+The \n User's Manual - The !chshitlevel Command        
+
+\bUsage:\b !chshitlevel <shitmask> <new level>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!chshitlevel\b  Changes the level of a shitlist entry.
+
+\bSee also:\b Users CHSHITMASK CHSHITREASON CHWHOSHITTED CHWHENSHITTED
+%end
+%subject nuserinfo
+The \n User's Manual - The !nuserinfo Command          
+
+\bUsage:\b !nuserinfo <nick>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nuserinfo\b  Same as !userinfo, but uses the person's
+current irc nick to lookup the email and nick entries in the userlist.
+
+\bSee also:\b USERINFO, MYEMAIL, MYNICK, EMAILADD, NICKADD, SHOWEMAIL
+%end
+%subject accesswrite
+The \n User's Manual - The !accesswrite Command          
+
+\bUsage:\b !accesswrite
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!accesswrite\b makes me write the current command
+access levels to a file, thereby making them permanent.
+
+\bSee also:\b CHACCESS, READACCESS, SHOWACCESS, CMDACCESS
+
+%end
+%subject chanst
+The \n User's Manual - The !chanst Command             
+
+\bUsage:\b !chanst [channel]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!chanst\b makes me give you some channel
+statistics for a channel.
+
+\bSee also:\b SHOWBANS, SHOWUSERS
+
+%end
+%subject showbans
+The \n User's Manual - The !showbans Command             
+
+\bUsage:\b !showbans <channel>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!showusers\b makes me show you a list of all the
+bans on the channel specified and their unban times if any. If
+no channel is specified, it'll show a list of bans on the
+channel you're currently on.
+
+\bSee also:\b CHANST, SHOWUSERS
+
+%end
+%subject chuserlevel
+The \n User's Manual - The !chuserlevel Command        
+
+\bUsage:\b !chuserlevel <usermask> <new level>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!chuserlevel\b  Changes the userlevel for
+an existing user.
+
+\bSee also:\b NCHUSERLEVEL, USERADD, NUSERADD, USERDEL,
+              NUSERDEL, USERWRITE, CHUSERMASK
+%end
+%subject nchuserlevel
+The \n User's Manual - The !nchuserlevel Command       
+
+\bUsage:\b !nchuserlevel <nick> <new level>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nchuserlevel\b  Changes the userlevel for
+an existing user.
+
+\bSee also:\b CHUSERLEVEL, USERADD, NUSERADD, USERDEL,
+              NUSERDEL, USERWRITE, CHUSERMASK
+%end
+%Subject expireadd
+The \n User's Manual - The !expireadd Command          
+
+\bUsage:\b !expireadd <shitmask> <days until expiration>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!expireadd\b sets a shitlist entry to expire
+X number of days from the current date. At that time, both
+the expirelist entry and the shitlist entry will be deleted.
+
+\bSee also:\b EXPIREDEL, EXPIRELIST, EXPIREWRITE, SHITADD,
+              NSHITADD
+%end
+%Subject expiredel
+The \n User's Manual - The !expiredel Command          
+
+\bUsage:\b !expiredel <shitmask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!expiredel\b removes a shitlist entry from
+the expirelist thereby making it permanent.
+
+\bSee also:\b EXPIREADD, EXPIRELIST, EXPIREWRITE, SHITADD,
+              NSHITADD
+%end
+%Subject Whyshitted
+The \n User's Manual - The !whyshitted Command             
+
+\bUsage:\b !whyshitted <address>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!whyshitted\b Will search the shitlist for the 
+mask specified and return the reason given for the shit.
+
+\bSee also:\b SHITDEL, SHITWRITE, Levels
+
+%end
+%subject Filetransfer
+The \n User's Manual - File Transfer Commands            
+
+The \n fileserver interface.  Sure beats mIRC.
+
+        files           flist           chat
+        send            get             mget
+        listdcc         ls              cd
+        pwd             queue
+
+You can make \bfiletransfer\bs with me without any quota.
+The transfers are done by using \bDCC\b. All up and downloads are
+logged for statistic purposes. Don't transfer if you don't like
+this policy.
+And if you think you got something interesting to share with the
+Internet community, uploading is also possible, just DCC it
+to me, i.e. /dcc send \n \buseful_file\b
+
+%end # Filetransfer
+%Subject Getting_access
+
+\bgetting_access:\b To get any level > 0, you need to contact
+someone who has a level >= 100. Use USERLIST to get a list
+of users.
+
+\bSee also:\b USERLIST
+
+%end
+%subject Personality
+The \n User's Manual - Giving Me A Personality           
+
+Try and get newbies to talk to me!  Annoy fellow ops with impunity!
+The ultimate insult is getting someone to call \n for 
+some deathmatch.
+
+        say             me              desc
+        talk            wall            buy
+
+%end
+%subject Privileged
+The \n User's Manual - Using Privileged Commands         
+
+These commands have to do with the actual operation of the bot
+and are hence reserved for userlevels 100+
+
+        fork            rehash          do
+        die             diedie          quit
+        cycle           talk            secure
+        bwallop         server          loglevel
+        nick            nickch          channels
+        showusers       spy             spylog
+
+%end
+%Subject expirewrite
+The \n User's Manual - The !expirewrite Command        
+
+\bUsage:\b !expirewrite
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!expirewrite\b writes the expirelist to disk. 
+
+\bSee also:\b EXPIREADD, EXPIREDEL, EXPIRELIST, SHITADD,
+              NSHITADD
+%end
+%Subject expirelist
+The \n User's Manual - The !expirelist Command         
+
+\bUsage:\b !expirelist
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!expirelist\b shows you a list of all
+shitlist entries that are set to expire.
+
+\bSee also:\b EXPIREADD, EXPIREDEL, EXPIREWRITE, SHITADD,
+              NSHITADD
+%end
+%subject tbk
+The \n User's Manual - The !tbk Command                
+
+\bUsage:\b !tbk <nick> <# of minutes> [kick message]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!tbk\b makes me ban then kick the user
+specified, then unban them after X number of minutes.
+
+\bSee also:\b BANUSER, BEWT, UNBAN, KICK, BK
+
+%end
+%Subject sendbotlist
+The \n User's Manual - The !sendbotlist Command          
+
+\bUsage:\b !sendbotlist <file>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!sendbotlist\b sends you one of my list
+files.
+FILES:
+   USER    - User list
+   SHIT    - Both shit list files
+   PROT    - Prot list
+   PASSWD  - Password list
+   EXCLUDE - Exclude list
+   EXPIRE  - Expire list
+   ACCESS  - Command level list
+%end
+%Subject Nhuseradd
+The \n User's Manual - The !nhuseradd Command         
+
+\bUsage:\b !nhuseradd <nick> <userlevel> [email] [nick]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!nhuseradd\b adds a user with a specified level
+to the userlist, just like \bUSERADD\b, only here you only need
+to specify the nick, and not the whole usermask. The resulting
+usermask will have the person's full hostname. The person who
+should be added must be on one of the channels I'm on.
+
+\bSee also:\b USERLIST, USERDEL, USERADD, NUSERDEL, Levels,
+              CHUSERMASK
+%end
+%Subject cmdhistory
+The \n User's Manual - The !cmdhistory Command        
+
+\bUsage:\b !cmdhistory
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!cmdhistory\b gives you a list of the last 20
+commands that affect a channel, the channel they were executed
+in, and who invoked them. Commands that add to this list are:
+!banuser, !bewt, !bk, !tbk, !unban, !kick, !massunban, !deop,
+!giveop, !massdeop, !masskick, !massnk, and !massop.
+
+
+%end
+%subject chusermask
+The \n User's Manual - The !chusermask Command         
+
+\bUsage:\b !chusermask <old mask> <new mask>
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!chusermask\b  Changes the mask for an
+existing user.
+
+\bSee also:\b NCHUSERLEVEL, USERADD, NUSERADD, USERDEL,
+              NUSERDEL, USERWRITE, CHUSERLEVEL
+%end
+%Subject readfp
+The \n User's Manual - The !readfp Command               
+
+\bUsage:\b !readfp
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!readfp\b Reads flood prot settings from
+disk.
+%end
+%Subject fpwrite
+The \n User's Manual - The !fpwrite Command              
+
+\bUsage:\b !fpwrite
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!fpwrite\b writes the flood prot settings
+to disk.
+%end
+%Subject Voice
+The \n User's Manual - The !voice Command                
+
+\bUsage:\b !voice [channel]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!voice\b makes me try to give you +v on the specified
+channel, or the channel that I'm on if no channel is given. This
+command won't work if you're already voiced.
+%end
+%Subject Devoice
+The \n User's Manual - The !devoice Command                
+
+\bUsage:\b !devoice [channel]
+
+\bUserlevel required:\b \l
+
+\bPurpose:\b \b!devoice\b makes me -v you on the specified
+channel, or the channel that I'm on if no channel is given. This
+command won't work if you're already devoiced.
+%end

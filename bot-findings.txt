@@ -48,7 +48,14 @@ slightly older alpha 12 in the archive.
 File: hop1.8.tar.Z
 
 [bot.c] Bot v0.01   11/7/91 - Peyote Coyote  Generic bot shell
-[ strcasestr ] NOT used. I just pulled it out of Sagebot for possible future use.
+[ strcasestr ] NOT used. I just pulled it out of Sagebot for possible future 
+use.
+
+
+== IncuBot ==
+Incubus fork, which was done in parallell with the Chronic bot and incorporated
+BadCRC's changes. The archive comes with many obsolete files and txt files from
+the bots it was based on.
 
 
 == PC Bot 0.01 ==

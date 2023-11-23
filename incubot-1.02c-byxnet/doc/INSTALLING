@@ -1,0 +1,46 @@
+How to install ChRoniCbot
+-------------------------
+- Compile the bot by typing "make".  This will create an executable
+  binary called "chronic.new" if its successful.  If make files, you
+  may have to edit Makefile and add/remove libraries or defines for
+  your flavour of unix.
+
+- Setup your user/prot/shit/exclude lists.  Samples are provided
+  in the files user.list prot.list shit.list exclude.list.  Be sure
+  to keep the same format.  One space in the wrong place can make
+  your bot not recognize you.
+
+- Put your mail addresses into useradd.notify that you want to be
+  notified every day with a list of events.
+
+- Review infile.cfg for important runtime information.
+
+- If you have an available crontab and want the bot to be up all
+  the time, look in the sample "botcheck" script included.  If you
+  don't have a crontab available, look at the sample "maintainer"
+  program included.  If you keep the name "chronic.new" and you
+  have gcc available, you can compile maintainer with:
+  gcc -o maintainer maintainer.c
+  If you rename chronic.new , you will have to modify maintainer.c
+  so it calls the right filename.
+
+- Once your bot is up, if you have other bots that will be in the
+  same channel as yours, you need to add the other bots at level
+  105 on your bot, and add your bot at 105 on the other bots.  The
+  bots should never be higher than level 50 on themselves, and they
+  don't need any prot level security.  Your bot has to be added to
+  itself.  I would recommend level 50, but no higher.  Don't add
+  your bot at level 20 on itself or it won't be able to ban shitted
+  users.
+
+- Once all the bots are added on each other properly, you have to
+  synchronize your bots passwords on the other bots so it can op
+  itself.  You can do this 2 ways: either logon to irc from your
+  bot's account, authenticate on the other bots, and change the
+  password, OR if the other bots are ChRoniCbots, you can use the
+  !passwdadd command.   Either way, the password for YOUR bot on
+  the other bots MUST be the same password that is in your bot's
+  passwd.list file for itself.
+
+===EOF===
+
