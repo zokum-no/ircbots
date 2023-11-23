@@ -1,0 +1,1077 @@
+
+                       Sparse Documentation for 
+                                TnT-II
+                              IRC robot
+
+                            Version: 5.7f
+                      Last updated: April 1998   
+
+
+DISCLAIMER:
+
+    YOU RUN THIS PROGRAM AT YOUR OWN RISK.  THERE IS NO IMPLIED OR EXPRESSED
+    WARRANTY.  THIS PROGRAM HAS BEEN TESTED AS THOROUGHLY AS WAS POSSIBLE BY
+    THE AUTHOR WITHOUT ANY ILL EFFECTS; HOWEVER, IT MAY OR MAY NOT WORK 
+    PROPERLY ON ALL MACHINES.  THE AUTHOR IS NOT LIABLE FOR ANY DAMAGES 
+    RESULTING FROM THE USE OF THIS PROGRAM.
+
+
+* 0.0  Introduction
+-------------------
+
+    Having gotten the disclaimer out of the way, thank you for using the
+    TnT-II automaton.  I hope this automaton will fill your needs for bot
+    fun.  This robot was started from a HackBot (by CoMSTuD), which was in
+    turn derived from VladBot (by VladDrac).  Since then, it has gone through
+    drastic changes to serve my needs.  This automaton is a consolidation of
+    some of the more interesting and useful features (from PosterBoy, joh,
+    etc) I've encountered from a few of the many irc automatons out there.
+    I will go through some of the features in the sections to follow.
+
+    For the automaton commands that have options, you can just issue the
+    command with no arguments to the automaton and the automaton will tell
+    you the valid options available.
+
+    NOTE: Anything within the angle brackets, < and >, means that it
+          is a required parameter to the automaton command.  Anything 
+          within the brackets, [ and ], mean it is an optional item;
+          you may or may not need to specify them to get the command to
+          function.
+
+* 1.0  File setup
+-----------------
+
+    Let's first go through the required files:
+
+	o botnick.ul -- user list
+ 	o botnick.ak -- autokick list
+	* botnick.nl -- nick list
+	o infile.cfg -- the configuration file
+	* mklog -- for when you are running inside a Kerberos environment
+    where 
+	o means the file is required and 
+	* indicates that it's optional.
+
+    NOTE: Filenames _must_ be in lowercase!  e.g. If you name your bot
+          "AbCdEf" or "ABCDEF", the corresponding files would be named 
+          "abcdef.ul", "abcdef.sl" and "abcdef.nl".
+
+    The configuration file, infile.cfg, has all the options laid out.
+    You can look in README.cfg for an explanation of each of them.  There are
+    basically 3 kinds of configuration commands: global, bot, and channel.
+    Global commands can go anywhere, but it is advisable to put them before
+    any of the bot or channel settings.  Bot settings must go under the
+    "nick botnick" line; channel settings must go under the "channel <name>,
+    <mode>,<topic>" line.  Channel assignments must go under the bot under
+    consideration; additional "nick botnick" commands can have their own
+    channel assignments.  BE SURE that you follow this guideline or the
+    automaton may not work as it is supposed to.
+
+    You can specify filenames for userfile, akfile (autokick file),
+    nickfile, suspendfile, and ignorefile other than the default ones of 
+    BotNick.ul, BotNick.ak, BotNick.nl, and BotNick.ign, respectively.
+
+    The lists files are pretty much self-explanatory.  The format for the
+    respective files are given.  A note concerning giving access to all
+    channels; the channel designator is "*" and not "#*"!  Other than that,
+    you would enumerate channel access as "#channel1,#channel2,#channel3".
+
+** 1.1  Setting the configuration file
+--------------------------------------
+
+    The bot's configuration file is named "infile.cfg".  Look through the file
+    "README.cfg" to see the available global, bot, and channel options.
+
+    Global configurations deal with things like where the bot directory is,
+    what is the owner's userhost and email address, and where the different
+    files (note, picture, news, ...) would be found.
+
+    Bot configurations deal with bot-specific settings, like the
+    bot's prefix, its userlist file, its autokick list file, its
+    server(s), as well as bot toggles.  Note that since version 5.0, bot
+    toggle commands _must_ be prefixed by the '!', exclamation, character.
+
+    For the "Server" bot configuration command, you can specify more than
+    just the server's name.  You can optionally specify the server port to
+    use, the hostname to use (if supported by server) and the server password
+    (if required by server), respectively, separated by commas or colons.
+    An example setting is    
+           Server  "localhost":6667
+
+    You may omit the server port, hostname, and password fields.  The 
+    default port to connect to a server is 6667.
+
+    Channel configurations include the channel name, mode, topic, as well
+    as the numerous channel toggles.  Note that since release 5.0, channel
+    configuration toggle commands _must_ be prefixed by the '!' character.
+
+    As you may have noticed, both the bot and channel configuration toggle 
+    commands are prefixed by the same character, '!'.
+
+    If you want to see how your configuration file is working, you can debug
+    the parsing of that file.  The default "infile.cfg" file has the
+    command "DEBUG 2" already set.  The "DEBUG" command is new to release
+    5.0; it is used to debug the reading of the config file.  Valid debug
+    values are between 0 and 2 -- 0 means no debug, 1 means debugging of
+    errors only, and 2 means to debug everything, including every non-comment
+    line in your configuration file.
+
+    Again, look through "README.cfg" file to see all of the available
+    configuration commands.  Also take a look at the sample "infile.cfg"
+    file to see how to set up your own config file.  The file "cfgcmds.lst", if
+    it exists, contains all of the configuration commands available. (You can
+    make your automaton create this file for you when it is online.  See 
+    help on the "SAVE" command.)
+
+** 1.2  Setting up the list files
+---------------------------------
+
+*** 1.2.1  Modifying the userlist
+---------------------------------
+
+    Each userlist entry has eleven (11) fields, one of which is there for 
+    clarity only.  The fields are the following:
+
+      index:n!u@h:passwd:nick:access:umodes:prot:chan:sus_by:sus_time:added_at
+       (1)   (2)   (3)   (4)   (5)    (6)   (7)  (8)   (9)     (10)     (11)
+
+    where:
+       (1) - index of the entry, the i'th entry, here for clarity only
+       (2) - the userhost to match for the registered user as nick!user@host
+       (3) - the password for the user if given password access, otherwise
+             it defaults to "NOPASSWORD" for no password required.
+       (4) - the nick to associate the userhost (2) with.
+       (5) - the user access level given to (2)
+       (6) - the usermodes in hexadecimal format; normally, mode of 1 means
+             auto-op, mode of 2 means suspended, mode of 3 means auto-op
+             but suspended for now.  There may be more modes in the future.
+       (7) - the protection level: 1 = reop if deopped, 2 = kick aggressor if
+             this user is banned or kicked, 3 = kick+ban aggressor if this
+             user is banned or kicked.
+       (8) - the channel(s) in which this user has access to; it is a
+             comma separated list, i.e. #chan1,#chan2,#chan3
+       (9) - if suspended, who suspended this user
+      (10) - if suspended, when was the user suspended
+      (11) - when the user was added to the list
+
+    Commands to deal with the userlist include the following: USER, AOP,
+    NAOP, PROT, NPROT, and USERMOD.  Please refer to the helpfile on how 
+    to use those commands.
+
+    Note that owner access level is at 999.  Owners have pretty much complete
+    control over the bot, particularly the one matching the "owner" setting
+    in the "infile.cfg" configuration file.  So, be careful to whom and how
+    many users with 999 access you offer.
+
+*** 1.2.2  Modifying the Autokick list
+--------------------------------------
+
+    Each autokicklist entry has nine fields, one of which is there for clarity.
+    The following is a description of those fields:
+
+       index:n!u@h:level:last attempt:attempts:chan:bywhom:time:reason
+        (1)   (2)   (3)     (4)         (5)    (6)   (7)   (8)   (9)
+
+    where:
+        (1) - index of the entry; there only to make the list more readable
+        (2) - the userhost to match for auto-kicking/deopping/banning
+        (3) - the autokick level: 1 = deop if opped, 2 = join kick, 3 = kickban
+        (4) - the time when user last attempted to join the bots channel
+        (5) - the total number of attempts to date
+        (6) - the channel(s) in which (2) is/are not allowed in
+        (7) - who placed (2) into this list
+        (8) - when this entry was added to the list
+        (9) - the reason for putting (2) in the list
+
+    Some commands to deal with the autokicklist include AK and AKMOD.
+    Please refer to the helpfile on how to use these commands.
+
+
+* 2.0  Dealing with the lists and accesses 
+------------------------------------------
+
+** 2.1  Setting up the userlist
+-------------------------------
+
+    The "USER ADD" command is used to add users to the automaton 
+    userlist.  The format is:
+
+        USER ADD <nick or nick!user@host> <access> <channel> 
+                [aop] [prot.level] [password]
+
+    The items bounded by < and > are required.  Those items within [ and ] 
+    are optional.  If "aop" is not given, then the default value is "0" for 
+    no auto-op.  If "prot level" is not given, the default value is "0" for 
+    no protection.  If password is not given, then no password is assumed -- 
+    that is the string "NOPE".
+
+    To delete a user, use the "USER DEL" command.  The format is:
+
+        USER DEL <nick | nick!user@host | -*pattern*>
+
+    Save the userlist with "USER WRITE".
+
+** 2.2  Protection levels
+-------------------------
+
+    User access 999 is owner level.  It is advised that you restrict the
+    number of people with owner access.  People with access 900 and up can
+    add and delete users; it is a good idea to restrict people with this
+    access as well.  A basic access level is 20, where those people are
+    allowed to get channel operator status.
+
+    Protection levels are 0 through 5.
+        Level 0 -- no protection.
+        Level 1 -- unban user if banned
+        Level 2 -- level 1; re-op the user if user is deopped
+        Level 3 -- Levels 1 and 2; deop the offender if not protected.
+        Level 4 -- Levels 2+1 _and_ kick the offender if not protected 
+                   with level 2.
+        Level 5 -- Ban and kick offender.
+        Level 6 -- something higher, nothing special otherwise..
+
+    The protection scheme since version 5.2 has been revised.  It is a bit
+    more realistic, especially for bot owners themselves -- i.e. make the
+    bot favor the bot owners over user protection level. :)
+
+** 2.3  Dealing with the autokicklist
+-------------------------------------
+
+    If someone gets on your nerves, you can add them to the automaton's 
+    autokicklist.  Please do not be "quick-on-the-draw" as autokicking people 
+    unnecessarily is frowned upon.  There are three autokick levels: 
+
+	1 -- deop if opped, 
+	2 -- kick on join, and
+	3 -- kick+ban on join (autokick+ban).
+
+    Use the AK command to add people to the autokicklist.  The format is:
+
+        AK ADD <nick or nick!user@host> <level> <channel> [reason]
+        AK DEL <nick or nick!user@host or -*pattern*>
+
+    Note that there is no ban pattern saved; whatever the autokicked pattern, 
+    that's what the ban pattern shall be.  If you specify <nick>, then the 
+    resulting pattern will be as *!*user@*host.  Of course, if you use the 
+    "AK DEL .. " command, then all you would put down next would either be 
+    the nick or the pattern that you want to delete.
+
+    Save the autokicklist with "AK WRITE" command.
+
+** 2.4  Modifying access
+------------------------
+
+    You can also change the userlist and the autokicklist through the 
+    commands "USERMOD" and "AKMOD" respectively.  Here are their syntax:
+
+        USERMOD <option> <nick | nick!user@host | -*pattern*> <newvalue>
+    where <option> is one of CHAN, LEVEL, NICK, PROT, PASSWD; 
+
+        AKMOD <option> <nick | nick!user@host | -*pattern*> <newvalue>
+    where <option> is one of CHAN, LEVEL, REASON.
+
+    To change a user's level only, you can also use the "USER CLVL" command.
+
+    Note that "-*pattern*" means to type an '-' symbol followed by whatever
+    pattern you want to search for in the form of "*pattern*".  This will
+    match the first registered pattern matching "*pattern*".
+
+    Another way to modify a user's channel access would be using the
+    "CHAN" command.  It allows you to add or delete a channel from the
+    user's channels.  The format for the command is:
+
+        CHAN <ADD/DEL> <nick or nick!user@host or -*pattern*> <channel>
+        CHAN SET <nick or nick!user@host or -*pattern*> <channel list>
+
+** 2.5  Password access
+-----------------------
+
+    If a user is given password access, then he/she must use "LIN" command
+    to login.  The authorization lifetime is 35 minutes; the user is logged
+    out if he/she has been idle for a duration of the authorization
+    lifetime.  The lifetime setting can be configured in the bot 
+    configuration file.  To logout of the automaton, the user should
+    issue the "LO" command.
+
+    NOTE: 
+        When the automaton closes a dcc chat connection due to too much 
+        idle on the user's part, the login session will be expired and 
+        the user must login again.
+
+    The password can be changed with the "PASSWD" command.  If the user
+    feels that password access is not needed anymore, then he/she can issue,
+    after authenticating to the automaton, the "PASSWD UNSET" command.
+    The syntax is "PASSWD UNSET <old password>".
+
+** 2.6  Suspending users
+------------------------
+
+    If a user has been misbehaving or something weird happens to a user's
+    account, the account's access can be suspended with the "SUS" command.
+    Access can be regained with "NSUS" unsuspend command.  This operation
+    is logged to "log.usage", so you had better give a good reason for
+    suspending someone's access.
+
+    Suspended users cannot use commands that require more than access level
+    of 5.  Since the default access level for "OPME" and "ME" commands is 20,
+    the cutoff at access 5 seems pretty fair so that the suspended user can
+    still use commands that do not relate to channel privileges. 
+
+** 2.7  Listing/Searching users
+-------------------------------
+
+    Use the "SHOW" command to show different lists or searching in those
+    lists.  Issue "SHOW" with no arguments to the automaton to see a list
+    of options.  Basically, the format is:
+
+        SHOW <option> [*pattern*]
+
+    where [*pattern*] would be something like "*dunno.*" for finding anyone
+    that has "dunno." in their pattern.
+
+    Note that in "SHOW DCC" command, any user with "<P>" highlighted in front
+    of their userhost means he/she is in the party line (see below).
+
+** 2.8  Saving/Loading lists
+----------------------------
+
+    To load a list, use the "LOAD" command.  To save a list, use the "SAVE"
+    command.  Issue the respective commands with no arguments to the automaton
+    and the automaton will give you the valid options.
+
+    Note that you can load nicks from specified files.  Just use the command
+    "LOAD NICKS <nickfile>" to load them.
+
+    You can save user, autokick, and nick lists to specified files.  User lists
+    are saved with the default extension of ".users"; autokick lists are saved
+    with the default extension of ".ak"; nick lists are saved with the
+    default extension of ".nicks".  These default extensions are used in case
+    you inadvertently specify a filename that is the same as some system or
+    bot file.
+
+    To save to specified files, use the command "SAVE <type> <filename>", 
+    where <type> is one of USERS, AK, and NICKS. 
+
+** 2.9  Putting people on timed autokick
+----------------------------------------
+
+    If you only want to prevent someone from getting into a channel for a
+    short period of time, rather than putting that person on autokick list,
+    you can place that person on timed autokick instead.
+
+    The prefix command to put people on timed autokick list is TAK.  You
+    can add, delete, and change channel info for the timed autokick.
+    Look through the helpfile if you need more detail.
+
+    Note that the minimum time for the timed autokick is 3 minutes.  If the
+    person joins over 3 times in 3 minutes, the person will be banned.
+    The number of joins is reset to one if the last join attempt is over
+    3 minutes ago.
+
+
+* 3.0  Channels and miscellany
+------------------------------
+
+** 3.1  Channel commands
+------------------------
+
+    The automaton can do many of the basic commands: op, deop, kick, ban,
+    unban, massunban, massop, masskick.  In addition, it can also do opping
+    of users only, massdeopping of nonusers only, sitebanning offenders,
+    site-kick+banning offenders, as well as pattern operations for opping,
+    deopping, kicking, and unbanning (PO, PD, PK, PDB as well as P1 along
+    with its subcommands).
+
+    Experiment with the automaton and see what it can do.  Also read up on
+    the helpfile.  I believe I have most of those commands documented there.
+
+    You must specify a reason before making the automaton leave a channel.
+    If you specify the command in public and want the automaton to leave
+    that channel, use channel "." as a shortcut.  For instance, if you want
+    the automaton to leave the channel #bots, issue in public "PART . leave
+    #bots now".
+
+** 3.2  Channel topics and modes
+--------------------------------
+
+    Use the "STO" command to store a channel topic.  Only one topic can be 
+    stored for a channel at any given time.
+
+    Use "CS TR" channel setting command to set the topic refresh time, in
+    minutes.  There are minimum and maximum topic refresh times.  The bot
+    will refresh the topic every "topic refresh" minutes, if the topic has
+    changed since the last refresh.  You can turn off the topic refresh by
+    specifying a value of -1 or 0 for "CS TR" command.
+
+    The automaton is able to enforce the channel modes: +nstilkpm.  Use "CEM"
+    command to specify which ones to enforce, if any.  The automaton will
+    always remove a bogus channel key if it's not set by itself.  Channel key
+    and channel limit are as yet unable to be enforced.
+
+    You can specify the user access below which the bot will always reset
+    the enforced modes once those modes are changed.  You can also make the
+    bot kick anyone below a userlevel, as defined by the EnfModeKickLevel
+    configuration command.  The default "EnfModeKickLevel" is zero, meaning
+    no one will get kicked for modifying the enforced modes, but by default,
+    only users with access 150 and above can modify the enforced modes in
+    a channel.
+
+    NOTE: 
+        The automaton must be enforcing topics (try "CS TR <minutes>") in 
+        order for you to store a topic.
+
+** 3.3  Flood protection
+------------------------
+
+    This automaton detects massive nickfloods, beep floods, and public floods.
+    It will auto-kick (!!) if it detects the following:
+        o  > 19 beeps in 5 seconds; autokick as *!*user@host
+        o  > 13 nick changes in 5 seconds; autokick as *!*@host
+        o  > 16 lines in public in 5 seconds; autokick as *!*user@host
+
+    You can also change the above values for auto-kick, as well as the
+    interval of time to detect those values.  The longer the interval, the
+    more likely the bot will inadvertently auto-kick someone, so make the
+    interval short and the values large enough as a precaution.  By the way,
+    people with access to the bot will not be auto-kicked.
+
+    The automaton will also kick when it detects 5 beeps (default).  The
+    rule is for people to be nice and not annoy others with silly beeps.
+
+    The configuration commands for changing the above settings are
+    the following: MassBeepInterval, BeepNumAutoKick, MassNickInterval,
+    NickNumAutoKick, MassPubInterval, and PubMsgNumAutoKick.  The interval
+    values are in seconds, the smaller the better in case the bot mistakenly
+    adds someone because of a netjoin.
+
+    In addition, the bot will also detect flooding from other sources.
+    The command to set these is FLOODSET, which sets 3 types of flood
+    detection. The format of this command is the following:
+
+        FLOODSET    <type>     <lines>, <interval>, <ignore length>
+                      (1)         (2)       (3)          (4)
+
+    where:
+        (1) - there are three types: MSGS, PUBMSGS and DCCMSGS
+        (2) - this is the number of lines to detect,
+        (3) - the interval for which (2) is detected, in seconds, and
+        (4) - the ignore length, in seconds, once flooding is detected
+
+    The above types are for the bot to ignore the offender if (2) is
+    detected in time interval (3).
+
+    NOTE: The SIGNOFFS option from previous versions has been removed.
+          That was just a kludge for detecting a netsplit.  Now the bot
+          can truly detect netsplits.
+
+* 4.0  Ignoring
+---------------
+
+    You can make the automaton ignore people with the "IGN" command.
+    To unignore a person, use "NIGN".  You can specify the exact 
+    nick!user@host for the bot to ignore or have the bot make the pattern
+    if you specify only a nick for the bot to ignore.
+
+** 4.1  Ignore file format
+--------------------------
+    The ignore file consists of three fields.  The format is as follows:
+
+        index:nick!user@host:mode (unused)
+         (1)       (2)        (3)
+
+    where:
+        (1) - This is the index number, the n'th ignore; it's here
+              only to tell you how many you've got in the list.
+        (2) - The pattern to match for the automaton to ignore.
+        (3) - The ignore mode; currently unused.
+
+
+* 5.0  Bot services
+-------------------
+
+** 5.1  File transfer
+---------------------
+
+    This automaton uses the ComBot-style (by ComSTud) file transfer.
+    You assign access level required for each file offered.  In the file
+    index, called "filelist.bot", you are also supposed to put down the
+    filesizes so people will know how big the files are.
+
+    The format of the index file "filelist.bot" is the following:
+
+        filename      access_needed   filesize     description
+          (1)              (2)          (3)            (4)
+
+    where:
+        (1) - This is the name in the download directory that you 
+              are offering to others through the bot.
+        (2) - This is the user access needed to acquire the file; 
+              people with access less than this cannot get the file
+        (3) - This is the size of the file, so people will know how 
+              big the file is; you must get the filesize by using
+              the Unix command "ls -l filename" and get the number
+              to the left of the month/day/time field of the output.
+        (4) - This is a short description of the file.
+
+    You can specify the upload and download directories in the configuration
+    file.  Upload directory is where you have others upload files to; the 
+    download directory is where you have files to offer others.  You can also
+    specify whether the automaton can send and/or receive files.  Files only
+    offered by people in the automaton's userlist are accepted.
+
+    You can also use wildcards to match files to send; requester's access
+    will be checked just like before.  Filename matching conforms to the
+    Unix filename matching convention; if you use patterns for listing or
+    sending files, the match is case-insensitive.
+
+    You can also put in specific comments in the file listing.  To do that,
+    in your "filelist.bot" or similar index file, begin your comments with
+    the '!' character on column one, the beginning of a line.  The bot will
+    display the comment beginning with "# ".
+
+    Unlike in 4.2 and earlier versions, 5.0 and above send multiple files
+    in a queue-like fashion; after one file is completed, another one is
+    offered to be sent.  This is logical compared to earlier versions, where
+    multiple matching files are offered all at once, which could make the
+    bot quite busy.
+
+** 5.2  Note service
+--------------------
+
+    This automaton allows people to leave notes to other people.  Please
+    see the helpfile on "NOTE" for more information.  Basically, leaving
+    a note requires three (3) steps:
+
+	1. Use NOTE CREATE to specify recipient and the subject of note.
+	2. Use NOTE ADDL to add lines into the note.
+	3. Use NOTE SEND to actually send the note.
+
+    Pretty easy, huh?  Maybe not... :)
+
+    Some things to keep in mind when creating a note.  You can add additional
+    lines using the note.ADDL subcommand; you can add up to 18 lines in
+    a note.  If you want to delete a line that you have previously added,
+    use the note.DELL subcommand.   Now if you just want to replace a line
+    you've previously entered, use the note.REPLL subcommand.  DELL stands
+    for DELete Line; REPLL stands for REPLace Line.
+
+    To leave a note for all to see, i.e. a public note, use "PUBLIC" as the
+    addressee; this is done as "NOTE CREATE PUBLIC <some subject here>."
+    Public notes can be read by everyone, but only the bot owner can
+    delete it.
+
+    To leave a note for the bot's owner but you don't know the owner's 
+    address (in the form of "nick!login@machine"), use the "OWNER" 
+    addressee instead, like this: "NOTE CREATE OWNER Please gimme access!."
+    Well, you wouldn't exactly want to do that, but you get the idea.
+    By the way, this "OWNER" is anyone with access 999, the owner access.
+
+    To see the notes available for you, issue "NOTE LIST".  If you have
+    left messages for others and you want to see which ones they are, use
+    the command "NOTE LIST FromMe".
+
+** 5.3  News service
+--------------------
+
+    The file "news.bot" is now a repository for all sorts of news.  The 
+    default news topic is "standard," with a user access of 0.  You can 
+    specify additional news items in the newsfile by adding "%Subject 
+    <newsitem>" lines in it, set an access level for this news item using
+    the "ACCESS " keyword, put the relevant news text following the access
+    level, and finally place "%end" after the last line.
+
+    Here is an example of a newsfile (see the sample text between the 
+    "## BEGIN NEWSFILE" and "## END NEWSFILE"):
+
+    ## BEGIN NEWSFILE
+    %subject list
+    ACCESS 0
+          -- news items available on this bot --
+             list:0    standard:0     party:1
+                    -- end news item --
+    %end
+    %subject standard
+    ACCESS 0
+    -- newsfile for bot \n --
+    Welcome.  This is only a sample newsfile.  Ask my owner to put
+    more information here. :)
+    -- end news --
+    %end
+    %subject party
+    ACCESS 1
+    -- it's \iPARTY\i time !!! --
+    when:
+    where:
+    why:
+    directions:
+    -- end of announcement --
+    %end
+    ## END NEWSFILE
+
+    In the above news.bot file, there are 2 news items: standard and party.
+    The news index is under the heading of "list".  The number just below the 
+    "%subject" line shows the user access required to view that news item.
+
+    You can list the news items you have added by issuing the "NEWS LIST"
+    command.  The user access required will (should) also be displayed.
+
+    Note that you can use the same text attribute handling of highlighting, 
+    bolding, and underlining as you would in the file help.bot, as well as 
+    using "\n" to denote the bot nick.
+
+** 5.4  Party line
+------------------
+
+    The automaton also supports a party line, maintained through DCC CHAT.
+    With DCC CHAT established, use the DCC command ".CHAT ON" to get on the
+    party line; use ".CHAT OFF" to remove yourself from the party line without
+    closing your DCC CHAT connection with the automaton.  You can use ".QUIT"
+    or close your DCC CHAT connection with the automaton to remove yourself
+    from the automaton as well.
+
+    Available commands for the party line, which must be issued through the
+    DCC CHAT connection, are as follows:
+        .ME          -- send an action to the party line
+        .QUIT        -- close DCC link and get off party line
+        .CHAT ON/OFF -- to get on/off the party line
+        .ECHO ON/OFF -- to turn on/off echoing of messages sent by self
+        .WHOM        -- to see who all are on the party line
+        .AWAY        -- set/unset away message in party line
+        .NICK        -- change nick for party line
+
+    To talk on the party line, just private message the bot through the
+    DCC CHAT link, normally with the format /MSG =botnick {blah blah}.
+
+    Before, commands can be issued to the automaton without being prefixed 
+    with command character.  However, with this party line, commands now
+    require the '.', dot, character to take effect; otherwise, the issued
+    command will be seen as a chat message and be sent to all the people in
+    the party line.
+
+    NOTE: starting from 5.3a, anyone who is not on the party line can issue
+          commands to the automaton through dcc chat without prefixing them
+          with the command character.
+
+    For users with high access, default 900, they can invite, delete (kick),
+    and list people on the party line through the PARTY command set.  Users
+    with no access to the PCHAT command can be invited onto the party line;
+    people in the autokick list or the timer autokick list cannot be invited,
+    however.
+
+    You can turn on/off the party line through the configuration file 
+    "infile.cfg".  The default is to have party line turned on at all times.
+
+** 5.5  ASCII picture library
+-----------------------------
+    [ NOTE: This command may or may not be in the release version. ]
+
+    The automaton allows the showing of ascii pictures in its picture library 
+    "pics.bot".  The command is "PIC".  Use "PIC LIST" to see a list of the 
+    available pictures.
+
+    Note that the owner must put those pictures in the picture index or 
+    "PIC LIST" will not give you a listing of the available pictures.
+
+    A sample picture library file is as follows:
+
+    ## BEGIN PICTURE LIBRARY
+    %subject LIST
+    -- index of available pictures --
+       ex1   ex2
+    -- end index --
+    %end
+    %subject ex1
+    [ some picture here ]
+    %end
+    %subject ex2
+    DCC_CHAT
+    [ some other picture here ]
+    %end
+    ## END PICTURE LIBRARY    
+
+    In the above example, there are two pictures: ex1 and ex2.  There is also
+    a picture index under the subject heading of "list".  The "DCC_CHAT" line
+    right after the "%subject ex2" line means picture 2 should be sent through
+    DCC CHAT only -- this is to avoid having the automaton excess flooding
+    (sending out too many lines such that the irc server disconnects you).
+
+    Note that any picture with the '\' backslash character in them must be
+    escaped, i.e. it must be pre-pended with another '\'.  So if you have a
+    picture that uses '\', your pics.bot file should have it as "\\" -- this
+    is because '\' is a "special" character and must be handled as such. :)
+
+
+* 6.0  More bot miscellany
+--------------------------
+
+** 6.1  Bot nicks
+-----------------
+
+    The botnick.nl file is used for the "NEWN" command.  You can store a
+    list of nicks (max. of 16) per automaton so the automaton can change
+    nicks when too many people signoff a channel (netsplit).  This is used
+    to lessen the chance of nick collisions.  If you do not add any nicks
+    to the automaton nicklist, then the automaton will not change nicks.
+
+    To add a nick to a automaton, use "NICK ADD <nick>".  To delete a nick,
+    use "NICK DEL <nick>".  If you just want to the automaton to change to
+    some temporary nick, use "NICK <nick>", where <nick> cannot be "add" or
+    "del".
+
+    Save the modified nick list with the "SAVE NICKS" or "NICK WRITE" commands.
+
+    If you want to nick your automaton as "add", "del", or "write", you need
+    to prepend a '-' in front of it, i.e. "NICK -add" to have an automaton
+    nicked "add".
+
+    The nicklist file is saved in the following format:
+
+             index:nickname
+              (1)    (2)
+     where:
+        (1) - the nick index, unused except for clarity, and
+        (2) - the actual nickname, up to nine characters in length
+
+    The bot can change nicks if you desire; just use "BT NC" if the nick
+    change option is off.  You can optionally specify the interval between
+    successive nick changes (see "BS NCI <minutes>").  If you specified nicks
+    for the automaton in the nickfile, those nicks will be used, otherwise
+    the automaton will choose nicks by using the first five letters of its
+    present nick and append a random four (4) digit number.
+
+    The automaton has an option of changing nicks in a very random manner.
+    It will randomly choose letters and valid symbols from 7 to 9 characters
+    in length.  The nicks from this nick change look _very_ odd at times.
+    See help on "BT RN" in the helpfile.
+
+    The automaton will also change nicks if it detects a netsplit--a certain
+    number of people signoff at a given interval; the nick change toggle must 
+    be on for this to work.
+
+** 6.2  More bots
+-----------------
+	
+    You can call up more bots when your bot is online with the command 
+    NEWBOT.  See the helpfile for the syntax.  You must specify a nick 
+    for this new bot.  The lists (userlist, autokicklist) for this new 
+    bot will be the same as those of the parent of this new bot.  If you 
+    want new userlist and autokicklist for this bot, you can create them
+    beforehand by making the appropriate botnick.ul and botnick.sl files.
+
+    The temporary bots from NEWBOT will use the user and autokick lists of
+    their parents'.  Accordingly, the temporary bots will save their
+    user and autokick lists to their parents' user and autokick files.
+
+
+* 7.0  Miscellaneous stuff you can do on bot
+--------------------------------------------
+
+** 7.1  Logs and other information
+----------------------------------
+
+    The bot logs some stuff by default and logs other things if you tell
+    it to.  By default, and you can't prevent it, anyone establishing DCC
+    GET/SEND connections are logged.  Actions done to the bot -- kicking,
+    banning, being killed -- are also logged automatically.  DCC logs are sent
+    to the file "log.dcc"; actions done to the bot are logged to "log.actions".
+
+    You can also also log actions done by your automaton to others, such as
+    kicking, banning, deopping.  The log file for this is called "log.actions".
+    The kicking and banning of protected users by anybody are also logged to
+    the file "log.actions".
+
+    This automaton allows you to oversee channel chats without your having
+    to be in the channel.  You can also allow other people to oversee
+    the channel chats.  The appropriate command is "SPY ADD #channel [who]".
+    If you leave [who] blank, then you will be spying on #channel.  To see
+    who all are overseeing the channel chat in a particular, use "SPY CLIST".
+
+    To have a log of the channel chats, use "LOG CHAT ADD <channel>".  
+    To remove the logging, use "LOG CHAT DEL <channel>".  Channel chats are 
+    logged to the file "/tmp/chat.log.%pid" by default, where "%pid" is the 
+    automaton process's ID number.  Use "LOG CHAT LIST" to see a list of the 
+    the channels where the chat is being logged.
+
+    You can also oversee private messages that the bot receives by using
+    the command "SPY MSG [who]".  By leaving [who] blank, you will be 
+    overseeing the private messages.  To see who are all overseeing the
+    private messages, use "SPY MLIST".
+
+    To see who did what command on the bot, and when, use "REPORT", which
+    shows you the last 10 commands issued.  Optionally, you can log all
+    of the commands issued by enabling with "BT LOG", for "log commands".
+    Commands are logged to file "/tmp/cmds.log.$pid" by default, where $pid
+    is the automaton process's ID number.  You can also issue the command as
+    "LOG CMDS ON" to turn on the logging.  You can specify commands from 
+    which access level on gets logged; see the LOGCMDLEVEL configuration
+    command for more details, as well as help on BS.LCL and BT.LOG.
+
+    The command log format is different depending on if it is a command issued
+    to a channel or issued directly to the bot.  Commands sent to a channel 
+    will be logged as follows:
+
+     "PUB [chan] (cmd level/cmd log level) <who did it (access)> => cmd line"
+
+    Commands sent to the bot will not have a [channel] associated with it.
+    The logging format for msg commands is as follows:
+
+        "MSG (cmd level/cmd log level) *who did it (userlevel)* => cmd line"
+
+    To see who all are in a channel the automaton is in, issue "WHO [chan]".
+    If this is issued inside a channel, then the automaton will show you a
+    list of the people in that channel.  The two output formats involve 
+    users and people on the autokick list; they are as follows:
+
+        AK  - -  - - mode: + | nick!user@host
+        <userlevel>U <protlevel>P <aop?> <suspended?> mode: +  | nick!user@host
+
+    A mode of "+*" means that person is an IRC OP.  A mode of "+o" means that
+    person is a channel operator.
+
+    Another way of seeing who all are in a channel is with "WHOS [channel]" 
+    command.  This command will show the server info for the users as well.
+    The output from WHOS command is as follows:
+
+        [*|-|@] access_level nick!user@host (hop_count server_name)
+
+    In the above output, the '*' indicates irc op status; '@' indicates
+    channel op status, and the '-' means just a channel user.  The 
+    "hop_count" indicates the server hop count between the bot and the 
+    listed channel user.  A server name of "N/A" means the server info is 
+    not available.  The server info is automatically registered for users 
+    in a channel when the bot joins it, otherwise you will have to wait
+    for pre-set intervals when the bot refreshes the channel list.
+
+    To see a list of nicknames only, use "NM [channel]".  To see the channel 
+    statistics, use "CHS [channel]".  For a list of the channels the bot
+    is in, including the channel modes, use "CHI".
+
+** 7.2  Bot/channel settings
+----------------------------
+
+    To toggle settings in effect for the bot, use "BT".  The automaton will
+    tell you the options availables.  The helpfile should be complete in
+    explaining what they do, or you can read up about them in the config file.
+    I plan to put in a more explanatory section on it later.  You can see
+    the present bot toggles with "SBT".  To see the bot settings, e.g. the
+    numbers of lines for flooding, the mass protection level, use "SBS".
+    "BS" is used for setting the respective settings.
+
+    To toggle settings in effect for a channel, use "CT".  To show the
+    current toggle settings, use "SCT".
+
+    Channel mass action levels default to access level 200.  This is the
+    level for the bot to react to public/nick flooding.
+
+** 7.3  Channel-Minded Automaton (CMA) mode
+-------------------------------------------
+
+    This is formerly known as the "war" mode.  Now, it shall be known as the
+    Channel-Minded Automaton (CMA) mode to better reflect the nature of this
+    function.
+
+    Well, to be honest, this automaton just isn't extremely quick when it
+    comes to response time compared to the "true" war bots.  So when some
+    people want to take over your channel, the bot may not respond as fast
+    as it should.  To circumvent that, I've added this CMA mode so hopefully
+    it will react a bit quicker.  This is done by shutting down some
+    services such as file transfer, note facility, etc.; the automaton will
+    be secured to user access 5 by default and you cannot lower it unless
+    you get it out of CMA mode.  In addition, mass protection is meaner with
+    the kicks and bans.
+
+** 7.4  Making the bot greet people
+-----------------------------------
+
+    The bot can be setup to greet people on certain trigger words.  Some
+    trigger phrases are "hi", "hi <bot's nick>", "re", etc.; there are
+    five trigger types -- most of these are greetings.  The bot will not
+    always greet people on the trigger phrase since then people can make
+    the bot flood.  In fact, since version 5.0c, the bot will only check for
+    greetings at intervals you specify in infile.cfg file with the command
+    "GreetInterval"; this is in seconds -- default is 15 seconds.
+
+    You need to have the file "greets.bot" in the bot directory so the bot
+    can have the appropriate phrases to respond with.  Formerly the 
+    responses are hardcoded in the bot, but with release 5.0, you can make 
+    your own responses.  The greeting file consists of three fields:
+
+               "gives ":" a big bear hug!":1
+                 (1)          (2)       (3)
+ 
+        (1) what you want to appear in front of the nick
+        (2) what to appear after the nick
+        (3) if you want the response to be an action
+
+    In the above example, if nick "ttone" triggers the bot "SMiLes" and
+    the above greeting response is given, the resulting display will be
+    a CTCP ACTION as "*** SMiLes gives ttone a big bear hug!".  Note that
+    the greeting responses are for greeting people with access to the bot.
+    Greeting responses for non-users on the bot remain unchanged.
+
+    You can also make some words bold, underline, highlighted, or a
+    combination of those character attributes.  Here are the escape 
+    sequences for adding to the greeting lines:
+
+          \u  - underline
+          \i  - highlight
+          \b  - bold
+
+    You use these escape sequences in pairs to turn them on and off.
+
+    By default, the bot is asked not to greet people.  To turn it on, you
+    need to add "!Greet 1" in the "infile.cfg" file or issue "GREET ON" or
+    "BT GREET".
+
+    Note that there is an upper limit of 10 responses the bot can have.
+    It wouldn't make much sense to have more than that.
+
+** 7.5  Making the bot say quotes
+---------------------------------
+
+    The bot can say quotes, as specified in the quotes.bot file, if you 
+    want it to.  By default, the bot will _not_ say quotes.  To make it 
+    say quotes, you specify the quote interval (with QuoteInterval config. 
+    command), in minutes.
+
+    Use "CS QI <minutes>" to change the quote interval.  A time of -1 or
+    0 will turn off the quoting.
+
+    Currently, the bot is allowed up to 200 quotes to choose from.
+
+** 7.6  Global settings
+-----------------------
+
+    Global settings refer to settings that affect all bots, including the
+    forked bots.  A major example is the bot reset interval, in seconds, 
+    which is the same for all the bots from one process.  To show the global 
+    settings, use the SGS (Show Global Settings) command.  You can set most 
+    of the global settings with the GS command.
+
+
+* 8.0  External commands
+------------------------
+
+    This is where you bring out your creativity. :-)
+
+    This automaton allows you to add some external commands to it.  You need
+    to look into the file "extcmds.bot".  It has the pertinent information
+    for you to understand this feature.  I have some sample external commands
+    in the file already.  If you want the automaton to say something, make
+    sure it doesn't say more than five lines or it might either get kicked
+    by other automatons for flooding or die of "Excess Flood".
+
+    The keywords available to extended commands are the following:
+        ACTION	- sends an action to the present channel
+        SAY	- send a message to the present channel
+        ACTION2	- send an action to someone/channel
+        DEOP	- deop up to four nicks in the present channel
+        KICK	- kick someone from the present channel
+        TOFROM	- send a message to the person who issued the command
+        OP	- op someone by 2's, i.e. +oo nick nick, in the present channel
+        SAY2	- send a message to someone; same as TOWHOM
+        TOWHOM	- send a message to someone; same as SAY2
+        MODE	- send a mode to the present channel
+        NOTICE	- send a notice to the present channel
+        NOTICE2	- send a notice to someone/channel
+
+    To list the available commands for "XC", use "XC COMMANDS".  This command
+    requires a DCC CHAT connection to prevent flooding.
+
+    NOTE: 
+        You must edit the commands listing in the file "extcmds.bot" in
+        order for "XC COMMANDS" to function.
+
+
+* 9.0  Changing command access
+------------------------------
+
+    You can dynamically change the access level required for all the 
+    commands.  To check the access required for a command, use the "ACL" 
+    command.  If you want to change the access required to something else,
+    you just specify the level after the command, like so:
+
+        ACL <command> [new access level]
+
+    You can change the commands access levels by editing the file "commands.l"
+    in your automaton directory.  The file consists of the command name and
+    the access required.  Just modify the access to something more suitable
+    to your own tastes:  Complete listing of commands can be found in
+    "TnT-II.cmds".
+
+    To print out a new listing of "TnT-II.cmds", issue "SAVE CMDREF" to the
+    automaton.  To print out a new "commands.l" file, issue "CMD WRITE" to
+    the automaton.  This way, if you accidentally delete those files, you
+    can create new ones for reference and use.
+
+    NOTE: 
+        You cannot and must not change the command names.  Otherwise,
+        the corresponding command access levels will not be changed.
+
+     
+* 10.0  Dealing with the bot
+----------------------------
+
+** 10.1  Running the bot
+------------------------
+
+    To run the bot after you've configured all the necessary settings, try
+    issuing "./tnt2" at the Unix prompt (command line).  Do _not_ include 
+    the quotation marks though.  To make the bot process have less impact
+    on the system it is running on, you can increase the "NiceLevel" setting
+    in the bot's configuration file.
+
+    If you get some error message like "./tnt2: Permission denied" after you
+    issued the "./tnt2" command, you need to make the file "tnt2" executable.
+    That file should've been executable already, but you can issue the Unix
+    command "chmod u+x tnt2" just to be sure.
+
+** 10.2  Killing the bot
+------------------------
+
+    You can kill the bot when you are offline with the Unix command 
+    "kill_bot", included in the bot distribution.  This is a simple shell 
+    script that takes the guesswork out of Unix for this operation.
+
+    When using this script "kill_bot", be sure you are in the same directory 
+    as when you started the bot and that you have this "kill_bot" file in
+    your path or in the same directory.
+
+    If you are a bit familiar with Unix, you can find the process id (PID,
+    a number) corresponding to the bot program you ran in the background 
+    and send a terminate signal to that process, as in "kill process_id".
+
+* 11.0  A note about the versions
+---------------------------------
+
+    There may be different versions of the tnt2bot available; for now, 
+    they are in the form of X.Y[r], X.Y[r].s, and X.Y[r].sb, where "X" is 
+    the major version, "Y" is the minor version, and "s" and "sb" denote 
+    specialized versions.  Bug fixes and some improvements are denoted by
+    the [r] character, starting from "a" and counts upwards.  The [r]
+    character stands for revision and is optional.
+
+    For instance, if the bot's version is 5.7f, the major version is 5, the
+    minor version is 7, and the "f" means it is revision f of version 5.7.
+
+    Version ".s" excludes the following: beep flood kick, caps flood kick,
+    idle kick, as well as the commands, settings, and toggles related to
+    those features.  Also, the greet function differs in that the bot will,
+    if toggled on, greet users with access to the bot on channel join; no
+    trigger phrases are necessary.  This version will hopefully reduce memory
+    and system overhead while maintaining the original bot features intact. 
+
+
+--
+
+Happy botting!
+
+
+--------------------------------------------------------------------------
+If you have any questions, bug reports, or suggestions, please email
+me at the address below.  Thanks!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ttone (tonys@access.mountain.net)          Copyright (c) 1995-1997
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

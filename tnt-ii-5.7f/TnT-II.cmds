@@ -1,0 +1,149 @@
+############################################################################
+# TnT-II bot (version 5.7f) commands reference
+# Created: Fri Apr 24 16:39:31 1998
+# Note: All commands require command prefix unless prefix is not required
+############################################################################
+# DCC-only commands   (NOTE: prefix must be '.', as shown)
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# DCC-COMMAND   LEVEL   
+#-------------|---------
+ = .ECHO         0
+ = .QUIT         0
+ = .MOTD         0
+ = .WHOM         0
+ = .ME           0
+ = .CHAT         0
+ = .AWAY         0
+ = .NICK         0
+#
+#===========================================================================
+# Message and DCC-capable commands
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# NOTES:
+#     -   Column value not available, off, or false
+#     X   Column value is available, on, or true
+#     *   Access level lower than specified incurs time delay
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# COMMAND      LEVEL   OPTIONS USE_DCC PASSWORD?
+#-----------|---------|-------|-------|---------
+ ver           100 *      -       -       X
+ prefix         20 *      -       -       -
+#...............................................
+ SEND             0       0       -       X
+ NOTE             0       9       X       X
+ HELP             0       0       X       -
+ NEWS             0       0       X       X
+ LS               0       0       X       -
+ LIN             10       0       -       -
+ LO              10       0       -       X
+ TIME            10       0       -       -
+ ROLL            10       0       X       -
+ PIC             10       0       -       -
+ STAT            10       0       X       X
+ ACC             10       0       -       -
+ PING            20       0       -       -
+ INFO            20       0       X       X
+ ACL             20       0       -       -
+ PASSWD          20       0       -       X
+ OPME            20       0       -       X
+ ME              20       0       -       X
+ CHS             20       0       X       X
+ CHAT            20       0       -       -
+ DECIDE          20       0       -       -
+ DB              30       0       -       X
+ OP              30       0       -       X
+ DEOP            30       0       -       X
+ CK              30       0       -       X
+ B               30       0       -       X
+ TIC             40       0       -       X
+ SB              40       0       -       X
+ SPLAT           40       0       -       X
+ SKB             40       0       -       X
+ KB              40       0       -       X
+ OPK             50       0       -       X
+ DOUK            50       0       -       X
+ CHB             50       0       X       X
+ PDB             50       0       -       X
+ CNB             60       0       -       X
+ PK              60       0       -       X
+ PKB             60       0       -       X
+ MDB             60       0       -       X
+ PD              60       0       -       X
+ DBK             70       0       -       X
+ NSL             70       0       -       X
+ JOIN            80       0       -       X
+ CYCLE           80       0       -       X
+ SIU             80       0       X       X
+ SEC             80       0       -       X
+ WHOS            90       0       X       X
+ NM              90       0       X       X
+ STO             90       0       -       X
+ WHO             90       0       X       X
+ FREE           100       0       -       X
+ SCREW          100       0       -       X
+ INV            100       0       -       X
+ SCT            200       0       X       X
+ CHI            200       0       X       X
+ LK             200       0       -       X
+ CT             200      18       -       X
+ P              300       7       -       X
+ PART           300       0       -       X
+ PO             300       0       -       X
+ LOCK           400       0       -       X
+ NLOCK          400       0       -       X
+ IGN            400       0       -       X
+ NIGN           400       0       -       X
+ MKB            400       0       -       X
+ MODE           500       0       -       X
+ SGS            500       0       X       X
+ SUS            500       0       -       X
+ NSUS           500       0       -       X
+ OPEN           500       0       -       X
+ CEM            600       0       -       X
+ RESYNC         600       0       -       X
+ NEWN           600       0       -       X
+ KEYB           700       0       -       X
+ BS             700      20       -       X
+ SCS            700       0       X       X
+ CS             700       3       -       X
+ SBT            700       0       X       X
+ SBS            700       0       X       X
+ ACT2           700       0       -       X
+ ANNOY          700       0       -       X
+ SAY            800       0       -       X
+ MSG            800       0       -       X
+ SHOW           800      15       X       X
+ SERV           800       0       -       X
+ HOP            800       0       -       X
+ AK             800       4       -       X
+ TAK            800       4       -       X
+ XC             800       0       -       X
+ GLOBAL         800       3       -       X
+ BT             800      26       -       X
+ REPORT         850       0       X       X
+ SPITE          850       0       -       X
+ REGAIN         850       0       -       X
+ FORGET         850       0       -       X
+ KK             850       0       -       X
+ PARTY          850       3       X       X
+ AWAY           850       0       -       X
+ AKMOD          900       3       -       X
+ USERMOD        900       5       -       X
+ CHAN           900       3       -       X
+ PACHAN         900       0       -       X
+ USER           900       9       -       X
+ SPY            900      10       X       X
+ NICK           950       0       -       X
+ FLS            950       0       -       X
+ SAVE           950       5       -       X
+ LOAD           950       2       -       X
+ CMD            950       5       -       X
+ FORK           950       0       -       X
+ GS             990      29       -       X
+ CMA            999       0       -       X
+ REFRESH        999       0       -       X
+ REBOOT         999       0       -       X
+ QUOTE          999       0       -       X
+ LOG            999       2       -       X
+ OFF            999       0       -       X
+### End of TnT-II.cmds

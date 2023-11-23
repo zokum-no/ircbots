@@ -1,0 +1,91 @@
+####################################################################
+# Picture library file for TnT-II bot
+#
+# The format is similar to the helpfile.  You can specify the 
+# character attributes of underline (\u), highlight (\i), and bold (\b).
+####################################################################
+# NOTE!!!
+#   Displaying these pictures may make the bot die of excess flood.
+#   The PIC command does NOT require a DCC CHAT, so even msg'ing
+#   the bot for the picture will not help if you do not have a DCC
+#   CHAT connection with it.
+#
+# NOTE 2:  Use the keyword DCC_CHAT right below the "%subject" line
+#          to force people to use dcc chat when viewing big pictures.
+#          -- See below for the XWING picture.
+#-------------------------------------------------------------------
+#
+%subject LIST
+Here are the available pictures:
+    bunny  bunny2  parrot  xwing  teddybear
+%end # LIST
+
+%subject BUNNY
+               ___       /|
+               \\_ \\     / |
+                 \\ \\   / /
+                  \\ \\ / /
+                  > . . <
+                 >\\  "  /<
+                   | ~ |
+%end # BUNNY
+%subject BUNNY2 
+                  /\\ /|
+                 |||| |
+        ________ |||| |
+       /        \\ \\ | \\
+      /  _       \\/  \b@\b \b@\b
+     /    \\          =>X<=
+   /|      |         /
+   \\|     /________| |_
+     \\________\\    \\___\\
+%end # BUNNY2
+%subject PARROT
+DCC_CHAT
+                        _
+                      /` '\\                
+                    /| @   l                 
+                    \\|      \\
+                      `\\     `\\_
+                        \\    __ `\\
+                        l  \\   `\\ `\\__
+                         \\  `\\./`     ``\\
+                           \\ ____ / \\   l
+                             ||  ||  )  /
+                -----------(((-(((---l /-----------
+                                    l /
+                                   / /
+                                  / /
+                                 //
+                                /
+%end # PARROT
+%subject TEDDYBEAR
+        ()_()
+       ( O.O )
+      __\\ ~ /__
+     (__     __)
+       (  _  )
+       (_) (_)
+%end # TEDDYBEAR
+%subject XWING
+DCC_CHAT
+                                              ____________
+                               --)-----------|____________|
+                                             /        /
+               -)------========            /  _____ /
+                        \\     \\          /   /____/
+                          \\     \\      /        /
+                            \\     \\__/_________/__
+                              \\ _ _| ^--      || |
+                   ________--------|_____________|\\
+    -  \\-----------                               ||
+ -     ============================ ______________ |
+    - _____________________________|  |'      || |/
+                               /   |_____________|
+                             /     /  \\         \\
+                           /     /      \\      ___\\
+               -)---------========        \\    \\____\\
+THE FORCE, LUKE,                            \\         \\
+USE THE \iFORCE\i!                                \\_________\\_
+                              --)-------------|___________|
+%end

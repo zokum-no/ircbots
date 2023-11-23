@@ -1,0 +1,22 @@
+#!/bin/sh
+# script for killing bot process
+#
+pidfile="./tnt2.pid"
+
+if [ $# -ge 1 ]
+then
+    case "$1" in
+     "-*" ) echo "Usage: $0 {pidfile}"
+            exit 0
+            ;;
+    esac
+    pidfile=$1
+fi
+
+if [ -f "$pidfile" ]
+then
+    kill `/bin/cat $pidfile`
+    rm -f "$pidfile"
+else
+    echo "ERROR: Unable to find file $pidfile!"
+fi

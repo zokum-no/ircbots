@@ -1,0 +1,73 @@
+============================================================================
+				FILELIST 
+============================================================================
+
+List and description of files included with the TnT-II bot.
+[NOTE: Operating system specific files are in tnt2-{OS}.tgz. 
+       Common files suitable for all systems are in tnt2-common.tgz.]
+(current release: 5.7b, May 1997)
+----------------------------------------------------------------------------
+README    		The first file you should read for configuring
+			and running a tnt2bot
+README.4x 		The conversion information file for converting
+			from tnt2 4.x to tnt2 5.x and newer.
+tnt2.doc		The documentation file for TnT-II.
+README.doc		A symbolic link to tnt2.doc
+README.cfg		The readme file for configurating a tnt2bot.
+			Current and all valid config. commands are found
+			in "configcmds.lst".
+config.cmds    		This file shows all valid config. commands for tnt2bot.
+			This file may or may not be included.  If not there,
+			you can recreate it by issuing "SAVE CFGCMDS"
+			to your bot when it's online.
+ChangeLog		The summary of changes in the tnt2bot
+tnt2			The main executable.
+gotnt2			The Unix shell script for running your tnt2bot.
+kill_bot		Unix shell script for killing the bot's process
+infile.cfg		The configuration file 
+CONVERT-5.0		This is used to convert tnt2bot 4.x and earlier user 
+			and autokick list files to the 5.x format.
+*users.1		The sample userlist file
+*autokick.1		The sample autokick list file
+*ignores.1		The sample ignore file
+*nicks.1		The sample nick list file
+help.bot		The helpfile in ASCII format as used by helpread
+help.html		The helpfile in HTML format.
+helpread		The offline helpfile reader; usage: helpread subject
+mkpasswd		A program for adding crypted passwords to the userlist.
+mklog			The file of Unix shell command(s) for making the bot 
+			process relogin to the Kerberos server so the bot
+			can save its list files and have access to the
+			miscellaneous *.bot files.
+extcmds.bot		The extended commands file for tnt2bot
+filelist.bot		The download index file, for specifying files you
+			are offering for others to download
+greets.bot		The file of greetings the bot uses to greet people with
+news.bot		The newsfile
+note.bot		The notefile
+pics.bot		The ascii picture library 
+motd.bot		The DCC party line MOTD greet file.
+quotes.bot		The file of quotations
+splat.bot		The file of splatterkicks
+*log.dcc		The log of DCC send/get connections to the bot
+*log.error		Error log file
+*log.kickban		Log of kicks and bans on protected people
+*log.onme		Log of kicks and bans done to the bot
+*log.onthem		Log of kicks, bans, and deops done by the bot on others
+*log.usage		Log of userlist/autokick list administration, e.g.
+			adding/deleting users, changing user profile,
+			adding/deleting autokick users
+
+*  These files may or may not be included in the distribution.
+-----------------------------------------------------------------------------
+For an absolute minimum setup for running a tnt2bot, here are the files
+to keep:
+	tnt2, infile.cfg
+
+It is, however, highly recommended that you keep the help.bot file just in 
+case you or the users on your bot's userlist need pointers on using a command.
+
+
+--
+ttone
+tonys@access.mountain.net

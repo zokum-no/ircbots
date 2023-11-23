@@ -1,0 +1,16 @@
+########################################################
+# File: filelist.bot
+# Use:  list of offered files
+# Format: filename  access  filesize
+########################################################
+# filename	access_needed	filesize	Description
+#.......................................................
+!
+! List of commands for tnt2bot
+!
+TnT-II.cmds 	20		??  		command ref.
+! the configuration file for tnt2bot
+infile.cfg 	0		??		Configuration file
+! documentation for tnt2bot
+tnt2.doc	
+!                   END       OF       LIST                      

@@ -1,0 +1,677 @@
+=========================================
+  TnT-II bot ChangeLog -- Update info
+  by: ttone (tonys@access.mountain.net)
+=========================================
+
+Version 5.7f ----------------------------------------------------
+   o	Now should track a logged in user's nickname better.  This would
+	not necessitate the logged in user to re-auth to the bot after
+	having authorized to the bot followed by changing his/her nickname.
+   o	The bot will not automatically change its nickname until 4 minutes 
+	after it has last joined a channel, under calm periods.
+	- BUT for nick change upon being kicked, the bot won't change its
+	  nick until 30 seconds after it has last joined a channel.
+   o	The bot should behave better in ONUL (op non-user level) protection.
+   o	Added "ver" command that allows the bot to show to bot users
+	the version (release and compile date) of the bot.
+   o	UPDATE: The ignore function will ignore private messages, public 
+	messages, notices, and ctcps (requests and replies) from the 
+	ignored user.
+   o	Now made the forked bots have the same general settings of their
+	parent(s), e.g. the various flood detection and protection settings,
+	the spite interval, the min. DCC level, the AOP level, etc.
+   o	Fixed bot dying from malformed user@host settings for USER.ADD
+	and AK.ADD.
+   o	Command parsing has changed such that only lines that begin
+	with a non-space character are ok.
+	- Also, fixed the parsing of commands that go to specific botnick.
+	  Commands issued to bot nicks that don't start with an upper or 
+	  lower-case letter can now be parsed correctly again.
+   o	Added configuration setting command MaxLagAllowed, in seconds.
+	This command sets the maximum lag, the bot will tolerate from
+	the server before it switches to another server.
+	- Added corresponding online bot setting command BS.MLA.
+   o	Added configuration setting command MaxAutoOpDelay, in seconds.
+	This command sets the maximum duration the bot will wait before
+	giving out delayed auto-ops.
+	- Added corresponding online bot setting command BS.MAD.
+   o	Improved netsplit detection.
+   o	Added SHOW.AOP subcommand to list the auto-opped users.
+   o	Fixed bot process from dying by segmentation violation if bot exits
+	from too many server reconnects.
+   o	Added '*' option to RESYNC command, as in "RESYNC *", to allow the
+	bot send out JOIN requests for all channels it's supposed to be in.
+   o	Modified delayed auto-ops to delay 5-10 seconds for non-lagged server
+	connections and 10-20 seconds for server connections with at least
+	6 seconds of lag time.
+   o	Added modification to stop the bot from always trying to connect to 
+	servers that has already banned it.  It'll retry 1 in 10 times.
+   o	Changed processing of some actions on op after all modes are parsed.
+   o	Now hides the arguments to the PASSWD and LIN commands from users
+	who are spying commands.
+   o	Preliminary change: now queues the kicks due to channel user
+	flooding from public msgs, beeps, and shouting (caps).
+   o	To unban an user being auto-kicked, prefix the nickname with the
+	exclamation mark, '!'.
+   o	Renamed the following bot online setting commands:
+	- BS.MDL-->BS.MDT; BS.MKL-->BS.MKT; BS.NCL-->BS.NFT;
+	  BS.BKL-->BS.BKT; BS.CKL-->BS.CKT;
+   o	Added KickQCheckInterval bot configuration setting command to
+	set the interval in seconds between checking the kick queues.
+   o	New commands for toggling the multi-nick kicks:
+	- Added bot configuration toggle command "MultiNickKick".
+	- Added corresponding online toggle BT.MNK.
+   o	Added the minimum and maximum values for the configuration setting
+	commands for reference.  Use the command SAVE.CFGCMDS to save the 
+	config commands reference to the file "config.cmds".
+   o	Fixed the bot secure so one -can- set the secured access indefinitely.
+	- Also fixed CMA command not to change the secure length if that is
+	  longer than the cma length.
+   o	BS.ONUL (op non-user level) can now be set to level 1000 if need be.
+   o	The bot will now only update the topic if it's opped in the channel.
+   o	New configuration settings commands: NOSERVEROP2 channel toggle,
+	and SECURELEVEL and SECURELENGTH bot settings.
+   o	Owners (access = 999) can secure the bot to 1000 if needed.
+	Users with access of 999 can still lower the security level when needed.
+   o	Added GS.DITO subcommand for setting the Dcc Idle Timeout value.
+	- Set to -1 to disable automatic timeout.
+   o	Added GS.MEML and GS.AUTL online setting commands for setting the
+	memory and authorization lifetimes.  They are in minutes.
+   o	Added NONBLOCKCONNECT configuration setting command for determining
+	whether network connect attempts should be non-blocking.
+   o	Now properly reads in nicknames and channel names.
+	- If any of them are not legal, the bot will exit immediately.
+   o	Added fix to hopefully reduce the bot from potential flooding
+	due to sending mode changes.
+   o	Added subcommands CMD, -CMD, and NLIST to the SPY command
+	for dealing with the spying of bot commands.
+	- Also renamed NOMSG subcommand to -MSG.
+   o	Added deop of unknown ops on detection of massdeops and masskicks
+	if the bot is in CMA mode.
+   o	Added change such that known ops massdeoping and masskicking
+   	non-bot users (e.g. clones/flooders) will not be punished.
+   o	Added BOTS subcommand to GLOBAL to quickly list all bots online.
+   o	Updated BT and CT commands to accept an additional parameter of
+	"on" or "off" to turn on/off the toggle.
+   o	Renamed the command NEWBOT to FORK.  This is used to quickly
+	setup another bot with the parent bot's attributes.
+   o	Fixed general CTCP (unknown) commands parsing.
+   o	Removed more confirmation replies for executing some commands.
+   o	Fixed CTCP PING reply.
+   o	For now, only commands sent through DCC chat can have the
+	"Executing command..." confirmation reply .
+   o	Fixed the IGN(ore) command such that it sets the masks better.
+   o	Fixed registration request to irc server.
+   o	Preliminary proxy server support.  Use the global configuration
+	setting command "Firewall".
+   o	Added global configuration setting commands "NickFloodMask",
+	"BeepFloodMask", and "PubFloodMask" for determining the 
+	nick!user@host mask for the various flood offenders.
+   o	Added "LeaveRestricted" bot toggle configuration command along
+	with the BT.LRS (leave restricted server) bot toggle for
+	allowing the bot to leave a restricted server when it 
+	encounters one.
+   o	Added "BotHostName" and "BotIpAddress" global configuration
+   	settings to specify the particular hostname or ip address 
+   	to use for network connections.  Work still in progress.
+   o	Fixed the swapped autokick message for public and ctcp flooders. 
+   o	The toggle "change nick on kick" (BT.CNK) is no longer affected by
+	the CMA mode.  Before, even if CNK toggle is off but CMA mode
+	is on, the bot will change nick upon being kicked.
+   o	Now restricts sending of kicks and nick changes on a
+	restricted connection (+r).
+   o	Changed delayed auto-op slightly to deop the nick if that 
+	nick quits irc before the auto-op is given.
+   o	Restricted server connections will now be noted for any bots.
+   o	Fixed the ban pattern when usernames are 10 (!) chars in length.
+   o	The SERV command should now be able to switch to a (new) server
+	with its specified port number.
+   o	Added "FloodProtLevel" bot configuration setting command for
+	setting the channel protection when detecting any floods
+	- Valid levels are 0 (none), 1 (kick), and 2 (kick+ban).
+   o	Added "CMALength" bot configuration setting command for setting
+	the time in minutes the bot should be in channel minded mode.
+	- Set to -1 for always on.
+   o	Now works with irc 2.9 server's JOIN and PART formats.
+   o	To try to op or deop users even when the bot thinks it is not
+	opped, use the exclamation mark '!' in front of the first nick.
+	- e.g.  use "op !ThatNick" to force the bot send out an op mode for
+	  nick "ThatNick".
+   o	Fixed the bot process from dying if one of the multiple bots 
+	configured for the bot process is issued to DIE.
+   o	Added the count of split users in the CHI display, denoted by SPLT.
+   o	Consolidated the logs for "onme", "onthem", and "kickban" into
+	the log "actions".  The individual toggles are unchanged.
+	- Changed SHOW.LOG command accordingly.
+   o	Updated to parse favorably TSora server-set +ov channel nick mode.
+	- (why even bother with "+ov" channel modes for nick??)
+   o	Removed server info gathering related toggles
+	- "ServerInfo" bot toggle configuration command is gone.
+	- "BT SI" is now gone.
+   o	The BotDir setting is now the relative root for all 
+	non-configurable botfiles.
+	- This means that one is better off starting the bot from
+	  the bot directory and setting BotDir to "./"
+	  - This allows the bot to read the startup config file
+	    during a bot refresh.
+	- Logfiles are now written to this relative bot directory.
+	  They were written to the directory where the bot got 
+	  launched from such that if BotDir setting is not the 
+	  launch directory, "SHOW LOG ..." will report nothing.
+	  - Also removed extra blank line from the SHOW LOG output.
+   o	Logfile timestamping changed to: YYYY/MM/DD hh:mm:ss
+   o	Added global configuration command "AutoStrictOpLen" (ASO) for
+	setting the number of minutes the bot will be on strict-op
+	automatically after some channel action.
+	- If the bot is in ASO mode, delayed auto-opping will be bypassed
+	  in favor or immediate auto-op.
+   o	The bot now kicks once every second for users that should be
+	auto-kicked upon joining the bot's channel.
+	- This delayed kicking is also used in the masskicking feature.
+   o	Fixed memory leak in greeting list if the bot is rehashed.
+
+Version 5.7e ----------------------------------------------------
+   o	If a channel has public commands disabled, then commands for
+	that channel can only be issued through private messages.
+	- This means commands issued in public prefixed with either
+	  the prefix character or prefix word will not be carried out.
+   o	Re-added AUTODEBAN channel toggle command.  This allows whether
+	the bot will automatically expire bans in the channel specified.
+	- Also re-added CT.ADB channel toggle subcommand.
+   o	Fixed a bug in LOG.CHAT.LIST subcommand.
+   o	The REPORT command now also shows the subcommands invoked by users.
+   o	Changed to delay channel who request after a channel join.
+
+Version 5.7d ----------------------------------------------------
+   o	Fixed the SIGSEGV bug from signoff messages.
+   o	Now allows AuthLifeTime to be shorter than MemoryLifeTime, given
+	that MemoryLifeTime is at least 5 minutes.
+
+Version 5.7c ----------------------------------------------------
+   o	Fixed FreeBSD version with respect to crypted passwords.
+	- Now uses crypt.c source originally by Tom Truscott.
+	- The previous FreeBSD versions were compiled with crypt() from
+	  the libscrypt.so (07/16/96, v2.0) library, which didn't really
+	  provide backward compatibility with the (old) crypt() function
+	  on the other platforms.
+   o	Enhanced SERV command.  If the entered server is non-reachable,
+	the bot won't terminate the current server's connection.
+	- Added '+' prefix -- prefixing a server with the '+', plus, sign
+	  allows you to add that server in without causing a server change.
+   o	Fixed clustering of DNS hostnames that start with a number. (ARGH!)
+	- This will allow "USER ADD <nick>" to add a reasonable hostmask.
+   o	Passwords less than 5 characters long entered in "tnt2 -u" will
+	cause the password access for the request hostmask to be unset!
+	- This allows the resetting of user passwords :)
+   o	Fixed the useradd feature when invoking the bot as "tnt2 -u"
+	or "tnt2 -m"; it now accepts user input properly and more consistently.
+   o	The bot now sends the "Enter your password:" prompt as it should
+	if you have password access on the bot and attempt to initiate a 
+	DCC chat connection with it.
+   o	Fixed the Ping Timeout problem.
+   o	Most network connect calls are blocking I/O initially, then set
+	to nonblocking I/O after successful connect.
+	- This should fix the previous two problems.
+   o	PASSWD.UNSET works properly now.  For those with problems in logging
+	in after a PASSWD UNSET, try the password "NP".
+   o	Added MEMORYLIFETIME and AUTHLIFETIME global setting commands for
+	setting the expire time for idle users in the memory list.
+	- MemoryLifeTime sets the time non-bot users remain in memory, 
+	  from 2 to 7200 minutes.
+	- AuthLifeTime sets the time password-protected users remain in memory
+	  after they have logged in to the bot, from 4 to 7200 minutes.
+
+Version 5.7b ----------------------------------------------------
+   o	The bot should be more regular about backing up the user and autokick
+	lists after midnight when the bot is online.
+   o	Fixed memory leak in backup_files from 5.7a.
+   o	Now it's possible to spy on ALL channels by using "*" as the channel,
+	i.e. SPY ADD *
+	- Note that using "*" will cause the other channels to be deleted
+	  from the channel spy list.
+   o	Fixed a bug in seconds to idle conversion, e.g. idle x days y min...
+	- Before, if the hours came out to be 0, no matter how many days
+	  the bot is up or idle, the display will only tell you the 
+	  idle/uptime being so many minutes and so many seconds.  Oops!
+
+Version 5.7a ----------------------------------------------------
+   o	Fixed SERV command's delete option.  One can now delete
+	a server from the bot's server list either by "server:port"
+	or by the index to the left of the server.
+   o	Added ".list" option to SERV command -- it works the same as for
+	the SHOW SERVERS command.
+   o	Idle memory list entries are kept for ~25 minutes; idle logged in
+	(non-DCC) users in the memory list are logged out after 35 minutes.
+   o	Improved netsplit/netjoin detection.
+	- Flood detection for netjoin channel users will be slightly
+	  more lenient by approx. 5 units:
+	  - Public messages flood level is increased by 5 lines.
+	  - Beep check flood level is increased by 5 counts.
+	  - Nick flood level is increased by 3 nicks.
+	- This change could possibly make life better just right after
+	  a netjoin.
+	- Netjoin flood check levels are reverted to the normal levels
+	  after upwards to a minute (slow netjoins are another matter).
+   o	Enabled the viewing of IrcII /WHOIS and /USERHOST information 
+	if so requested.
+
+Version 5.7 -----------------------------------------------------
+   o	Changed the options '-u' and '-m' to invoke a generic
+	built-in userlist maintenance function.
+	- It's possible to add/delete users.
+	- You can modify these user profiles: 
+          - nick, password, access, auto-op, and channel(s)
+   o	Fixed the error reply when the bot needs a longer pattern for
+	certain commands.
+   o	Fixed the join of an existing channel with a key set after the bot 
+	starts up and connects to a server.  Before, it couldn't join
+	the already established channel that has a channel key.
+   o	Changed ctcp replies a bit.  Also added CTCP USERINFO response.
+	- Ctcp userinfo response can be configured in the config file
+	  with the global setting command of "UserInfo".
+   o	Changed the default anti-idle time to a saner maximum limit.
+	- 3 hours is a bit extended.
+   o	It's now possible to change certain CTCP responses online: 
+	finger (GS CFM), userinfo (GS CIM), version (GS CVM), and 
+	clientinfo (GS CCM).
+   o	Updated/added the correct GS options to the SGS command.
+   o	Fixed "GS MKI" setting.  It was doing the same thing as "GS MDI".
+   o	Removed "GS STMS" for setting the select() timeout in microseconds.
+        - Timeouts will now be in integer seconds only.
+   o	Removed "AUTODEBANINTERVAL" channel setting command.  The bot
+	will now remove expired bans approx. every 5 min.
+   o	Added netsplit information for channel users who got netsplitted.
+	- Netsplit users will be denoted as such from WHO and WHOS displays.
+	- Users who are not back within about 15 minutes are purged
+ 	  from the channel userlist.
+	- The purge will be done approx. every 10 minutes.
+	- Netsplit detection is improved even more to check for valid
+	  domains.
+   o	Hopefully fixed the obscure bug with the bot sending out the reply
+	to the last command you requested before you are asked for your
+	password while logging in to the bot (via DCC CHAT).
+   o	Timer auto-kicking will elicit a ban on the third join attempt.
+   o	The file "configcmds.lst" is now renamed to "config.cmds".
+   o	"UserName" command is not used by default.  The bot can and will
+	determine the login of the user invoking the bot.
+
+Version 5.6k ----------------------------------------------------
+   o	Added detection of CTCP Flood to a channel and to the bot.
+	- If the flood is to the channel and the abuser is not protected 
+	  at level 2 or higher, the bot will kick the abuser if the flood
+	  protection mode is set at 1.
+	- A ban may also be placed if the flood protection mode (BS.FPL)
+	  is set to level 2.
+	- Request floods to the bot will be ignored -- no replies are sent.
+   o	Changed the number of possible channels configured in infile.cfg
+	to 10, the max. allowed by some servers.
+   o	Fixed server read of join's; sometimes a trailing character gets
+	left in the channel name.
+	- This should fix the problem with the bot not banning some user
+	  on timer autokick who repeatedly rejoins the channel.
+   o	Changed the output format for some commands, e.g. WHO, WHOS...
+   o	AWAY command now works through DCC CHAT to set the bot's own away
+	message if the user is not on the party line.
+
+Version 5.6j ----------------------------------------------------
+   o	Fixed commands that need to obtain the user@host when only given 
+	the nicknames; e.g. USER ADD <nickname>..., USER DEL <nickname>...
+   o	Changed auto-DCC CHAT request so that the bot will only auto-request
+	(if toggled on) DCC CHAT of users whose access is at least MinDCCLevel.
+	- one side-effect for this is if MinDCCLevel is set too high, users
+	  able to request a command that requires DCC CHAT won't be able
+	  to use that command. :-I
+   o	The CHAT command will only work for those users whose accesses are
+	at least MinDCCLevel.
+   o	Max. nickname length is set to 30 chars. for those daring to run
+	bots on DALnet, but registered nicks are highly recommended to stay at
+	max. of 9 chars. in length.
+   o	Renamed STEAL to REGAIN; renamed NSTEAL to FORGET. 
+	- REGAIN can only be used for those channels that were configured
+	  in the config. file.
+	- Note: the maximum number of configured channels allowed per bot is 5.
+   o	Fixed the nickname in party line action so that it will be in accord
+	with the nick you've changed to.
+   o	Fixed commands sent through DCC chat; bot will sometimes think the
+	command is a comment.
+   o	Max. number of concurrent DCC sessions (chat, send) is set to 45.
+   o	Changed so that if user deops oneself, the bot won't reop the user.
+   o	Party line nickname is as registered in the users file.  If user is
+	not registered, the nick will be the one user is presently using
+	and randomized if it's not unique to the party line.
+	- This means that when users are added, make sure their registered
+	  nicknames are unique per user.
+   o	The bot will now invite users who are kicked and are protected
+	at level 2 or higher, unless the bot did the kicking.
+   o	Fixed active server info gathering (BT SI) for users joining channel.
+	- useful mainly for channels with people joining occasionally 
+   o	Revised spy functions that will only allow users on DCC CHAT to spy.
+	- any spying *requires* DCC connection.
+	- one can no longer specify another target to spy for.
+   o	The output for "Enforced modes" from SCS command with the default
+	current channel is displayed fine now.
+
+Version 5.6i ----------------------------------------------------
+   o	Fixed the occasional yet serious dropping of a line after 
+	having concatenated a message (from 5.6h).
+   o	Fixed user count after RESYNC of a channel.
+   o	Fixed furious empty socket reads after certain dcc chat close
+	situations initiated by the DCC user -- since 5.x (maybe even earlier)
+	- the reads would drop back to normal when another dcc chat is 
+	  established.
+   o	DCC party line commands are now the following (MUST be sent thru DCC):
+	[NOTE: these DCC-only commands can be used by anyone with DCC link.]
+	- .CHAT ON  -- to join party line when entered thru DCC CHAT
+	- .CHAT OFF -- to get off party line w/o closing DCC link
+	- .MOTD     -- to display DCC party line Message Of The Day
+	- .QUIT     -- to close dcc link, hence getting off party line
+	- .ME       -- to send an action to the party line, must be issued
+	               through DCC CHAT (formerly PME)
+	- .ECHO     -- to turn on/off echoing of messages sent from self,
+	               options are "on" and "off" (formerly PECHO)
+	- .WHOM     -- used to list who are on the party line (formerly PWHO)
+	- .NICK     -- change own nick in the party line
+	- .AWAY     -- set/unset away message in party line
+   o	The command "SAVE CMDREF" will also save the available DCC-only cmds.
+   o	Dcc party line flood detection is now treated the same as regular
+	server private messages.
+   o	CTCP replies can be spied appropriately (not that the bot will send
+	out CTCP requests in the first place).
+   o	Changed WAR command to CMA (Channel-Minded Automaton).
+	- when in CMA mode, the bot will no longer greet people and checks
+	  for public flooding only.
+   o	Default access levels for SAY and MSG commands are now set to 800.
+   o	Fixed config toggle settings where the line is like "!Greet   = 1"
+   o	Added bot toggle "BT LPM" -- Log Private Messages -- allows the bot to
+	log private messages sent to it.
+	- Also added config. bot toggle command LogPrivMsg.
+   o	Message spying now includes the sender's user@host as well, in the
+	form of *nick!user@host* -- more informative in the log if BT.LPM is on.
+   o	Incorporated ADDUSER and ADDOWNER into tnt2 binary file 
+	- invoke ADDOWNER as "tnt2 -m" and ADDUSER as "tnt2 -u".
+
+Version 5.6h ----------------------------------------------------
+   o	Removed silly "Unknown command" error reply because the user
+	does not have adequate access to that particular command (from 5.6g).
+   o	Spy messages can be sent time-stamped in the form of Hour:Min:Sec
+	- time-stamping can be enabled/disabled online with the command
+	  "BT AST" (Add Spy Time).
+   o	Removed those silly "./" characters that get interspersed with
+	the incoming server data (from 5.6g).
+	- Removed possible SIGSEGVs caused by this read problem as well.
+   o	Attempted to correct total user count in CHI output; incomplete still.
+   o	Not yet fixed: "SERV" command must be executed twice if you want to 
+	add a server and then use it as well.
+	- Be sure the port is specified as well if it's other than 6667
+	  when specifying the server to change to.
+   o	Hopefully fixed the problem with the bot not knowing that it is
+	indeed opped in a channel (from 5.6g).
+   o	Removed "UserName" bot setting command; the process will find the
+	appropriate login or use "UNKNOWN" (very rare case) otherwise.
+   o	Added "AntiIdle" configuration bot toggle command.  Set to 0 to
+	disable anti-idle; default is set to true.
+	- Also added "BT AI" online bot toggle command.
+   o	Fixed "REFRESH" command so that it actually works (bug from long ago).
+	- "NEWBOT" and "REBOOT" commands should work once again as well.
+   o	Users with access 900 or above can make the bot leave a channel and
+	_not_ rejoin even if the auto-rejoin flag is active.
+   o	Fixed: "LOAD NICKS" should work fine now.
+
+Version 5.6g ----------------------------------------------------
+   o	Finally! Made the bot less CPU intensive.
+   o	Fixed CMD.WORD command so it works once again.
+   o	Fixed SIGSEGV problem due to sending lots of bytes to DCC connections,
+	causing temporary lack of system allotted resources.
+   o	Fixed INFO output of used system time. It was inflated by some factor.
+   o	Mostly lower-case replies; my eyes needed some rest.
+   o	Fixed "%QuoteInterval" channel configuration setting in infile.cfg.
+	It was mistakenly set to seconds and not to minutes.
+   o	Changed DCC-connect password wait timeout to 2 minutes or so.
+   o	Added "MotdFile" global configuration command for setting the
+	location and name of the motd file for DCC party line.
+   o	Changed Beep and Caps checking so that if the bot is not opped,
+	it will no longer perform the two aforementioned checks.
+   o	Fixed serious bug in a few GS command options.
+   o	Added a tiny bit of security checking for mklog file -- "rm " command
+	is not allowed (not that anyone would want to delete something anyway).
+
+Version 5.6f ----------------------------------------------------
+   o	Changed GS.PMNAK to GS.PMAK, for Public (flood) Messages to Auto-kick
+   o	Changed BT.LOGKB (log kicks and bans) to BT.LKB.
+   o	Changes to ".s" versions
+	- Fixed file transfer functions.
+	- Re-added channel user idle checking.
+	- The greeting feature is re-added.
+   o	Enhanced the display for outputs from SBT, SCT, SBS, SGS, and SCS
+	to display the option that goes with each of the respective set
+	commands.
+	- any setting that doesn't correspond to any option will have
+	  "n/a" as the option.
+   o	Renamed command PARTY.DELETE to PARTY.KICK.
+	- Added kick message when someone has been kicked off.
+   o	Changed the protection levels.  They now mean the following:
+	- level 0 -- no protection
+	- level 1 -- unban user if user is banned
+	- level 2 -- level 1 + reop user if user is deopped
+	- level 3 -- levels 1+2 + deop offender is offender is not protected
+	- level 4 -- levels 1+2+3 + kick offender
+	- level 5 -- levels 1+2+3+4 + ban offender as well
+
+Version 5.6e (BETA BETA BETA) -----------------------------------
+   o	NEW! Channel-specific access levels!
+	- To add channel specific access, specify channels as
+	  #chan1@<level_for_#chan1>,#chan2@<level_for_#chan2>
+	- Note the new character '@'
+	- Note that "USER ADD" function still requires an access level,
+	  but you -can- use the #channel@access construct to specify
+	  per channel access level.
+   o	Fixed: "AKMOD CHAN" can accept "*" as a channel name.
+   o	Fixed: Server hop count should now be registered when doing
+	/CTCP <bot> WHO <channel>
+   o	Added "KickJustBanned" configuration channel toggle command.
+	- Also added online "CT KJB" channel toggle command.
+	- This allows automatic kick of everyone matching the banned pattern,
+	  unless the user has adequate access level on the bot.
+   o	Removed a few old commands:
+	- MOP --> use PO instead for massopping
+	- MCK --> use PK instead for masskicking
+	- MDEOP --> use PD instead for massdeopping
+   o	Improved "helpread" utility to print a prompt and ask for topic
+	to display help for if no topics are specified.
+   o	Added switches "-m" and "-u" to run ADDOWNER and ADDUSER
+	programs, respectively.
+	- This allows adding of bot owner and users.
+   o	CHANGED! Added crypted passwords.  Any passwords not encrypted
+	will be encrypted by the bot upon a restart.
+   o	Added daily backup of user and autokick lists to filenames with
+	"_backup" appended.
+   o	Added exit upon too many server connect retries.
+	- The value is set at 80 reconnects.
+	- (The retry count will be user settable later.)
+   o	Removed any spy activities once a user's password interval has expired.
+   o	Added password access for DCC CHAT.  If user has password-protected
+	access, that user -must- provide the password in order to establish
+	dcc connection.
+	- Password must be entered within ~60 seconds of establishing
+	  a dcc connection to maintain it.
+   o	Fixed a bug in USER.CLVL and USER.PROT commands.
+
+Version 5.6d ---------------------------------------------------
+   o	Fixed: will not cutoff DCC connection of users with high access.
+   o	Fixed: "SERV" command now works properly and also accepts 
+	the index of the server to change to.
+   o	The delete server command "SERV -<server_name>" now also
+	accepts the index of the server for deletion.
+   o	Changed to non-blocking I/O -- see if this helps.
+   o	Auto-op of users with access to *all* channels now fixed.
+   o	USER ADD command now checks for the correct access of the
+	target channels with those of the one adding to make sure
+	non-accessed channels cannot be added.
+	- NOTE: Consider this a beta feature still.
+   o	Changed BT.NCK (change nick on kick) to BT.CNK.  Configuration
+	bot toggle command remains as before.
+   o	Added BT.NFC (nick-flood check) command.  If on, will check
+	for nick flooders and kick on the right conditions.
+	- Default setting is on.
+	- Complementary configuration bot toggle command is NickFloodCheck.
+   o	Fixed spying of ctcp messages; the channel was missing.
+
+Version 5.6c ---------------------------------------------------
+   o	Fixed the auto-op of users (with auto-op access) who do not 
+	even have access to the channel(s) in question.
+   o	Fixed "SHOW LOG <logfile>" command so "<logfile>" is in
+	lower case.
+   o	Fixed "AK ADD" so that _any_ user with access to _any_
+	channel could not be added to the autokick list.
+   o	Fixed a bug that shows up on the Solaris system with 
+	the bot dieing due to use of "USER ADD" command.
+    o	Added %AutoDebanInterval channel configuration setting command
+	for telling the bot when (in minutes) to auto-unban old 
+	channel bans.
+   o	Changes to party line
+	- The status messages are changed a bit.
+	- Added "/PME action" command for sending actions to the party line
+	- Party line users will not be automatically disconnected
+	  due to excess idle.
+	- Commands through party line, and DCC CHAT in general, 
+	  *must* be prefixed by the '/' character.  The standard 
+	  bot prefix character may not even work.
+
+Version 5.6b ---------------------------------------------------
+   o	Fixed bug in ban, who channel lists -- introduced in 5.6a
+
+Version 5.6a ---------------------------------------------------
+   o	Fixed the ".s" version in regards to file transfer:
+	- the FILELIST, UPLOADDIR and DOWNLOADDIR should work fine now
+	- the greeting of users is fixed -- the greeting file was not
+	  read in at all previously
+   o	Added stacked channel mode replies; hopefully reduces flooding.
+   o	Fixed: the deop protection would not deop offender even if the
+	protected user has a high enough protect level.
+   o	Upon joining a channel, the bot will scan for people on the 
+	autokick list and will autokick any found.
+   o	Fixed the LS command when used with patterns
+	- the use of pattern will prevent the comments from showing up
+	  unless the comments match the specified pattern.
+   o	Added "CtcpRespond" bot configuration toggle command.  If enabled,
+	allows the bot to reply to CTCP requests.
+	- Also added "BT.CTCP" bot online toggle command.
+   o	Added spying of CTCP requests.
+
+Version 5.6 ----------------------------------------------------
+    o	Reorganized the flood check/ignore.
+	- Settings to detect flooding are now set with FLOODSET
+	  configuration command: reset, interval and lines for
+	  public, private, and dcc messages.
+	- This means FLOODSET "MSGS, PUBMSGS, and DCCMSGS" all work now,
+	  as well as all of the parameters
+	- Deleted MSGFLOODRATE as that is taken care of by "FLOODSET MSGS"
+	- Added runtime global configuration setting commands
+	  GS.(PFR, PFI, PFL, MFR, MFI, MFL, DFR, DFI, DFL), for
+	  Public, (private), and Dcc message settings.
+	  - The 'R' is for reset setting, in seconds (to reset flooding status)
+	  - The 'I' is for interval setting, in seconds.
+	  - The 'L' is for lines to detect in interval set above.
+    o	Added "TOGGLE" and "SET" configuration prefix commands.
+	- TOGGLE takes the place of "!" in front of toggle config. commands.
+	- SET takes the place of "%" in front of setting config. commands.
+    o	Fixed the problem with nick change on being kicked from a channel
+	and the bot not returning...and no wonder (!!)
+    o	Added "BT CKN" and "DoCheckNote" configuration bot toggle command
+	for deciding whether to check for notes for people joining a channel.
+    o	Changed the CK, KK, KB, etc kick commands so it will -not- show
+	who requested the kick, just that it has been requested.
+
+Version 5.5b ---------------------------------------------------
+    o	Command "AWAY" can now take parameter "-" to take off the away message.
+    o	A protected user that is kicked from a channel will be invited back
+	if the bot is opped.
+    o	Changed nick randomization after enough (16) failed NICK registrations.
+    o	Added response to "CTCP WHO <channel>" so users can make the bot look 
+	for server info of users in <channel> that the bot is also in.
+    o	Command "LS" will only list the files to which the user has access to.
+	- Also, the access level is not shown anymore.
+    o	Fixed: STAT command _will_ show output even if a user is not in
+	the userlist.  This means people on autokick can also be listed.
+    o	Fixed: "USER ADD -*pattern*" now fills in the pattern's nick as
+	something like "<UNKNOWN>" or "-" rather than leaving it blank.
+    o	Users with access 950 and above CAN be marked as flooding; the 
+	previous change could impose unneeded system overhead.
+
+Version 5.5a ---------------------------------------------------
+    o	Fixed the AK.ADD of userhost after the code change.
+    o	Fixed the PASSWORD info in "STAT" output after code change.
+    o	Active Server Info gathering is off by default.
+
+Version 5.5 ----------------------------------------------------
+    o	NOTE: "TOGGLE" configuration command support is now removed --
+	always toggle settings in infile.cfg with the '!' prefix
+    o	NOTE: "SET" configuration command support is now removed --
+	always set settings in infile.cfg with the '%' prefix
+    o	NOTE: entries in "filelist.bot" with "-----" can be filenames.
+	- Previously, entries with "-----" are taken as comments.
+    o	Removed MDBF command -- not much use anyways
+    o	Configurable auto dcc connection:
+	- Added "AutoDccConnect" configuration bot toggle command  
+	- Added "BT ADCC" online bot toggle command
+    o	Speeded up command recognition.
+    o	Added WHOS command.  It is a terse version of the WHO command,
+	but also showing a user's server as well.
+    o	The CHI output is changed a bit to make it more compact.
+	- the Active Channel Status indicator is '*' and '@' for active
+	  and opped.
+    o	Added AUTOREJOIN channel toggle configuration command to turn on
+	auto-rejoin.  By default, the bot will leave a channel when someone
+	tells it to and won't rejoin after a time by itself.
+    o	Changed USER.RELOAD command so you can optionally load in another
+	user file provided you have at least 990 access.
+    o	Incorporated NSL2 to the NSL command.
+    o	Incorporated ACT to the ACT2 command.  A shortcut to act to the
+	present channel is with the "." identifier.
+    o	Fixed that random nick change bug.
+    o	Added "ServerInfo" bot toggle configuration to turn off/on
+	server info gathering for channel users.
+    o	Added "BT SI" to toggle the above while online; default is on.
+	- Active server info gathering is off if the bot is in "war" mode.
+    o	Changes to channel joining and getting channel information; 
+	this should make the bot a bit faster
+    o	Fixed the bug with specifying the server option from NEWBOT command
+	but the bot wouldn't use the server since the port is wrong if
+	the port option is not specified.
+    o	Partially fixed the bug with userlist corruption due to using 
+	NEWBOT command.  NOTE: You -MUST- kill forked bots first if you
+	need to reduce the number of active bots or else your userlist will
+	be in jeopardy.
+    o	Changed the bot's prefix word to be case sensitive.
+    o	Added identd checking when auto-opping users.
+	- To change this feature for individual users, see "USER IDENTD" cmd.
+    o	Users on machines not using identd cannot use the universal
+	tnt2bot prefix word "tnt2" to issue commands.
+    o	Added capability to change the user protection scheme:
+	- Added BT.PAD bot toggle command for changing the user protection
+	  scheme.  PAD stands for "Protect Access Difference", meaning the
+	  higher a user's access, the more likely that user is protected.
+	- Added "ProtAccessDiff" configuration bot toggle command for
+	  doing the above -- BT.PAD.
+	- By default, user protection is in accordance with protection
+	  levels given.
+	- Access difference and protection levels are set as follows:
+	  - access difference > 700, protection = 3
+	  - access difference > 400, protection = 2
+	  - access difference > 100, protection = 1
+    o	Bot nick in log files now uses up to 9 spaces, more if necessary.
+	- This allows for easy checking of log time.
+	- The nick is left justified if the length is not 9 chars. long.
+    o	Fixed: the bot will again greet people who use the trigger phrases:
+	"Hey", "Hi", "Hi <botnick>", "Re", "Hello", "Re <botnick>",
+	"Re All", "Hi All", "Hello All", "Hello <botnick>",
+	"Bye <botnick>", and "Bye all"
+	- NOTE: trigger phrases are case-insensitive.
+    o	Fixed: the bot should not kick itself for nick flooding, not that
+	the bot should be nick flooding in the first place.
+    o	Fixed: the bot no longer shows two (2) messages with "NO INFORMATION
+	AVAILABLE FOR .." in the "STAT" command.
+    o	Fixed: the multi-port server entries for bot works properly.
+	NOTE: You have to make sure you only have one entry of the server
+	with the particular port or you'll have duplicate entries with
+	duplicate ports in the bot's server list.

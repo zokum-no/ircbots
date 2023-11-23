@@ -1,0 +1,166 @@
+######################################################
+# Configuration commands for TnT-II 5.7f
+# Filename: config.cmds
+# Created: Fri Apr 24 10:35:48 1998
+######################################################
+#
+### Global configuration commands
+	DEBUG
+	SET
+	OWNER
+	OWNERUHOST
+	OWNEREMAIL
+	OWNERNICK
+	BOTDIR
+	BOTHOSTNAME
+	BOTIPADDRESS
+	PICFILE
+	QUOTEFILE
+	MOTDFILE
+	FLOODSET
+	KLOGFILE
+	NOTEFILE
+	NEWSFILE
+	HELPFILE
+	SPLATFILE
+	EXTCMDFILE
+	LOGCHATFILE
+	CMDLOGFILE
+	VERSIONMSG
+	FINGERMSG
+	USERINFO
+	CLIENTINFO
+	FIREWALL
+	NONBLOCKCONNECT
+#
+### Global setting commands  [min to max]
+	% DEBUG                 [ 0 to     2]
+	% GREETINTERVAL         [ 1 to  9000]
+	% IDLETIMEOUT           [-1 to 30000]
+	% WAITTIMEOUT           [ 5 to   600]
+	% RESETINTERVAL         [ 5 to   900]
+	% SELECTTIMEOUT         [ 1 to   300]
+	% MAXUPLOADSIZE         [ 0 to 30000]
+	% MASSCAPINTERVAL       [ 1 to   600]
+	% MASSKICKINTERVAL      [ 1 to   600]
+	% MASSDEOPINTERVAL      [ 1 to   600]
+	% MASSNICKINTERVAL      [ 1 to   600]
+	% MASSBEEPINTERVAL      [ 1 to   600]
+	% MASSPUBINTERVAL       [ 1 to   600]
+	% BEEPNUMAUTOKICK       [ 3 to   600]
+	% NICKNUMAUTOKICK       [ 3 to   600]
+	% PUBMSGNUMAUTOKICK     [ 3 to   600]
+	% NICELEVEL             [-10 to    20]
+	% MEMORYLIFETIME        [ 2 to 10080]
+	% AUTHLIFETIME          [10 to 10080]
+	% AUTOSTRICTOPLEN       [ 0 to 10000]
+	% NICKFLOODMASK         [ 0 to     3]
+	% BEEPFLOODMASK         [ 0 to     3]
+	% PUBFLOODMASK          [ 0 to     3]
+#
+### Global flood settings
+	floodset MSGS
+	floodset PUBMSGS
+	floodset DCCMSGS
+#
+### Bot configuration commands
+	NICK
+	PREFIX
+	PREFIXWORD
+	USERNAME
+	IRCNAME
+	AWAYMSG
+	USERLIST
+	AKLIST
+	NICKLIST
+	IGNORELIST
+	SERVER
+	UPLOADDIR
+	DOWNLOADDIR
+	FILELIST
+#
+### Bot setting commands  [min to max]
+	% OPNONUSERLEVEL        [ 0 to  1000]
+	% MASSLEVEL             [ 1 to  1000]
+	% MASSPROTLEVEL         [ 0 to  1000]
+	% MASSCAPS              [ 0 to   999]
+	% MASSKICKS             [ 0 to   999]
+	% MASSDEOPS             [ 0 to   999]
+	% MASSNICKS             [ 0 to   999]
+	% MASSBEEPS             [ 1 to   999]
+	% IDLETIME              [300 to 30000]
+	% FLOODKICKLINES        [ 3 to  3000]
+	% MINDCCLEVEL           [ 0 to   999]
+	% LOGCMDLEVEL           [-2 to   999]
+	% ALWAYSOPLEVEL         [ 1 to  1000]
+	% CHANMODELEVEL         [ 0 to   999]
+	% NICKCHANGEINTERVAL    [30 to 30000]
+	% CMALENGTH             [-1 to 30000]
+	% FLOODPROTLEVEL        [ 0 to     2]
+	% SECURELEVEL           [ 0 to  1000]
+	% SECURELENGTH          [-1 to  3000]
+	% KICKQCHECKINTERVAL    [ 0 to    10]
+	% MAXAUTOOPDELAY        [10 to   600]
+	% MAXLAGALLOWED         [10 to  1800]
+#
+### Bot toggle commands
+	! LOGKICKBAN
+	! GREET
+	! ALLOWGET
+	! ALLOWSEND
+	! PARTYLINE
+	! NEEDPREFIX
+	! LOGCMDS
+	! LOGPRIVMSG
+	! KICKPROTECTED
+	! NICKCHANGE
+	! RANDOMNICK
+	! CHANGENICKONKICK
+	! CHANGENICKONKILL
+	! NICKFLOODCHECK
+	! CTCPRESPOND
+	! UNDOSELF
+	! LOGONTHEM
+	! KICKONHACKJOIN
+	! DIEONKILL
+	! INVISIBLE
+	! PROTACCESSDIFF
+	! AUTODCCCONNECT
+	! DOCHECKNOTE
+	! ANTIIDLE
+	! LEAVERESTRICTED
+	! MULTINICKKICK
+#
+### Channel config commands
+	CHANNEL
+	MODE
+	TOPIC
+	TOGGLE
+	SET
+#
+### Channel setting commands
+	% TOPICRESETINTERVAL    [-1 to 30000]
+	% QUOTEINTERVAL         [-1 to 30000]
+	% ENFMODEKICKLEVEL      [ 0 to   999]
+#
+### Channel toggle commands
+	! IDLEKICK
+	! NOSERVEROP
+	! NOSERVEROP2
+	! BEEPKICK
+	! STRICTOP
+	! AUTOOP
+	! PUBLICCMD
+	! ENFORCEMODE
+	! MASSPROT
+	! PROTECTION
+	! AUTOKICK
+	! AUTOREJOIN
+	! CAPSKICK
+	! LOGCHAT
+	! STRICTTOPIC
+	! DELAYOP
+	! KICKJUSTBANNED
+	! AUTODEBAN
+#
+### End of config.cmds

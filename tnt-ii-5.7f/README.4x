@@ -1,0 +1,76 @@
+
+             Important information on changes to release 5.0!!
+---------------------------------------------------------------------------
+
+  This is the README file for converting from tnt2bot 4.2b and older to
+the new 5.0.  There are numerous changes in the new release.  The major 
+changes, which may also cause the most inconvenience (it will), are made
+in the config file "infile.cfg" and in the list files.
+
+  Configuration commands have changed quite a bit in the new "infile.cfg";
+be sure you look over the sample "infile.cfg" before you try to update your
+own bot.  The changes to the config are the following:
+
+	o  UserFile, AkFile, IgnoreFile, and NickFile config commands have
+	   changed to UserList, AkList, IgnoreList, and NickList, respectively.
+
+	o  Bot and channel toggle commands must now be prefixed by the
+	   exclamation point '!'.  For instance, to turn the "nickchange"
+	   bot toggle on, you would put in the infile.cfg file "!NickChange 1";
+	   note the '!' character in front of the toggle command.  Likewise,
+	   to turn a channel toggle such as EnfmTog to on, use "!EnfmTog 1".
+
+	o  Setting commands that require a value now require the '%' prefix.
+	   Hopefully this streamlines the config file and makes the settings
+	   easier to understand.  E.G.  "%IdleTimeOut 3000"
+
+	o  Added configuration commands "%IdleTimeOut" and "%WaitTimeOut".
+
+	o  Removed the "PicFile" config; the bot will look at the 
+	   $(PicDir)/pics.bot file to find an index of the available 
+	   picture files.
+
+  Be sure you make the appropriate changes to your "infile.cfg" file or your
+bot may not and most likely will not function properly.
+
+  The format for the USER ADD command has been changed; the new format is: 
+
+     USER ADD <nick | nick!user@host> <level> <channel> [aop] [prot]...
+
+  The SHIT command is _no longer_ available.  Use the AK command instead.
+Also, the AK ADD command is changed; the new format is:
+
+     AK ADD <nick | nick!user@host> <channel> <level> <reason>
+
+  Note that the "ban pattern" option is now gone and the <level> option
+is in.  The <level> option is used to determine the shit level.  There are
+three possible levels: 1, 2, and 3.  See the help file to more information.
+
+  The list files have changed format as well.  I have added fields into 
+all the list files, most notably in the userlist and shitlist.  If you
+have pre-5.0 listfiles, you need to run my "CONVERT-5.0" program to convert
+them accordingly; this program should be self-explanatory so I'm not 
+including any documentation for it.  
+
+  I also wrote the utility program "ADDOWNER-5.0" for adding yourself to
+the userlist.  This program should allow you to add yourself into the userlist
+so that you can be the bot's "master".  To add other users to the userlist,
+you can use the analogous program "ADDUSER".
+
+  Another big change in release 5.0 is the configuration of the user greeting
+list.  Yes, I've finally made it configurable.  Note that the bot will only
+read in the first 16 greetings; the rest will be ignored.
+
+  The flooding parameters are configurable also, as well as the timeout 
+periods and reset intervals.  Note the added xxxxInterval, xxxNumAutoShit,
+and FLOODSET configuration commands.  Look in README.cfg for more information.
+(I should update README.cfg file more often.)
+
+  Hope you enjoy the new release.  Please read the ChangeLog and README.cfg
+carefully and make the appropriate changes to your "infile.cfg".
+
+  If you have any questions, you can email me at tonys@access.mountain.net.
+
+--
+ttone
+tonys@access.mountain.net

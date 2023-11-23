@@ -1,0 +1,70 @@
+######################################################################
+# News file for TnT-II bot
+#--------------------------------------------------------------------#
+# Format:
+#   %subject <topic>
+#   ACCESS  <user access level required>
+#     <the news relating to topic -- multi-line accepted/preferred>
+#   %end
+######################################################################
+
+%subject LIST
+ACCESS 0
+\b========================================================\b
+                Available news topics:
+\b--------------------------------------------------------\b
+FORMAT:    "Subject:<user access required>"
+
+   standard:0        info:0        special:0
+\b========================================================\b
+%end
+%subject standard
+ACCESS 0
+\b================== NEWS FILE FOR \n ================\b
+  You are now reading the news file for TnT2bot.  This 
+file contains updated information on the bot or any
+other information the bot owner may wish to put here.
+
+  \bOct. 1995\b (version 5.4)
+     \io\i More enhancements and a few fixes.  See ChangeLog
+
+  \bJan. 1996\b (version 5.5a)
+     \io\i Even more bug fixes and more enhancements.
+
+  \bAug. 1996\b (version 5.6f)
+     \io\i Numerous enhancements! See "NEWS INFO"
+
+  \bMay 1997\b (version 5.7b)
+     \io\i More improvements along with a few bug fixes.
+\b========================================================\b
+%end
+
+%subject INFO
+ACCESS 0
+=======================================================
+\i*-*-*-*-*-*-*\i  \uTnT2bot 5.7b\u is available! \i*-*-*-*-*-*-*\i
+================== May      1997 ======================
+  There are tons of changes as well as improvements
+since version 4.2b and 5.5.  Among the changes are:
+
+     \bo\b The bot is a bit faster now; could be better
+     \bo\b Much improved delayed opping that not only
+       groups the ops.  Reduced unnecesary opping.
+     \bo\b Much improved list files -- userlist and shitlist
+     \bo\b Improved user protection mechanism
+     \bo\b Improved look to DCC party line.
+     \bo\b Channel-specific user access levels.
+     \bo\b Added encryption of user passwords!
+     \bo\b Improved look for status displays.
+     \bo\b ...and many other improvements -- check out
+       \bChangeLog\b file for all the changes, improvements,
+       and additions!
+=======================================================
+%end
+
+%subject SPECIAL
+ACCESS 0
+==================== \b ! \b SPECIAL NEWS \b ! \b ====================
+                 You are special!   \i(-=\i
+==============================================================
+%end

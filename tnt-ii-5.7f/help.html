@@ -1,0 +1,2957 @@
+<HTML>
+<!-- Comment: The formatting for this page can/will change in the future -->
+<!-- Keywords: tnt2, tnt2bot, TnT-II bot, help, helpfile -->
+<HEAD><Title> Help file for TnT-II 5.7f </Title></HEAD>
+<BODY>
+<BASEFONT size=3>
+ 
+<H1>TnT-II 5.x helpfile</H1>
+ 
+General help topics:
+ 
+<UL>
+<LI><A HREF="#Standard">Standard</A>
+<LI><A HREF="#PartyLine">Party Line</A>
+<LI><A HREF="#BotInfo">Brief bot information</A>
+<LI><A HREF="#Channel">Channel commands</A>
+<LI><A HREF="#Users">User commands</A>
+<LI><A HREF="#Bot">Bot commands</A>
+<LI><A HREF="#cmd_NOTE">Note commands</A>
+<LI><A HREF="#Filetransfer">File exchange commands</A>
+<LI><A HREF="#Services">Accessing Services</A>
+</UL>
+
+<HR>
+<PRE>
+######################################################################
+################ TnT-II Version 5.7f Helpfile         ################        
+#### Copyright (c) 1995-1998 by ttone (tonys@access.mountain.net) ####
+################ Last updated: April 1998             ################
+######################################################################        
+<A NAME="Standard"><B>Topic</B>: <FONT size=+1>Standard</FONT></A>
+<B>===============================================================</B>
+          <EM>Basic Help for BOTNICK version VERSION</EM>
+<B>---------------------------------------------------------------</B>
+
+Thank you for using TnT-II version VERSION.  Remember to be
+responsible with botting and ircing.
+
+Items in <B>{</B> and <B>}</B> are required options to commands;
+items in <B>[</B> and <B>]</B> are optional.
+
+To get help on commands, type /msg BOTNICK help <B>{topic}</B>, where 
+{topic} is the desired topic. I.e. /msg BOTNICK help commands
+
+<U>General topics</U>:
+      <B>Commands</B>      - Commands available to you
+      <B>Users</B>         - commands for dealing with users
+      <B>Channel</B>       - Commands for channel use
+      <B>Bot</B>           - Commands to control/set bot
+      <B>BotInfo</B>       - General background
+      <B>Services</B>      - Some services provided by the bot
+      <B>FileTransfer</B>  - Information about transferring files
+      <B>PartyLine</B>     - Information on the party chat line
+
+<B>===============================================================</B>
+- * -
+
+<A NAME="Users"><B>Topic</B>: <FONT size=+1>Users</FONT></A>
+<B>===============================================================</B>
+*-*-*-*-*-*-*-*-*-*-*   <B>USER COMMANDS</B>   *-*-*-*-*-*-*-*-*-*-*-*
+<B>---------------------------------------------------------------</B>
+       USER    AK      CHAN    USERMOD  AKMOD
+       ACC     STAT    NOTE    TIME     TAK    <B>...</B>
+<B>===============================================================</B>
+- * -
+
+<A NAME="Channel"><B>Topic</B>: <FONT size=+1>Channel</FONT></A>
+<B>===============================================================</B>
+*-*-*-*-*-*-*-*-*-*-*  <B>CHANNEL COMMANDS</B> *-*-*-*-*-*-*-*-*-*-*-*
+<B>---------------------------------------------------------------</B>
+       CT      SCT     CS      SCS     CHS     CHB
+       P       PDB     PK      PKB     PO      PD
+       SB      SKB     SCREW   CK      MCK     MKB
+       OPK     DOUK    SPLAT   MDB     LOCK    NLOCK
+       STO     REGAIN  FORGET  CHI     WHO     CYCLE 
+       WHOS    DBK     RESYNC  <B>...</B>
+<B>===============================================================</B>
+- * -
+
+<A NAME="Bot"><B>Topic</B>: <FONT size=+1>Bot</FONT></A>
+<B>===============================================================</B>
+*-*-*-*-*-*-*-*-*-*-*-*  <B>BOT COMMANDS</B> *-*-*-*-*-*-*-*-*-*-*-*-*
+<B>---------------------------------------------------------------</B>
+       BT      GS      PARTY   XC      SAVE    NOTE
+       BS      SHOW    CMD     SERV    SPY
+<B>===============================================================</B>
+- * -
+
+<A NAME="Filetransfer"><B>Topic</B>: <FONT size=+1>Filetransfer</FONT></A>
+<B>===============================================================</B>
+*-*-*-*-*-*-*-*-*-*-*   <B>FILE TRANSFER</B>   *-*-*-*-*-*-*-*-*-*-*-*
+<B>---------------------------------------------------------------</B>
+  Use <B>LS [*pattern*]</B> to list the files offered.  Files 
+  are offered according to access levels.  Only people with 
+  access equal to or greater than the access indicated can 
+  get that particular file.  [*pattern*] can be excluded to
+  list all files in the index; otherwise the bot will list
+  files matching that pattern (case insensitive).
+
+  Use <B>SEND {filename}</B> <B>SEND [*pattern*]</B> to request 
+  the bot send the specified file or the files matching
+  [*pattern*].  See the help on SEND for more information.
+
+  This automaton can also <U>receive</U> files.  Files offered
+  only by users of this automaton are accepted though.
+<B>===============================================================</B>
+<I>See Also</I>: LS SEND
+- * -
+
+<A NAME="Services"><B>Topic</B>: <FONT size=+1>Services</FONT></A>
+<B>===============================================================</B>
+*-*-*-*-*-*-*-*-*-*-*   <B>BOT SERVICES</B>    *-*-*-*-*-*-*-*-*-*-*-*
+<B>---------------------------------------------------------------</B>
+  Here are the three services the bot offers:
+
+  <B>*</B> NOTE -- for leaving notes to people
+          o try /msg BOTNICK help note
+  <B>*</B> File transfer -- for sending/receiving files
+          o LS   -- to list the files being offered; files
+                    with access of 0 are open to all
+          o SEND -- to request a file from the bot
+  <B>*</B> NEWS -- for disseminating news to others
+          o type /msg BOTNICK NEWS for general news
+          o type /msg BOTNICK NEWS {topic} for news on {topic}
+          o type /msg BOTNICK NEWS LIST for a list of news items
+
+<B>===============================================================</B>
+<I>See Also</I>: NOTE SEND LS
+- * -
+
+<A NAME="BotInfo"><B>Topic</B>: <FONT size=+1>BotInfo</FONT></A>
+<B>===============================================================</B>
+*-*-*-*-*-*-*-*   <B>INFORMATION ABOUT THE BOT</B>   *-*-*-*-*-*-*-*-*
+<B>---------------------------------------------------------------</B>
+  This is a TnT-II bot - a.k.a tnt2bot - version VERSION
+  It was transformed greatly from hackbot 0.99 alpha 13.
+  You can ask <B>ttone</B> (tonys@access.mountain.net) for a runtime 
+  version or check out <B>http://access.mountain.net/~tonys/irc/</B>.
+
+  Compliments to <B>CoMsTuD</B> for the fine work he's done on the hackbot.
+  Compliments to <B>VladDrac</B> for a fine bot he introduced to netland.
+  Compliments to <B>joh</B> for his johbot as a fine example.
+<B>===============================================================</B>
+- * -
+
+<A NAME="PartyLine"><B>Topic</B>: <FONT size=+1>PartyLine</FONT></A>
+<B>===============================================================</B>
+*-*-*-*-*-*-*-*     <B>INFO ABOUT PARTY LINE</B>     *-*-*-*-*-*-*-*-*
+<B>---------------------------------------------------------------</B>
+  Users can chat on the party line by issuing the command ".CHAT ON".
+  This feature requires that users have already established DCC CHAT
+  with the bot -- this may or may not require access to the bot.
+
+  Commands are best issued through DCC CHAT by using the DCC command
+  prefix character <B>.</B> -- the dot.  The bot's command prefix
+  character may or may not be recognized through dcc chat.
+
+  Useful chat line commands are:
+        .CHAT ON/OFF -- to join/leave the party line
+        .QUIT        -- to get off chat line *and* closing dcc chat
+        .WHOM        -- show who all are on the party line
+        .ME          -- send an action to the party line
+        .ECHO        -- toggle party line echo of own message
+        .PARTY       -- an umbrella of commands only available
+                        to privileged users on the bot.
+        .AWAY        -- set/unset your away message on party line
+        .NICK        -- change own nick in party line
+
+  Additional commands and functionality may yet to be added.
+<B>===============================================================</B>
+- * -
+
+<A NAME="cmd_ACC"><B>Topic</B>: ACC</A>
+<B>Syntax</B>: ACC [nick | user@host]
+  <I>Description</I>:
+    Shows the access level of a person...if no 
+    argument is given, it shows your access.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_ACT"><B>Topic</B>: ACT</A>
+<I>See Also</I>: ACT2
+- * -
+
+<A NAME="cmd_ACT2"><B>Topic</B>: ACT2</A>
+<B>Syntax</B>: ACT2 {channel | nick} {action statement}
+  <I>Description</I>:
+    Makes the bot do an action to a channel or nick.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_ADD"><B>Topic</B>: ADD</A>
+<B>Please use "USER ADD" instead</B>
+- * -
+
+<A NAME="cmd_DEL"><B>Topic</B>: DEL</A>
+<B>Please use "USER DEL" instead</B>
+- * -
+
+<A NAME="cmd_USER"><B>Topic</B>: USER</A>
+<B>Syntax</B>: USER {option} [...]
+  <B>Options</B>: ADD DEL CLVL PROT AOP NAOP WRITE RELOAD IDENTD
+  <I>Description</I>:
+    This is for adding users to and deleting users from 
+    the userlist.
+  
+    When adding new users, if [aop], [protlvl] and [passwd]
+    are not specified, they default to no aop, prot 0, and
+    no password, respectively.
+<I>See Also</I>: USER.{option} USERMOD
+- * -
+
+<A NAME="cmd_USER.ADD"><B>Topic</B>: USER.ADD</A>
+<B>Syntax</B>: USER ADD {nick | nick!user@host} {level} 
+                {channels} [aop] [prot level] [password]
+  <I>Description</I>:
+    This command is used to add a user to the automaton.
+    If you want the automaton to assign a pattern, then 
+    use the "nick" format, otherwise use the 
+    "nick!user@host" format.
+  
+    User levels go from 1 to 999, with owners being 999.
+    Setting low user levels at first may be a good idea; you 
+    can always increase the user level later on as needed.
+<I>See Also</I>: USER USERMOD PASSWD 
+- * -
+
+<A NAME="cmd_USER.DEL"><B>Topic</B>: USER.DEL</A>
+<B>Syntax</B>: USER DEL {nick | nick!user@host | -*pattern*}
+  <I>Description</I>:
+    This command is used to delete a user from the userlist.
+    You can specify the user's nick if that nick is on irc,
+    specify the user's registered pattern (usually as 
+    *!*user@*host), or specify a pattern in the form 
+    "-*pattern*" and the bot will find the appropriate pattern
+    to delete.
+  
+    NOTE: using "-*pattern*" will make the bot find the 
+          <B>first</B> pattern matching "*pattern*" and delete that.
+<I>See Also</I>: USER.ADD
+- * -
+
+<A NAME="cmd_USER.CLVL"><B>Topic</B>: USER.CLVL</A>
+<B>Syntax</B>: USER CLVL {nick | *!*user@*host | -*pattern*} {level}
+  <I>Description</I>:
+    This command is used to change a user's access level in
+    the bot.  Note that specifying the user with the pattern 
+    -*pattern* will make the bot modify the access of the 
+    <B>first</B> user matching the pattern "*pattern*".
+
+<I>See Also</I>: USER.DEL USER.ADD USERMOD
+- * -
+
+<A NAME="cmd_USER.PROT"><B>Topic</B>: USER.PROT</A>
+<B>Syntax</B>: USER PROT {nick | *!*user@*host | -*pattern*} {level}
+  <I>Description</I>:
+    Change the protection level for a registered user.
+
+    The different possible protect levels are:
+       0 - none
+       1 - Unban protected user
+       2 - Reop protected user
+       3 - Deop aggressor
+       4 - Kick aggressor
+       5 - Kickban aggressor
+       6 - ?? just something higher
+
+    To remove protection for a user, use 0 for {level}.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_USER.AOP"><B>Topic</B>: USER.AOP</A>
+<B>Syntax</B>: USER AOP {nick | *!*user@*host | -*pattern*}
+  <I>Description</I>:
+    Place a registered user on auto-op.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_USER.NAOP"><B>Topic</B>: USER.NAOP</A>
+<B>Syntax</B>: USER NAOP {nick | *!*user@*host | -*pattern*}
+  <I>Description</I>:
+    Remove a user from being auto-opped.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_USER.RELOAD"><B>Topic</B>: USER.RELOAD</A>
+<B>Syntax</B>: USER RELOAD [filename for alternate userlist]
+  <I>Description</I>:
+    Reload the userlist from file.  You can optionally choose
+    to reload another users file if it exists.
+<B>See Also</B>
+- * -
+
+<A NAME="cmd_USER.IDENTD"><B>Topic</B>: USER.IDENTD</A>
+<B>Syntax</B>: USER IDENTD {nick | *!*user@*host | -*pattern*}
+  <I>Description</I>:
+    Change the identd checking for a nick, user@host, or
+    pattern that exists in memory.  If a user is logged
+    in to a machine without identd, the bot will _not_
+    auto-op the user on join.
+<B>See Also</B>
+- * -
+
+<A NAME="cmd_PASSWD"><B>Topic</B>: PASSWD</A>
+<B>Syntax</B>: PASSWD {option} [...]
+  <B>Options</B>: SET UNSET CHANGE
+  <I>Description</I>:
+    This is used to set, unset, and change, respectively, 
+    your password on the automaton.
+<I>See Also</I>: PASSWD.{option}
+- * -
+
+<A NAME="cmd_PASSWD.SET"><B>Topic</B>: PASSWD.SET</A>
+<B>Syntax</B>: PASSWD SET {password}
+  <I>Description</I>:
+    This is used to assign yourself a password on the automaton.
+  
+    This means you -must login- every time you signon irc
+    to gain access to the higher commands on the automaton.
+<I>See Also</I>: PASSWD.UNSET PASSWD.CHANGE
+- * -
+
+<A NAME="cmd_PASSWD.UNSET"><B>Topic</B>: PASSWD.UNSET</A>
+  <B>Syntax</B>: PASSWD UNSET {old password}
+  <I>Description</I>:
+    This is used to remove your password from the automaton
+    so you would not have to login every time you signon irc
+    or when your login time has expired.
+  
+    You -must- specify your old password just in case.
+<I>See Also</I>: PASSWD.SET PASSWD.UNSET
+- * -
+
+<A NAME="cmd_PASSWD.CHANGE"><B>Topic</B>: PASSWD.CHANGE</A>
+<B>Syntax</B>: PASSWD CHANGE {old password} {new password}
+  <I>Description</I>:
+    This is used to change your password on the automaton.
+  
+    You need to specify your old password, then the new 
+    password you want to use.
+<I>See Also</I>: PASSWD.SET PASSWD.UNSET
+- * -
+
+%subject B
+<B>Syntax</B>: B [channel] {nick | user@host}        
+  <I>Description</I>:
+    Bans a person on current or specified channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_ACL"><B>Topic</B>: ACL</A>
+<B>Syntax</B>: ACL {command} [level]        
+  <I>Description</I>:
+    Checks for/changes the access required to execute command.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CHAN"><B>Topic</B>: CHAN</A>
+<B>Syntax</B>: CHAN {option} [...]
+  <B>Options</B>: ADD DEL SET
+  <I>Description</I>:
+    Change the channel info for a user.  You can change 
+    one channel at a time; if a user has access to only
+    one channel, then that channel _cannot_ be deleted
+    -- use "USERMOD CHAN" command instead.
+<I>See Also</I>: CHAN.{option}
+- * -
+
+<A NAME="cmd_CHAN.ADD"><B>Topic</B>: CHAN.ADD</A>
+<B>Syntax</B>: CHAN ADD {nick | nick!user@host | -*pattern*} {chan}
+  <I>Description</I>:
+    Add a channel to a user's channel access list.
+    Only one channel can be added per command and 
+    the issuer _must_ have access to that channel.
+  
+    The first user matching *pattern* will be changed if found.
+<I>See Also</I>: CHAN.SET CHAN.DEL
+- * -
+
+<A NAME="cmd_CHAN.DEL"><B>Topic</B>: CHAN.DEL</A>
+<B>Syntax</B>: CHAN DEL {nick | n!u@h | -*pattern*} {chan}
+  <I>Description</I>:
+    Delete a channel from a user's access list.
+    Only one channel can be deleted per command and
+    the issuer _must_ have access to that channel.
+  
+    The first user matching *pattern* will be changed if found.
+<I>See Also</I>: CHAN.ADD CHAN.SET
+- * -
+
+<A NAME="cmd_CHAN.SET"><B>Topic</B>: CHAN.SET</A>
+<B>Syntax</B>: CHAN SET {nick | n!u@h | -*pattern*} {chan list}
+  <I>Description</I>:
+    Set a user's access to the channel list specified.
+    The issuer must have access to _all_ channels in
+    using this command.  
+  
+    The first user matching *pattern* will be changed if found.
+<I>See Also</I>: CHAN.ADD CHAN.DEL
+- * -
+
+<A NAME="cmd_RESYNC"><B>Topic</B>: RESYNC</A>
+<B>Syntax</B>: RESYNC [channel]
+  <I>Description</I>:
+    Make the bot resynchronize with the channel's 
+    list of users, bans, and modes.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CHAT"><B>Topic</B>: CHAT</A>
+<B>Syntax1</B>: CHAT
+<B>Syntax2</B>: .CHAT {on | off}
+  <I>Description</I>:
+    Makes the bot send you a dcc chat request.
+
+    With <B>Syntax2</B>, allows one to join or leave the party line
+    if the command is issued through DCC CHAT.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_PCHAT"><B>Topic</B>: PCHAT</A>
+<I>See Also</I>: CHAT
+- * -
+
+<A NAME="cmd_PWHO"><B>Topic</B>: PWHO</A>
+<I>See Also</I>: WHOM
+- * -
+
+<A NAME="cmd_WHOM"><B>Topic</B>: WHOM</A>
+<B>Syntax</B>: .WHOM
+  <I>Description</I>:
+    For anyone on the party line, gives a list of the
+    people on the party line.  This is a DCC-only command.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_PME"><B>Topic</B>: PME</A>
+<I>See Also</I>: ME
+- * -
+
+<A NAME="cmd_PECHO"><B>Topic</B>: PECHO</A>
+<I>See Also</I>: ECHO
+- * -
+
+<A NAME="cmd_ECHO"><B>Topic</B>: ECHO</A>
+<B>Syntax</B>: .ECHO {on | off}
+  <I>Description</I>:
+    Turn "on" and "off" the echoing of party line messages
+    sent by self.  This is a DCC-only command.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_PARTY"><B>Topic</B>: PARTY</A>
+<B>Syntax</B>: PARTY {option} [...]
+  <B>Options</B>: INVITE DELETE LIST
+  <I>Description</I>:
+    This is used to manage the party line.  You can
+    invite people to the party line, delete people
+    from the party line, or list the people in the
+    party line.
+<I>See Also</I>: PartyLine PARTY.{option}
+- * -
+
+<A NAME="cmd_PARTY.INVITE"><B>Topic</B>: PARTY.INVITE</A>
+<B>Syntax</B>: PARTY INVITE [=]{nick}
+  <I>Description</I>:
+    Invite a nick to the party line.  If nick already
+    has dcc chat with the bot (and hasn't changed nicks),
+    the bot will add the person to the party line.  
+    Otherwise, the bot will request dcc chat with nick.
+
+    You can optionally prefix {nick} with the equal sign, '=',
+    to specify a user already on the bot's dcc chat list.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_PARTY.DELETE"><B>Topic</B>: PARTY.DELETE</A>
+<I>See Also</I>: PARTY.KICK
+- * -
+
+<A NAME="cmd_PARTY.KICK"><B>Topic</B>: PARTY.KICK</A>
+<B>Syntax</B>: PARTY KICK {*pattern*}
+  <I>Description</I>:
+    Delete a user from the party line.  The user will be
+    forced off the dcc chat with the bot as well.
+
+    You must enter a pattern of at least four characters
+    in length to match with those people in the party 
+    line.  Also, your access must be greater than the other
+    person matched before that person can be booted off
+    the party line.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_PARTY.LIST"><B>Topic</B>: PARTY.LIST</A>
+<B>Syntax</B>: PARTY LIST
+  <I>Description</I>:
+    List the people on the party line.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_AKMOD"><B>Topic</B>: AKMOD</A>
+<B>Syntax</B>: AKMOD {option} {newval}
+  <B>Options</B>: LEVEL CHAN REASON
+  <I>Description</I>:
+    Change an autokick pattern according to the option sought.
+    {newval} is the appropriate value for the option sought
+<I>See Also</I>: AK AKMOD.{option}
+- * -
+
+<A NAME="cmd_CHUSER"><B>Topic</B>: CHUSER</A>
+<I>See Also</I>: USERMOD
+- * -
+
+<A NAME="cmd_USERMOD"><B>Topic</B>: USERMOD</A>
+<B>Syntax</B>: USERMOD {option} {access pattern} {new value}
+  <B>Options</B>: PROT LEVEL CHAN NICK PASSWD
+  <I>Description</I>:
+    Change a user's access according to the option sought.
+  
+    {access pattern} can be a registered nick, n!u@h, or
+    -*pattern* matching the first registered pattern in
+    the userlist.
+<I>See Also</I>: USER CHAN AKMOD
+- * -
+
+<A NAME="cmd_CINFO"><B>Topic</B>: CINFO</A>
+<I>See Also</I>: CHI
+- * -
+
+<A NAME="cmd_CHI"><B>Topic</B>: CHI</A>
+<B>Syntax</B>: CHI [channel]
+  <I>Description</I>:
+    The bot returns the channels it's on or is trying to join.
+    It also shows the modes and number of users in the channels.
+<I>See Also</I>: CHS
+- * -
+
+<A NAME="cmd_CHS"><B>Topic</B>: CHS</A>
+<B>Syntax</B>: CHS [channel]
+  <I>Description</I>:
+    Show the channel statistics: number of users, number
+    opped, etc.  Default shows the current channel.
+<I>See Also</I>: CHI
+- * -
+
+<A NAME="cmd_CLVL"><B>Topic</B>: CLVL</A>
+<I>See Also</I>: "USER CLVL"
+- * -
+
+<A NAME="cmd_PREFIX"><B>Topic</B>: PREFIX</A>
+<B>Syntax</B>: PREFIX
+  <I>Description</I>:
+    Show the prefix character.
+<I>See Also</I>: PREFIXW CMD.PREFIX
+- * -
+
+<A NAME="cmd_CYCLE"><B>Topic</B>: CYCLE</A>
+<B>Syntax</B>: CYCLE [channel]
+  <I>Description</I>:
+    Makes the bot leave and rejoin the current or specified channel.
+<I>See Also</I>: 
+- * -
+
+<A NAME="cmd_DB"><B>Topic</B>: DB</A>
+<B>Syntax</B>: DB [channel] [!]{nick | user@host}        
+  <I>Description</I>:
+    Debans (unbans) a person on current or specified channel.
+
+    Prefix the nick with the '!' to force the bot unban a
+    pattern that is being auto-kicked.
+<I>See Also</I>: PDB MDB "P DB"
+- * -
+
+<A NAME="cmd_DEOP"><B>Topic</B>: DEOP</A>
+<B>Syntax</B>: DEOP [channel] [!]{nick} [[nick2] [nick3] ...]        
+  <I>Description</I>:
+    Deops the specified nick(s) on current or specified channel. 
+
+    Add the '!' character in front of the first nick specified to
+    force the automaton to send out a deop command.
+<I>See Also</I>: PD P.D
+- * -
+
+<A NAME="cmd_QUIT"><B>Topic</B>: QUIT</A>
+<B>Syntax</B>: .QUIT
+  <I>Description</I>:
+    Closes DCC connection with the bot.
+<I>See Also</I>: OFF
+- * -
+
+<A NAME="cmd_OFF"><B>Topic</B>: OFF</A>
+<B>Syntax</B>: OFF [msg]
+  <I>Description</I>:
+    The actual command to make the bot quit irc.
+<I>See Also</I>: "GLOBAL DIE [botname]"
+- * -
+
+<A NAME="cmd_ROLL"><B>Topic</B>: ROLL</A>
+<B>Syntax</B>: ROLL
+  <I>Description</I>:
+    This is a dice game.  You versus the bot :)
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_DO"><B>Topic</B>: DO</A>
+<I>See Also</I>: QUOTE
+- * -
+
+<A NAME="cmd_QUOTE"><B>Topic</B>: QUOTE</A>
+<B>Syntax</B>: QUOTE {stuff}
+  <I>Description</I>:
+    Sends {stuff} to the server.  This allows one to send out
+    raw irc (protocol-compliant) messages to the server. 
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CEM"><B>Topic</B>: CEM</A>
+<B>Syntax</B>: CEM [channel] [modes]        
+  <I>Description</I>:
+    Enforce modes on a channel...
+    If no mode is specified, the currently enforced
+    channel modes will be shown.
+  
+    The bot will remove all of the present channel modes
+    and put up the present enforced modes.  
+  
+    If you no longer wish to enforce the channel modes, 
+    you can use either "CEM [channel] <B>-</B>" or "CT.EM".  
+    The difference between using CEM and CT.EM is that
+    you will be removing the enforced modes with CEM 
+    whereas CT.EM only tells the bot not to enforce 
+    the modes.
+  
+    To reset the modes in a channel, issue "CEM <B>.</B>".
+<I>See Also</I>: MODE, CT.EM
+- * -
+
+<A NAME="cmd_MODE"><B>Topic</B>: MODE</A>
+<B>Syntax</B>: MODE [channel] {mode}
+  <I>Description</I>:
+    Set a channel mode to {mode}.
+<I>See Also</I>: CEM
+- * -
+
+<A NAME="cmd_DECIDE"><B>Topic</B>: DECIDE</A>
+<B>Syntax</B>: DECIDE {yes/no question}
+  <I>Description</I>:
+    This is the electronic decision checker.
+    Just ask the bot some yes/no question.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_LS"><B>Topic</B>: LS</A>
+<B>Syntax</B>: LS [*pattern*]
+  <I>Description</I>:
+    Lists the files that are in the fileslist
+    (filelist.bot) that's in the download directory.
+   
+    You can also specify a pattern for listing files
+    matching that pattern.  Pattern is case insensitive.
+<I>See Also</I>: SEND
+- * -
+
+<A NAME="cmd_FREE"><B>Topic</B>: FREE</A>
+<B>Syntax</B>: FREE [channel]
+  <I>Description</I>:
+    Unbans you from the current or specified channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_GETCH"><B>Topic</B>: GETCH</A>
+<B>Syntax</B>: GETCH
+  <I>Description</I>:
+    Not Available.
+<I>See Also</I>: CHI
+- * -
+
+<A NAME="cmd_HOP"><B>Topic</B>: HOP</A>
+<B>Syntax</B>: HOP 
+  <I>Description</I>:
+    Makes the bot jump to the next server in the serverlist.
+- * -
+
+<A NAME="cmd_SUS"><B>Topic</B>: SUS</A>
+<B>Syntax</B>: SUS {nick | n!u@h} {reason}
+  <I>Description</I>:
+    Suspend nick's access by *!*userid@*host.
+    A reason _must_ be supplied.
+<I>See Also</I>: NSUS
+- * -
+
+<A NAME="cmd_NSUS"><B>Topic</B>: NSUS</A>
+<B>Syntax</B>: NSUS {nick | n!u@h}
+  <I>Description</I>:
+    Un-Suspend nick's access by *!*userid@*host.
+<I>See Also</I>: SUS
+- * -
+
+<A NAME="cmd_IGN"><B>Topic</B>: IGN</A>
+<B>Syntax</B>: IGN [!]{nick | n!u@h}
+  <I>Description</I>:
+    Ignores all commands from nick by its *!*userid@*host.  Specify
+    the exclamation mark, '!', as the first character of either nick
+    or n!u@h to have the bot ignore any and all messages (incl. commands)
+    from the specified userhost.
+<I>See Also</I>: NIGN
+- * -
+
+<A NAME="cmd_NIGN"><B>Topic</B>: NIGN</A>
+<B>Syntax</B>: NIGN {nick}
+  <I>Description</I>:
+    Unignores nick by its *!*userid@*host.
+    The ".all" option unignores everyone on the list.
+<I>See Also</I>: IGN
+- * -
+
+<A NAME="cmd_INFO"><B>Topic</B>: INFO</A>
+<B>Syntax</B>: INFO
+  <I>Description</I>:
+    Returns information about BOTNICK.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_INVITE"><B>Topic</B>: INVITE</A>
+<I>See Also</I>: INV
+- * -
+
+<A NAME="cmd_INV"><B>Topic</B>: INV</A>
+<B>Syntax</B>: INV [channel] [nick]
+  <I>Description</I>:
+    Invites a nick to the current or specified channel.
+    If no nick is given, the issuer is invited.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_JOIN"><B>Topic</B>: JOIN</A>
+<B>Syntax</B>: JOIN {channel}
+  <I>Description</I>:
+    Makes the bot join a channel.
+<I>See Also</I>: PART
+- * -
+
+<A NAME="cmd_KICK"><B>Topic</B>: KICK</A>
+<I>See Also</I>: CK
+- * -
+
+<A NAME="cmd_CK"><B>Topic</B>: CK</A>
+<B>Syntax</B>: CK [channel] [!]{nick} [msg]
+  <I>Description</I>:
+    Kicks a nick from the current or specified channel
+    with the optional [msg] as reason for the kick.
+
+    Add a '!' character in front of the first nick to 
+    force the automaton to send out a kick request.
+<I>See Also</I>: KK
+- * -
+
+<A NAME="cmd_KK"><B>Topic</B>: KK</A>
+<B>Syntax</B>: KK [channel] {nick} [msg]
+  <I>Description</I>:
+    Kicks a nick from the current channel or the channel 
+    specified...a reason can also be given.  This command
+    allows the issuer to kick anybody (except the bot), even
+    if that person is protected.
+<I>See Also</I>: CK
+- * -
+
+<A NAME="cmd_BK"><B>Topic</B>: BK</A>
+<I>See Also</I>: KB
+- * -
+
+<A NAME="cmd_KB"><B>Topic</B>: KB</A>
+<B>Syntax</B>: KB [channel] [!]{nick} [msg]
+  <I>Description</I>:
+    Kickbans a nick from the current or specified channel
+    with the optional [msg] as reason for the kick.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SPLAT"><B>Topic</B>: SPLAT</A>
+<B>Syntax</B>: SPLAT [channel] {nick}
+  <I>Description</I>:
+    Splatterkicks {nick} from a channel, i.e. kicks nick
+    with a random (silly) message as reason.
+<I>See Also</I>: CK
+- * -
+
+<A NAME="cmd_PIC"><B>Topic</B>: PIC</A>
+<B>Syntax</B>: PIC {picture}
+  <I>Description</I>:
+    Displays an ascii picture.  You must have the ascii
+    pictures though (typically in the file pics.bot).
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_KLOG"><B>Topic</B>: KLOG</A>
+<B>Syntax</B>: N/A
+  <I>Description</I>:
+    The bot will automatically relogin to the Kerberos
+    server if you have the file defined; see infile.cfg
+    for the config.  Relogin is once every 8 hours or so.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_LAST10"><B>Topic</B>: LAST10</A>
+  <B>Please use the REPORT command.</B>
+- * -
+
+<A NAME="cmd_REPORT"><B>Topic</B>: REPORT</A>
+<B>Syntax</B>: REPORT
+  <I>Description</I>:
+    Shows the last 10 commands issued to the bot.
+<I>See Also</I>: BT.LOG SAVE.LAST10
+- * -
+
+<A NAME="cmd_PART"><B>Topic</B>: PART</A>
+<B>Syntax</B>: PART {channel} {reason}
+  <I>Description</I>:
+    Makes the bot leave the current channel if "{channel}"
+    is denoted as "<B>.</B>" and issued in public or the 
+    channel specified.  The bot won't leave a channel
+    it is trying to regain op...use "forget" to make it leave.
+<I>See Also</I>: FORGET
+- * -
+
+<A NAME="cmd_LIN"><B>Topic</B>: LIN</A>
+<B>Syntax</B>: /msg BOTNICK LIN {your_password}
+  <I>Description</I>:
+    This is to authenticate yourself to the bot.
+    Login through private message.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_LOGOUT"><B>Topic</B>: LOGOUT</A>
+<I>See Also</I>: LO
+- * -
+
+<A NAME="cmd_LO"><B>Topic</B>: LO</A>
+<B>Syntax</B>: /msg BOTNICK LO
+<B>SYNTAX2</B>: LO
+  <I>Description</I>:
+    This logs you out of the bot (if you have password access)
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW"><B>Topic</B>: SHOW</A>
+<B>Syntax</B>: SHOW {option} [*pattern* | addit. option] [...]
+  <B>Options</B>: USER PROT AK AKLONG AOP MEM NICKS SUS IGN 
+            DCC UNICK SERVERS LOG QUEUE TAK TAKLONG
+  <I>Description</I>:
+    Available parameters are:
+      USER    -- userlist                PROT -- protlist
+      SUS     -- suspend list            IGN  -- ignore list
+      AOP     -- the auto-opped users in userlist
+      AK      -- shit list, short format 
+      UNICK   -- registered nicks in userlist
+      AKLONG  -- shit list, long format
+      DCC     -- dcc connections the bot has
+      NICKS   -- list of nicks for the bot
+      MEM     -- people last seen by the bot in the 
+                   past 40 minutes or so
+      SERVERS -- list of servers for current bot;
+                   it shows server name, server realname,
+  	         and server port
+  
+    Pattern is case-insensitive.  E.G. "SHOW USER *BlAh*"
+<I>See Also</I>: LOAD SHOW.{option}
+- * -
+
+<A NAME="cmd_SHOW.LOG"><B>Topic</B>: SHOW.LOG</A>
+<B>Syntax</B>: SHOW LOG {option} [pattern]
+  <B>Options</B>: ERROR DCC USAGE LAST10 ACTIONS
+  <I>Description</I>:
+    Show the log info for the above logfiles.
+  
+    You can optionally search for [pattern] in the logfile;
+    the pattern is case sensitive.
+    NOTE: [pattern] does not use any '*' for matching
+          patterns; the bot only checks to see if the
+          line it reads has [pattern] anywhere in it
+          -- if so, it will show that line.
+<I>See Also</I>: SHOW.LOG.{option}
+- * -
+
+<A NAME="cmd_SHOW.LOG.ONME"><B>Topic</B>: SHOW.LOG.ONME</A>
+<I>See Also</I>: SHOW.LOG.ACTIONS
+- * -
+
+<A NAME="cmd_SHOW.LOG.ONTHEM"><B>Topic</B>: SHOW.LOG.ONTHEM</A>
+<I>See Also</I>: SHOW.LOG.ACTIONS
+- * -
+
+<A NAME="cmd_SHOW.LOG.KICKBAN"><B>Topic</B>: SHOW.LOG.KICKBAN</A>
+<I>See Also</I>: SHOW.LOG.ACTIONS
+- * -
+
+<A NAME="cmd_SHOW.LOG.ERROR"><B>Topic</B>: SHOW.LOG.ERROR</A>
+<B>Syntax</B>: SHOW LOG ERROR
+  <I>Description</I>:
+    Show the log of errors that occurred to the bot.
+    e.g. when the bot is killed or cannot connect to a server.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.LOG.DCC"><B>Topic</B>: SHOW.LOG.DCC</A>
+<B>Syntax</B>: SHOW LOG DCC [pattern]
+  <I>Description</I>:
+    Show the log of dcc sends the bot performed in
+    sending files to people and the dcc gets the bot
+    did to receive files from users in the bot's userlist.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.LOG.USAGE"><B>Topic</B>: SHOW.LOG.USAGE</A>
+<B>Syntax</B>: SHOW LOG USAGE [pattern]
+  <I>Description</I>:
+    Show the log of uses on commands used in administering
+    the userlist and autokick lists.  i.e. any use of the
+    commands USER.{option}, AK.{option}, USERMOD.{option},
+    AKMOD.{option}, as well as some other related commands.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.LOG.ACTIONS"><B>Topic</B>: SHOW.LOG.ACTIONS</A>
+<B>Syntax</B>: SHOW LOG ACTIONS [pattern]
+  <I>Description</I>:
+    Show the log of actions the bot witnessed, either to 
+    itself or to others.  This log consolidates info from 
+    ONME, ONTHEM, and KICKBAN.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.LOG.LAST10"><B>Topic</B>: SHOW.LOG.LAST10</A>
+<B>Syntax</B>: SHOW LOG LAST10 [pattern]
+  <I>Description</I>:
+    Show the log of last 10 commands that were saved by user-request.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.QUEUE"><B>Topic</B>: SHOW.QUEUE</A>
+<B>Syntax</B>: SHOW QUEUE
+  <I>Description</I>:
+    Shows the files in the send queue; i.e. which files 
+    the bot is presently sending out to people.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.MEM"><B>Topic</B>: SHOW.MEM</A>
+<B>Syntax</B>: SHOW MEM {*pattern*}
+  <I>Description</I>:
+    This shows the people in the bot's memory list for
+    the past hour or so.  Anyone matching the pattern
+    specified will be shown; you _must_ specify a
+    pattern to match against.
+
+    Use "SHOW MEM *" to show everyone in the memory list.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.USER"><B>Topic</B>: SHOW.USER</A>
+<B>Syntax</B>: SHOW USER [*pattern*]
+  <I>Description</I>:
+    This shows the users in the bot's userlist.  You can
+    specify a pattern to match against the userlist. If no
+    pattern is specified, everyone on the list will be shown.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.PROT"><B>Topic</B>: SHOW.PROT</A>
+<B>Syntax</B>: SHOW PROT [*pattern*]
+  <I>Description</I>:
+    This shows the protected users in the bot's userlist.
+    You can specify a pattern to match against the userlist.
+    If no pattern is specified, every protected user from
+    the list will be shown.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.AOP"><B>Topic</B>: SHOW.AOP</A>
+<B>Syntax</B>: SHOW AOP [*pattern*]
+  <I>Description</I>:
+    This shows the auto-opped users in the bot's userlist.
+    You can specify a pattern to match against the userlist.
+    If no pattern is specified, every auto-opped user from
+    the list will be shown.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.AK"><B>Topic</B>: SHOW.AK</A>
+<B>Syntax</B>: SHOW AK [*pattern*]
+  <I>Description</I>:
+    This shows the autokick list on the bot, in terse format.
+    You can specify a pattern to match against the autokick
+    list with; if no pattern is specified, the entire autokick
+    list will be shown.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.AKLONG"><B>Topic</B>: SHOW.AKLONG</A>
+<B>Syntax</B>: SHOW AKLONG [*pattern*]
+  <I>Description</I>:
+    This shows the autokick list on the bot, in long format.
+    You can specify a pattern to match against the autokick
+    list with. If no pattern is specified, the entire autokick
+    list will be shown.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.SUS"><B>Topic</B>: SHOW.SUS</A>
+<B>Syntax</B>: SHOW SUS [*pattern*]
+  <I>Description</I>:
+    This shows the users in the bot's userlist whose access
+    have been suspended for some reason or other.  You can
+    specify a pattern to match against the userlist with.
+    If no pattern is specified, anyone whose access has been
+    suspended will be shown.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.TAK"><B>Topic</B>: SHOW.TAK</A>
+<B>Syntax</B>: SHOW TAK [*pattern*]
+  <I>Description</I>:
+    This shows the timer autokick list on the bot, short format.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHOW.TAKLONG"><B>Topic</B>: SHOW.TAKLONG</A>
+<B>Syntax</B>: SHOW TAKLONG [*pattern*]
+  <I>Description</I>:
+    This shows the timer autokick list on the bot, long format.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_LOAD"><B>Topic</B>: LOAD</A>
+<B>Syntax</B>: LOAD {option}
+  <B>Options</B>: NICKS IGN
+  <I>Description</I>:
+    Have the bot load specified list.
+<I>See Also</I>: SAVE SHOW
+- * -
+
+<A NAME="cmd_LOCK"><B>Topic</B>: LOCK</A>
+<B>Syntax</B>: LOCK [channel] [lock string]
+  <I>Description</I>:
+    Lock a channel with lock string.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_LOGCHAT"><B>Topic</B>: LOGCHAT</A>
+<I>See Also</I>: LOG.CHAT
+- * -
+
+<A NAME="cmd_LOGCMDS"><B>Topic</B>: LOGCMDS</A>
+<I>See Also</I>: LOG.CMDS
+- * -
+
+<A NAME="cmd_LOG"><B>Topic</B>: LOG</A>
+<B>Syntax</B>: LOG {option} [...]
+  <B>Options</B>: CHAT CMDS
+  <I>Description</I>:
+    This is a prefix command to the options above.
+    You need to specify the above options for it
+    to be useful.  It controls the logging of
+    channel chats and commands sent to the bot.
+<I>See Also</I>: LOG.{option}
+- * -
+
+<A NAME="cmd_LOG.CHAT"><B>Topic</B>: LOG.CHAT</A>
+<B>Syntax</B>: LOG CHAT {option} [channel]
+  <B>Options</B>: ADD DEL LIST
+  <I>Description</I>:
+  
+    LOG.CHAT.ADD
+      Log a channel's activity to a file.
+  
+    LOG.CHAT.DEL 
+      Stop the logging of a channel's activity.
+  
+    LOG.CHAT.LIST
+      List the channels where we are logging activities.
+<I>See Also</I>: CT.LOG
+- * -
+
+<A NAME="cmd_LOG.CMDS"><B>Topic</B>: LOG.CMDS</A>
+<B>Syntax</B>: LOG CMDS [on | off]
+  <I>Description</I>:
+    Whether to turn on/off command logging.  Any message
+    containing a valid command will be logged.
+  
+    If you do not specify on/off, the bot will
+    show you the present logging status.
+<I>See Also</I>: BT.LOG
+- * -
+
+<A NAME="cmd_INFO"><B>Topic</B>: INFO</A>
+
+<A NAME="cmd_CNB"><B>Topic</B>: CNB</A>
+<B>Syntax</B>: CNB [channel]
+  <I>Description</I>:
+    Clear the nick-only bans in a channel.
+<I>See Also</I>: DB PDB "P DB"
+- * -
+
+<A NAME="cmd_PACHAN"><B>Topic</B>: PACHAN</A>
+<B>Syntax</B>: PACHAN {- | pattern}
+  <I>Description</I>:
+    Part the channels that match {pattern}.  You can
+    optionally make the bot not leave the present
+    channel by using a '-' as the pattern.
+<I>See Also</I>: PART
+- * -
+
+<A NAME="cmd_MDB"><B>Topic</B>: MDB</A>
+<B>Syntax</B>: MDB {channel | .} [*pattern*] [time in minutes]
+  <I>Description</I>:
+    Removes all bans on the current channel or
+    on the channel specified; default pattern is *!*@*
+
+    Public channel must be specified as "."
+  
+    You can also specify how old the bans should be before 
+    deleting them.  Specify time in minutes.  Of course,
+    the age of the ban could be reduced by netjoins.
+<I>See Also</I>: PDB "P DB"
+- * -
+
+<A NAME="cmd_MDEOP"><B>Topic</B>: MDEOP</A>
+<I>See Also</I>: PD DOUK "P D"
+- * -
+
+<A NAME="cmd_DOUK"><B>Topic</B>: DOUK</A>
+<B>Syntax</B>: DOUK [channel]
+  <I>Description</I>:
+    Massdeops all nicks not in the userlist from
+    the current channel or from the channel
+    specified
+<I>See Also</I>: DEOP "P D"
+- * -
+
+<A NAME="cmd_NOTE"><B>Topic</B>: NOTE</A>
+<B>Syntax</B>: NOTE {option} [...]
+  <B>Options</B>: CREATE DELETE LIST READ REVIEW SEND DELL ADDL REPLL
+  <I>Description</I>:
+    <B>Note</B> is a prefix command.  Use "NOTE LIST" to see 
+    the list of messages awaiting you, if any.
+  
+    <U>Here is the procedure to create a note for someone</U>:
+      1. NOTE CREATE {receiver} {subject}
+      2. NOTE ADDL {line of text}
+      3. Repeat step 2 as needed or until you've entered 17 
+         lines of text.
+      4. Finally, type "NOTE SEND" to send the note.
+  
+    To get more information about these command, type
+      /MSG BOTNICK HELP note.{subcommand}
+  
+    NOTE: {receiver} is in the form nick!user@host
+
+<I>See Also</I>: NOTE.{option}
+- * -
+
+<A NAME="cmd_Note.CREATE"><B>Topic</B>: Note.CREATE</A>
+<B>Syntax</B>:  NOTE CREATE {receiver} {subject}
+  <I>Description</I>:
+    Example: NOTE CREATE *!*tdsst9@*.pitt.edu Suggestions for VERSION
+  
+    <B>Create</B> is used to create a new note.
+  
+    Use the PUBLIC address to make the note readable for
+    everyone, e.g. NOTE CREATE PUBLIC To everyone...
+  
+    After this command, you can add lines to the note by
+    typing <B>/msg BOTNICK ADDL a line of text</B> until you use
+    the NOTE SEND command.
+  
+    The CREATE command will return a note-id. This id can
+    be used to delete the note before sending it (i.e. if
+    you change your mind :)
+  
+<I>See Also</I>: note.ADDL  note.SEND  note.DELETE  note.REVIEW
+- * -
+
+<A NAME="cmd_Note.SEND"><B>Topic</B>: Note.SEND</A>
+<B>Syntax</B>: NOTE SEND
+  <I>Description</I>:
+    <B>Send</B> subcommand is used to finish a note. After the send 
+    command, modification or viewing of the note is not possible,
+    although you _can_ delete your own notes if you do not wish
+    the recipient to read it.
+  
+<I>See Also</I>: note.CREATE, note.ADDLINE
+- * -
+
+<A NAME="cmd_Note.LIST"><B>Topic</B>: Note.LIST</A>
+<B>Syntax</B>: NOTE LIST
+  <I>Description</I>:
+    <B>List</B> subcommand will show a list of waiting notes.
+    Notes from this list can be read using the NOTE READ
+    command. To delete a note, use the NOTE DELETE command
+    (PUBLIC notes cannot be deleted by a non-owner).
+  
+<I>See Also</I>: note.READ  note.DELETE
+- * -
+
+<A NAME="cmd_Note.DELETE"><B>Topic</B>: Note.DELETE</A>
+<B>Syntax</B>: NOTE DELETE {note id}
+  <I>Description</I>:
+    <B>Delete</B> is used to delete a note from the notelist.
+    The <B>DELETE</B> command expects a note-id.
+<I>See Also</I>: note.LIST  note.REVIEW
+- * -
+
+<A NAME="cmd_Note.READ"><B>Topic</B>: Note.READ</A>
+<B>Syntax</B>: NOTE READ {note id}
+  <I>Description</I>:
+    <B>Read</B> enables you to read a note from the notelist.
+    The <B>READ</B> command expects a note-id.
+<I>See Also</I>: note.DELETE  note.LIST
+- * -
+
+<A NAME="cmd_Note.DELL"><B>Topic</B>: Note.DELL</A>
+<B>Syntax</B>: NOTE DELL {line number}
+  <I>Description</I>:
+    <B>Dell</B> subcommand lets you delete a line you've previously 
+    entered.  This allows you to edit your note line by line. 
+    {line number} is the line number that you want to delete.
+  
+<I>See Also</I>: note.ADDL  note.REVIEW
+- * -
+
+<A NAME="cmd_Note.ADDL"><B>Topic</B>: Note.ADDL</A>
+<B>Syntax</B>: NOTE ADDL {line of text to add to note}
+  <I>Description</I>:
+    <B>Addl</B> subcommand lets you add a new line to your note.
+<I>See Also</I>: note.DELL  note.REVIEW
+- * -
+
+<A NAME="cmd_Note.REVIEW"><B>Topic</B>: Note.REVIEW</A>
+<B>Syntax</B>: NOTE REVIEW [note_id]
+  <I>Description</I>:
+    REVIEW subcommand lets you review your yet unfinished note
+    before you send it out using "Note Send" command.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_Note.REPLL"><B>Topic</B>: Note.REPLL</A>
+<B>Syntax</B>: NOTE REPLL {line no.} {new line to replace old line}
+  <I>Description</I>:
+    REPLL allows you to replace a line in your unfinished note
+    with a more appropriate line if you so wish.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_GLOBAL"><B>Topic</B>: GLOBAL</A>
+<B>Syntax</B>: GLOBAL {option}
+  <B>Options</B>: LIST DIE DEBUG BOTS
+  <I>Description</I>:
+    This is an umbrella of commands to show information about
+    the set of bots run from one bot process.  The command
+    accesses for each of the commands may differ, though
+    generally they require at least the semi-owner (800) level.
+<I>See Also</I>: GLOBAL.{option}
+- * -
+
+<A NAME="cmd_GLOBAL.INFO"><B>Topic</B>: GLOBAL.INFO</A>
+<I>See Also</I>: GLOBAL.LIST
+- * -
+
+<A NAME="cmd_GLOBAL.LIST"><B>Topic</B>: GLOBAL.LIST</A>
+<B>Syntax</B>: GLOBAL LIST [botname]
+  <I>Description</I>:
+    This command displays a summary status of all bots or just
+    the bot specified.  A bot is specified by its botname.
+- * -
+
+<A NAME="cmd_GLOBAL.DEBUG"><B>Topic</B>: GLOBAL.DEBUG</A>
+<B>Syntax</B>: GLOBAL DEBUG [debug_level]
+  <I>Description</I>:
+    This command sets the online debug setting level of messages.
+    It is mainly used while developing the bot.
+
+    Possible debug levels:
+      - 0 -- no debug
+      - 1 -- debug errors
+      - 2 -- debug everything
+- * -
+
+<A NAME="cmd_GLOBAL.DIE"><B>Topic</B>: GLOBAL.DIE</A>
+<B>Syntax</B>: GLOBAL DIE [botname]
+  <I>Description</I>:
+    This command can be used to kill all bots or just the
+    bot specified.
+- * -
+
+<A NAME="cmd_GLOBAL.BOTS"><B>Topic</B>: GLOBAL.BOTS</A>
+<B>Syntax</B>: GLOBAL BOTS
+  <I>Description</I>:
+    This command shows a one line summary status of all bots,
+    listed by nickname, created from that bot process.
+
+    NOTES:
+       1.  '}' before nickname means the bot is still 
+           connecting to server
+       2.  'S' denotes the number of servers in the bot's
+           server list
+       3.  'C' denotes the number of channels the bot is in
+- * -
+
+<A NAME="cmd_NEWS"><B>Topic</B>: NEWS</A>
+<B>Syntax</B>: NEWS [options]
+  <I>Description</I>:
+    This is the command to read news.  Without any options
+    given, the bot will read news from the file "news.bot"
+    in the bot directory.  Additional notefiles can be added
+    by adding entries in your newsfile, "news.bot" by default.
+
+    Use the command "NEWS LIST" to get a listing of the news
+    items posted on the bot.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_OPME"><B>Topic</B>: OPME</A>
+<B>Syntax</B>: OPME [channel]
+  <I>Description</I>:
+    Makes the bot op you on the current or specified channel.
+    Opping is by +ooo.
+<I>See Also</I>: ME
+- * -
+
+<A NAME="cmd_ME"><B>Topic</B>: ME</A>
+<B>Syntax1</B>: ME [channel]
+<B>Syntax2</B>: .ME {action statement}
+  <I>Description</I>:
+    Make the bot op you in the current or specified channel.
+    Opping is by +o.
+
+    With <B>Syntax2</B>, allows one to send an action statement
+    to the party line if issued through DCC CHAT.
+<I>See Also</I>: OPME PartyLine
+- * -
+
+<A NAME="cmd_MCK"><B>Topic</B>: MCK</A>
+<I>See Also</I>: PK
+- * -
+
+<A NAME="cmd_MKB"><B>Topic</B>: MKB</A>
+<B>Syntax</B>: MKB {channel} [pattern]
+  <I>Description</I>:
+    Mass-kickbans users according to the pattern (wildcards
+    are allowed).  Default pattern is: *!*@*
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_LK"><B>Topic</B>: LK</A>
+<B>Syntax</B>: LK [channel]
+  <I>Description</I>:
+    Masskicks users not in the userlist from the
+    current or specified channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_MASSOP"><B>Topic</B>: MASSOP</A>
+<I>See Also</I>: PO
+- * -
+
+<A NAME="cmd_MOP"><B>Topic</B>: MOP</A>
+<I>See Also</I>: OPK PO "P O"
+- * -
+
+<A NAME="cmd_MOPU"><B>Topic</B>: MOPU</A>
+<I>See Also</I>: OPK
+- * -
+
+<A NAME="cmd_OPK"><B>Topic</B>: OPK</A>
+<B>Syntax</B>: OPK [channel] [!][user level (} 0) ]
+  <I>Description</I>:
+    This command is used to op the people in a channel
+    that has access to the bot.  An optional userlevel
+    can be specified so the bot will op only those from
+    that access level on.
+
+    Put '!' in front of the userlevel if the bot is opped but
+    thinks it isn't.  It forces the bot to carry out the command.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_DBK"><B>Topic</B>: DBK</A>
+<B>Syntax</B>: DBK [channel]
+  <I>Description</I>:
+    This command is used to make the bot unban users 
+    banned in a channel.  The unban will also unban
+    users that have access, though not protected.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_MSG"><B>Topic</B>: MSG</A>
+<B>Syntax</B>: MSG {nick} {message}        
+  <I>Description</I>:
+    Makes the bot send a private message to a user.
+<I>See Also</I>: SAY
+- * -
+
+<A NAME="cmd_NAMES"><B>Topic</B>: NAMES</A>
+<I>See Also</I>: NM
+- * -
+
+<A NAME="cmd_NM"><B>Topic</B>: NM</A>
+<B>Syntax</B>: NM [channel]
+  <I>Description</I>:
+    Shows the nicks on a channel.  '@' as the first 
+    character in the nick means nick is channel op.
+<I>See Also</I>: WHO WHOS
+- * -
+
+<A NAME="cmd_WHO"><B>Topic</B>: WHO</A>
+<B>Syntax</B>: WHO [channel] [*pattern*]
+  <I>Description</I>:
+    Show who is in a channel; it is similar to 
+    "who {channel}" from irc client.
+  
+    You can optionally just get the output of people in 
+    the channel matching pattern "*pattern*".  The default 
+    is to show everybody.
+<I>See Also</I>: NM  WHOS
+- * -
+
+<A NAME="cmd_WHOS"><B>Topic</B>: WHOS</A>
+<B>Syntax</B>: WHOS [channel]
+  <I>Description</I>:
+    Show who is/are in a channel, along with the server
+    information and server hopcount.
+<I>See Also</I>: WHO  NM
+- * -
+
+<A NAME="cmd_NEWN"><B>Topic</B>: NEWN</A>
+<B>Syntax</B>: NEWN [number]
+  <I>Description</I>:
+    Change to a new bot nick.  You -must- have BotNick.nl
+    to use this command.  You can make the bot choose nicks
+    randomly from nicks in BotNick.nl or you can specify
+    the number of the nick -- the first nick listed, from
+    "<B>newn .list</B>" display, is assigned as nick no. 1.
+<I>See Also</I>: "SHOW NICKS"
+- * -
+
+<A NAME="cmd_NICK"><B>Topic</B>: NICK</A>
+<B>Syntax1</B>: NICK { option or "nick"} [nick]       
+  <B>Options</B>: ADD DEL WRITE
+<B>Syntax2</B>: .NICK {nick}
+  <I>Description</I>:
+    Renicks the bot...the bot will continue
+    to use files according to the original
+    nickname when the bot was started...
+
+    With <B>Syntax2</B> and issued through DCC CHAT, allows one
+    to change one's nick on the party line.
+<I>See Also</I>: NEWN
+- * -
+
+<A NAME="cmd_AWAY"><B>Topic</B>: AWAY</A>
+<B>Syntax</B>: AWAY {msg}
+<B>Syntax2</B>: .AWAY {msg}
+  <I>Description</I>:
+    Make the bot to be "away" with {msg}
+
+    With <B>Syntax2</B>, allows one to set one's away message
+    on the party line -- must be issued through DCC CHAT.
+    To unset the away, simply issue .AWAY to the bot.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_NSL"><B>Topic</B>: NSL</A>
+<B>Syntax</B>: NSL {nick | ip address | hostname }
+  <I>Description</I>:
+    Returns the userhost stored in memory for a certain nick
+    and do IP address to hostname conversion.
+
+    Specify by ip address to get hostname; specify
+    a hostname to get its corresponding ip address.
+    You can also specify a nick to find the corresponding
+    ip address or hostname.
+
+    NOTE: hostname must be in the format "machine.domain".
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_NSL2"><B>Topic</B>: NSL2</A>
+<I>See Also</I>: NSL
+- * -
+
+<A NAME="cmd_OP"><B>Topic</B>: OP</A>
+<B>Syntax</B>: OP [channel] {nick}
+  <I>Description</I>:
+    Ops a nick on current channel or the
+    channel specified
+<I>See Also</I>: PO "P O"
+- * -
+
+<A NAME="cmd_OPEN"><B>Topic</B>: OPEN</A>
+<B>Syntax</B>: OPEN {channel}
+  <I>Description</I>:
+    Removes the +ikspm modes and unbans you on the 
+    current channel or on the channel specified.
+<I>See Also</I>: FREE
+- * -
+
+%subject P
+<B>Syntax</B>: P [channel] {option} {*pattern*} [*pattern2*] [...]
+  <B>Options</B>: O D K DB KB +V -V
+  <I>Description</I>:
+    Pattern operation for: Op, Deop, Kick, DeBan (unban),
+    KickBan, give voice, and remove voice.
+    Pattern here is noted as <B>*text*</B>, where "text" 
+    is the pattern to match
+  <B>E.G.</B>  P O *pitt*
+<I>See Also</I>: PO  PK  PKB  PDB  PD
+- * -
+
+<A NAME="cmd_PD"><B>Topic</B>: PD</A>
+<B>Syntax</B>: PD [channel] {*pattern*}
+  <I>Description</I>:
+    This deops people in [channel] or the present 
+    channel who match the pattern {*pattern*}.
+<I>See Also</I>: "P D"
+- * -
+
+<A NAME="cmd_PDB"><B>Topic</B>: PDB</A>
+<B>Syntax</B>: PDB [channel] {pattern}
+  <I>Description</I>:
+    Pattern debans.  E.G. "pdb pitt"  :)
+    {pattern} is anything that shows up in
+    the banlist, wildcards do not get treated
+    as such in this command.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_PK"><B>Topic</B>: PK</A>
+<B>Syntax</B>: PK [channel] {pattern}
+  <I>Description</I>:
+    Pattern kicks.  E.G. "pk *lame*"
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_PKB"><B>Topic</B>: PKB</A>
+<B>Syntax</B>: PKB [channel] {*pattern*}
+  <I>Description</I>:
+    Pattern kicks+bans in channel.
+    {pattern} is something like "*blah*"
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_PO"><B>Topic</B>: PO</A>
+<B>Syntax</B>: PO [channel] {*pattern*}
+  <I>Description</I>:
+    Pattern ops.  E.G. "po *pitt*" :)
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_PING"><B>Topic</B>: PING</A>
+<B>Syntax</B>: PING
+  <I>Description</I>:
+    Have the bot return "Pong" to see how lagged it is.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_REFRESH"><B>Topic</B>: REFRESH</A>
+<B>Syntax</B>: REFRESH
+  <I>Description</I>:
+    Refreshes (rehash) the bot.  Note that forked bots will
+    die and _not_ come back after a refresh since they are
+    not defined in the infile.cfg configuration file.
+<I>See Also</I>: REBOOT
+- * -
+
+<A NAME="cmd_REBOOT"><B>Topic</B>: REBOOT</A>
+<B>Syntax</B>: REBOOT [...]
+  <I>Description</I>:
+    Reboot the bot by invoking a new process and killing 
+    the present process afterwards.
+  
+    You can also specify which config file for it to use. 
+  
+       <B>-f</B> config_file   -- invoke a different config file
+  
+    By default, the config file is set to "infile.cfg".
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SHIT"><B>Topic</B>: SHIT</A>
+<I>See Also</I>: AK
+- * -
+
+<A NAME="cmd_AK"><B>Topic</B>: AK</A>
+<B>Syntax</B>: AK {option} [...]
+  <B>Options</B>: ADD DEL WRITE RELOAD
+  <I>Description</I>:
+    This command is used to administer the shitlist.  You can
+    add and delete people to/from the shitlist.  You use the 
+    "write" option to save the shitlist to a file.
+<I>See Also</I>: AKMOD AK.{option}
+- * -
+
+<A NAME="cmd_AK.ADD"><B>Topic</B>: AK.ADD</A>
+<B>Syntax</B>: AK ADD {nick | nick!user@host} {chan} {level} [reason]
+  <I>Description</I>:
+    This is used to add someone to the shitlist.  {chan} is 
+    where the shitted person will be deopped, kicked, and/or
+    banned depending on the {level} you assign.
+  
+    Possible shitlist levels for adding:
+       1 - Deop user when opped
+       2 - Kick user on join
+       3 - Kickban user on join
+<I>See Also</I>: AK AKMOD
+- * -
+
+<A NAME="cmd_AK.DEL"><B>Topic</B>: AK.DEL</A>
+<B>Syntax</B>: AK DEL {nick | n!u@h | -*pattern*}
+  <I>Description</I>:
+    Delete a pattern from the autokick list.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_AK.WRITE"><B>Topic</B>: AK.WRITE</A>
+<B>Syntax</B>: AK WRITE [file].ak
+  <I>Description</I>:
+    Save the autokick list to a file.
+
+    You can optionally save the list to an alternate file
+    in the bot directory as "file.ak".
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_AK.RELOAD"><B>Topic</B>: AK.RELOAD</A>
+<B>Syntax</B>: AK RELOAD
+  <I>Description</I>:
+    Reload the autokick list from the saved file as specified
+    in the bot's autokick file from the configuration.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_TAK"><B>Topic</B>: TAK</A>
+<B>Syntax</B>: TAK {option} {...}
+  <B>Options</B>: ADD DEL CHANADD CHANDEL
+  <I>Description</I>:
+    Modify the timer autokick list on the bot.
+    You can add or delete a user to/from the 
+    timer autokick list.
+    If the person is also on the timer autokick
+    list, you can change the channel(s) for which
+    the autokick will take place.
+<I>See Also</I>: TAK.{option}
+- * -
+
+<A NAME="cmd_TAK.ADD"><B>Topic</B>: TAK.ADD</A>
+<B>Syntax</B>: TAK ADD {nick | nick!user@host} {minutes} [channels]
+  <I>Description</I>:
+    Place someone on timer autokick list.  The length of time
+    is specified in {minutes}, in seconds.  The channel(s) for
+    this to take effect is specified in [channels]; if no channels
+    are specified, the user will be timer autokicked on all
+    channels the bot is in and opped.
+
+    Note that [channels] can be a comma-separated list of
+    channels.
+<I>See Also</I>: TAK.DEL TAK.CHANADD TAK.CHANDEL
+- * -
+
+<A NAME="cmd_TAK.DEL"><B>Topic</B>: TAK.DEL</A>
+<B>Syntax</B>: TAK DEL {nick | n!u@h | -*pattern*}
+  <I>Description</I>:
+    Remove someone from the timer autokick list.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_TAK.CHANADD"><B>Topic</B>: TAK.CHANADD</A>
+<B>Syntax</B>: TAK CHANADD {nick | n!u@h | -*patern*} {channel}
+  <I>Description</I>:
+    Add a channel for autokicking someone on the timer ak 
+    list.  The user must not be being timer ak'ed on all
+    channels, in which case it is meaningless to add more
+    channels to the list.
+
+    The channel must be one channel only; no multiple 
+    channels can be added at this time with this command
+    in a single command line.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_TAK.CHANDEL"><B>Topic</B>: TAK.CHANDEL</A>
+<B>Syntax</B>: TAK CHANDEL {nick | n!u@h | -*pattern*} {channel}
+  <I>Description</I>:
+    Remove a channel from a user's timer ak list.  Note
+    that the only channel for the timer ak cannot be 
+    removed -- you must remove the user from timer ak
+    altogether.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SAVE"><B>Topic</B>: SAVE</A>
+<B>Syntax</B>: SAVE {option}
+  <B>Options</B>: NICKS IGN LAST10 CMDREF CFGCMDS
+  <I>Description</I>:
+    Save one of the bot's lists.  Type "SAVE"
+    to see the available bot lists.
+<I>See Also</I>: SAVE.{option}
+- * -
+
+<A NAME="cmd_SAVE.NICKS"><B>Topic</B>: SAVE.NICKS</A>
+<B>Syntax</B>: SAVE NICKS [file].nicks
+  <I>Description</I>:
+    Save the bot's nick list to the default nicklist
+    file.  You can optionally specify [file] so the
+    nicklist will be saved in the [file].nicks in
+    the present bot directory.
+<B>See Also</B>
+- * -
+
+<A NAME="cmd_SAVE.IGN"><B>Topic</B>: SAVE.IGN</A>
+<B>Syntax</B>: SAVE IGN
+  <I>Description</I>:
+    Save the ignore list to the default ignore file.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SAVE.CMDREF"><B>Topic</B>: SAVE.CMDREF</A>
+<B>Syntax</B>: SAVE CMDREF
+  <I>Description</I>:
+    Save the commands in a reference file called TnT-II.cmds.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SAVE.CFGCMDS"><B>Topic</B>: SAVE.CFGCMDS</A>
+<B>Syntax</B>: SAVE CFGCMDS
+  <I>Description</I>:
+    Save the configuration commands used in infile.cfg
+    to file "configcmds.lst".
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SAVE.LAST10"><B>Topic</B>: SAVE.LAST10</A>
+<B>Syntax</B>: SAVE LAST10
+  <I>Description</I>:
+    Save the output from the "REPORT" display in case there
+    is some information you want to save.  The file saved to
+    will be called "log.last10" in the present bot directory.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SAY"><B>Topic</B>: SAY</A>
+<B>Syntax</B>: SAY [channel] {text}
+  <I>Description</I>:
+    Makes the bot say something to the
+    current channel or the channel specifed
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SECURE"><B>Topic</B>: SECURE</A>
+<I>See Also</I>: SEC
+- * -
+
+<A NAME="cmd_SEC"><B>Topic</B>: SEC</A>
+<B>Syntax</B>: SEC [{level} {time in minutes | -1}]
+  <I>Description</I>:
+    This is to secure the bot to {level} for {time} minutes.
+    You can only secure up to your access level.
+
+    If no level is given, the bot will show you the present
+    secured access, if any.
+<I>See Also</I>: CMD.SECURE
+- * -
+
+<A NAME="cmd_CMD"><B>Topic</B>: CMD</A>
+<B>Syntax</B>: CMD {option} [...]
+  <B>Options</B>: WRITE SECURE PREFIX RELOAD WORD
+  <I>Description</I>:
+    This is a prefix command for dealing with the commands
+    as a whole.  The options are pretty self-explanatory.
+<I>See Also</I>: CMD.{option}
+- * -
+
+<A NAME="cmd_CMD.WRITE"><B>Topic</B>: CMD.WRITE</A>
+<B>Syntax</B>: CMD WRITE
+  <I>Description</I>:
+    This command is used to save the commands and their 
+    access levels to the file <B>commands.l</B>.  This 
+    command is formerly known as "save cmds 1".
+<I>See Also</I>: CMD.RELOAD
+- * -
+
+<A NAME="cmd_CMD.SECURE"><B>Topic</B>: CMD.SECURE</A>
+<B>Syntax</B>: CMD.SECURE {command} [level]
+  <I>Description</I>:
+    This is only to secure the access for command
+    to a higher level.  Don't specify a level if
+    you only want to see the secured level for that 
+    command.  A level of 0 is used to unsecure that 
+    command; a level greater than the normal access
+    level for that command will secure the command
+    to [level].
+<I>See Also</I>: SEC ACL
+- * -
+
+<A NAME="cmd_CMD.PREFIX"><B>Topic</B>: CMD.PREFIX</A>
+<B>Syntax</B>: CMD PREFIX
+  <I>Description</I>:
+    This is formerly the "prefix" command.  You can use
+    "prefix" or the new "cmd prefix" to check the command
+    character; to change the command character though, 
+    you need to issue "cmd prefix {character}".
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CMD.RELOAD"><B>Topic</B>: CMD.RELOAD</A>
+<B>Syntax</B>: CMD RELOAD
+  <I>Description</I>:
+    Reload the commands with their user access levels 
+    from the file "commands.l" in the bot directory.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CMD.WORD"><B>Topic</B>: CMD.WORD</A>
+<B>Syntax</B>: CMD WORD [word]
+  <I>Description</I>:
+    This is used to show/change the command word the bot
+    will listen to in addition to the use of command
+    prefix characters.
+<I>See Also</I>: PREFIXW
+- * -
+
+<A NAME="cmd_SB"><B>Topic</B>: SB</A>
+<B>Syntax</B>: SB [channel] {nick}
+  <I>Description</I>:
+    Site-bans a user on the current channel
+    or the channel specified.
+<I>See Also</I>: SKB B
+- * -
+
+<A NAME="cmd_SCREW"><B>Topic</B>: SCREW</A>
+<B>Syntax</B>: SCREW [channel] {nick} [num]
+  <I>Description</I>:
+    Screwbans {nick} on the current channel or the 
+    channel specified 1, 2, or 3 bans can be done, 
+    depending on [num].  {nick} is also booted out
+    of the channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SEND"><B>Topic</B>: SEND</A>
+<B>Syntax</B>: SEND {filename | *pattern*}
+  <I>Description</I>:
+    Sends a file that's in the fileslist 
+    (filelist.bot) in the download directory.
+  
+    You can also request a file pattern and the 
+    bot will send you any files matching that
+    pattern and which you have access to.
+<I>See Also</I>: LS
+- * -
+
+<A NAME="cmd_SERVER"><B>Topic</B>: SERVER</A>
+<I>See Also</I>: SERV
+- * -
+
+<A NAME="cmd_SERV"><B>Topic</B>: SERV</A>
+<B>Syntax</B>: SERV {srv_index | servername} [...]
+<B>Syntax</B>: SERV {<B>-</B> | <B>+</B>}servername[:port number]
+  <I>Description</I>:
+    Makes the bot switch servers, with the option of 
+    changing the username or ircname of the bot.  
+  
+    You can set some options while making the bot switch servers.
+    The following is a list of the valid switches you can use:
+           <B>-u</B> userid   o use userid "userid"  
+           <B>-i</B> <B>"</B>imsg<B>"</B>   o use ircname "imsg"  
+           <B>-a</B> <B>"</B>amsg<B>"</B>   o use away msg "amsg"
+           <B>-h</B> host     o use machine (server) "host"   
+           <B>-p</B> num      o use port number num
+           <B>-w</B> word     o use password "word"
+  
+    Default irc server port number is 6667; however, some 
+    servers require a different port number, like 6666, 6665,
+    etc.  To use those servers, and assuming they allow people
+    to run bots, you can use the "-p num" switch to change the
+    server port.
+  
+    The second syntax is for adding/deleting a server to/from the
+    server list.  You can delete by server number, but can only add
+    using a valid IP address or DNS hostname (reasonable I'd say). 
+    You can optionally specify a port number to delete if you have
+    the same server with two port numbers in the server list. Note
+    that you cannot delete the current server -- the current server 
+    has a <B>*</B> in front of the server number.
+
+    The benefit of adding a server using a '+' sign in front is so
+    you can add more servers to the bot without having the bot 
+    change servers at that time.
+
+    You may optionally issue "SERV .LIST" to get a list of servers
+    added to the bot.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SBANS"><B>Topic</B>: SBANS</A>
+<B>Syntax</B>: CHB [channel]
+  <I>Description</I>:
+    Show the bans in a channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CHB"><B>Topic</B>: CHB</A>
+<B>Syntax</B>: CHB [channel]
+  <I>Description</I>:
+    Show the bans in a channel, including the time 
+    and the person/server that banned it.
+<I>See Also</I>: 
+- * -
+
+<A NAME="cmd_SIDLE"><B>Topic</B>: SIDLE</A>
+<I>See Also</I>: SIU
+- * -
+
+<A NAME="cmd_SIU"><B>Topic</B>: SIU</A>
+<B>Syntax</B>: SIU [channel] [idle time in seconds]
+  <I>Description</I>:
+    Show who in a channel has been idle for idletime seconds.
+<I>See Also</I>: CT.IK CT.IKT
+- * -
+
+<A NAME="cmd_SKB"><B>Topic</B>: SKB</A>
+<B>Syntax</B>: SKB [channel] [!]{nick} [msg]
+  <I>Description</I>:
+    Site-kickbans a user on the current
+    channel or the channel specified...A
+    reason can also be given.
+
+    Add '!' in front of the nick to force the bot to carry
+    out the command.
+<I>See Also</I>: SB KB B
+- * -
+
+<A NAME="cmd_NEWBOT"><B>Topic</B>: NEWBOT</A>
+<I>See Also</I>: FORK
+- * -
+
+<A NAME="cmd_FORK"><B>Topic</B>: FORK</A>
+<B>Syntax</B>: FORK {botnick} [...]
+  <I>Description</I>:
+    Spawns a new bot with various options.
+    [...] can be any of the following:
+  	[-s server]  [-u username]  [-i "ircname"]
+        [-z prefix_char]  [-c channel_to_join]
+        [-a "away msg"]
+  
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_TEMPBOT"><B>Topic</B>: TEMPBOT</A>
+  This command has been taken off the commands list.
+<I>See Also</I>: FORK
+- * -
+
+<A NAME="cmd_SPITE"><B>Topic</B>: SPITE</A>
+<B>Syntax</B>: SPITE [{on | off} {time in minutes | -1}]
+  <I>Description</I>:
+    Used to check on the revenge mode if no argument is given.
+    Otherwise, turn on revenge mode for specified minutes, or
+    indefinitely if time is "-1".
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SPY"><B>Topic</B>: SPY</A>
+<B>Syntax</B>: SPY {option} [...]
+  <B>Options</B>: ADD DEL MSG -MSG CLIST MLIST CMD -CMD NLIST STAT
+  <I>Description</I>:
+    This is a prefix command to the set of spy functions.
+    This command incorporates the functionality of the older 
+    SPYC, [RN]SPYC, SPYM, [RN]SPYM, SSCL and SSML.
+<I>See Also</I>: SPY.{option}
+- * -
+
+<A NAME="cmd_SPY.ADD"><B>Topic</B>: SPY.ADD</A>
+<B>Syntax</B>: SPY ADD {channel} [where]
+  <I>Description</I>:
+    This is used to add yourself to the spying of channel
+    chat in a channel or add additional channels to
+    your channel spy list.
+  
+    Note only one channel can be added at any one time.
+    You can optionally spy channel chat to another person.
+    Make sure that person has established a dcc chat with
+    the bot or the bot may flood out.
+<I>See Also</I>: SPY
+- * -
+
+<A NAME="cmd_SPY.DEL"><B>Topic</B>: SPY.DEL</A>
+<B>Syntax</B>: SPY DEL {channel} [where]
+  <I>Description</I>:
+    This is used to delete you from the spying of chat in
+    a channel.  Users with owner access can also delete 
+    other people from spying channel chat.
+  
+    Only one channel may be specified per command to delete
+    the spying on that channel from yourself or a third party.
+<I>See Also</I>: SPY.ADD
+- * -
+
+<A NAME="cmd_SPY.MSG"><B>Topic</B>: SPY.MSG</A>
+<B>Syntax</B>: SPY MSG
+  <I>Description</I>:
+    This is used to make the bot redirect you any messages
+    (non commands) sent to the bot.
+<I>See Also</I>: SPY.NOMSG
+- * -
+
+<A NAME="cmd_SPY.NOMSG"><B>Topic</B>: SPY.NOMSG</A>
+<I>See Also</I>: SPY.-MSG
+- * -
+
+<A NAME="cmd_SPY"><B>Topic</B>: SPY</A>
+<B>Syntax</B>: SPY -MSG
+  <I>Description</I>:
+    This is used to stop the bot from redirecting your
+    any non-commands messages sent to the bot.
+<I>See Also</I>: SPY.MSG
+- * -
+
+<A NAME="cmd_SPY.CMD"><B>Topic</B>: SPY.CMD</A>
+<B>Syntax</B>: SPY CMD
+  <I>Description</I>:
+    This is used to make the bot notify you of any commands
+    sent to the bot and were carried out.
+- * -
+
+<A NAME="cmd_SPY"><B>Topic</B>: SPY</A>
+<B>Syntax</B>: SPY -CMD
+  <I>Description</I>:
+    This is used to stop the bot from notifying you of any 
+    commands sent to the bot and were carried out.
+- * -
+
+<A NAME="cmd_SPY.CLIST"><B>Topic</B>: SPY.CLIST</A>
+<B>Syntax</B>: SPY CLIST {channel}
+  <I>Description</I>:
+    Have the bot show you a list of people spying 
+    channel chats in a channel.
+<I>See Also</I>: SPY.MLIST SPY.DEL
+- * -
+
+<A NAME="cmd_SPY.MLIST"><B>Topic</B>: SPY.MLIST</A>
+<B>Syntax</B>: SPY MLIST
+  <I>Description</I>:
+    Have the bot show you a list of the people
+    spying private messages sent to the bot.
+<I>See Also</I>: SPY.NOMSG
+- * -
+
+<A NAME="cmd_SPY.NLIST"><B>Topic</B>: SPY.NLIST</A>
+<B>Syntax</B>: SPY NLIST
+  <I>Description</I>:
+    Have the bot show you a list of people spying commands.
+- * -
+
+<A NAME="cmd_SPY.STAT"><B>Topic</B>: SPY.STAT</A>
+<B>Syntax</B>: SPY STAT
+  <I>Description</I>:
+    See your present spy status on the bot.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SPYC"><B>Topic</B>: SPYC</A>
+<I>See Also</I>: SPY
+- * -
+
+<A NAME="cmd_SSCL"><B>Topic</B>: SSCL</A>
+<I>See Also</I>: SPY.CLIST
+- * -
+
+<A NAME="cmd_SSML"><B>Topic</B>: SSML</A>
+<I>See Also</I>: SPY.MLIST
+- * -
+
+<A NAME="cmd_SPYM"><B>Topic</B>: SPYM</A>
+<I>See Also</I>: SPY
+- * -
+
+<A NAME="cmd_STAT"><B>Topic</B>: STAT</A>
+<B>Syntax</B>: STAT [nick or user@host]        
+  <I>Description</I>:
+    Shows the full Access level, protection,
+    shitlist, auto-op stats for a user.
+    With no arguments, will show your own stats.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_NSTEAL"><B>Topic</B>: NSTEAL</A>
+<I>See Also</I>: FORGET
+- * -
+
+<A NAME="cmd_FORGET"><B>Topic</B>: FORGET</A>
+<B>Syntax</B>: FORGET {channel}        
+  <I>Description</I>:
+    Stops trying to regain op in channel.
+<I>See Also</I>: REGAIN
+- * -
+
+<A NAME="cmd_STEAL"><B>Topic</B>: STEAL</A>
+<I>See Also</I>: REGAIN
+- * -
+
+<A NAME="cmd_REGAIN"><B>Topic</B>: REGAIN</A>
+<B>Syntax</B>: REGAIN {channel}
+  <I>Description</I>:
+    The automaton will try to regain op in the channel specified.
+
+    This should only be used if the channel is op-less and you
+    need to regain channel operators to administer the channel.
+
+    Note that once the bot gains op, it will attempt to deop all
+    users below the secured level if set, otherwise 20.
+<I>See Also</I>: FORGET
+- * -
+
+<A NAME="cmd_TIME"><B>Topic</B>: TIME</A>
+<B>Syntax</B>: TIME
+  <I>Description</I>:
+    Returns the current time where the bot 
+    is running...if a channel is given, it
+    shows the time to the channel
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_GS"><B>Topic</B>: GS</A>
+<B>Syntax</B>: GS {option} [value]
+  <B>Options</B>: RSI GRI MNI MPI MBI NCAK BNAK PMAK ULS STS MDI CKI MKI
+  <B>Options</B>: PFR PFI PFL MFR MFI MFL DFR DFI DFL CVM CFM CIM CCM ASE
+  <I>Description</I>:
+  
+    Change/view some global settings.
+  
+    RSI, GRI      -- interval for bot reset, greeting
+    MNI, MBI, MPI -- detection interval for nick changes, beeps, pub msgs
+    NCAK -- num. of nick changes to autokick
+    BNAK -- num. of beeps to autokick
+    PMAK -- num. of public msgs to autokick
+    ULS  -- maximum uploadsize for files allowed, in KB
+    STS  -- select timeout in seconds
+    PFR, PFI, PFL -- public flood detection rate, interval, lines
+    MFR, MFI, MFL -- message flood detection rate, interval, lines
+    DFR, DFI, DFL -- dcc msg. flood detection rate, interval, lines
+    CVM, CFM, CIM, CCM -- CTCP version, finger, userinfo, clientinfo msgs
+    ASE           -- auto-strict-op length in minutes
+  
+<I>See Also</I>: SGS GS.C?M GS.ASE
+- * -
+
+<A NAME="cmd_GS.CVM"><B>Topic</B>: GS.CVM</A>
+<B>Syntax</B>: GS CVM [- | + | ? | string]
+  <I>Description</I>:
+    Enables one to alter the bot's CTCP version response.
+    No arguments will allow one to view the current response, if any.
+
+    -       Make the bot not respond to version requests
+    +       Make the bot respond with default version info
+    ?       Show help message
+    string  Use "string" as the new ctcp version response.  It is
+            composed of one or more words.  Don't use quotes to enclose it.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_GS.CFM"><B>Topic</B>: GS.CFM</A>
+<B>Syntax</B>: GS CFM [- | + | ? | string]
+  <I>Description</I>:
+    Enables one to alter the bot's CTCP finger response.
+    No arguments will allow one to view the current response, if any.
+
+    -       Make the bot not respond to finger requests
+    +       Make the bot respond with default finger info
+    ?       Show help message
+    string  Use "string" as the new ctcp finger response.  It is
+            composed of one or more words.  Don't use quotes to enclose it.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_GS.CIM"><B>Topic</B>: GS.CIM</A>
+<B>Syntax</B>: GS CIM [- | + | ? | string]
+  <I>Description</I>:
+    Enables one to alter the bot's CTCP userinfo response.
+    No arguments will allow one to view the current response, if any.
+
+    -       Make the bot not respond to userinfo requests
+    +       Make the bot respond with default userinfo
+    ?       Show help message
+    string  Use "string" as the new ctcp userinfo response.  It is
+            composed of one or more words.  Don't use quotes to enclose it.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_GS.CCM"><B>Topic</B>: GS.CCM</A>
+<B>Syntax</B>: GS CCM [- | + | ? | string]
+  <I>Description</I>:
+    Enables one to alter the bot's CTCP clientinfo response.
+    No arguments will allow one to view the current response, if any.
+
+    -       Make the bot not respond to clientinfo requests
+    +       Make the bot respond with default clientinfo
+    ?       Show help message
+    string  Use "string" as the new ctcp clientinfo response.  It is
+            composed of one or more words.  Don't use quotes to enclose it.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_GS.ASE"><B>Topic</B>: GS.ASE</A>
+<B>Syntax</B>: GS ASE [time in minutes]
+  <I>Description</I>:
+    Shows/sets the auto-strict-op length, in minutes.
+    If set, the bot will auto-set its strict-op feature
+    on some trigger for the time in minutes specified.
+<I>See Also</I>: CT.SO
+- * -
+
+<A NAME="cmd_SGS"><B>Topic</B>: SGS</A>
+<B>Syntax</B>: SGS
+  <I>Description</I>:
+    Show global settings.
+<I>See Also</I>: GS
+- * -
+
+<A NAME="cmd_BS"><B>Topic</B>: BS</A>
+<B>Syntax</B>: BS {option | .list} [value]
+  <B>Options</B>: PFKL FPL MPL MDT MKT NFT MAL CKT BKT IKT
+           NCI MDCC ONUL LCL AOL BL KQI CML MAD MLA
+  <I>Description</I>:
+    Set/View some bot options.  Without any arguments
+    given to {option}, the bot will show the present 
+    setting for that option.
+
+    Use the <B>.list</B> option to list the settings available.
+<I>See Also</I>: BS.{option} SBS BT SBT CT SCT SCS
+- * -
+
+<A NAME="cmd_BS.PFKL"><B>Topic</B>: BS.PFKL</A>
+<B>Syntax</B>: BS PFKL [value]
+  <I>Description</I>:
+    Set/View the number of lines to detect for public floods.
+    PFKL stands for Public Flood Kick Lines.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.FL"><B>Topic</B>: BS.FL</A>
+<I>See Also</I>: BS.PFKL
+- * -
+
+<A NAME="cmd_BS.PFR"><B>Topic</B>: BS.PFR</A>
+<I>See Also</I>: BS.PFKL
+- * -
+
+<A NAME="cmd_BS.FPL"><B>Topic</B>: BS.FPL</A>
+<B>Syntax</B>: BS FPL [level]
+  <I>Description</I>:
+    Set/View the flood-protection level.
+    Level 1=kick, Level 2=ban+kick
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.MPL"><B>Topic</B>: BS.MPL</A>
+<B>Syntax</B>: BS MPL [level]
+  <I>Description</I>:
+    Set/View the mass-protection level.  E.G. massdeops,
+    masskicks Level 1=deop, Level 2=kick, Level 3=ban+kick.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.MDT"><B>Topic</B>: BS.MDT</A>
+<B>Syntax</B>: BS MDT [level]
+  <I>Description</I>:
+    Set/View the mass-deop trigger (level).  How many deops 
+    to activate mass-action protection.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.MKT"><B>Topic</B>: BS.MKT</A>
+<B>Syntax</B>: BS MKT [level]
+  <I>Description</I>:
+    Set/View the mass-kick trigger level.  How many kicks 
+    to activate mass-action protection.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.NFT"><B>Topic</B>: BS.NFT</A>
+<B>Syntax</B>: BS NFT [level]
+  <I>Description</I>:
+    Set/View the nick flood trigger level - how many 
+    nick changes to activate nickflood (mass-action) protection.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.MAL"><B>Topic</B>: BS.MAL</A>
+<B>Syntax</B>: BS MAL [level]
+  <I>Description</I>:
+    Set/View the Mass-Action Level.  Users from this level (access)
+    upwards will be "immune" to mass-action protection
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.CKT"><B>Topic</B>: BS.CKT</A>
+<B>Syntax</B>: BS CKT [level]
+  <I>Description</I>:
+    Set/View the Caps-Kick Trigger level.  This is the number of lines
+    sent by a person all in UPPERCASE which the bot will detect
+    in a certain period of time before kicking that person.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.BKT"><B>Topic</B>: BS.BKT</A>
+<B>Syntax</B>: BS BKT [level]
+  <I>Description</I>:
+    Set/View the Beep-Kick Trigger level.  How many beeps 
+    to activate kicking.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.IKT"><B>Topic</B>: BS.IKT</A>
+<B>Syntax</B>: BS IKT [time in sec.]
+  <I>Description</I>:
+    Set/View the number of seconds allowed for people idling
+    in channels. Idling means not speaking in public.
+      1800 seconds = 30 minutes.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.MDCC"><B>Topic</B>: BS.MDCC</A>
+<B>Syntax</B>: BS MDCC [access level]
+  <I>Description</I>:
+    Set/View the access level required to establish DCC 
+    connection with the bot.  Default is 0 -- open to all.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.ONUL"><B>Topic</B>: BS.ONUL</A>
+<B>Syntax</B>: BS ONUL [access level]
+  <I>Description</I>:
+    Set/View the OpNonUserLevel setting.  This setting
+    affects users from which user access onwards are 
+    allowed to op non users in a channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.AOL"><B>Topic</B>: BS.AOL</A>
+<B>Syntax</B>: BS AOL [access level]
+  <I>Description</I>:
+    Set/View the AlwaysOpuserLevel.  This setting affects
+    users from which access onwards will never be placed
+    on the delayed auto-op list; instead, they will be
+    auto-opped right away.  To force everyone who are
+    being auto-opped on the delayed auto-op list, 
+    set this to 1000.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.BL"><B>Topic</B>: BS.BL</A>
+<B>Syntax</B>: BS BL [time in sec.]
+  <I>Description</I>:
+    Set/View the command break length for non-users.
+    Non-users can only execute commands on the bot
+    every "break length" seconds.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.KQI"><B>Topic</B>: BS.KQI</A>
+<B>Syntax</B>: BS KQI [time in sec.]
+  <I>Description</I>:
+    Set/View the kick queue check interval.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.CML"><B>Topic</B>: BS.CML</A>
+<B>Syntax</B>: BS CML [level]
+  <I>Description</I>:
+    This sets/views the allowed user access level required to
+    change channel modes.  Otherwise, anyone caught changing
+    the channel mode will be kicked by the bot.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.MAD"><B>Topic</B>: BS.MAD</A>
+<B>Syntax</B>: BS MAD [time in sec.]
+  <I>Description</I>:
+    Set/View the maximum auto-op delay, in seconds.  The
+    bot will delay from half this value to this value
+    before giving auto-ops.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BS.MLA"><B>Topic</B>: BS.MLA</A>
+<B>Syntax</B>: BS MLA [time in sec.]
+  <I>Description</I>:
+    Set/View the maximum allowed lag for a server before the
+    bot will switch to another server.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT"><B>Topic</B>: BT</A>
+<B>Syntax</B>: BT {option | .list} [on | off]
+  <B>Options</B>: CC GREET AFG AFS CNOK LOG CNK NC RN SELF AST
+           KOHJ AI LOM KP LKB PL INV PAD ADCC CKN CTCP LRS MNK
+  <I>Description</I>:
+    Toggle some bot settings.  One can optionally specify the
+    "on" or "off" parameter to set the toggle on or off.
+
+    Use the <B>.list</B> option to list the available toggles.
+<I>See Also</I>: BT.{option}
+- * -
+
+<A NAME="cmd_BT.CC"><B>Topic</B>: BT.CC</A>
+<B>Syntax</B>: BT CC
+  <I>Description</I>:
+    Toggle the necessity of prefix character 
+    for commands typed in public
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.AFG"><B>Topic</B>: BT.AFG</A>
+<B>Syntax</B>: BT AFG
+  <I>Description</I>:
+    Toggle <B>a</B>uto-<B>f</B>ile-<B>g</B>et.  This automaton can 
+    receive files offered by users.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.AFS"><B>Topic</B>: BT.AFS</A>
+<B>Syntax</B>: BT AFS
+  <I>Description</I>:
+    Toggle <B>a</B>uto-<B>f</B>ile-<B>s</B>end.  This automaton 
+    can offer files to users and nonusers.
+<I>See Also</I>: 
+- * -
+
+<A NAME="cmd_BT.LOG"><B>Topic</B>: BT.LOG</A>
+<B>Syntax</B>: BT LOG
+  <I>Description</I>:
+    Toggle the logging of commands sent to the automaton
+<I>See Also</I>: CT.LOG
+- * -
+
+<A NAME="cmd_BT.GREET"><B>Topic</B>: BT.GREET</A>
+<B>Syntax</B>: BT GREET
+  <I>Description</I>:
+    Toggle greeting users by the bot.
+<I>See Also</I>: GREET
+- * -
+
+<A NAME="cmd_BT.NC"><B>Topic</B>: BT.NC</A>
+<B>Syntax</B>: BT NC
+  <I>Description</I>:
+    Toggle nick change on ping.
+<I>See Also</I>: 
+- * -
+
+<A NAME="cmd_BT.RN"><B>Topic</B>: BT.RN</A>
+<B>Syntax</B>: BT RN
+  <I>Description</I>:
+    Toggle the random nick change feature.  If toggled ON and 
+    the automaton is allowed to change nicks, the automaton 
+    will randomly choose a nick from 7 to 9 characters long.
+<I>See Also</I>: BT.NC
+- * -
+
+<A NAME="cmd_BT.CNK"><B>Topic</B>: BT.CNK</A>
+<B>Syntax</B>: BT CNK
+  <I>Description</I>:
+    Toggle the change nick on kick feature.  If toggled ON,
+    the automaton will change nicks upon being kicked. [<U>OFF</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.SELF"><B>Topic</B>: BT.SELF</A>
+<B>Syntax</B>: BT SELF
+  <I>Description</I>:
+    Toggle undo-self mode change.  This goes for deops 
+    and channel modes.  [<U>OFF</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.CNOK"><B>Topic</B>: BT.CNOK</A>
+<B>Syntax</B>: BT CNOK
+  <I>Description</I>:
+    Toggle change-nick-on-kill option.  If on, the bot will
+    change to another nick when it is killed for some reason,
+    e.g. ircop kill or nick collision.  [<U>ON</U>].
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.KOHJ"><B>Topic</B>: BT.KOHJ</A>
+<B>Syntax</B>: BT KOHJ
+  <I>Description</I>:
+    Toggle the kick on hack join.  This is for kicking someone
+    who joins a channel even though that someone is banned, as
+    in a netjoin after a netsplit.
+  
+    The bot will not kick any users who have access to the bot
+    though.  [<U>ON</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.LOM"><B>Topic</B>: BT.LOM</A>
+<B>Syntax</B>: BT LOM
+  <I>Description</I>:
+    Toggle the logging of actions the bot does to other uses.
+    If turned on and the bot deops, bans, or kicks a user, 
+    that action will be logged to the file <U>onthem.log</U>. [<U>OFF</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.KP"><B>Topic</B>: BT.KP</A>
+<B>Syntax</B>: BT KP
+  <I>Description</I>:
+    Toggle kicking of protected users below access 800. [<U>OFF</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.LOGKB"><B>Topic</B>: BT.LOGKB</A>
+<I>See Also</I>: BT.LKB
+- * -
+
+<A NAME="cmd_BT.LKB"><B>Topic</B>: BT.LKB</A>
+<B>Syntax</B>: BT LKB
+  <I>Description</I>:
+    Toggle the logging of protected users being 
+    kicked or banned from channels.  [<U>OFF</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.PL"><B>Topic</B>: BT.PL</A>
+<B>Syntax</B>: BT PL
+  <I>Description</I>:
+    Toggle the party line on the bot.  [<U>OFF</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.INV"><B>Topic</B>: BT.INV</A>
+<B>Syntax</B>: BT INV
+  <I>Description</I>:
+    Toggle the invisible mode for bot.  If turned off and 
+    the bot reconnects to a server, the bot will not be
+    made invisible to others not in the same channel. [<U>ON</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.SI"><B>Topic</B>: BT.SI</A>
+<B>Syntax</B>: BT SI
+  <I>Description</I>:
+    Server info gathering -- REMOVED
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.PAD"><B>Topic</B>: BT.PAD</A>
+<B>Syntax</B>: BT PAD
+  <I>Description</I>:
+    Toggle the user protection scheme of using user
+    access differences as well.  [<U>OFF</U>].
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.ADCC"><B>Topic</B>: BT.ADCC</A>
+<B>Syntax</B>: BT ADCC
+  <I>Description</I>:
+    Toggle auto DCC connection feature. [<U>ON</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.CKN"><B>Topic</B>: BT.CKN</A>
+<B>Syntax</B>: BT CKN
+  <I>Description</I>:
+    Toggle check notes on join.  This is used when someone
+    has a note waiting on the bot and whether you want the
+    bot to announce the note's presence.  [<U>ON</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.CTCP"><B>Topic</B>: BT.CTCP</A>
+<B>Syntax</B>: BT CTCP
+  <I>Description</I>:
+    Toggle bot replies to CTCP requests. [<U>ON</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.NFC"><B>Topic</B>: BT.NFC</A>
+<B>Syntax</B>: BT NFC
+  <I>Description</I>:
+    Toggles the nick-flood check routine.  If enabled, the
+    bot will, if opped, kick anyone changing so many nicks
+    in a certain time interval. [<U>ON</U>]
+    The default setting for a forked bot is OFF.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.AI"><B>Topic</B>: BT.AI</A>
+<B>Syntax</B>: BT AI
+  <I>Description</I>:
+    Toggles the anti-idle check routine.  If enabled,
+    the bot will make itself non-idle at certain time 
+    intervals (non-configurable as yet). [<U>ON</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.AST"><B>Topic</B>: BT.AST</A>
+<B>Syntax</B>: BT AST
+  <I>Description</I>:
+    Toggles the adding of current time in spied messages. [<U>OFF</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.LRS"><B>Topic</B>: BT.LRS</A>
+<B>Syntax</B>: BT LRS
+  <I>Description</I>:
+    Toggles the leaving of restricted servers if connected to one. [<U>OFF</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_BT.MNK"><B>Topic</B>: BT.MNK</A>
+<B>Syntax</B>: BT MNK
+  <I>Description</I>:
+    Toggles the kicking by multiple nicknames. [<U>OFF</U>]
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT"><B>Topic</B>: CT</A>
+<B>Syntax</B>: CT [channel] {option} [on|off]
+  <B>Options</B>: EM PUB SK AOP PROT NSO NSO2 SO MASS
+           AR CK IK BK LOG STOP DOP ADB
+  <I>Description</I>:
+  
+    Set channel options (toggles).  Issue the command
+    by itself to get a list of the available options.
+    One can optionally specify the "on" or "off" parameter to set
+    the toggle on or off.
+<I>See Also</I>: SCT SCS CT.{option}
+- * -
+
+<A NAME="cmd_CT.EM"><B>Topic</B>: CT.EM</A>
+<B>Syntax</B>: CT [channel] EM
+  <I>Description</I>:
+    Toggle channel enforce modes
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT.LOG"><B>Topic</B>: CT.LOG</A>
+<B>Syntax</B>: CT [channel] LOG
+  <I>Description</I>:
+    Toggle chat logging in a channel.  If on, all
+    public messages to that channel will be logged.
+<I>See Also</I>: CT
+- * -
+
+<A NAME="cmd_CT.STOP"><B>Topic</B>: CT.STOP</A>
+<B>Syntax</B>: CT [channel] STOP
+  <I>Description</I>:
+    Toggle strict channel topic enforcement.  If on, the
+    bot will strictly enforce a topic if it's changed to 
+    something else.  
+    <B>**</B> NOTE <B>**</B> Use this with caution as two bots enforcing
+    strict topics will cause a topic change flood!
+<I>See Also</I>: CT
+- * -
+
+<A NAME="cmd_CT.NSO"><B>Topic</B>: CT.NSO</A>
+<B>Syntax</B>: CT [channel] NSO
+  <I>Description</I>:
+    Toggle server deop for the channel.  If a person is 
+    opped by a server but has no access to the bot, that 
+    person will be deopped by the bot if the bot is opped.
+<I>See Also</I>: CT.NSO2, SEC
+- * -
+
+<A NAME="cmd_CT.NSO2"><B>Topic</B>: CT.NSO2</A>
+<B>Syntax</B>: CT [channel] NSO2
+  <I>Description</I>:
+    Toggle deop on server op for a channel upto secured level.
+    Anyone opped by a server who is below the bot secured 
+    level will be deopped by the bot if the bot is opped.
+<I>See Also</I>: SEC, CT.NSO
+- * -
+
+<A NAME="cmd_CT.AR"><B>Topic</B>: CT.AR</A>
+<B>Syntax</B>: CT [channel] AR
+  <I>Description</I>:
+    Toggle auto-rejoin for a channel.
+<I>See Also</I>: CT
+- * -
+
+<A NAME="cmd_CT.CK"><B>Topic</B>: CT.CK</A>
+<B>Syntax</B>: CT [channel] CK
+  <I>Description</I>:
+    Toggle kicking on caps.  If a person sends out a certain 
+    amount of lines in UPPERCASE, that person will be kicked.
+<I>See Also</I>: BS.CKL
+- * -
+
+<A NAME="cmd_CT.IK"><B>Topic</B>: CT.IK</A>
+<B>Syntax</B>: CT [channel] IK
+  <I>Description</I>:
+    Toggle idle-kicking for the channel
+<I>See Also</I>: BS.IKL
+- * -
+
+<A NAME="cmd_CT.BK"><B>Topic</B>: CT.BK</A>
+<B>Syntax</B>: CT [channel] BK
+  <I>Description</I>:
+    Toggle beep-kicking for channel
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT.SK"><B>Topic</B>: CT.SK</A>
+<B>Syntax</B>: CT [channel] SK
+  <I>Description</I>:
+    Toggle channel shit-kicking
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT.AOP"><B>Topic</B>: CT.AOP</A>
+<B>Syntax</B>: CT [channel] AOP
+  <I>Description</I>:
+    Toggle auto-opping on a channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT.PROT"><B>Topic</B>: CT.PROT</A>
+<B>Syntax</B>: CT [channel] PROT
+  <I>Description</I>:
+    Toggle user protection on a channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT.SO"><B>Topic</B>: CT.SO</A>
+<B>Syntax</B>: CT [channel] SO
+  <I>Description</I>:
+    Toggle channel strict opping.  If on, only users
+    with access in the channel can be opped.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT.MASS"><B>Topic</B>: CT.MASS</A>
+<B>Syntax</B>: CT [channel] MASS
+  <I>Description</I>:
+    Toggle channel mass-action detect.  E.G. msg floods
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT.PUB"><B>Topic</B>: CT.PUB</A>
+<B>Syntax</B>: CT [channel] PUB
+  <I>Description</I>:
+    Toggle the use of public commands in channel [channel].
+    This means if it is turned off, the bot will not listen 
+    to any commands issued in that channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT.DOP"><B>Topic</B>: CT.DOP</A>
+<B>Syntax</B>: CT [channel] DOP
+  <I>Description</I>:
+    Toggle delayed auto-op in channel.  The default is 
+    to use delayed auto-op.  You can now turn it off in 
+    individual channels.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CT.ADB"><B>Topic</B>: CT.ADB</A>
+<B>Syntax</B>: CT [channel] ADB
+  <I>Description</I>:
+    Toggle auto-deban setting in channel.  The default is
+    do auto-deban.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SVCMDS"><B>Topic</B>: SVCMDS</A>
+<I>See Also</I>: SAVE.CMDS
+- * -
+
+<A NAME="cmd_SAVE.CMDS"><B>Topic</B>: SAVE.CMDS</A>
+<B>Syntax</B>: SAVE CMDS {option}
+  <B>Options</B>: 0 1
+  <I>Description</I>:
+    Save the commands to a file.
+    option = 0:  Save commands to <B>TnT-II.cmds</B> for reference
+    option = 1:  Save commands and access levels to <B>commands.l</B> 
+                 where you can modify the access levels for the 
+                 various commands.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_WAR"><B>Topic</B>: WAR</A>
+<I>See Also</I>: CMA
+- * -
+
+<A NAME="cmd_CMA"><B>Topic</B>: CMA</A>
+<B>Syntax</B>: CMA [{on | off} {time in minutes | -1}]
+  <I>Description</I>:
+    This is used to turn on/off the CMA mode on the bot. CMA 
+    mode hopefully makes the bot more responsive than before.
+
+    CMA stands for Channel-Minded Automaton.
+
+    If no arguments are given, the bot will show you the 
+    present CMA mode.
+  
+    When turning on the CMA mode, you must specify how long 
+    (in minutes) it will last; specify time as "-1" will keep 
+    it in CMA mode indefinitely.  The bot will also be secured 
+    to access 20 automatically.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_TOPIC"><B>Topic</B>: TOPIC</A>
+<I>See Also</I>: TIC
+- * -
+
+<A NAME="cmd_TIC"><B>Topic</B>: TIC</A>
+<B>Syntax</B>: TIC [channel] {text}
+  <I>Description</I>:
+    Changes the topic on the current channel
+    or the channel specified
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_UNLOCK"><B>Topic</B>: UNLOCK</A>
+<I>See Also</I>: NLOCK
+- * -
+
+<A NAME="cmd_NLOCK"><B>Topic</B>: NLOCK</A>
+<B>Syntax</B>: NLOCK [channel]
+  <I>Description</I>:
+    Unlock a channel.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_FLS"><B>Topic</B>: FLS</A>
+<B>Syntax</B>: FLS {nick or user@host}
+  <I>Description</I>:
+    This is used to "flash" someone.  You can either specify a 
+    nick or a valid user@host argument for the bot to flash to.
+<I>See Also</I>: ANNOY
+- * -
+
+<A NAME="cmd_ANNOY"><B>Topic</B>: ANNOY</A>
+<B>Syntax</B>: ANNOY {nick} {type}
+  <I>Description</I>:
+    Send a couple of annoying lines to {nick}
+    {nick} will be ignored as *!*user@*host
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_KEYB"><B>Topic</B>: KEYB</A>
+<B>Syntax</B>: KEYB {channel} {+ | -}{type}
+  <I>Description</I>:
+    Place to/Remove from a channel keybomb.
+  
+    Type "KEYB .LIST" to get a list of the keybombs available.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_SBT"><B>Topic</B>: SBT</A>
+<B>Syntax</B>: SBT
+  <I>Description</I>:
+    Show the bot toggles in effect.
+<I>See Also</I>: SCT SBS SCS
+- * -
+
+<A NAME="cmd_SCT"><B>Topic</B>: SCT</A>
+<B>Syntax</B>: SCT [channel]
+  <I>Description</I>:
+    Show the channel toggles in effect for present 
+    or specified channel.
+<I>See Also</I>: SBT SBS
+- * -
+
+<A NAME="cmd_SCS"><B>Topic</B>: SCS</A>
+<B>Syntax</B>: SCS [channel]
+  <I>Description</I>:
+    Show the settings for a channel.  The settings are
+    the topic and mode for the channel.
+<I>See Also</I>: SCT SBS SBT
+- * -
+
+<A NAME="cmd_SBS"><B>Topic</B>: SBS</A>
+<B>Syntax</B>: SBS
+  <I>Description</I>:
+    Show the bot settings in effect.
+<I>See Also</I>: SBT SCT SCS
+- * -
+
+<A NAME="cmd_STO"><B>Topic</B>: STO</A>
+<B>Syntax</B>: STO [channel] {topic}
+  <I>Description</I>:
+    Store a topic for the specified channel.  If no
+    channels are specified, the default channel is used.
+<I>See Also</I>: CS.TR
+- * -
+
+<A NAME="cmd_CS"><B>Topic</B>: CS</A>
+<B>Syntax</B>: CS [channel] {option} [value]
+  <B>Options</B>: TR QI EMKL
+  <I>Description</I>:
+    Change/View channel settings.
+<I>See Also</I>: CS.{option}
+- * -
+
+<A NAME="cmd_CS.TR"><B>Topic</B>: CS.TR</A>
+<B>Syntax</B>: CS [channel] TR [time in minutes]
+  <I>Description</I>:
+    Change/check the default topic reinceforcement, in minutes.
+    Use a time of 0 or -1 to turn off topic enforce.
+<I>See Also</I>: STO
+- * -
+
+<A NAME="cmd_CS.QI"><B>Topic</B>: CS.QI</A>
+<B>Syntax</B>: CS [channel] QI [time in minutes]
+  <I>Description</I>:
+    Change/check the quote interval, in minutes.
+    Use a time of 0 or -1 to turn off quotes.
+<I>See Also</I>:
+- * -
+
+<A NAME="cmd_CS.EMKL"><B>Topic</B>: CS.EMKL</A>
+<B>Syntax</B>: CS [channel] EMKL [userlevel]
+  <I>Description</I>:
+    Change the userlevel below which a user will be kicked
+    for modifying the enforced mode in a channel.
+<I>See Also</I>: CT.EM
+- * -
+
+<A NAME="cmd_XC"><B>Topic</B>: XC</A>
+<B>Syntax</B>: XC {what} {where}
+  <I>Description</I>:
+    This stands for "e<B>X</B>tended <B>C</B>ommand".  Something
+    like the splatter-stuff for kicking/deopping, simple
+    scripting, etc.
+
+    {what} stands for the type of extended command to execute.
+    {where} can be a nick or a channel, where the bot will 
+            issue responses to; some commands obviously do not
+            make sense if sent to a channel.
+
+    Issue "XC COMMANDS" to get a list of available commands
+    as defined by the owner of BOTNICK.
+<I>See Also</I>:
+- * -
+
+</PRE><HR><BR>
+Last modified: April 11, 1998
+<BR>
+<ADDRESS>Send your comments or questions to <A HREF = "mailto: tonys@access.mountain.net">tonys@access.mountain.net</A>
+</ADDRESS>
+<BR>Copyright &#169; 1997-1998 by Tony Shan (tonys@access.mountain.net).
+</BODY>
+</HTML>

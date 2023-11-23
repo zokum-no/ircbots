@@ -1,0 +1,14 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\i            Welcome to TnT-II's DCC Party Line !                   \i
+-------------------------------------------------------------------
+   This is the default TnT-II MOTD file.  Owners may customize
+   it by editing the "motd.bot" file in the bot directory.
+
+   \i<I>\i Send msg to others on party line with 
+           \b/msg =<my_dcc_nick> [your message here]\b
+   \i<I>\i Pertinent commands: .whom .chat .me .echo .quit
+   \i<I>\i NOTE: Use \b.echo on|off\b to turn on/off the echoing of 
+       your messages.
+
+   Be considerate and enjoy chatting!  \i@_@\i
+=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

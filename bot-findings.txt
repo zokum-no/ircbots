@@ -2,11 +2,6 @@
 French Vladbot fork from 1996 with added AI code and commands.
 
 
-== Ariela ==
-A fork off of Vladb ot 2.1c with a few minor registered only users tweaks for
-Barron and President. Bot seems to have been in use on Undernet.
-
-
 == Bot 0.01 ==
 Very early bot, by Peyote Coyote which evolved into Hopbot. The bot.c file
 has the following comment: 11/7/91 - Peyote Coyote. Less advanced than Hopbot.
@@ -62,6 +57,14 @@ more  functionality than Bot did. Hopbot has much of the same functionality,
 but it has been organzed better, into more source files. 
 
 
+== TnT-II 5.7f ==
+Hackbot fork by ttone (tonys@access.mountain.net). Contains code form johbot.
+It seems it was only distributed as two types archives. One type consists of
+multiple a machine-specific binary for Linux, SunOS, FreeBSD etc. The other
+type is a pack with documentation, examples, changelogs, html manual, all the
+non-binary files.
+
+
 == Vladbot 1.9m ==
 File: vladbot-1.9m.tar.gz
 
@@ -73,6 +76,12 @@ Copyright:
 ----------
     VladBot 1.9 - A service bot for IRC.
     (c) 1993 Ivo van der Wijk
+
+
+== Vladbot 2.1c-ariela ==
+A fork off of Vlad bot 2.1c with a few minor registered only users tweaks for
+Barron and President. Bot seems to have been in use on Undernet. Minor changes
+in the Makefile, config.h etc.
 
 
 == Vladbot 2.1h-hip ==

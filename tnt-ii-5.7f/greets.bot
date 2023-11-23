@@ -1,0 +1,18 @@
+########################################################################
+# Greetings file for responding to public greets
+########################################################################
+# FORMAT= "Before nick ":" After nick":Action flag
+# \i stands for highlighted text
+# \u -- underline
+# \b -- bold
+#-----------------------------------------------------------------------
+"Oh my goodness, it's ":  "!!": 	0
+"pokes \u": 	"\u .. tee hee hee ..=\b*\b)": 	1
+"gives \b": 	"\b a lollipop. \b@\b}-----": 	1
+"Hiya ": 	"!": 	0
+"greets \i": 	"\i enthusiastically.": 	1
+"hugs ": 	" tightly. *SQUEEEEZE* \u(o=\u": 	1
+"Glad you're here, \b": 	"\b!": 	0
+"*warm*fuzzy*hugs* ": 	" .. :\b*\b>": 	1
+"*tickle*hugs* ": 	" .. \b}\b:o>": 	1
+"*flying*tackle*hugs* ": 	" ..": 	1

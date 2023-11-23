@@ -1,0 +1,153 @@
+#############################################################
+## FILE: extcmds.bot
+## DESCRIPTION: 
+## 	File containing external commands for the bot
+#############################################################
+#
+## Vocabulary:
+#	ACTION ACTION2 SAY (SAY2 TOWHOM) TOFROM
+#	MODE DEOP OP KICK NOTICE NOTICE2
+#-----------------------------------------------------------
+## FORMAT: XC <command> <nick> [additional text]
+#                        \p         \q
+#-----------------------------------------------------------
+# Info on \ stuff (escape sequences):
+# \b -- bold		 	\u -- underline
+# \i -- inverse			\p -- the nick to send to
+# \q -- everything that follows the nick (\p)
+# \n -- the bot's current nickname
+#-----------------------------------------------------------
+## NOTE:
+#	To send out a blank line, make the bot send out
+#	the sequence "\b\b" rather than an empty line --
+#	the empty line won't get sent out.
+#-----------------------------------------------------------
+%subject COMMANDS
+TOFROM Here are some commands for XC:
+TOFROM ------------------------------------------------
+TOFROM   HUG KISS TICKLE LPOP SPCK1 SD1 HEART
+TOFROM   ROSE 12ROSE SPCK2 COFFEE BUG1 KNIFE
+TOFROM   FLIRTX1 FLIRTY1 SCARE TEA SHADOW
+TOFROM ------------------------------------------------
+%end # COMMANDS  
+#-----------------------------------------------------------
+
+%subject HUG
+ACTION gives \p a great big hug *squeeeeze*
+ACTION giggles...
+%end # HUG
+%subject KISS
+ACTION plants a big wet kiss on \p's cheek  *MUAH*
+SAY \p: how was it? ;)
+ACTION giggles
+%end # KISS
+%subject LPOP
+ACTION gives \b\p\b a sweet enticing lollipop  \b@\b)=======
+SAY :)
+%end # LPOP
+%subject ROSE
+ACTION gives \b\p\b a big fresh rose  \b@\b}-`--,------
+%end # ROSE
+%subject TICKLE
+ACTION tickles \b\p\b until \n is tired
+SAY \p: hehe *wink*
+%end # TICKLE
+%subject 12ROSE
+ACTION gives \b\p\b a dozen fresh roses \b@\b}-`--,---- ... \b@\b}-`--,-----
+SAY \p: hope u like them =o)
+%end # 12ROSE
+%subject SPCK1
+ACTION thinks \b\p\b is talking out of turn again
+ACTION decides what \n can do about it
+#KICK \bOoops......my foot slipped :-D\b
+KICK \bHope you've learned to raise ur hand now :-D\b
+#SAY hehe
+\p really needed that
+%end # SPCK1
+%subject SPCK2
+ACTION decides to make \p fear \n
+KICK \bHope this hurts ;) \b
+SAY hehe
+%end # SPCK2
+%subject SD1
+ACTION thinks \p's powers are growing almost without bound...
+SAY \p: hope u don't mind :-D
+DEOP \p \p
+%end # SD1
+%subject COFFEE
+ACTION thinks \p needs to be rejuvenated
+SAY \p: shall I get u a cup of coffee?
+ACTION fills up a hot cup of coffee and offers it to \p
+SAY \p: it's not too hot ;)
+%end # COFFEE
+%subject BUG1
+ACTION looks at \p...hmm
+TOWHOM Hey cutie!!
+ACTION tickles \p until mercy is sought
+SAY \p: gosh, i'm poofed! =-I
+%end # BUG1
+%subject HEART
+TOWHOM \b       ..     ..\b
+TOWHOM \b    .`    `.'    '.\b
+TOWHOM \b    .      !      .\b
+TOWHOM \b      .         .\b
+TOWHOM \b         .   .\b \i \p!! \i
+TOWHOM \b           .\b   \b\q\b
+TOFROM \bA heart has been sent to \p\b
+%end # HEART
+%subject MEGAOP
+MODE +o \p
+MODE +ooo \p \p \p
+MODE +o \p
+%end 
+%subject TEA
+ACTION thinks \p is thirsty
+ACTION pours a nice cup of oo-long tea for \p
+SAY \p: no sugar, right? ;)
+%end # TEA
+%subject KNIFE
+ACTION thinks \p needs some exercise....
+SAY \p: get ready now ;)
+ACTION throws a slew of knives at \p...hehehehe =)
+%end # KNIFE
+%subject FLIRTX1
+ACTION looks deeply into \p's eyes...wow, soo \bLOVELY\b!
+ACTION hugs and kisses \p passionately
+SAY \p: =)
+%end # FLIRTX1
+%subject FLIRTY1
+ACTION runs fingers gently through \p's hair...wow! nice! =)
+ACTION gives \p a peck on the cheek...
+SAY \p: if u want more, come over here big boy =)
+%end # FLIRTY1
+%subject SCARE
+TOWHOM \b \\ ^ /     ,^,\b
+TOWHOM \b \\<@@>/    ((\b
+TOWHOM \b  (..)     );)  --\b \iboo!\i  
+TOWHOM \b   vv\\^^^^^ /\b   \b\q\b
+TOWHOM \b  /==  ))) )\b
+TOWHOM \b ( ==/ )=< \\\b
+TOWHOM \b{{{)=(}}}(_}}}\b
+TOFROM \b scared \p ;) \b
+%end 
+%subject TEST
+TOWHOM inverted: \i hello \i
+TOWHOM bolded: \b hi hi hi hi \b
+TOWHOM bolded+inverted: \b\i how does this look? \i\b
+TOWHOM underline: \u working ever so hard \u
+TOWHOM underline+inverted: \u\i happily working \i\u
+TOFROM end of test
+%end
+%subject ACK1
+SAY \b\b      _   /|
+SAY \b\b      \'o.O'     - \p
+SAY \b\b      =(___)=    - \q
+SAY \b\b         U
+%end
+%subject SHADOW
+SAY \b\b O ___.   O            /-------   [=] /   |~|/ \\|~|
+SAY \b\b<\\/      /\\  *WHACK!!*  -|-|-|-   -'- /   |-|/ \\|\\|
+SAY \b\b  \\     /|             --'-`-`--   []     |-|.-.|
+SAY \b\b  /     | \\            ` `  ' '   /|\\ /  / _||_||  !!!
+KICK \bwu yin ge gui!! =P \b
+%end

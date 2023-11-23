@@ -1,0 +1,143 @@
+---------------------------------------------------------------------------
+		README FILE FOR TNT2 (version 5.7 and up)
+---------------------------------------------------------------------------
+
+    Thank you for using TnT-II bot, also known as tnt2 or tnt2bot.  For
+    newcomers to botting, please read this file in its entirety for helpful
+    hints and advice on getting your bot started.  Veteran users can skip
+    this file and should scan through ChangeLog for changes to the most 
+    recent versions.
+
+    Please read tnt2.doc for the disclaimer.
+
+    Note that tnt2 is distributed as two files: one is operating system
+    specific and the other is the package of text files.  For instance, if
+    your operating system is FreeBSD, you need tnt2-FreeBSD.tgz.
+    The package of common text files is in tnt2-common.tgz.
+
+    In order to run the bot, you need to configure the bot properly.  That
+    means choosing a nickname for the bot, finding permissible servers to 
+    connect the bot onto IRC, and adding users and owner, among other things.
+
+Configuring the bot:
+--------------------
+
+    The default and recommended configuration file is called "infile.cfg".
+    You need to edit the file with a text editor to assign the bot's 
+    nickname, server, and channel(s).  Also be sure to set "OwnerUhost" 
+    correctly as that nick!user@host pattern will (should) never be deleted
+    if a user goes wild over deleting every single user in the bot's 
+    userlist; note that this setting is in the form of "nick!user@host" -- 
+    this pattern will never have access unless added in the userlist.
+
+    Change "BotDir" setting to point to the location (directory) where you
+    will be running the bot from.  For example, if you run the bot from the
+    directory /home/user1/bot, with the bot executable as /home/user1/bot/tnt2,
+    you would change the BotDir setting to     
+
+	BotDir "/home/user1/bot/"
+
+    Note that you must append the trailing backslash character, '/'.
+
+    The configuration has three major sections for settings: global, bot,
+    and channel.  Global settings must precede all other settings.  There
+    are three types of settings: string, numeric, and toggle (boolean).
+
+    String settings are used to assign bot/owner related information, such
+    as the owner's email (OwnerEmail) or the bot's CTCP finger message.
+    String settings start with the string setting configuration command,
+    such as 
+
+        OwnerEmail = "user@machine.domain".
+
+    Numeric settings can start either with a percent sign, '%', or with the
+    word "Set", e.g.  "%ResetInterval = 70" and  "SET FloodKickLines 6".
+    Note that the equal sign, '=', is optional in either of the two formats.
+
+    Toggle settings are used for channel and bot toggle configurations.  They
+    allow you to determine which channel or bot features to be active where.
+    They are prefixed by either the "Toggle" keyword or the exclamation mark,
+    '!', and take on values of 0 for FALSE and 1 for TRUE.  Examples are 
+    "!NickFloodCheck 1", allowing you to turn on nickflood detection on the
+    bot, and "TOGGLE AutoOp 1", allowing you to set which channel(s) have 
+    auto-op of users with the correct status.
+
+    Global settings affect any bots that are started from a single UN*X 
+    process.  Bot settings affect a single bot (nickname) in the process.
+    Channel settings affect the bot under which they are defined.  Global
+    settings start from the beginning of the configuration file "infile.cfg".
+    Bot settings follow those and go under the initial "Nick" keyword, which
+    assigns the bot's nickname.  Channel settings are bot specific; they 
+    begin with the "Channel" keyword.  Each channel should have its own set
+    of configurations.
+
+Examples of settings:
+---------------------
+    o global setting         -- %GreetInterval = 10
+    o bot setting            -- Nick "SmiLES"
+    o bot toggle setting     -- !CtcpRespond 1
+    o channel setting        -- Channel "#MyChan","nt","Welcome to my channel."
+    o channel toggle setting -- !EnforceMode 1
+
+
+    Bot toggles and channel toggles look the same, but are treated according
+    to the type of setting as defined for the command.
+
+    To run multiple bots in a single process (NOT RECOMMENDED!!), include 
+    multiple invocations of "Nick" command along with corresponding bot and 
+    channel settings.
+
+
+Adding owner and users:
+-----------------------
+
+    A bot with no owner is no bot at all.  The easy way to add the owner
+    is through the "tnt2 -m" command.  Choose an appropriate userlist file
+    that you you have specified in infile.cfg file under the "userlist"
+    bot string setting.
+
+    Initially, to add users to the bot, you can issue the "tnt2 -u" command.
+    As with adding the owner, you need to choose the appropriate userlist
+    file that you have specified in infile.cfg.  User access levels go from
+    10 to 998; the owner is at access 999 while the minimum useful access 
+    is 10 -- this is with the default command access levels anyway.
+
+    Note that if you get stuck while entering the password, enter "NP" 
+    without the quotes and press the RETURN or ENTER key.  This should not
+    password-protect the userhost pattern that you have entered.
+
+
+Running the bot:
+----------------
+
+    Before running the bot, double check your configuration file infile.cfg
+    and the userlist file.  Make sure all the settings are correct and that 
+    you, presumably the owner, have enough access in the bot's userlist.
+    Change to the bot directory if you are not already there.  In there, you
+    can run the bot either as "./tnt2" or "./gotnt2", where gotnt2 is a script.
+
+    One way to debug your configuration file, infile.cfg, is to edit it,
+    making sure that you have "%debug = 2" as the first non-commented line.
+    This debug setting of 2 will display all the lines with configuration
+    settings; a debug setting of 1 will only display those lines with errors.
+    Note that you need to run the bot with the "-b" option, not to put it in
+    the background, as in "tnt2 -b".  Once you are sure the configuration 
+    file is okay, you can run the bot without the "-b" option.
+
+
+Closing remarks:
+----------------
+
+    Please read through tnt2.doc, FILELIST, and README.cfg.  Also take some
+    time to read TnT-II.cmds and config.cmds (formerly configcmds.lst).
+    TnT-II.cmds contains all the available bot commands, including the party
+    line DCC commands.  The config.cmds file contains the list of configuration
+    commands used in infile.cfg.  You may want to edit the file "commands.l",
+    which is the file with the bot commands (listed in TnT-II.cmds) and the
+    required user accesses; editing this file allows you to change the required
+    command access levels according to your needs.
+
+--
+ttone
+tonys@access.mountain.net
+
