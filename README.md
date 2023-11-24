@@ -40,8 +40,9 @@ Hopbot                               Very basic bot, less than 15kb.
    +--ChRoniCBot                     Stricter on channel security.
    |  +--IncuBot 1.02c               The branch incubus worked on.
    |  |  +--Incubot-1.02c-Byxnet     Compiler fixes, minor bug fixes.
-   |  +--Mikribot                    My branch.
-   |  +--Revbot                      Revzoot's branch for #quake.   
+   |  |  +--Mikribot                 My own branch.
+   |  |  +--Revbot                   Revzoot's branch for #quake.   
+   |  IncuBot 1.03b-beta             Has more code from The Black
    Vladbot 2.1.h
    +--Vladbot-pHb-Nefertari          French translation.
    +--HipBot                         Stripped away some features.

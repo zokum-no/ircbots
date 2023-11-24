@@ -1,0 +1,411 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<X-SAS-WINDOW TOP=0 BOTTOM=434 LEFT=0 RIGHT=788>
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows - Trial Version">
+	<TITLE>IncuBot (Changes from ChRoniC v1.03)</TITLE>
+</HEAD>
+
+<BODY>
+
+<P><B><FONT SIZE="6">v1.0:</FONT></B></P>
+<P>
+<HR ALIGN="CENTER">
+Shitadds no longer store the date and nick!user@host in the shit reason. They are now stored in separate fields
+in the shitlist. Format of shit.list was changed to accomodate the modifications.&nbsp;</P>
+
+<P>Nethacked +l, +m, and +k are auto-removed now. Kinda buggy though, the bot will remove them on join.&nbsp;</P>
+
+<P>Incorporated badcrc's 1.03 fixes.&nbsp;</P>
+
+<P>Fixed many memory leaks. (all?)&nbsp;</P>
+
+<P>Added a new escape character for the help file that shows the current level of the command.&nbsp;</P>
+
+<P>!nhuseradd is gone.&nbsp;</P>
+
+<P>When an account is locked for excessive failures or doing it in public, the bot wallops the nick!user@host of
+the offender and why it was locked.&nbsp;</P>
+
+<P>Bots running on the same process now have separate command level tables, so a !chaccess on one bot doesn't affect
+the others.&nbsp;</P>
+
+<P>Prot now works only if the kicker/banner is auth'ed and the kickee/bannee is not (I think).&nbsp;</P>
+
+<P>Bots now /away on connect. Need to work on this more.&nbsp;</P>
+
+<P>Centralized auth checking. Used to check for auth in every command that required auth. Now all checks are done
+in on_msg() and the on_msg_commands[] structure has a new member that indicates whether auth is required for a
+command.&nbsp;</P>
+
+<P>Removed the bullshit stuff the bot sent to itself when it is idle.&nbsp;</P>
+
+<P>Made bot compile 100% clean when compiled with -Wall.&nbsp;</P>
+
+<P>More stuff I can't remember right now.&nbsp;</P>
+
+<P>Bot will now /msg every bot in its userlist &quot;invite #channel&quot; when it can't join a channel because
+its +i.&nbsp;</P>
+
+<P>&quot;!whois&quot; and &quot;!userinfo &lt;pattern&gt; all&quot; now force a dcc chat if more than 6 lines would
+be sent.&nbsp;</P>
+
+<P>Using !chpasswd, !passwd, and !passwdop in public now locks your account like it was supposed to.&nbsp;</P>
+
+<P>!massnk shouldn't flood the bot off now.&nbsp;</P>
+
+<P>!passwdadd no longer has a limit on the length of the password.&nbsp;</P>
+
+<P>!userlist now takes parameters:</P>
+
+<UL>
+	<LI>&quot;!userlist&quot; Same as before.
+	<LI>&quot;!userlist -mask &lt;mask&gt;&quot; Displays all userlist entries that match &lt;mask&gt;.
+	<LI>&quot;!userlist -nick &lt;nick&gt;&quot; Displays all userlist entries with nick fields matching &lt;nick&gt;.
+	<LI>&quot;!userlist -email &lt;email address&gt;&quot; Displays all userlist entries with email fields matching
+	&lt;email address&gt;.
+	<LI>&quot;!userlist -level &lt;level&gt;&quot; Displays all userlist entries with the specified userlevel.&nbsp;
+</UL>
+
+<P>!userlist, !shitlist, !exlist, and !protlist now print &quot;End of ???? list&quot; when the command is finished.
+(I know. Picky picky :P)&nbsp;</P>
+
+<P>!shitlist now takes parameters:</P>
+
+<UL>
+	<LI>&quot;!shitlist&quot; Same as before.
+	<LI>&quot;!shitlist -reason &lt;reason&gt;&quot; Displays all shitlist entries with shitreasons that match &lt;reason&gt;.
+	<LI>&quot;!shitlist -level &lt;level&gt;&quot; Displays all shitlist entries with a shitlevel of &lt;level&gt;.
+	<LI>&quot;!shitlist -whoshitted &lt;whoshitted&gt;&quot; Displays all shitlist entries with whoshitted info matching
+	&lt;whoshitted&gt;.
+	<LI>&quot;!shitlist -whenshitted &lt;whenshitted&gt;&quot; Displays all shitlist entries that were shitted on a
+	date matching &lt;whenshitted&gt;.&nbsp;
+</UL>
+
+<P>!nuseradd now takes extra parameters:</P>
+
+<UL>
+	<LI>&quot;!nuseradd &lt;nick&gt; &lt;level&gt; [email] [nick]&quot; Same as before.
+	<LI>&quot;!nuseradd -minhost &lt;nick&gt; &lt;level&gt; [email] [nick]&quot; Forces the add mask to be &quot;*!*uname@*.blah.blah&quot;.
+	The normal add mask can sometimes be &quot;*!*uname@*blah.blah.blah&quot;.
+	<LI>&quot;!nuseradd -fullhost &lt;nick&gt; &lt;level&gt; [email] [nick]&quot; Forces the add mask to be &quot;*!*uname@full.host.com&quot;.&nbsp;
+</UL>
+
+<P>!nuseradd &lt;nick&gt; &lt;level&gt; now puts &lt;nick&gt; in the userlist nick field unless you specify a different
+one.&nbsp;</P>
+
+<P>!(n)useradd now allow adds at level 200.&nbsp;</P>
+
+<P>!shitdel now tells you if there are any exlist entries that match the shitmask that was deleted.&nbsp;</P>
+
+<P>!cycle and !leave now require you to be authed.&nbsp;</P>
+
+<P>Added optional &quot;-expire &lt;number of days&gt;&quot; switch to !(n)shitadd. New format is !(n)shitadd [-expire
+&lt;# of days&gt;] &lt;nick/mask&gt; &lt;level&gt; [reason].&nbsp;</P>
+
+<P>Added an auth indicator to !nwhois.&nbsp;</P>
+
+<P>Cleaned up the formatting of the !showusers output and added an auth indicator.&nbsp;</P>
+
+<P>!(n)shitadd, !desc, !me, and !say no longer allow mIRC colors.&nbsp;</P>
+
+<P>!die, !diedie, !cycle, !leave, !help, !rehash, and !quit must now be addressed to a specific bot if used in
+public.&nbsp;</P>
+
+<P>!fp no longer simply toggles the various flood prots on and off:</P>
+
+<UL>
+	<LI>!fp &lt;type&gt; Returns current setting for &lt;type&gt;.
+	<LI>!fp &lt;type&gt; &lt;setting&gt; Changes the action taken for &lt;type&gt;
+	<P><B>Types</B>:</P>
+	<UL>
+		<LI><B>CLONE</B> When clones are detected in the channel.
+		<LI><B>PUBLIC</B> When someone is msg or notice flooding the channel.
+		<LI><B>NICK</B> When someone is nick flooding the channel.
+		<LI><B>CTCP</B> When someone is CTCP flooding the channel.
+		<LI><B>OP</B> When a non-op types !op in the channel.
+		<LI><B>AWP</B> When a non-op types !awp in the channel.
+	</UL>
+	<P><B>Settings:</B></P>
+	<UL>
+		<LI><B>OFF</B> No action is taken.
+		<LI><B>KICK</B> User is kicked off the channel.
+		<LI><B>BANKICK</B> User is ban-kicked off the channel.
+		<LI><B>TBK</B> User is ban-kicked off the channel for 5 minutes.&nbsp;
+	</UL>
+</UL>
+
+<P>Fixed !giveop and !deop sigsegv'ing if the nick was too long.&nbsp;</P>
+
+<P>Fixed !shitadd and !nshitadd sigsegv'ing if the shit reason was too long.&nbsp;</P>
+
+<P>!desc will no longer send to users who aren't in a channel with the bot.&nbsp;</P>
+
+<P>!op, !awp, and !passwdop no longer send &quot;You're already channel operator!&quot;. They will, however, complain
+if the bot is not opped in the channel you're requesting ops in.&nbsp;</P>
+
+<P>Added !whoshitted &lt;mask&gt; Mask must be the exact match of an existing shitmask.&nbsp;</P>
+
+<P>Added !whenshitted &lt;mask&gt; Mask must be the exact match of an existing shitmask.&nbsp;</P>
+
+<P>Added !chshitlevel &lt;mask&gt; &lt;new level&gt; Change the shitlevel.&nbsp;</P>
+
+<P>Added !chshitmask &lt;old mask&gt; &lt;new mask&gt; Change the shitmask.&nbsp;</P>
+
+<P>Added !chwhoshitted &lt;mask&gt; &lt;nick!user@host&gt; Change the whoshitted info for a shitmask.&nbsp;</P>
+
+<P>Added !chwhenshitted &lt;mask&gt; &lt;mm/dd/yy&gt; Change the date of a shitmask.&nbsp;</P>
+
+<P>Added !chshitreason &lt;mask&gt; &lt;new reason&gt; Changes the whyshitted info for a shitlist entry.&nbsp;</P>
+
+<P>Added !chshitmask &lt;old mask&gt; &lt;new mask&gt; Changes the shitmask for a shitlist entry.&nbsp;</P>
+
+<P>Added !nshowauth &lt;nick&gt; Shows whether the person is auth'ed on the bot.&nbsp;</P>
+
+<P>Added !nuserinfo &lt;nick&gt; Same as !userinfo, but uses their current irc nick to lookup the email and nick
+entries in the userlist.&nbsp;</P>
+
+<P>Added !expireadd &lt;mask&gt; &lt;number of days&gt; Sets a shitlist entry to expire X number of days from the
+current date.&nbsp;</P>
+
+<P>Added !expirelist Shows the current list of shitmasks that are set to expire.&nbsp;</P>
+
+<P>Added !expiredel &lt;mask&gt; Removes an expirelist entry.&nbsp;</P>
+
+<P>Added !expirewrite Writes the expirelist to disk.&nbsp;</P>
+
+<P>Added !tbk &lt;nick&gt; &lt;#&gt; [kick msg] Ban-kicks &lt;nick&gt;, then unbans after &lt;#&gt; minutes have
+passed.&nbsp;</P>
+
+<P>Added !showbans [channel] Shows the bans in a channel and their unban times if any.&nbsp;</P>
+
+<P>Added !chanst [channel] Gives op/voice/non-op/total counts for a channel.&nbsp;</P>
+
+<P>Added !chuserlevel &lt;usermask&gt; &lt;level&gt; and !nchuserlevel &lt;nick&gt; &lt;level&gt; Changes a user's
+level without destroying their nick, email, or password fields.&nbsp;</P>
+
+<P>
+<HR ALIGN="CENTER">
+<B><FONT SIZE="6">v1.01:</FONT></B></P>
+
+<P>
+<HR ALIGN="CENTER">
+Added code to allow each bot on a process to have its own eventlist.log and useradd.notify.&nbsp;</P>
+
+<P>Altered the wallop code to work around the recipient limit some servers have.&nbsp;</P>
+
+<P>Added !sendbotlist &lt;list&gt;. Sends a 150+ user one of the bot's list files.&nbsp;</P>
+
+<P>Fixed the code that removes nethacked modes. It was removing them every time the bot joined. Also added +i to
+the list of modes that will be removed if ethacked.&nbsp;</P>
+
+<P>Fixed a major bug in get_mask(). It was causing nuserdel to delete the people.&nbsp;</P>
+
+<P>Made the &quot;lame nick&quot; bankicks a #define. It is off by default.&nbsp;</P>
+
+<P>
+<HR ALIGN="CENTER">
+<B><FONT SIZE="6">v1.02:</FONT></B></P>
+
+<P>
+<HR ALIGN="CENTER">
+</P>
+<P>Fixed a bug in !chanst. It wasn't counting voiced non-ops in the non-op totals.&nbsp;</P>
+
+<P>Fixed a bug in the mailevents code. It couldn't find the progam that mails the eventfile if &quot;.&quot; wasn't
+in the bot's path.&nbsp;</P>
+
+<P>Added code for !(n)chuserlevel, !chshitlevel, !chshitreason, !chshitmask, !chwhoshitted, and !chshitdate so
+they add eventlist entries.&nbsp;</P>
+
+<P>Re-added !nhuseradd so Wendigo would stop bitching.&nbsp;</P>
+
+<P>Changed the way prot works again. Heres how it works:</P>
+
+<UL>
+	<LI>Kick prot: If your protlevel is non-zero, you're opped or auth'ed, and someone with a lower userlevel kicks
+	you, that person is kicked.
+	<LI>Ban prot: Works the same as in non-modified Chronics except you are not unbanned if it was a level 105 user
+	that set the ban. If someone is spoofing a 100-prot op and you need to ban them, use !bk, !bewt, or !tbk to ban
+	them (even then it only works if they're not auth'ed, so MAKE SURE YOU DON'T SEND YOUR PASSWORD TO SPOOFERS!).
+	<LI>Deop prot: If you are opped, your protlevel is &gt;0, your shitlevel is 0 or you're excluded, and you are deopped
+	by someone with a lower userlevel, you are reopped.&nbsp;
+</UL>
+
+<P>Removed some unused functions.&nbsp;</P>
+
+<P>Removed some ambiguous code in !nshitadd, !shitadd, !nprotadd, and !protadd.&nbsp;</P>
+
+<P>Added a #define for the old chronic userlevels. Change the &quot;#undef OLD_USERLEVELS&quot; line in config.h
+to &quot;#define OLD_USERLEVELS&quot; if you want the old userlevel system.&nbsp;</P>
+
+<P>Added !cmdhistory which gives you a list of the last 20 !banuser, !bewt, !bk, !tbk, !unban, !kick, !massunban,
+!deop, !giveop, !massdeop, !masskick, !massnk, !massop, or !open's performed, the channel they were executd in,
+and who initiated them.&nbsp;</P>
+
+<P>Removed channel mode &quot;s&quot; fom the list of modes that are removed when !open is used.&nbsp;</P>
+
+<P>Changed auth handling. Now when you auth, then join another channel the bot is on, you're auth stays with you.&nbsp;</P>
+
+<P>Added !chusermask &lt;old mask&gt; &lt;new mask&gt;.&nbsp;</P>
+
+<P>Changed !open to require auth.&nbsp;</P>
+
+<P>Bot no longer kicks non-ops that match a banmask if the banmask also matches a protected op.&nbsp;</P>
+
+<P>Fixed !join sigsegv'ing if its aready on that channel. Also made it check the channel name for validity and
+added the ability to join multiple channels with one !join command (!join #chan1,#chan2 or !join #chan1 #chan2).&nbsp;</P>
+
+<P>Bot no longer wallops when it recieves a vladbomb. IRCOPs are starting to use the old behavior to detect vlads/chronic/incubots.&nbsp;</P>
+
+<P>Added !fpwrite to write flood prot settings to disks.&nbsp;</P>
+
+<P>Added !readfp to read flood prot from disk on demand.&nbsp;</P>
+
+<P>Fixed a backdoor that has been in the bots since they were Vlads. There should be no backdoors now.&nbsp;</P>
+
+<P>Ripped the code from eggdrops that prevents them from running multiple processes. Change the &quot;#undef USE_PIDFILE&quot;
+line in config.h to &quot;#define USE_PIDFILE&quot; to enable this feature. It is off by default.&nbsp;</P>
+
+<P>Fixed the code I added to !desc in a previous version that was supposed to prevent the bot from !desc'ing to
+people that aren't in a channel with it.&nbsp;</P>
+
+<P>
+<HR ALIGN="CENTER">
+<B><FONT SIZE="6">v1.02a:</FONT></B></P>
+
+<P>
+<HR ALIGN="CENTER">
+</P>
+<P>Fixed !chusermask. It now changes the mask in the protlist and passwdlist.&nbsp;</P>
+
+<P>Fixed !userinfo and changed the way it works: (wildcards can be used in each of these)</P>
+
+<UL>
+	<LI>!userinfo &lt;nick&gt; = Returns the email address and nickname for the first userlist entry with a nickname
+	field that matches &lt;nick&gt;.
+	<LI>!userinfo -email &lt;email&gt; = Returns the email address and nickname for the first userlist entry with an
+	email field that matches &lt;email&gt;.
+	<LI>!userinfo -mask &lt;mask&gt; = Returns first mask, email address, and nickname for the first userlist entry
+	with a userhost field that matches &lt;mask&gt;.
+</UL>
+
+<P>Appending &quot;all&quot; to any of the above will make !userinfo return all matches instead of just the first
+one.&nbsp;</P>
+
+<P>&quot;None&quot; is now allowed in the email field when using !useradd, !nuseradd, and !nhuseradd.&nbsp;</P>
+
+<P>The bot now uses the wildcard match function from IRCD. The old match function handled &quot;[&quot; and &quot;]&quot;
+differently (*[abc]* was same as *a*, *b*, and *c*). If you want to use the old match function, undefine USE_IRCD_MATCH
+in config.h.&nbsp;</P>
+
+<P>The bot now clears matching bans and any bans that push the number of bans over the max (max == 15) before setting
+a new ban.&nbsp;</P>
+
+<P>
+<HR ALIGN="CENTER">
+<B><FONT SIZE="6">v1.02b:</FONT></B></P>
+
+<P>
+<HR ALIGN="CENTER">
+Added level 25 to the list of valid levels.&nbsp;</P>
+
+<P>Added !voice [channel].&nbsp;</P>
+
+<P>!seen now takes wildcards.&nbsp;</P>
+
+<P>!showseen now takes wildcards. Added &quot;-mask&quot; switch to make it do matching on nick!user@host instead
+of nick alone (default).&nbsp;</P>
+
+<P>If !showpasswd or !nshowpasswd is accessible to 100 or below users, they will only be able to see passwords
+for users that have lower or equal userlevel.&nbsp;</P>
+
+<P>If !protadd, !nprotadd, !protdel, or !nprotdel are accessible to 100 or below users, they will not be able to
+add/del prot for users with higher levels.&nbsp;</P>
+
+<P>!showpasswd, !nshowpasswd, !passwdadd, !passwddel, !protadd, !nprotadd now ignore level 105 users (other bots)
+no matter what the minimum required level is.&nbsp;</P>
+
+<P>Level 150 users can now use !passwddel on level 200 users.&nbsp;</P>
+
+<P>Fixed !shitadd and !nshitadd so they won't accept non-numeric strings as the shitlevel.&nbsp;</P>
+
+<P>Added -mask to the list of switches !shitlist takes.&nbsp;</P>
+
+<P>Added an indicator to !channels that shows whether the bot is opped on them.&nbsp;</P>
+
+<P>Wrote the installcron script that will create the proper botcheck script depending on whether USE_PIDFILE is
+defined in config.h and will install a cron entry if the user wishes.&nbsp;</P>
+
+<P>Fixed !op's channel handling. Now you only have to specify a channel if you're in more than one channel with
+the bot.&nbsp;</P>
+
+<P>Added !devoice [channel].</P>
+
+<P>
+<HR ALIGN="CENTER">
+<B><FONT SIZE="6">v1.02c:</FONT></B></P>
+
+<P>
+<HR ALIGN="CENTER">
+!kick now requires auth.&nbsp;</P>
+
+<P>Added virtual hostname support (Like Epic's /irchost). To use it, put: 'irchost &quot;hostname.com&quot;' in
+infile.cfg in the same section as the login line.</P>
+
+<P>Fixed a function that !giveop and !deop uses to validate nicknames.&nbsp;</P>
+
+<P>Added !listwrite which writes all lists. This command is also called from !die, !diedie, and !global die, so
+now all lists are written before the botshuts down (unless its because of a sigsegv or some other abnormal termination).&nbsp;</P>
+
+<P>Cleaned up on_join() a bit.&nbsp;</P>
+
+<P>All shitlevels greater than or equal to 100 ban the mask that is in the shitlist now.&nbsp;</P>
+
+<P>Fixed !chanst. The totals were ops+nonops+voice instead of ops+nonops.&nbsp;</P>
+
+<P>Fixed !do. It was crashing/locking up if &quot;%&quot; was in the string.&nbsp;</P>
+
+<P>Fixed a bug in !op, !voice, and !devoice that would cause a SIGSEGV if the user wasn't on a channel with the
+bot and a channel wasn't specified.&nbsp;</P>
+
+<P>Changed !voice and !devoice so they won't work if they are used publically and not addressed to a specific bot.&nbsp;</P>
+
+<P>Changed the ban routines so the bots unban the oldest bans instead of the newest when they clear bans that are
+over the limit.&nbsp;</P>
+
+<P>Added flags for level 25 privileges. They are written using !accesswrite and changed using:</P>
+<P>!chaccess LEVEL25 &lt;+/-flag1&gt; [+/-flag2] [+/-flag3] etc</P>
+<P>Flags are:</P>
+
+<UL>
+	<LI>NOBANKICK - Level 25 users don't get kicked when a ban that matches them is set.
+	<LI>NOOPKICK - Level 25 users don't get kicked for saying !op.
+	<LI>NOPUBLICKICK - Level 25 users don't get kicked for public flooding.
+	<LI>NOCLONEKICK - Level 25 users don't get kicked for cloning.
+	<LI>NOMASSNK - Level 25 users don't get kicked during a !massnk.
+	<LI>CANHAVEOPS - Level 25 users can keep ops if someone !giveop's them, but they can't op themselves.
+</UL>
+
+<P>*NOTE* None of these are turned on by default.&nbsp;</P>
+
+<P>Changed !showaccess so it will show level 25 flags when &quot;!showaccess 25&quot; is used.&nbsp;</P>
+
+<P>Can now !chaccess commands that have a higher level than you (assuming you have access to the !chaccess command).&nbsp;</P>
+
+<P>Changed !chaccess so it returns an error message if the requested command doesn't exist.&nbsp;</P>
+
+<P>Fixed the anti-clone code so the action it takes matches the &quot;!fp clone&quot; setting.&nbsp;</P>
+
+<P>Changed !fp so it won't take &quot;kick&quot; as a valid setting for the clone prot.&nbsp;</P>
+
+<P>Added 115 to the list of valid levels.&nbsp;</P>
+
+<P>&nbsp;
+
+</BODY>
+
+</HTML>

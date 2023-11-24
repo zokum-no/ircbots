@@ -55,7 +55,7 @@ use.
 == IncuBot ==
 Incubus fork, which was done in parallell with the Chronic bot and incorporated
 BadCRC's changes. The archive comes with many obsolete files and txt files from
-the bots it was based on.
+the bots it was based on. The 1.03 beta has more code from The Black's bot.
 
 
 == PC Bot 0.01 ==

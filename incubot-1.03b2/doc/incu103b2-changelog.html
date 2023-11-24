@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<X-SAS-WINDOW TOP=0 BOTTOM=434 LEFT=0 RIGHT=788>
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>IncuBot (Changes from ChRoniC v1.03)</TITLE>
+</HEAD>
+
+<BODY>
+
+<P><B><FONT SIZE="6">v1.03 Beta 2:</FONT></B></P>
+
+<P>
+<HR ALIGN="CENTER">
+Fixed hangs or SIGBUS when &quot;!deop #channel nickname&quot; is used.<BR>
+<BR>
+Fixed a memory leak in add_user().<BR>
+<BR>
+Bot now clears out its channel data properly. It wasn't clearing user information, leading to inaccurate !chanst
+or !showusers results.<BR>
+<BR>
+Rewrote some of the shitlist code. shit.list2, and expire.list are no longer separate files, they are now merged
+with shit.list. This should also eliminate the problem where a shitlist entry's shit reason could get lost.<BR>
+<BR>
+Bot will now attempt to gain ops if it isn't opped and another bot gets opped.<BR>
+<BR>
+Fixed some code in on_mode() that was exiting without updating the bot's internal channel info when someone was
+server-opped.<BR>
+<BR>
+Now when the bot writes its list files, it writes each one to &quot;temp.list&quot; and, if the write is successful,
+renames it to whichever list file is being written. This should keep the bot from writing empty or incomplete lists
+when there is not enough disk space although any changes made to the lists since the last successful write will
+be lost.<BR>
+<BR>
+Removed TB_MSG code.<BR>
+<BR>
+Fixed banmask generation routines so usernames longer than 9 characters won't be truncated.<BR>
+<BR>
+Added !nshitdel. *Note* !nshitdel will not work if the person is shitted AND excluded.<BR>
+<BR>
+Added !uptime<BR>
+<BR>
+Added !version<BR>
+<BR>
+Added &quot;FP&quot; to the list of file specifiers !sendbotlist takes.<BR>
+<BR>
+!sendbotlist can now be used with either a list of file specifiers or &quot;ALL&quot;.<BR>
+<BR>
+Sockets are now read-buffered for server connections and DCC chats. It used to go into a loop reading one byte
+of data from the socket until it received a linefeed character. This could slow the bot down while reading data
+from lagged connections or hang it completely if a linefeed never came.<BR>
+<BR>
+Fixed output of !channels so channels that the bot isn't in are marked as such.<BR>
+</P>
+
+<P>Increased the max number of bans a channel can have before the bot starts unbanning old ones before setting
+a new ban.<BR>
+<BR>
+Bot no longer unbans and rebans the same mask.<BR>
+<BR>
+Fixed some code that could keep the bot from banning/unbanning in some rare cases.<BR>
+<BR>
+When bot joined a channel an got the banlist, they were added to its internal banlist in the wrong order. Fixed.<BR>
+<BR>
+Bot now chmods its list files to &quot;owner read/write&quot; when it writes them.<BR>
+<BR>
+Fixed a problem in fnmatch.h that made compiles fail with &quot;FNM_CASEFOLD undeclared&quot;<BR>
+<BR>
+Fixed a bug in !deop that was making it +o people instead of -o. Don't know if this was there in the last version
+or if I put it there between versions.<BR>
+<BR>
+!giveop and !deop now do modes in groups of 4 instead of 3.<BR>
+
+
+</BODY>
+
+</HTML>
