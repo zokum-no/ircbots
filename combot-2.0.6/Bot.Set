@@ -1,0 +1,41 @@
+####################################################
+####  COMBOT.SET FILE FOR COMBOT Version 2.06 ####
+####################################################
+
+Owner=*!*comstud@*texas.net
+
+Usersfile=ComBot.lists
+
+Nick=ComBot
+	CmdChar=+
+	Username=combot
+           IrcName=ComBot Version 2.05
+	Log Commands=commands.log
+	Log Failed=failed.log
+	Log Dcc=dcc.log
+	Log Errors=errors.log
+	Log Danger=danger.log
+	Server=irc.portal.com
+	Server=irc.portal.com 6666
+	Tog CC
+	Tog DCC
+#	Tog INV
+	Channel=#ComBot
+		Set Enfm nst
+		Tog Enfm 1
+		Tog KS 1
+		Tog SS 1
+		Tog SD
+		Tog AOP
+		Tog Shit
+		Tog Pub
+		Tog Prot 1
+		Set Fpl 1
+		Set fl 5
+		Tog Mass 1
+		Tog Ik 0
+		Tog Rk 1
+		Tog Bk 0
+		Tog Ck 0
+		Tog Greet 1
+
