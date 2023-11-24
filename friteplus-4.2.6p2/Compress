@@ -1,0 +1,5 @@
+cd src
+tar -cvf frite+_source.tar *.c *.h *.o
+gzip frite+_source.tar
+rm *.c *.h *.o
+cd ..

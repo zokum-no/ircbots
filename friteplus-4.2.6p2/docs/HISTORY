@@ -1,0 +1,20 @@
+
+4.2.1 - Started out this entire adventure.  Added the RULE and ARULE functions.
+
+	Basically just used this revision to "play" and learn what the various
+	functions and structures did.
+
+4.2.2 - Added the POET and APOET functions.
+
+	Broke the HELP file into two files.  One for regular help, and one for
+	ophelp.  Ophelp can only be accessed by people with a level => 50. 
+
+	
+
+4.2.6 - Fixed the security hole in sing, lyrics, and ascii.  Thanks to Chaos
+        for this one! :)
+
+  	Various errors fixed in function.c.  It should now compile on more
+	systems than it previously could.  Many many many thanks go to Lumena
+	for this! :)
+

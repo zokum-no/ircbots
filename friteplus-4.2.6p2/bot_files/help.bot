@@ -1,0 +1,223 @@
+# Effort to make some sort of more configurable helpfile..
+#
+# Meaning of some commands (start with ) %
+# subject - start a subject
+# end 	  - end it
+#
+# Commands that should be added:
+# level(command, format) i.e. %level(useradd, "(u/s)") -> (100/0)
+# 
+# Available escape sequences:
+# \b \u \i 	- bold, underline, inverse
+# \n		- nickname of bot
+# \v		- bot's versionnumber
+# \\		- \
+# \#		- #
+# \c		- command character -os
+#
+# I really should update this stuff more often....
+#
+%subject Standard
+=-=-o-o-o-o-o-   \bUpdated Help for SucKeR\b   -o-o-o-o-o-=-=
+= For more information on a topic, please :             =
+= Type : \b/msg SucKeR help <topic>\b                       =
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+= \bTopic\b     = \bComment\b                                   =
+=-----------=-------------------------------------------=
+= \bCommands\b  = \bA list of commands available to the\b       =
+=           = \bgeneral publics.\b                          =
+=-----------=-------------------------------------------=
+= \bUsers\b     = \bInformation on User Levels, and info on\b   =
+=           = \bthe Ops of Chat.\b                          =
+=-----------=-------------------------------------------=
+= \bServices\b  = \bInformation on Filetransfer Commands, and\b =
+=           = \bvarious other services provided.\b          =
+=-----------=-------------------------------------------=
+= \bSucKeR\b    = \bInformation on the Bot, it's programmers,\b =
+=           = \bAnd where to get a copy.\b                  =
+=========================================================
+= \bOps please use \b/msg SucKeR ophelp\b.                  \b  =
+=========================================================
+#
+%end # Standard
+%subject Commands
+=========================================================
+= The following is a list of public access commands.    =
+= \b/msg SucKeR <command>\b for more information.           =
+=-------------------------------------------------------=
+=\b Rules      Info       List       Time       Quote    \b =
+=\b Rap        Sing       Dance      Bulletin   Dice     \b =
+=\b ASCII      8Ball      News       Bonk       Ping     \b =
+=========================================================
+=\b All of the above commands are available to the public \b=
+=\b in general, and require no level on the bot.          \b=
+=========================================================
+%end # Commands
+%subject Rules
+=========================================================
+= \bUsage\b: rules                                 \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will display a list of the channel rules to you. \b=
+=\b DCC CHAT is required for the list of rules.  Please   \b=
+=\b review the rules if you are new to the channel.       \b=
+=========================================================
+%end # Rules
+%subject Info
+=========================================================
+= \bUsage\b: info                                  \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will display various statistics and information  \b=
+=\b on the bot.  DCC CHAT is required to use this command.\b=
+=========================================================
+%end #Info
+%subject List
+=========================================================
+= \bUsage\b: list                                  \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will display a list of commands available to     \b=
+=\b your userlevel.  This command may be restricted to    \b=
+=\b ChanOp's only.  If it is restricted, you will be told.\b=
+=========================================================
+%end #List
+%subject Time
+=========================================================
+= \bUsage\b: time                                  \bLevel\b: 0 =
+=-------------------------------------------------------=
+= \bDisplays the LOCAL time and date of the bot.          \b=
+=========================================================
+%end #Time
+%subject Quote
+=========================================================
+= \bUsage\b: quote                                 \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will display a Discordian Quote.  This command   \b=
+=\b may be restricted.  If it is restricted, you will be  \b=
+=\b informed of that fact by the bot.                     \b=
+=========================================================
+%end #Quote
+%subject Rap
+=========================================================
+= \bUsage\b: rap <group>                           \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will rap a song from the <group> you specify.    \b=
+=\b If you do not specify a group, a list of all the      \b=
+=\b groups the bots knows will be displayed.  This        \b=
+=\b command may be restricted.  If it is restricted, you  \b=
+=\b will be informed of that fact by the bot.             \b=
+=========================================================
+%end #Rap
+%subject Sing
+=========================================================
+= \bUsage\b: sing <group>                          \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will sing a song from the <group> you specify.   \b=
+=\b If you do not specify a group, a list of all the      \b=
+=\b groups the bots knows will be displayed.  This        \b=
+=\b command may be restricted.  If it is restricted, you  \b=
+=\b will be informed of that fact by the bot.             \b=
+=========================================================
+%end #Sing
+%subject Dance
+=========================================================
+= \bUsage\b: dance                                 \bLevel\b: 0 =
+=-------------------------------------------------------=
+= \bThis will make the bot do a randomly selected dance.\b  =
+=\b This command may be restricted.  If it is restricted, \b=
+=\b you will be informed of that fact by the bot.         \b=
+=========================================================
+%end #Dance
+%subject Bulletin
+=========================================================
+=\b Usage\b: bulletin <bulletin to add>            \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will add a bulletin to SucKeR's bulletin list.   \b=
+=\b If you do not specify a bulletin, the bulletin list   \b=
+=\b will be displayed to you.  This command requires DCC  \b=
+=\b CHAT.                                                 \b=
+=========================================================
+%subject Dice
+=========================================================
+=\b Usage\b: dice                                  \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will play a really simple game of dice with you. \b=
+=\b No real point to this command, just a little bot-toy. \b=
+=========================================================
+%end #Dice
+%subject ASCII
+=========================================================
+=\b Usage\b: ascii <pic_name>                      \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will display an ascii picture to you.  If you do \b=
+=\b not specify a picture, the list of available pictures \b=
+=\b will be displaced.  This command requires DCC Chat.   \b=
+=========================================================
+%subject 8Ball
+=========================================================
+=\b Usage\b: 8ball <question>                      \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This is the same as those executive toys.  Will reply \b=
+=\b with a simple answer.  Another bot-toy.               \b=
+=========================================================
+%end #8ball
+%subject News
+=========================================================
+=\b Usage\b: news                                  \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will display the news file to you.  This command \b=
+=\b requires DCC Chat.                                    \b=
+=========================================================
+%end #news
+%subject Bonk
+=========================================================
+=\b Usage\b: bonk <nick>                           \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will make the bot "bonk" a user with a random    \b=
+=\b object.  This command may be restricted.              \b=
+=========================================================
+%end #bonk
+%subject Ping
+=========================================================
+=\b Usage\b: ping                                  \bLevel\b: 0 =
+=-------------------------------------------------------=
+=\b This will cause the bot to reply with a "Pong" which  \b=
+=\b will allow you to gauge your lag in relation to the   \b=
+=\b bot.                                                  \b=
+=========================================================
+%end #ping
+%subject Users
+=========================================================
+=\b Users and Levels on the Bot                           \b=
+=-------------------------------------------------------=
+=\b The average user will have a level of 0 on the bot.   \b=
+=\b This is fine.  You don't need any more than that.  A  \b=
+=\b 0 level user can access all the commands located in   \b=
+=\b this helpfile, if they are not restricted.  If it is  \b=
+=\b necessary, you will be added to the bot, with a user  \b=
+=\b level.  When that happens, you will be shown how to   \b=
+=\b use the bot.  Please do not ask to be added to the    \b=
+=\b userlist, as this is not possible.  Thanks...         \b=
+=========================================================
+%end
+%subject Services
+=========================================================
+=\b File Transfer Services                                \b=
+=-------------------------------------------------------=
+=\b Normally a fRitE+ has DCC file transfer capabilities, \b=
+=\b enabling a fRitE+ bot to be used as an "IRC FTP site" \b=
+=\b Because this is a development bot, and not for        \b=
+=\b release, no file transfer services are provided by    \b=
+=\b this bot.                                             \b=
+=========================================================
+%end
+%subject SucKeR
+=========================================================
+=\b SucKer is a fRitE+                                    \b=
+=-------------------------------------------------------=
+=\b The fRitE+ is an extension to the fRitE bot.  Due to  \b=
+=\b the fact that OffSpring no longer expressed intrest   \b=
+=\b in coding the fRitE, I decided to step-in, and keep   \b=
+=\b the bot alive as it were.  Anyways, the fRitE+ is the \b=
+=\b series developed out of it. Type /msg SucKeR news for \b=
+=\b the latest in the developments.                       \b=
+=========================================================
+%end

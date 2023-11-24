@@ -1,0 +1,6 @@
+cd src
+gunzip frite+_source.tar.gz
+tar -cvf frite+_source.tar
+rm frite+_source.tar
+cd ..
+

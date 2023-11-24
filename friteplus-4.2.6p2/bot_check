@@ -1,0 +1,40 @@
+#!/bin/csh
+#
+# To check for your bot every 10 minutes, put the following line in your
+# crontab:
+#    0-59/10 * * * *   /home/warren/Bots/SucKeR/bot_check
+# To create a crontab, create a file called "crontab" and put that line
+# in it. (Replacing the directory to make yours).  Then type 
+# crontab -r crontab
+#
+# To use this script, simple replace all the "SucKeR"'s with your bots binary
+# name, and change the directories to match your directories.
+#
+# WARNING!!!!  Make sure the ps flags are correct!  If they are not, your
+# bot will clone into infinity!!!!!!  You have been warned..
+# 
+# This script has been tested under Linux (v1.1.59 --> 1.1.28)
+
+set chkbot=`ps xu | grep "SucKeR" | awk '$11=="SucKeR"||$11=="(SucKeR)" { print $5 }'`
+if "$chkbot" == "" then
+  echo ""
+  echo "Couldn't find the bot running.  Reloading it..."
+  echo ""
+  set oldcwd=$cwd
+# change this to your home directory:
+ cd /home/warren/Bots/SucKeR
+
+# change this to your eggdrop command line:
+  SucKeR
+  cd $oldcwd
+  unset oldcwd
+else
+	if "`echo YES | awk '$chkbot >= 1000 { print $1 }'`" == "YES" then
+		kill -15 `ps xu | grep "SucKeR" | awk '$11=="SucKeR"||$11=="(SucKeR)" { print $2 }'`
+		/home/warren/Bots/SucKeR/bot_check
+	endif
+
+endif
+unset chkbot
+
+

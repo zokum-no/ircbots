@@ -1,0 +1,31 @@
+                             ######            #######
+                      ###### #     #  #  ##### #          #
+                      #      #     #  #    #   #          #
+                      #####  ######   #    #   #####    #####
+                      #      #   #    #    #   #          #
+                      #      #    #   #    #   #          # 
+                      #      #     #  #    #   #######
+
+
+Upgrading from a 4.0 or 4.1x fRite
+----------------------------------
+If you are now faced with the troubles up upgrading from an earlier fRite,
+this document should help you get up and running in the least amount of
+time.  First off, copy all of your *.list files(User, Shit, and Protect)
+into the bot_lists/ directory.  Edit your user.list file, and make sure
+that you give yourself level 175 on the bot.  This is required if you
+want access to all the commands.
+
+Your infile.cfg can still be used.  Copy your old infile.cfg into the
+fRitE+ main directory, and then edit it to point the lists to the
+bot_lists/ directory.  (Eg, bot_lists/user.list bot_lists/shit.list)
+
+Sorry, but you CANNOT use your old config.h file.  You are going to have
+to edit the default config.h file to match your current needs.  There are
+alot of new variables defined in the config.h now, so you need to have
+them all in order to be able to compile the bot.
+
+The help system has been redone, breaking it into two sections, 
+regular help, and ophelp.  There are two new default files provided
+with the new fRitE+.  If you want to customize the news, publics,
+bulletins, etc, all the *.bot files are in the bot_files/ directory.

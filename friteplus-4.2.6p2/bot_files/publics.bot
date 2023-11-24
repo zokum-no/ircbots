@@ -1,0 +1,43 @@
+%n "*7-Up* " 1 1
+%r 1
+	a digs around in the fridge and tosses a 7-Up to \n
+%n "*thanks*" 1 1
+%r 1
+	s Not a problem \n !!!! :)
+%n "*lo*" 1 1
+%r 1
+	s 01110100 00100111 01010110 01010110 01000111 10010110 11100110 01110110 00110111
+%n "*bite*me*" 1 1
+%r 1
+	s *cHoMp* *ChOmP* *CHoMP*
+%n "*icky*" 1 1
+%r 1
+	s Sorry to hear that..
+%n "*replace*diode*" 1 1
+%r 3
+	s Thanks \n !  Now I can just sit here and wait until they rot out again...
+	s What a waste...  I have the brain capacity of a planet, 
+	s but I'm stuck here answering the door..
+%n "sick*" 1 1
+%r 3
+	s I've got this terrible pain in all the diodes down my left side,
+	s I mean I've asked for them to be replaced, but nobody ever listens..
+	s Oh God, I'm so Depressed!!
+%n "*weed*" 1 1
+%r 3
+	a pulls out a baggie and rolls up a nice bean...
+	a sparks up the joint and takes a deep toke...
+	a tosses it to \n ..  SMoKE uP d00D!!
+%n "*feel*bad*" 3 1
+%r 1
+	a feels for ya \n ..  I really do..
+%r 2
+	a tosses \n a lollipop..
+	s Cheer Up!!!
+%r 1
+	s Sorry, but I'm depressed right now \n!!  Can't help you!
+%n "stupid bot" 1 0
+%r 3
+	s St00pid bot?!?!?  St00pid Bot?!?!?!?
+	s Sure, I put up with you idiot users all day, and all you can say is st00pid bot?
+	a *whacks* \n ..  Shaddup!!  Until you have the same IQ as I do, don't bitch!

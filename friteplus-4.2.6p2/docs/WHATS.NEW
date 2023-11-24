@@ -1,0 +1,107 @@
+                             ######            #######
+                      ###### #     #  #  ##### #          #
+                      #      #     #  #    #   #          #
+                      #####  ######   #    #   #####    #####
+                      #      #   #    #    #   #          #
+                      #      #    #   #    #   #          # 
+                      #      #     #  #    #   #######
+
+
+
+What's New In the fRitE+ Series?
+--------------------------------
+Well, alot of stuff is new in the fRitE+ series, but here's what comes
+to mind right away :
+
+  * OPHELP command has been added.   This allows you  to give  ChanOps, or
+    people  with  a minimum  level,  access to  a help file  that explains
+    what  the userlevel  bot commands do,  without giving that information
+    to every lamer on the IRC.
+
+  * RULES command has been added.   This is a dynamic list  that other OPs 
+    can add to, using the ADDRULE command.
+
+  * POET  command  has been  added.   This will spout some form of  poetry
+    out  to the channel.   This is dynamic list  that can be added to with
+    the APOET command.
+
+  * Userlevel  175  has been  added.   This level should  be restricted to
+    only  the bot owner,   and possibly one  other trusted person.    This
+    command  level  has access to the  REBOOT, DIE, QUIT,  DO, REPLY, CTCP
+    and  other  commands  that  can  be  used against  the channel/bot.  I
+    have  added a safety trap  that will not allow any user to be added to
+    the  list at 175,  and that  175 level  commands  cannot  be  effected
+    by the CHACCESS command.
+
+  * Made  fRitE+  tougher to  kill.  Some  of  the  problems, such  as the
+    NOTE  core  command,  and the PUBLICS core, have been removed.  As far
+    as  I  can tell, this bot cannot  be cored  off of the  IRC.   This is
+    not a  guarantee  however!   I will NOT  guarantee it can't  be cored!
+
+  * The file structure has been changed.   I made the  tree to look like :
+		main --\
+                       -- src
+                       -- docs
+                       -- bot_files
+                       -- bot_lists
+                       -- bot_logs
+    All  the bot  files have  been  pointed  to  the  directories.   Their
+    purpose  should  be   explainatory.    "src" is  all the  source code,
+    "docs"    contains   any   documentation   I  may  have  written   up, 
+    "bot_files"   is   all   the   *.bot   files,  "bot_lists" contain the 
+    three  lists,  user,  shit,  and  protect.   "bot_logs" is  where  all
+    the logs will be placed by default.
+
+  * Speaking of docs,  I have attempted  to write some  documentation for
+    fRitE+.   Most of  it is  directed  towards the  average  user who is
+    trying to  set  up  the fRitE+.   I may include more advanced info in
+    the future.
+
+  * Thanks to  code that was  given to me by  Run from the ircd v3.0 code
+    there  is now a core file  written if  DBUG is defined.   If only you
+    knew how long I was searching for a way to do this...
+
+  * Alot of the  compiler warnings  have been  squashed.  There are still
+    warnings  displayed, these  shouldn't  effect  the  running  of  your
+    bot.  I'm working on this, but don't expect miracles...
+
+  * Changed  the LIST command so  that is now  accepts a parameter <lvl>.
+    If a level is given it will display commands only for that userlevel.
+    Users cannot  list commands higher than their level.  Also added some
+    cosmetic changes to the way the list is displayed.
+
+Things that may (or may not) be added
+-------------------------------------
+  * A CAPS kick that  will work on a user structure,  allowing it to keep
+    better track  of who's  using CAPS, and at  what level  to kick  that
+    person.
+
+  * The ASSTLVL will be more fully implemented, allowing for better
+    security.
+
+  * Auto-Shitlisting that works... :/
+
+  * The EMAIL section for E-Mailing files to a user on request.
+
+  * Changing  the LIST command to accept a <level> flag that will display
+    on commands  that  are ==  the  <level> given,  with a check  so that
+    users can't display a command who's <level> is <= <userlevel>
+
+  * Better  flood protection  that will check the u@h on a person sending
+    3 commands in 1  second.  If 4  commands  come in within 1 second, it
+    checks  the @h of all  the people who  sent the command.  If the @h's
+    are the same, it will ignore *!*@<flooding_host>
+
+  * On  the  same  note,  instead of  using the IGNORE  command, make the
+    bot try a SILENCE command first,  and if that returns an error,  then
+    do an IGNORE command.  This will make the bots more Undernet
+    compatible.
+
+  * A parseable command file that would contain all the commands, their
+    levels, DCC/SHOW flags, functions and comments.  This would be the
+    beginning of having a dynamic CHACCESS command that would change the
+    commands level permanently.
+
+  * If you can think of something, or have added something, please let me
+    know so I can add it to the bot.  All code  sent in will be credited.
+    Send comments/suggestions to pyber@alias.undernet.org

@@ -1,0 +1,32 @@
+# Effort to make some sort of more configurable helpfile..
+#
+# Meaning of some commands (start with ) %
+# subject - start a subject
+# end     - end it
+#
+# Commands that should be added:
+# level(command, format) i.e. %level(useradd, "(u/s)") -> (100/0)
+#
+# Available escape sequences:
+# \b \u \i      - bold, underline, inverse
+# \n            - nickname of bot
+# \v            - bot's versionnumber
+# \\            - \
+# \#            - #
+# \c            - command character -os
+#
+# I really should update this stuff more often....
+#
+%subject Standard
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=\b ChanOp Help Section -- All of the commands listed in  \b=
+=\b this help section require various userlevels on the   \b=
+=\b bot.                                                  \b=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=\b Topic\b     = \bComments\b                                  =
+=-----------=-------------------------------------------=
+= \bCommands\b  = \bDisplay a Command List\b                    =
+=-----------=-------------------------------------------=
+=\b ChanOp Help\b -\b Only on a fRitE+\b                        =
+=========================================================
+%end# Standard

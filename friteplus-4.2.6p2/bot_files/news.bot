@@ -1,0 +1,7 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\bWARNING:\b There is a security hole in the
+fRitE+ ..  To remove the hole, edit 
+frite_add2.c and comment out the
+SING and LYRICS command.  Patch is in
+the works.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

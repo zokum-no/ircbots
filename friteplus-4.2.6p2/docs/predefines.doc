@@ -1,0 +1,17 @@
+                             ######            #######
+                      ###### #     #  #  ##### #          #
+                      #      #     #  #    #   #          #
+                      #####  ######   #    #   #####    #####
+                      #      #   #    #    #   #          #
+                      #      #    #   #    #   #          # 
+                      #      #     #  #    #   #######
+
+
+Preprocessor Definitions
+------------------------
+As per this release (v4.3) of the fRitE+, the preprocessor definitions are
+not implimented.  What they will provide in the future however is a 
+way to reduce the binary size, if you are not going to be using
+some of the features of the bot.  Look for these features in fRitE+ v4.5
+
+				- Pyber

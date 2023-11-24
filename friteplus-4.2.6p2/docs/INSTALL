@@ -1,0 +1,55 @@
+                             ######            #######                       |
+                      ###### #     #  #  ##### #          #
+                      #      #     #  #    #   #          #
+                      #####  ######   #    #   #####    #####
+                      #      #   #    #    #   #          #
+                      #      #    #   #    #   #          # 
+                      #      #     #  #    #   #######
+                                   =-- v4.3 --=
+
+
+In the beginning...
+-------------------
+I'll keep this short and simple.  fRitE's have been the only bot I've run that
+have been stable, and back-door free.  This isn't to say that they weren't
+without they're quirks.  Anyways, OffSpring has let it known that he doesn't
+want to code the fRitE's anymore, so I decided to try my hand.  I started on
+this series, which I call fRitE+.  I worked on a few of the functions that
+were not working properly, and added a few more.  See the "whats.new" file to
+find out what has been changed.
+
+I've worked my butt off to organize the files, and make the compile routine
+like all these changes.  I hope this directory structure makes it easier to 
+configure the bot, and keep things sane.
+
+Please report any bugs to Pyber (pyber@alias.undernet.org).  I'll try to sort
+out the problem for ya.  Please include an err.log any core files?  Here
+is an easy way to create a good bug log.
+
+	1) Compile with #define DBUG
+	2) Start the bot with <botname> -b > trace.log &
+	3) gzip the trace.log and mail it to me with a description
+	   of any error messages and what you were doing.
+
+
+Installing a fRitE+ the easy way.
+---------------------------------
+Ok, to install a fRitE+ the easy way, simple follow these easy steps...
+
+	1) Edit the src/config.h file and make the appropriate changes.
+	   See docs/defines for more information on this.
+	2) Edit the src/Makefile file and make the appropriate changes.
+	   Changes for this section are heavy commented.
+	3) Edit the infile.cfg file and make the appropriate changes.
+	   See docs/config_file.doc
+	4) Type "make" in the Bot's main dir.
+	5) Run your bot.
+
+Due to the large number of people unable to configure their bots properly, and
+the fact that there have been a large number of "fake fRitE"'s that have been
+appearing on "#Chat", the config.h, Makefile, and infile.cfg will NOT work
+until you make the correct changes.  This is our attempt at idiot-proofing the
+bot.
+
+----
+04/11/95

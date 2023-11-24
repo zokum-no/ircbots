@@ -1,0 +1,150 @@
+                             ######            #######
+                      ###### #     #  #  ##### #          #
+                      #      #     #  #    #   #          #
+                      #####  ######   #    #   #####    #####
+                      #      #   #    #    #   #          #
+                      #      #    #   #    #   #          # 
+                      #      #     #  #    #   #######
+                                    =- v4.3 -=
+
+
+Definitions in the config.h file
+--------------------------------
+Here's a quick explanation of the #define's found in the config.h
+file.  Don't expect much in the way of verbosity..
+
+IRCNAME		- This defined the nick of the bot.
+
+USERNAME	- This is the username of your bot on the IRC.  This
+		  should be the account name from which your bot is
+		  run.  If not, this could lead to troubles with the
+		  IRCops.
+
+IRCGECOS	- This is the IRC Name of your bot.  It's what shown
+		  between the ()'s on a whois.
+
+PUBLIC_NICK	- This is the name which your bot will respond to, like
+		  fRitE or SucKeR.  If you are using the publics, this
+		  must be defined.
+
+USERFILE	- This defines where the bot will find the userlists.
+		  This can also be set in the infile.cfg, but this is the
+		  hard coded-value.
+
+SHITFILE	- This defines where the bot will find the shitlists.
+		  This can also be set in the infile.cfg, but this is the
+		  hard coded-value.
+
+PROTFILE	- This defines where the bot will find the protlists.
+		  This can also be set in the infile.cfg, but this is the
+		  hard coded-value.
+
+DCCLOGFILE	- This defines where the bot will put the log of DCC
+		  transfers.
+
+ERRFILE		- This defines where the bot will but the log of ERRORS.
+		  Remember, if you are a sending a bug report, an
+		  error log is appriecated.. :)
+
+LOGFILE		- This defines where the bot will put the channel logs.
+	 	  The bot will create one logfile per channel, as well
+		  as keeping a seperate command log.
+
+FILEROOTDIR	- This defines the "root" directory for you file 
+		  transfers.  The bot performs a chroot() on that dir,
+		  so the users cannot change into the parent dir.
+
+CONTENTSFILE	- This defines where to find the contents file.
+
+FILEUPLOADDIR	- This is where the bot will place all the incoming files.
+
+PUB_FILE	- This is where the public reactions are stored. 
+
+HELPFILE	- This defines where the bot can find the help file.
+
+OPHELPFILE	- This defines where the bot can fine the ophelp file.
+
+NOTEFILE	- This defines where the bot can read/write the note file.
+
+BONKFILE	- This is the file with the bonk objects.
+
+QUOTEFILE	- This is the files with the discordian quotes.
+
+TOPICFILE	- This file stores the random topics.
+
+BULLFILE	- This is where the bulletins are stored.
+
+RULEFILE	- This is where the rules are stored.
+
+POETFILE	- This is where the poetry is stored.
+
+NEWSFILE	- This is where the news is stored.
+
+LIBFILE		- For the catalog of ASCII art.
+
+LYRICFILE	- For the catalog of songs.
+
+SPLATFILE	- This is where the splatter kicks is stored.
+
+DANCEFILE	- This is where the  dances are stored.
+
+REPLYFILE	- Domn't touch this definition or file.
+
+INSULTFILE	- The insults are stored in here.
+
+PICDIR		- This is the directory where the bot can find it's
+		  picture files.  The directory should end with a 
+		  trailing "/".
+
+SONGDIR		- This is the directory where the bot can find it's
+		  song files.  The directory should end with a 
+		  trailing "/".
+
+ASSTLVL 125	- This is the assistant level.  Right now this is only
+		  functional in a few commands.  Leave it as is, or raise
+		  it to 150.  It should not be less than 125.
+
+KICKSAYLVL	- Anybody with a level greater than the KICKSAYLVL will
+		  be excempt from being kicked if they say a banned 
+		  word or phrase.
+
+ENFORCE_MODES	- Define this if you want mode enforcement.
+
+LOG		- Define this if you want channel loggins on by default.
+
+GREET		- Define this if you want the bot to greet people.  If
+		  this is defined, the bot will great anybody with a level
+		  equal to or greater than the ASSTLVL.
+
+PUBLICS		- Define this if you want public reactions.
+
+
+SING		- Define this if you want the bot to be able to sing.
+
+SHITCOMMENT	- This is unused at the moment.  You can leave as is.
+
+DCC_IDLETIMEOUT 
+DCC_WAITTIMEOUT 
+DCC_MAXFILESIZE - For maximum stability, I recommend leaving these values as
+		  is.  Their meanings should be self-explanitor.  If you do
+		  not want large files DCCed to the bot, reduce
+		  DCC_MAXFILESIZE.  It's value is in bytes.
+
+AUTO_DCC	- Define this if you want the bot to autmatically start a 
+		  DCC chat if it is required for the command.
+
+AUTO_OPLVL	- This is the level at which people entering the channel will
+		  be auto-opped.
+
+PREFIX_CHAR	- This is the prefix character for public commands.
+
+CFGFILE		- This is the default configuration file to use, if none is
+		  specified on the command line.
+
+DBUG		- Define this if you want debugging.
+
+If a #define appears in the config.h, but not in this document, it is best to 
+leave the #define alone, unless you understand what it does.  All #define's are 
+set by default to allow for the most flexibility and stability.
+
+

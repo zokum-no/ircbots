@@ -1,0 +1,90 @@
+#
+# For a description of the syntax of this configuration file,
+# see the Configure script.
+#
+
+comment 'General Bot Configuration'
+
+txt 'IRC Nick' IRCNAME bot
+txt 'IRC Username' USERNAME bot
+txt 'Public Nickname' PUBLIC_NICK bot
+
+comment 'User/Shit/Prot Lists.  Defaults should work.'
+
+txt 'Userlists' USERFILE bot_lists/user.list
+txt 'Shitlists' SHITFILE bot_lists/shit.list
+txt 'Protlists' PROTFILE bot_lists/shit.list
+
+comment 'Logs Files.  Defaults should work.'
+
+txt 'Channel Logs' LOGFILE bot_logs/chan.log
+txt 'DCC Transfer Logs' DCCLOGFILE bot_logs/dcc.log
+txt 'ERROR Logs' ERRFILE bot_logs/err.log
+
+comment 'Support Files.  Defaults should work.'
+
+txt 'Publics File' PUB_FILE bot_files/publics.bot
+txt 'Help File' HELPFILE bot_files/help.bot
+txt 'OPHelp File' OPHELPFILE bot_files/ophelp.bot
+txt 'Note File' NOTEFILE bot_files/note.bot
+txt 'Bonk File' BONKFILE bot_files/bonk.bot
+txt 'Quote File' QUOTEFILE bot_files/quote.bot
+txt 'Bulletin File' BULLFILE bot_files/bulletin.bot
+txt 'Channel Rules File' RULEFILE bot_files/rules.bot
+txt 'Poetry File' POETFILE bot_files/poet.bot
+txt 'News File' NEWSFILE bot_files/news.bot
+txt 'ASCII Library Index' LIBFILE bot_files/ascii_lib.bot
+txt 'Lyrics Index File' LYRICFILE bot_files/lyrics.bot
+txt 'SplatterKicks File' SPLATFILE bot_files/splatk.bot
+txt 'Dance Moves File' DANCEFILE bot_files/dance.bot
+txt 'Replies File' REPLYFILE bot_files/replies.bot
+txt 'Insults File' INSULTFILE bot_files/insult.bot
+txt 'Topics File' TOPICFILE bot_files/topic.bot
+
+comment 'Flood/Channel Protection Stuff.'
+
+int 'Flood Rate (# of line)' FLOOD_RATE 5
+int 'Flood Interval (# of seconds)' FLOOD_INTERVAL 1
+int 'Ignore Time (Seconds)' FLOOD_TALKAGAIN 30
+int 'CAPs kick percent' CAPP 90
+int 'Minimum Line Length for a CAPS check' CAPL 10
+
+comment 'DCC File Transfer Stuff.'
+
+txt 'Root File Directory' FILEROOTDIR /tmp/
+txt 'Contents File' CONTENTSFILE /tmp/INDEX
+txt 'Upload Directory' FILEUPLOADDIR /tmp/
+int 'DCC Idle Timeout (# of Seconds)' DCC_IDLETIMEOUT 120
+int 'DCC Wait Timeout (# of Seconds)' DCC_WAITTIMEOUT 90
+int 'DCC Maximum file size (# of Kbytes)' DCC_MAXFILESIZE 5120
+booln 'Auto-Start DCC Chats' AUTO_DCC y
+int 'Maximum files to queue' LISTSIZE 128
+
+comment 'Miscellaneous Definitions.'
+
+booln 'Enforce Channel Modes ?' ENFORCE_MODES y
+booln 'Logging ?' LOG y
+booln 'Greetings ?' GREET y
+booln 'Public Reactions ?' PUBLICS y
+booln 'Singing ?' SING y
+booln 'Debugging ?' DEBUG n
+
+comment 'Everything else required.  Defaults will work.'
+
+int 'AutoOp level' AUTO_OPLVL 50
+int 'Assistant Level' ASSTLVL 125
+int 'KickSay Level' KICKSAYLVL 45
+txt 'Prefix Command Character' PREFIX_CHAR *
+txt 'Default configuration file' CFGFILE infile.cfg
+txt 'Directory with ASCII pictures' PICDIR pics/
+txt 'Directory with SONG files' SONGDIR songs/
+
+comment 'Unless you know what you are doing, just accept the defaults.'
+
+int 'Wait Time in seconds' WAIT_SEC 40
+int 'Wait Time in seconds' WAIT_MSEC 0
+int 'Ping Interval' PINGINTERVAL 25
+int 'Ping Send Interval' PINGSENDINTERVAL 90
+int 'Reset Interval' RESETINTERVAL 30
+int 'Maximum # of bots' MAXBOTS 5
+int 'Maximum # of servers' MAXSERVER 10
