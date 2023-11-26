@@ -1,0 +1,18 @@
+Hi botters. 
+
+This divbot is modified from comstud's hackbot, with bugs fixed here and 
+there and few functions added.
+
+to START the bot:
+
+1. type "divinstall", then follow the directions to setup DIVSET. 
+
+2. load the bot by "divbot"
+
+3. learn how to use the bot by using the help function:
+		/msg BOTNICK divbot help topics
+ 
+If anything goes wrong you can type "killbot" to terminate it.
+
+
+Curl

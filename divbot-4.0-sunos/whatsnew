@@ -1,0 +1,23 @@
+=divbot 4.0=
+
+
+i forgot most of the changes in this version.  figure them out yourself...
+
+some of them are:
+
+additional protection level.  now level 1 means unban/no re-op, level 2 
+means both unban and reop.  and everything else shift one number up.
+
+you can specify SETFL, SETTOL, and SETNT in divset. (see the sample
+divset)
+
+the bot is not stable yet.
+i have a log file for bugs. called "divbug"
+if you find lines in the logfile, you can email me and i will see what i 
+can do.
+
+
+mail me if you found problems.  have fun
+
+curl
+

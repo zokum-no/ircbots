@@ -1,0 +1,32 @@
+Hi botters. 
+
+This divbot is modified from comstud's hackbot, with bugs fixed here and 
+there and few functions added.
+
+Any problem just email msg me while i am on or email me at:
+		curl@rabi.phys.columbia.edu
+welcome all comments, suggestions.. blah blah
+
+Ok, first of all..  i am lazy..  i usually don't update any changes in 
+a file (will, i used to, and maybe i should begin again..)  So i can't 
+tell you now what's been changed/fixed/added.  figure those parts urself :)
+
+In the version I released, I disabled the colliding functions for few 
+good purposes.  don't want to ruin this nice chatting place and don't 
+want to get backfired someday.
+
+Anyway, to START the bot:
+
+1. type "divinstall", then follow the directions to setup DIVSET. 
+
+2. load the bot by "divbot"
+
+3. learn how to use the bot by using the help function:
+		/msg BOTNICK divbot help topics
+ 
+If anything goes wrong, that you cannot control it, blah blah, 
+or the cputime/mem went up too high, you can type "killbot" to terminate it.
+
+
+Finally, have fun and good luck. 
+							       Curl
