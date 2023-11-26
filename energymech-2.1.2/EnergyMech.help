@@ -1,0 +1,805 @@
+:topics
+Help Topics for EnergyMech -Latest Revision by: Polygon-
+________________________________________________________________
+  Users           -            Help with User Commands
+  Channel         -            Help with Channel Commands
+  Toggles         -            Help with Toggles
+  Sets            -            Help with Sets
+  UrbanWar        -            Help with War Commands
+  BotInteraction  -            Help with Bot Specific Commands
+  Information     -            Information on bot events
+  DCC             -            Help with DCC commands
+________________________________________________________________
+Type -helpfull for a complete list of commands available to you
+Type -help <topic> for listing of commands in that section     
+________________________________________________________________
+:DCC
+Help for DCC Commands
+________________________________________________________________
+  cd     get     ls     pwd     queue     cqueue     dcclist   
+________________________________________________________________
+Type -help <command name> for help on that command            
+________________________________________________________________
+:Users
+Help for User Commands
+________________________________________________________________
+  add        del           aop          raop        cslvl     
+  who        userhost      chaccess     greet       rgreet    
+  shit       rshit         prot         rprot       protnick  
+  rprotnick  clvl          showusers    names       banlist   
+  loadall    saveall       loadlists    savelists   loadkicks 
+  savekicks  loadlevels    savelevels   userlist    shitlist  
+  nicklist   greetlist     search       adduser     deluser   
+  seen       showseen      match        cmatch      cdel      
+  clearshit  match                                            
+________________________________________________________________
+Type -help <command name> for help on that command            
+________________________________________________________________
+:Channel
+Help for Channel Commands
+________________________________________________________________
+  getch        ub          k           topic          join    
+  leave        part        server      steal          rsteal  
+  down         up          op          kb             sb      
+  cycle        showidle    b           deop           invite  
+  skb          mode        screwban    sc             leave   
+  update       cstats      wall        4op                    
+________________________________________________________________
+Help for mass commands
+________________________________________________________________
+  mopu         mub         mop         mkb            mubf    
+  mdeop        mdeopnu     mknu        mk                     
+________________________________________________________________
+Type -help <command name> for help on that command            
+________________________________________________________________
+:Information
+Information Commands
+________________________________________________________________
+   access      idle        stats       rollcall      nsl      
+   info        version     chanstats   channels      vers     
+   news        addnews     erasenews   addsite       sites    
+   erasesites  finger      whois                              
+________________________________________________________________
+Type -help <command name> for help on that command            
+________________________________________________________________
+:BotInteraction
+Help for Commands that affect the bot
+________________________________________________________________
+   me          say         exec        heart          forget  
+   spawn       verify      ping        kicks          channels
+   spymsg      rspymsg     report                     spylist 
+   restrict    collect     links       forget                 
+   do          setpass     chat        topkicks               
+   msg         nick        limit       setshitreason          
+   cmdchar     relogin     die         spy                    
+   rspy        heart       last        away                   
+   oper        kill        kline                              
+________________________________________________________________
+Server Commands
+________________________________________________________________
+   server    serverlist    addserver    splits    topsplits   
+________________________________________________________________
+Random Commands
+________________________________________________________________
+   randsay    insult    yomama    beavis    pickup    bong    
+   randtopic  randaway  randnick                              
+________________________________________________________________
+Type -help <command name> for help on that command            
+________________________________________________________________
+:Toggles
+Help for Toggles
+________________________________________________________________
+  TogSo      TogBk     TogCk    TogCC     TogIk    TogTop     
+  TogAop     TogProt   TogPub   TogShit   TogSD    TogEnfm    
+  TogRk      TogSS     TogKS    TogDCC    TogIC    TogWL      
+  TogAS      TogINV    TogCtl   TogSpy    TogIwa   TogGreet   
+  TogAOC     TogRAOC   TogCloak TogRV     TogRF    TogServLog 
+  TogSendLog TogAUP    TogAAWAY                               
+________________________________________________________________
+Usage: -tog <channel> <toggle>                                
+________________________________________________________________
+Type -help <command name> for help on that command            
+________________________________________________________________
+:Sets
+Help for Sets
+________________________________________________________________
+   SetBKL     SetCKL    SetMDL     SetMBL      SetMKL   SetMPL
+   SetFL      SetFPL    SetNCL     SetIKT      SetMAL         
+   SetAUB     SetBT     SetENFM    SetBanModes SetOpModes     
+   SetDALevel SetDAOP   SetDProt   SetAUP      SetAAWAY       
+________________________________________________________________
+Usage: -set <channel> <setname> <argument>                    
+________________________________________________________________
+Type -help <command name> for help on that command            
+________________________________________________________________
+:UrbanWar
+Help for War commands
+________________________________________________________________
+   getbomb      flood     randflood  tsunami     megaflood    
+   nrandflood   assault   flash5     flashmsg    flash3       
+   mflash       tspoof    pingflood  versionflood             
+________________________________________________________________
+Type -help <command name> for help on that command            
+________________________________________________________________
+:Help
+Usage: help <topics/command/level/pattern>
+
+     Topics  - Shows categories of help entries.
+     Command - Displays help entry for specified command
+                 Example: -help kick
+     Level   - Displays all commands for specified level
+     Pattern - Shows all help entries matching *pattern*
+                 Example: -help *spy*
+:Ping
+Usage: Ping
+   Makes the bot respond with one of 50 selected elite sayings
+:Stats
+Usage: Stats [<channel>] [<nick or userhost>]
+   Shows stats for a person on a certain channel
+:names
+Usage: names <channel>
+   Shows names on the specified channel
+:cslvl
+Usage: <channel or *> <nick or userhost> <newlevel>  
+   Changes the shitlist level on the specified person
+:collect
+Usage: collect <channel>
+   Collects information on a channel (same as 'grab')
+:grab
+Usage: grab <channel>
+   Collects information on a channel (same as 'collect')
+:setshitreason
+Usage: setshitreason <channel or *> <nick or userhost> <newreason>  
+   changes the shitreason on a shitlisted user on
+   a certain channel
+:links
+Usage: links
+   Gives you a list of active servers on the network
+:News
+Usage: news
+   Shows you the bot's news file
+:Info
+Usage: info
+   Shows version data and bot uptime
+:Version
+Usage: version
+   Returns the version of EnergyMech that is running
+:Access
+Usage: access [<channel>] [<nick or userhost>]
+   Shows someone's access level
+:Files
+Usage: files
+   Lists the files available for DCC on the bot
+:Flist
+Usage: flist
+   Lists the files available for DCC on the bot
+:Send
+Usage: send <filename>
+   Sends the given filename to you through DCC
+:Get
+Usage: get <filename>
+   Sends the given filename to you through DCC
+:Auth
+Usage: auth <passwd>
+   This verifies that you are who you claim to be
+:Passwd
+Usage: passwd <old_password> <new_password>
+   Changes your password on the bot
+Note: Passwords are case-sensitive and are crypted so not even bot
+      runners will know your password
+:Aop
+Usage: aop [<channel>] <nick or userhost>
+   Auto-ops someone on a certain channel
+:Raop
+Usage: raop [<channel>] <nick or userhost>
+   Stop auto-opping someone on a certain channel
+:Add
+Usage: add  <channel or *> <nick or userhost> <level> [<aop>] [<prot_level>] [<passwd>]
+   Adds someone on all chanels (*) or a certain channel
+   Level  - can be between 0 and 99, inclusive
+   AOP    - either 0 or 1 (0 = no, 1 = yes)
+   Prot   - can be 0 through 4
+            0 - no protection
+            1 - reop/unban, do nothing to offender
+            2 - reop/unban, deop offender
+            3 - reop/unban, kick offender
+            4 - reop/unban, kickban offender
+   Passwd - Assigns the person a password
+Note: If no args are given except the userlevel, all others are
+      assumed to be 0 with no passwd
+:Clvl
+Usage: clvl [<channel>] <nick or userhost> <level>
+   Changes the userlevel of someone on a certain channel
+Note: the level must be less than or equal to yours on that
+      channel
+:Del
+Usage: del <channel or *> <nick or userhost>
+   Deletes someone on all channels (*) or a certain channel
+:Shit
+Usage: shit <channel or *> <nick or userhost> <level> [expire] <reason>
+   Shitlists someone on all channels (*) or a certain channel
+   level - can be 1 through 3
+           1 - doesn't let the person be opped
+           2 - will kb the person
+           3 - rebans the person when unbanned by anyone
+   expire - the number of days the shitlist will be good for (default is 30)
+   reason - reason for the shitlist...displays it on kickban
+Note: The bot checks for shitlisted users on join, nick switch, and
+      when the bot is opped
+:Restrict
+Usage: restrict <level>
+   Restricts the bot to a certain level...users with a level less than
+the restrict level will not be able to do commands
+Note: a level of 0 removes restrict
+:RShit
+Usage: rshit <channel or *> <nick or userhost>
+   Removes someone from the shitlist
+:Prot
+Useage: prot <channel or *> <nick or userhost> <level>
+   Protects someone on a certain channel or all channels (*)
+   level - can be 1 through 4
+           1 - reop/unban, do nothing to offender
+           2 - reop/unban, deop offender
+           3 - reop/unban, kick offender
+           4 - reop/unban, kickban offender
+:RProt
+Usage: rprot <channel or *> <nick or userhost>
+   Stop protecting someone on a certain channel or all channels (*)
+:ChAccess
+Usage: chaccess <command> <level>
+   Changes the level needed to do a command
+Note: the level cannot be set to a level higher than yours
+:Chat
+Usae: chat
+   The bot will /DCC Chat you
+:Up
+Usage: up [<channel>]
+   Ops you on a certain channel
+:Down
+Usage: down [<channel>]
+   Deops you on a channel
+:B
+Usage: b [<channel>] <nick or userhost>
+   Bans someone on a certain channel
+:UB
+Usage: ub [<channel>] [<nick or userhost>]
+   Unbans someone on a certain channel
+Note: if no nick/userhost is given, you are unbanned
+:beer
+Usage: beer [<channel>] <nick>
+   Hands a frothy +o to someone on a certain channel
+:buds
+Usage: buds [<channel>] <nick>
+   Passes a smokin' +o to someone on a certain channel
+:Deop
+Usage: deop [<channel>] <nick>
+   Deops someone on a certain channel
+:K
+Usage: k [<channel>] <nick> [<reason>]
+   Kicks someone on a certain channel
+:KB
+Usage: kb [<channel>] <nick> [<reason>]
+   Bans, then kicks someone on a certain channel
+:SB
+Usage: sb [<channel>] <nick or userhost>
+   Sitebans someone on a certain channel
+:SKB
+Usage: skb [<channel>] <nick> [<reason>]
+   Sitekickbans someone on a certain channel
+:Invite
+Usage: invite [<channel>] [<nick>]
+   Invite someone to a certain channel
+   Note: It invites you by default if no nick is given
+:Topic
+Usage: topic [<channel>] <text>
+   Sets the topic on a certain channe-
+:MOP
+Usage: mop [<channel>] [<wildcards>]
+   Mass-ops people on a certain channel...if wildcards are given,
+   only those matching the wildcards will be opped.  Otherwise,
+   everyone is opped
+:MD
+Usage: md [<channel>] [<wildcards>]
+   Mass-deops people on a certain channel...if wildcards are given,
+   only those matching the wildcards will be deopped.  Otherwise,
+   everyone is deopped
+   Note: the bot will NOT deop those with levels greater than or
+          equal to what is set with "SetMal"
+:MK
+Usage: mk [<channel>] [<wildcards>]
+   Mass-kicks people on a certain channel...if wildcards are given,
+   only those matching the wildcards will be kicked.  Otherwise,
+   everyone is kicked
+   Note: the bot will NOT kick those with levels greater than or
+         equal to what is set with "SetMal"
+:MKB
+Usage: mkb [<channel>] [<wildcards>]
+   Mass-kickbans people on a certain channel...if wildcards are
+   given, only those matching the wildcards will be kickbanned.
+   Otherwise, everyone is kickbanned =)
+   Note: the bot will NOT kickban those with levels greater than or
+         equal to what is set with "SetMal"
+:MDeOpNU
+Usage: mdeopnu [<channel>]
+   Mass-deops non-users on a certain channel
+:MKNU
+Usage: mknu [<channel>]
+   Masskick non-users on a certain channel
+:MopU
+Usage: mopu [<channel>]
+   Mass-ops users on a certain channel
+:MUB
+Usage: mub [<channel>] [<wildcards>]
+   Massunbans the bans that match the wildcards specified
+:MUBF
+Usage: mubf [<channel>] [<wildcards>]
+   Massunbans the bans done by the person specified with the
+wildcards
+:SpyMsg
+Usage: spymsg
+   Redirects private messages the bot receives
+:RSpyMsg
+Usage: rspymsg <nick>
+   Stop redirecting private messages teh bot receives
+   Note: if a nick is given, that person will be removed from 
+         receiving the private messages
+:Spy
+Usage: spy <channel> [<channel>]
+   Spy on a certain channel
+   Note: if a channel is given at the end...the bot will redirect
+         to that channel instead of to you
+:RSpy
+Usage: rspy <channel> [<nick or channel>]
+   Stop spying on a certain channel
+   Note: if a nick or channel is given at the end...that person/channel
+         will be removed from spying
+:TogDCC
+Usage: Tog DCC
+   Toggles the requirement of a user needing to be on the userlist
+   before he/she can use dcc
+   In other words:
+     When this is "Yes", anyone can DCC.
+     When this is "No", only users can DCC.   
+:TogIC
+Usage: Tog [<channel>] IC
+   Toggles the ignoring of ctcps
+:TogWL
+Usage: Tog WL
+   Toggles the watching of server links (for netsplits)
+:TogKS
+Usage: Tog [<channel>] KS
+   Toggles kicking on kicksays
+:TogSS
+Usage: Tog [<channel>] SS
+   Toggles replying on saysays
+:TogRk
+Usage: Tog [<channel>] RK
+   Toggles revenge kicking
+:TogBK
+Usage: Tog [<channel>] BK
+   Toggles the kicking of beepers
+:TogCK
+Usage: Tog [<channel>] CK
+   Toggles the kicking of CAPSers
+:TogAOp
+Usage: Tog [<channel>] Aop
+   Toggles the auto-opping of users if verified
+:TogProt
+Usage: Tog [<channel>] Prot
+   Toggles the protection of users
+:TogPub
+Usage: Tog [<channel>] Pub
+   Toggles the allowance of public commands
+:TogShit
+Usage: Tog [<channel>] Shit
+   Toggles the kicking of shitlisted users
+:TogTop
+Usage: Tog [<channel>] Top
+   Toggles the enforcement of the channel topic
+:TogIK
+Usage: Tog [<channel>] IK
+   Toggles the kicking of idle lusers on a certain channel
+:TogSD
+Usage: Tog [<channel>] SD
+   Toggles the deopping of non-users who are serveropped
+:TogINV
+Usage: Tog INV
+   Toggles the sending of umode +i to the server
+:TogCC
+Usage: Tog CC
+   Toggles the necessity of the command character for doing commands
+:TogENFM
+Usage: Tog [<channel>] Enfm
+   Toggles mode enforcement on a certain channel
+:TogSO
+Usage: Tog [<channel>] SO
+   Toggles strict opping...if on, if people not in the userlist
+   are opped, they will be deopped
+:TogAS
+Usage: Tog [<channel>] AS
+   Toggles auto-shitlisting on a channel
+:SetBKL
+Usage: Set [<channel>] BKL <level>
+   Sets the number of beeps allowed within a 5 second period
+before the user will be kicked
+:SetCKL
+Usage: Set [<channel>] CKL <level>
+   Sets the number of lines of caps allowed within a 5 second
+period before the user will be kicked
+Note: a line is considered all caps if 60% if it is in caps
+:SetOpModes
+Usage: Set [<channel>] Opmodes <value>
+   Number of MODE -o's that can be done at a time
+:SetBanModes
+Usage: Set [<channel>] Banmodes <value>
+   Number of MODE +b's that can be done at a time
+:SetENFM
+Usage: Set [<channel>] Enfm <modes>
+   This is the old "enfmodes" command...
+   It enforces modes on a channel if a server changes them or
+if a non-user changes them.
+:SetBT
+Usage: Set [<channel>] Bt <value>
+   Which bans to unban when ban-limit is reached  
+:SetAUB
+Usage: Set [<channel>] Aub <value>
+   Erases old bans automatically, this sets how 
+   old they have to be  
+:SetMDL
+Usage: Set [<channel>] MDL <level>
+   Sets the the number of deops allowed during a 10 sec time
+   period before it is considered a massdeop
+:SetMBL
+Usage: Set [<channel>] MBL <level>
+   Sets the the number of bans allowed during a 10 sec time
+   period before it is considered a massban
+:SetMKL
+Usage: Set [<channel>] MKL <level>
+   Sets the the number of kicks allowed during a 10 sec time
+   period before it is considered a masskic
+:SetMPL
+Usage: Set [<channel>] MPL <level>
+   Sets the protection level against massmoders
+   level - can be 0, 1 or 2
+           0 - no action taken against offender
+           1 - kick offender
+           2 - kickban offender
+           3 - kickban and shitlist offender
+:SetFL
+Usage: Set [<channel>] FL <level>
+   Sets the number of lines by the same person within a 10-second
+   period before it is considered a flood
+:SetFPL
+Usage: Set [<channel>] FPL <level>
+   Sets the protection level against floods
+   level - can be 0 through 2
+           0 - no action against offender
+           1 - kick offender
+           2 - kickban offender
+Note: After 3rd kick within 10 minutes, the person will be
+      sitekickbanned.
+      After the 4th time, the person will be shitlisted
+:SetNCL
+Usage: Set [<channel>] NCL <level>
+   Sets the number of nick changes within a 10 second period
+   before it is considered nickflooding
+:SetIKT
+Usage: Set [<channel>] IKT <level>
+   Sets the number of seconds someone is allowed to be idle before
+   being kicked (if TogIK is on)
+:SetMAL
+Usage: Set [<channel>] MAL <level>
+   Sets the mass-action level (the level massdeop, masskick,
+   and masskickban will have no effect on)
+:DCCList
+Usage: DCCList
+   Lists all of the bots DCC connections
+:Userlist
+Usage: Userlist
+   Shows the userlist
+:Shitlist
+Usage: Shitlist
+   Shows the shitlist
+:Loadlists
+Usage: Loadlists
+   Loads the userlist/shitlist/nicklist/greetlist file
+:Savelists
+Usage: Savelists
+   Saves the userlist/shitlist/nicklist/greetlist file
+:Save
+Usage: Save
+   Saves the entire enchilada
+:Search
+Usage: Search *<pattern>*
+   Searches the lists file for a specified pattern
+   Returns matches and # of matches. Use *pattern* as format
+:Banlist
+Usage: Banlist [<channel>]
+   Shows the banlist for a certain channel
+:SpyList
+Usage: SpyList <channel>
+   Shows who's spying on a certain channel
+:Showusers
+Usage: Showusers [<channel>]
+   List the people on a certain channel
+   This will show their userlevel and current mode status too
+:Showidle
+Usage: Showidle [<seconds>]
+   This will show how long people are idle
+   If a number of seconds is given, it will only show people
+   idle for more than that amount of time
+:Last
+Usage: Last [<number of commands>]
+   Shows the last commands done, and who did them
+   Default is 10, and goes up to 20
+:Channels
+Usage: Channels
+   Lists the channels the bot is active on
+:Say
+Usage: Say [<channel>] <text>
+   Make the bot talk on a certain channel
+:Me
+Usage: Me [<channel>] <text>
+   Make the bot do an action on a certain channel
+:Msg
+Usage: Msg <nick> <text>
+   Makes the bot /msg someone
+:Join
+Usage: Join <channel> [<key>]
+   Makes the bot join a channel
+:Cycle
+Usage: Cycle [<channel>]
+   Makes the bot leave and rejoin a certain channel
+:Leave
+Usage: Leave [<channel>]
+   Makes the bot leave a certain channel
+:Nick
+Usage: Nick <nick>
+   Changes the nick of the bot
+:Limit
+Usage: Limit [<channel>] <number>
+   This is a replacement for the +l mode.
+   When the number of lusers on the channel reaches the number
+   specified, the bot will +i the channel. Once the number of lusers
+   is 3 less than the number specified, it will unlock the channel.
+:Userhost
+Usage: Userhost <nick>
+   Returns the userhost of a person
+:Steal
+Usage: Steal <channel>
+   Makes the bot try and steal a channel
+:RSteal
+Usage: rsteal <channel>
+   Makes the bot stop trying to steal a channel
+:CmdChar
+Usage: cmdchar <command_character>
+   Changes the bot's command character
+:Away
+Usage: away [<message>]
+   Sets the bot /away
+   Note: /away by itself no longer makes the bot /away
+:Oper
+Usage: oper <nick> <password>
+   :)
+:Kill
+Usage: kill <nick> <reason>
+   It's broken, anyway :P
+:Server
+Usage: Server <servername>
+   Makes the bot switch servers
+:Serverlist
+Usage: Serverlist
+   Lists the bot's internal server choices
+:Addserver
+Usage: Addserver <servername>
+   Adds server to bot's internal server list
+:NextServer
+Usage: NextServer
+   Makes the bot go to the next server in the serverlist
+:Idle
+Usage: Idle <nick>
+   Shows how long a person has been idle on a channel
+:RollCall
+Usage: rollcall
+   Used as a public command; shows all the EnergyMech's 
+   cmdchars if there are lots of them in a channel
+:Part
+Usage: Part <channel>
+   Makes the bot leave a certain channel
+:Exec
+Usage: exec <command>
+   Executes a Unix command in the background
+:savelevels
+Usage: savelevels
+   Save's the level list
+:kicks
+Usage: kicks <nick>
+   Shows how many kicks you, or another user have
+:report
+Usage: report
+   Gives you a detailed report on the bot, what 
+   Toggles are on, Sets, etc.
+:forget
+Usage: forget <channel>
+   Deletes a channel from memory
+:nicklist
+Usage: nicklist
+   Shows the nicklist
+:greetlist
+Usage: greetlist
+   Shows the greetlist
+:greet
+Usage: greet <channel> <nick or u@h> <greeting>
+   Adds a greeting for a user
+Note: EnergyMech does not greet people with a level of 99 or greater
+:rgreet
+Usage: rgreet <channel> <nick or u@h>
+   Removes a greeting for a user
+:sslist
+Usage: sslist
+   Shows the saysay list
+:kslist
+Usage: kslist
+   Shows the kicksay list
+:ks
+Usage: ks <channel> <pattern of words to ban>
+   Adds a kicksay...the bot kicks users when they say the words
+Usage: rks <channel> <pattern of words banned>
+   Removes a kicksay
+:ss
+Usage: ss <channel> "What is said" "How to reply"
+   Adds a saysay
+   - The bot replies to what certain users say
+     Note: The quotes above are *required*
+:rss
+Usage: ss <channel> "What is said"
+   Removes a saysay
+Note: the quotes above are *required*
+:userhost
+Usage: userhost <nick>
+   Gives you the userhost of the specified nick
+:Protnick
+Usage: protnick <nickname>
+   Protects the given nickname as {nickname}!*@*
+:loadnicks
+Usage: loadnicks
+   Loads the nicklist
+:loadall
+Usage: loadall
+   Loads everything that can be loaded
+:loadlevels
+Usage: loadlevels
+   Loads the levels list
+:setpass
+Usage: setpass <nick or userhost> <password>
+   Sets the password for a user
+:topkicks
+Usage: topkicks <channel>
+   Gives you a list of top kickers in a certain
+   channel
+:who
+Usage: who <channel>
+   Lists people in a channel that the bot is in now,
+   or was in.  see "collect"
+:topsplits
+Usage: topsplits
+   Gives you a list of the top splits that the bot
+   has recorded
+:rprotnick
+Usage: rprotnick <nickname>
+   Removes protection on a certain nickname
+:savekicks
+Usage: savekicks
+   Saves kicks to the memory file
+:Rehash
+Usage: Rehash
+   Reloads the bot
+:Massbomb
+Usage: Massbomb <channel or nick> <ctcp_type>
+   Sends a CTCP Reply to a channel or person
+:GetBomb
+Usage: Getbomb <nick>
+   Sends 9 DCC bombs to specified nick
+:Do
+Usage: do <raw_irc>
+   Sends raw crap to the server
+   Example: -do privmsg #dork :yer all lame
+:Randnick
+Usage: randnick
+   makes the bot change to a random nick
+:Heh
+Usage: heh <secret>
+   Gotta be 'leet enough to figure this one out :)
+:Spawn
+Usage: Spawn <nick> <options>
+   Spawns a new bot with the given nickname
+   options:
+           -s servername
+           -u login
+           -i ircname
+           -z command character
+           -c channelname
+   Example of usage: spawn Lamah -s irc.lame.net -u fuxor -z [ -i Ahuh
+:GetCh
+Usage: GetCh
+   Returns the name of the bot's current channel
+:ChanStats
+Usage: ChanStats [<channel>]
+   Returns basically useless information about a channel
+:Global
+Usage: Global <subcommand> args...
+   Lets you control the other bots that are spawned
+   Subcommands:
+     List [botnick] -- Gives information about current bots
+                       'global list' lists main bot and its spawns
+                       'global list botnick' gives info on bot
+     Info -- same as List
+     Die  -- kills a certain bot or all bots
+:Die
+Usage: Die <reason>
+   Kills the bot *snif*
+:Adduser
+Usage: Adduser <nick or userhost>
+   Adds a user with the default paramaters
+:Deluser
+Usage: Deluser <nick or userhost>
+   Deletes a user or userhost
+:Randsay
+Usage: Randsay <nick or channel>
+   Says a random quote to specified destinatio
+:Insult
+Usage: Insult <nick or channel>
+   Says a random insult to specified destination
+:Beavis
+Usage: Beavis <nick or channel>
+   Says a random beavis and butthead saying to specified destination
+:Yomama
+Usage: Yomama <nick or channel>
+   Says a random yomama joke to specified destination
+:Pickup
+Usage: Pickup <nick or channel>
+   Says a random pickup line to specified destination
+:RandTopic
+Usage: Randtopic <channel>
+   Sets a random topic
+:RandAway
+Usage: RandAway
+   Marks mech away with random quote
+:RandKick
+Usage: RandKick <channel> <nick>
+   Says a random kick message
+:Flood
+Usage: Flood <nick or channel>
+   Floods a channel with a string from the randflood.e file
+:RandFlood
+Usage: RandKick <channel> <nick>
+   Says a random kick message
+:Tsunami
+Usage: Tsunami <nick or channel>
+   Tsunami's with the Tsunami string
+:MegaFlood
+Usage: MegaFlood <nick or channel>
+   Super floods with random flood strings
+:Skitzo
+Usage: Skitzo <nick or channel>
+   Says random messages :)
+:FlashMSG
+Usage: FlashMSG <nick or channel>
+   Sends vt100 escape codes in a message
+:NRandFlood
+Usage: NRandFlood <nick or channel>
+   Nick changing random flood
+:Assault
+Usage: Assault <nick or channel>
+   Assaults a channel with nasty floods, more effective it there are no ops
+:Flash
+Usage: Flash <userhost> <level>
+   Flashes a user by requesting a talk session, choose a level
+   between 1 and 3, 2 and 3 are the better ones
+:MFlash
+Usage: MFlash <stmp server> <address from> <address to>
+   Mail Flashes some geek
+:Vers
+Usage: Vers
+   Gets version information on 1 line
+

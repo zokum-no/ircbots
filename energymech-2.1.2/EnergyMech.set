@@ -1,0 +1,186 @@
+#################################################################
+####  BOT.SET FILE EnergyMech                                ####
+#################################################################
+
+# 1 Owner for the entire Process...
+Owner=*!*polygon@*starweb.net
+
+# Virtual Host, must be hostname (ie. fractal.net)
+# Leave blank if you aren't gonna be using it
+Virtual=
+
+### BOT 1
+
+Nick=Harmony
+	Usersfile=EnergyMech.lists
+	CmdChar=-
+	Username=harmony
+	IrcName=The Inner Chaos
+	Modes=+ik-sw
+
+### LOGS
+
+	Log Commands=commands.log
+	Log Failed=failed.log
+	Log Dcc=dcc.log
+	Log Errors=errors.log
+	Log Danger=danger.log
+	Log Netsplit=netsplit.log
+	Log Kill=kill.log
+	Log Server=server.log
+	Log Send=send.log
+	Log Msg=msg.log
+	Log Debug=debug.log
+	Log Serv=serv.log
+	
+### Monitor Logs
+
+	Log MON_KLINE=mon_kline.log
+	Log MON_CON=mon_connection.log
+	Log MON_EXIT=mon_exit.log
+	Log MON_REJECT=mon_reject.log
+	Log MON_INVU=mon_inv_username.log
+	Log MON_CONF=mon_con_failure.log
+	Log MON_IPMIS=mon_ipmismatch.log
+	Log MON_UCON=mon_unauth_con.log
+	Log MON_LINKS=mon_links_request.log
+	Log MON_FLOOD=mon_flood.log
+	Log MON_RECKLINE=mon_rec_kline.log
+	
+### SERVERS
+
+	Server=irc.chat.org 6668
+	
+### GLOBAL TOGGLES
+
+	Tog CC 1
+	Tog DCC 1
+	Tog IC 1
+	Tog WL 0
+	Tog Spy 1
+	Tog ServLog 0
+	Tog SendLog 0
+	Tog Cloak 1
+	Tog Rv 0
+	Tog Rf 0
+	Tog Iwm 1
+	Tog AAway 1
+	Tog Log 1
+	Tog NoIdle 1
+	Set AAway 5
+	
+### CHANNEL STUFF
+
+	Channel=#heaven
+		Set Enfm nt
+		Tog Enfm 1
+		Tog Greet 0
+		Tog KS 1
+		Tog SS 1
+		Tog SD 1
+		Tog AOP 1
+		Tog AS 1
+		Tog Shit 1
+		Tog Pub 1
+		Tog Prot 1
+		Set Fpl 1
+		Set FL 10
+		Set MDL 3
+		Set MPL 1
+		Set MAL 1
+		Set Banmodes 4
+		Set Opmodes 4
+		Set DALevel 50
+		Set DAOP 1
+		Set DProt 1
+		Tog Mass 1
+		Tog Ik 0
+		Tog Rk 0
+		Tog Bk 0
+		Tog Ck 0
+		Tog So 0
+		Tog Ctl 1
+		Tog Abk 1
+
+		
+### END BOT
+###########################################
+### BOT 2
+
+Nick=Anarchy
+	Usersfile=EnergyMech.users
+	CmdChar=-
+	Username=anarchy
+	IrcName=The Inner Harmony
+
+### LOGS
+
+	Log Commands=commands.log
+	Log Failed=failed.log
+	Log Dcc=dcc.log
+	Log Errors=errors.log
+	Log Danger=danger.log
+	Log Netsplit=netsplit.log
+	Log Kill=kill.log
+	Log Server=server.log
+	Log Send=send.log
+	Log Msg=msg.log
+	Log Debug=debug.log
+	Log Serv=serv.log
+	
+### SERVERS
+
+	Server=scud.vistech.net 6666
+	
+### GLOBAL TOGGLES
+
+	Tog CC 1
+	Tog DCC 0
+	Tog IC 1
+	Tog WL 0
+	Tog Spy 1
+	Tog ServLog 0
+	Tog SendLog 0
+	Tog Cloak 1
+	Tog Rv 0
+	Tog Rf 0
+	Tog Iwm 1
+	Tog AAway 1
+	Set AAway 5
+	Tog Log 1
+	Tog NoIdle 1
+	
+### CHANNEL STUFF
+
+	Channel=#hell
+		Set Enfm nt
+		Tog Enfm 1
+		Tog Greet 0
+		Tog KS 0
+		Tog SS 0
+		Tog SD 1
+		Tog AOP 1
+		Tog AS 1
+		Tog Shit 1
+		Tog Pub 1
+		Tog Prot 1
+		Set Fpl 1
+		Set FL 10
+		Set MDL 3
+		Set MPL 1
+		Set MAL 1
+		Set Banmodes 4
+		Set Opmodes 4
+		Set DALevel 90
+		Set DAOP 1
+		Set DProt 1
+		Tog Mass 1
+		Tog Ik 0
+		Tog Rk 0
+		Tog Bk 0
+		Tog Ck 0
+		Tog So 0
+		Tog Ctl 1
+		Tog Abk 1
+		
+### END BOT

@@ -1,0 +1,71 @@
+Helpful items for use with EnergyMech
+
+How to...
+
+   * get the bot to stay on-line after you logout.
+   * use crontab to get your bot to reload if it is not running.
+   * use sh to get your bot to reload if it is not running.
+
+---------------------------------------------------------------------------
+
+How to get the bot to stay on-line after you logout if the bot dies
+ after you logout.
+
+type nohup EXE >& /dev/null &
+
+Example: nohup EnergyMech >& /dev/null &
+
+Thanks to Menacer
+
+---------------------------------------------------------------------------
+
+How to use crontab to get your bot to reload if it is not running.
+
+Now follow these steps:
+
+  1. Make a new file called mycron (pico mycron will do) and out the
+     following line in it (first line only).
+
+         0,10,20,30,40,50 * * * *   /whole/path/to/botchk
+
+  2. Edit the 'botchk' file that came with this version of ComBot.
+
+  3. Make sure that your botchk script is in your main home directory and
+     that the permissions on it are set that so that it becomes a
+     executable. Just type chmod 755 botchk On some systems the combot
+     executable have the permissions set also. So just type chmod 755
+     EnergyMech
+
+  4. Now test your botchk script by typing ./botchk and if it works it will
+     start your bot if it is not running if and if your bot is running it
+     should see it and do nothing. BE SURE that botchk works ok before
+     crontabbing it!!!
+
+  5. If you have made it this far you are doing good :) now for the final
+     test... from you main home directory where your botchk and mycron
+     files are type crontab mycron. Then go to irc and sit on the channel
+     with your bot and wait to see if the system starts up your bot or not.
+     DO NOT leave a newbie crontab running on your system unless it works
+     correctly!! Crontab is run by the system itself and is a very easy way
+     of automating things that you would normally do every time you login
+     :)
+
+Now the crontab will check to make sure that ComBot is running every 10
+minutes. If it is not then it will start it back up automatically and will
+e-mail you that it did so.
+
+Thanks to Ed Rogers
+
+---------------------------------------------------------------------------
+
+How to use sh to get your bot to reload if it is not running.
+
+Just type the following to start your bot...
+
+EnergyMech -b -f EnergyMech.Set -d 2
+sh /home/blah/shellscr
+
+Thanks to Steve Chaney
+
+---------------------------------------------------------------------------
+Steve Deal

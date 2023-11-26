@@ -1,0 +1,64 @@
+Before you start to try to run a bot...
+
+Be sure that you are allowed to have bot on your machine and know what type
+and version of unix you have. Also, you should know some basic unix
+commands before you begin.
+---------------------------------------------------------------------------
+
+  1. Get the Bot code
+
+  2. Unzip the bot by typing
+
+                gunzip (botfile name)
+
+  3. Untar the bot by typing
+
+                tar -xvf (botfile name)
+
+  4. Edit the EnergyMech.set file to your liking.
+  5. Edit the file called EnergyMech.lists like so
+
+               User= *!*@*
+            Channel= *
+              Level= 100
+                Aop= 1
+               Prot= 4
+               Time= 805186048
+                Who= It!DONt@matter.net
+
+     But for the user add your login and host. Example: My login is sdeal1
+     and my host is umbc.edu. So I would make the User line this
+
+     User= *!*sdeal1@*.umbc.edu
+
+  6. Edit the EnergyMech.levels file if you feel like it.
+  7. Edit the following lines in include/config.h
+
+     #define DEFAULT_OWNERUH "*!*comstud@*texas.net"
+     #define DEFAULT_SERVER  "fucking.fuck.i.don't.exist"
+     #define DEFAULT_PORT    6667
+     #define DEFAULT_IRCNAME "Blow me, okay?"
+     #define DEFAULT_LOGIN   "comstud"
+     #define DEFAULT_CMDCHAR '-'
+
+     (NOTE: I seemed to noticed all you really have to change is the
+     DEFAULT_SERVER line since the other lines come from the Bot.Set file.)
+  8. Edit the on_msg_commands[] table in the source/com-ons.c file if your
+     the hacker type.
+  9. Edit the source/Makefile to what your system has.
+ 10. Now, from the main Bot directory type the word make
+ 11. If it compiled successfully then your almost there! Now just type the
+     word EnergyMech and it will automatically run in the background. Then get
+     on IRC and have FUN!!! (NOTE: It sometimes takes a while for the bot
+     to connect to a server so have some patience.)
+
+     If it did NOT compile successfully then check More Help for some
+     additional help.
+     
+ 12. Once your bot is on-line then try botchk or a sh script to keep your
+     bot on-line.
+ 13. If you care to Debug your bot then just start combot by typing 
+     EnergyMech -b -d 2
+
+---------------------------------------------------------------------------
+Steve Deal

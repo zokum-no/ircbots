@@ -1,0 +1,116 @@
+#
+#  This is the Makefile for EnergyMech
+#  Editing this should not be neccessary
+#
+
+CC = @CC@
+CFLAGS = @CFLAGS@
+STRIP = @STRIP@
+LIBS = @LIBS@
+DEFS = @DEFS@
+INCL = -I..
+
+OBJS = cfgfile.o channel.o chanuser.o com-ons.o combot.o commands.o ctcp.o dcc.o debug.o fileio.o fnmatch.o ftext.o ftp_dcc.o function.o log.o main.o match.o memory.o monitor.o parse.o send.o server.o userlist.o vars.o xmech.o xmech2.o xproto.o
+
+all: making mech
+
+mech: ${OBJS} link cleanup
+	
+link: sendmsg.o
+	${CC} ${LIBS} ${STRIP} -o sendmsg sendmsg.o
+	${CC} ${LIBS} ${STRIP} -o EnergyMech ${OBJS}
+	
+making:
+	@echo "_____________________"
+	@echo "EnergyMech 2.1"
+	@echo ""
+	
+cleanup:
+	@mv EnergyMech ..
+	@mv sendmsg ..
+	@echo ""
+
+cfgfile.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h cfgfile.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c cfgfile.c
+
+channel.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h channel.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c channel.c
+
+chanuser.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h chanuser.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c chanuser.c
+
+com-ons.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h com-ons.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c com-ons.c
+        
+combot.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h combot.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c combot.c
+        
+commands.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h commands.h commands.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c commands.c
+        
+ctcp.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h ctcp.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c ctcp.c
+
+dcc.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h dcc.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c dcc.c
+
+debug.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h debug.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c debug.c
+        
+fileio.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h fileio.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c fileio.c
+
+fnmatch.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h fnmatch.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c fnmatch.c
+
+ftext.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h ftext.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c ftext.c
+        
+ftp_dcc.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h ftp_dcc.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c ftp_dcc.c
+
+function.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h function.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c function.c
+
+log.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h log.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c log.c
+        
+main.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h main.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c main.c
+
+match.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h match.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c match.c
+
+memory.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h memory.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c memory.c
+        
+monitor.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h monitor.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c monitor.c
+
+parse.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h parse.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c parse.c
+        
+send.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h send.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c send.c
+        
+sendmsg.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h sendmsg.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c sendmsg.c
+
+server.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h server.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c server.c
+
+userlist.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h userlist.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c userlist.c
+        
+vars.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h vars.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c vars.c
+
+xmech.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h commands.h xmech.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c xmech.c
+        
+xmech2.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h commands.h xmech2.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c xmech2.c
+        
+xproto.o: config.h defines.h fnmatch.h ftext.h global.h h.h structs.h commands.h xproto.c
+	${CC} ${CFLAGS} ${DEFS} ${INCL} -c xproto.c
+

@@ -1,0 +1,77 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(source/xmech.c)
+AC_CONFIG_HEADER(config.h)
+
+dnl Checks for programs.
+AC_PROG_CC
+AC_PROG_CPP
+
+AC_PROG_MAKE_SET
+AC_CHECK_PROG(STRIP,strip,-s)
+AC_CHECK_PROG(UNAME,uname,uname)
+
+dnl stop putting -g in there!  @#$!#$%!
+dnl also fix strength-reduce problem in gcc
+CFLAGS="-O"
+if test "x$CC" = "xgcc"; then
+  CFLAGS="-O3"
+fi
+if test x`${UNAME}` = "xLinux"; then
+  if test x`${UNAME}` = "xi486"; then  
+    CFLAGS="${CFLAGS} -m486"
+  fi
+  if test x`${UNAME}` = "xi586"; then
+   CFLAGS="${CFLAGS} -m486"
+  fi
+fi
+
+dnl Check for OSF/1.
+AC_MSG_CHECKING(for OSF/1)
+if test x`${UNAME}` = "xOSF1"; then
+  AC_MSG_RESULT(yes)
+  AC_DEFINE(STOP_UAC)
+else  
+  AC_MSG_RESULT(no)
+fi
+
+AC_MSG_CHECKING(for IRIX)
+if test x`${UNAME}` = "xIRIX"; then
+  AC_MSG_RESULT(you are cursed with IRIX)
+  IRIX=yes
+  STRIP=
+else
+  AC_MSG_RESULT(no)
+  IRIX=no
+fi
+
+dnl crazy machines
+AC_AIX
+AC_MINIX
+
+dnl Checks for libraries.
+AC_CHECK_LIB(nsl, gethostname)
+AC_CHECK_LIB(socket, socket)
+AC_CHECK_LIB(crypt, crypt)
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS(fcntl.h strings.h sys/time.h unistd.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_C_INLINE
+AC_HEADER_TIME
+
+dnl Checks for library functions.
+AC_CHECK_FUNCS(vsprintf)
+
+if test "${ac_cv_func_vsprintf}" = "no"; then
+  echo ""
+  echo "Your system does not have the sprintf/vsprintf libraries."
+  echo "These are required to compile almost anything.  Sorry."
+  echo ""
+  exit
+fi
+
+AC_OUTPUT(source/Makefile)
