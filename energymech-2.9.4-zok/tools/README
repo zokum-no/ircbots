@@ -1,0 +1,6 @@
+These are just various development tools, for developers.
+Please add your own, if you have any laying around.
+Should probably rm this dir in release tarballs.
+
+genserver	Generates current undernet serverlist in mech.set format
+upver		Intellegantly updates version/srcdate in global.h

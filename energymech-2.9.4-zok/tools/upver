@@ -1,0 +1,38 @@
+#!/usr/bin/perl
+# Intelligently updates gloval.h version/srcdate
+open(G, "global.h") or die("Coldn't open global.h: $!\n");
+open(O, ">global.h.$$") or die("Couldn't open global.h.$$ for write: $!\n");
+
+while (<G>) {
+	chomp;
+	if (/VERSION\[\]\s+\=\s+\"(.+?)\"/) {
+		my $ver = update_ver($1);
+		print O ("char VERSION[]\t\t= \"$ver\"\;\n");
+		next;
+	}
+	if (/SRCDATE\[\]\s+\=/) {
+		chomp(my $date = `date +"%B %d, %Y"`);
+		print O ("char SRCDATE[]\t\t= \"$date\"\;\n");
+		next;
+	}
+	print O ("$_\n");
+}
+
+close(O);
+close(G);
+system("mv global.h.$$ global.h");
+
+sub update_ver {
+	my $cur = $_[0];
+	my ($class, $major, $minor) = split(/\./, $cur);
+
+	if ($minor =~ /([A-z]+)(\d+)/) {
+		print("12 - $1 $2\n");
+		my $str = $1; my $patch = $2; $patch++;
+		$minor =~ s/p\d+//;
+		return("$class.$major.$minor$str$patch");
+	}
+
+	$minor++;
+	return("$class.$major.$minor");
+}

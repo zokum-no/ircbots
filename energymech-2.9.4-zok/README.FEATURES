@@ -1,0 +1,125 @@
+This file contains information regarding some of the extra features 
+added to the bot.
+
+1. Services Support
+2. Trivia Game
+3. Dynamic Channel Limiting
+
+-------------------
+1. Services Support
+-------------------
+
+  Usage:
+
+  -SERVICE <ADD|DEL> [channel] <to> <message>
+  or
+  -SERVICE LIST [<channel>|LOGIN]
+
+  There are 2 facilities supported by this SERVICE command.. One is
+  for sending requests upon logging into a server, and the other is
+  for requesting channel-op status from another channel-op. Both can 
+  have multiple requests specified, so authorizing to many different 
+  services is possible.   
+
+  With multiple requests upon logging in, there is no flood control,
+  so if you have to many requests, you will most likely flood the bot
+  off IRC before you even get to see it. Use your judgement.
+
+  With the channel-op request, things are different. The bot will
+  only send a request if it detects that the recipent of the message
+  is present and opped. If there are multiple requests involved, the 
+  bot will cycle the list, with one request about every 10 seconds,
+  until it has been opped. 
+
+  This semi-intellegent facility also makes it reasonably safe to gain 
+  channel-ops from other standard bots, like eggdrop. (reason: if 
+  somebody dupes a botnick, and gets opped as well, your channel 
+  security is already screwed. ;) Again, use your judgement.
+
+  Examples:
+
+  1) Sending a service request upon login:
+
+     -SERVICE ADD x@channels.undernet.org login myloginid mycoolpass
+
+     Everytime it connects to a server, it will send
+     'login myloginid mycoolpass' to 'x@channels.undernet.org'
+
+  2) Sending a need ops request upon joining a channel:
+
+     -SERVICE ADD #mychannel x op #mychannel
+
+     This will send 'op #mychannel <botname>' to X as soon as the
+     bot joins the channel #mychannel, on the condition that X is
+     actually *present* and *opped*.
+
+     You can use the variable '$nick' for specifying the botname.
+
+  3) Displaying which services requests are set:
+
+     -SERVICE LIST 	     	(displays all services requests)
+     -SERVICE LIST LOGIN 	(displays LOGIN services requests)
+     -SERVICE LIST #mychannel   (displays #mychannel NEEDOP requests)
+
+  4) Deleting a service request:
+
+     -SERVICE DEL x@channels.undernet.org login myloginid mycoolpass
+
+     will delete the first service used in example 1.
+
+     -SERVICE DEL #mychannel x op #mychannel
+
+     will delete the service used in example 2.
+
+--------------
+2. Trivia Game
+--------------
+
+  Usage: TRIVIA [channel] <start|stop>
+  Usage: TOP10 (public command)
+
+  In order to use the trivia game, you will need to download the trivia 
+  question file seperately, which you can find at:
+  
+    http://www.energymech.net/files/randtrivia.e.gz
+
+    If you have the program wget, use this to download it...
+    
+    wget -c http://www.energymech.net/files/randtrivia.e.gz
+    
+  Copy this file into the 'randfiles' directory in your bot distribution, 
+  and then run 'gzip -d randtrivia.e.gz'. You will need to rerun ./configure
+  again to build the trivia lookup index. 
+  
+  If you ever update the randtrivia.e file with new questions, you will have 
+  to rebuild the index with the utility ./mkindex, otherwise you might end up
+  having the bot asking garbled questions.
+  
+    ./mkindex randfiles/randtrivia
+ 
+  This generates the updated randtrivia.i index file.
+
+  The format of the trivia file is simple, each question is on a new line,
+  and the answer is seperated by an asterisk (*).
+
+  For example:
+
+    This is the first question?*First Answer
+    Second Question?*Another Answer
+
+  and so on...
+
+---------------------------
+3. Dynamic Channel Limiting
+---------------------------
+    
+  Usage: TOG DYNAMIC <ON|OFF|1|0>
+  
+  This feature will set the user limit on a channel to defend against join floods.
+  It works out a window (limit above current channel user count) by the number of
+  users / 10. So a channel with 33 users will have a window of 3 (33/10) and a limit
+  of 36 (33+3). Maximum window size is 4, and the limit is adjusted every 45 seconds 
+  if necessary. Neither of these settings can be change currently. 
+
+  
+  

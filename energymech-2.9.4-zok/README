@@ -1,0 +1,122 @@
+,-----------------------------------------------------------------.
+|   ,-----; ,------,     ,-----; ,-------,    ,----,     ,  ,-.   |
+|  /  ,---' |   ,.  \   /  ,---' |   ,--, \  /  ,-. \   /|  |  \  |
+| |   |___  |   | \  \ |   |___  |   |__|  ;|   | `~´  / |  |   | |
+| |   ,--'  |   |  |  ||   ,--'  |   |--; < |   | ,--,/   `-'   | |
+| |   |__,-,|   |  |  ||   |__,-,|   |  |  ||   | \  |\___.     | |
+| |        ||   |  |  ||        ||   |  |  ||   `~'  |     \    | |
+| |        ||   |  | / |        ||   |  | / |        |      |   | |
+| `~~~~~`\/ `---'  `/  `~~~~~`\/ `---'  `/  `/~~~~~~'       |,--' |
+|          ,---,    ,---,  ,-----;   ,----.    ,-.  ,--.          |
+|          |    \  /    | /  ,---'  /  ,--'   /  |  |  |          |
+|          |     \/     ||   |___  |   |     |   |__|  |          |
+|          |   |\  /|   ||   ,--'  |   |     |   ,--.  |          |
+|          |   | \/ |   ||   |__,-,|   |   /||   |  |  |          |
+|          |   |    |   ||        ||   `--' ||   |  |  |          |
+|          |   |    |   ||        ||        ||   |  | /           |
+|          `---'    `---'`~~~~~`\/ `\___/~~~'`---'  `/            |
+`-----------------------------------------------------------------'
+
+Compiling?
+~~~~~~~~~~
+To compile the source:
+
+1) Uncompress the source code distribution archive.
+
+2) cd emech-2.9.4
+-- Since you are reading this file, you have most likely already
+   come to this point.
+
+3) ./configure
+-- This script will prompt you for features to include or exclude,
+   going with the default isnt a bad idea.
+
+4) make clean install
+
+If all went well you should now have an executable called ``mech''.
+
+---*---
+
+Setup?
+~~~~~~
+Read  the  sample.set  file to  get  an idea of  the  config  file
+commands and then try to make your own.  A basic setup doesnt need
+much more than NICK,  USERFILE,  CHANNEL and  SERVER entries,  the
+rest is just tweaks of default values.
+
+EnergyMech no longer has a setup mode.  Before running the bot you
+should run ./genuser <userfile>.  For example, if your USERFILE is
+emech.users, you should run `./genuser emech.users'.
+
+Quick steps:
+
+1) cp sample.set mech.set
+
+2) pico mech.set 
+-- replace ''pico'' with your favourite text editor,  look through 
+   the file for sections to change,  you will have to remove lines
+   in order to get the bot to work. Check the file completely!
+
+3) ./genuser
+
+4) ./mech 
+
+That should get you running. If you don't see your bot come on IRC
+after a few minutes,  you should try running the bot in debug mode
+to see what's going on with... 
+
+  ./mech -d 
+
+If you get an 'Unknown option -d', you need to answer 'Y' to debug
+support when running ./configure from the compiling section above.
+
+---*---
+
+Updated Files?
+~~~~~~~~~~~~~~
+The main distro-site for the Energymech is:
+
+ http://www.energymech.net/index.html
+
+You can also find the files on ftp at:
+
+ ftp://ftp.energymech.net/pub/energymech/
+
+ You can also run the `cvsupdate'  program,  which will fetch the
+ latest version directly from our CVS server.
+
+---*---
+
+More Help?
+~~~~~~~~~~
+You  could try  asking for  help on  the undernet  channel #emech.
+However,  try reading the documentation  before asking there since
+we arent really fond of answering trivial questions.
+
+The  channel  #emech is  more a  place for  people  who  like  the
+EnergyMech,  not a help-channel,  so dont expect to  get help from
+the people there. And if you *do* get help, be grateful for it.
+
+We will NOT teach  you how to work with UNIX  shells or how to use
+your mech, you have to learn that by yourself. Im noting this here
+since it seems to be a common misconception that we would.
+
+In short:
+
+THIS SOFTWARE IS PROVIDED AS IS. YOU ARE ENTIRELY ON YOUR OWN WHEN
+IT COMES TO CONFIGURING AND USING IT.
+
+---*---
+
+Bug Reports
+~~~~~~~~~~~
+
+Bugs  can be  reported in  #emech  on  undernet,  or by  email  to
+<mailto:emech-dev@energymech.net>. This is an open mailing-list so
+you may not receive a reply  unless you subscribe  (see EnergyMech
+website for information on how to subscribe).
+
+---*---
+
+endorphin - Feb 4th, 2002.
+<mailto:endorphin@energymech.net>

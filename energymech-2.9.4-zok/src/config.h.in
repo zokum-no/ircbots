@@ -1,0 +1,433 @@
+/*
+
+    EnergyMech, IRC bot software
+    Parts Copyright (c) 1997-2001 proton, 2002-2004 emech-dev
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+*/
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#ifdef MEGA
+#define COM_ONS_C
+#define MAIN_C
+#endif
+
+/* debug support */
+@DEBUGDEF@
+
+/* This is only for developers, really */
+#ifdef DEBUG
+@SUPERDEBUG@
+#else /* DEBUG */
+#undef SUPERDEBUG
+#endif /* DEBUG */
+
+/* linkevents debug support */
+@LINKEVENTS@
+
+/* support for bot-links */
+@LINKDEF@
+
+/* support for telnet, requires linking support */
+#ifdef LINKING
+@TELNET@
+#endif
+
+/* aliased commands */
+@ALIASES@
+
+/* support for SEEN command, undefined by default
+   because it consumes a lardass amount of memory */
+@SEENDEF@
+
+/* sessions support (mech.session) */
+@SESSIONS@
+
+/* support to alter commandlevels on the fly. undefine
+   for static command levels (as listed in com-ons.c) */
+@DYNCMDDEF@
+
+/* support for some newbie spanking routines */
+@NEWBIE@
+
+/* WINGATE connection support */
+@WINGATES@
+
+/* pipeuser support */
+@PIPEUSER@
+
+/* services support */
+@SERVICES@
+
+/* trivia engine */
+@TRIVIA@
+
+/* dynamic channel limit support */
+@DYNCHANLIMIT@
+
+/* ipv6 support */
+@IPV6@
+
+/* clear auth on seeing user quit (even netsplits) */ 
+#undef STRICTAUTH
+
+/* fast nick regain if nickchange is seen where wantnick is freed */
+#undef FASTNICK
+
+/*
+ *  Spamming added users with their access levels, etc.
+ *  (it only spams when a nick is specified for ADD)
+ */
+#undef NEWUSER_SPAM
+
+/*
+ *  Include multi-head capabilities...
+ *  Support for non-multihead is still incomplete, dont undef this!
+ */
+#define MULTI
+
+/*
+ * 
+ */
+#define UPTIME
+
+/*
+ * Dynamically adjust the max. user limit in a channel
+ * (will be checked every 45 seconds)
+ */
+#define DYNCHANLIMIT
+
+/*
+ *  stuff under here shouldnt be changed
+ *  unless you really know what you're doing
+ */
+
+#define BOTDIR				"./"
+#define RANDDIR				"./randfiles/"
+#define CFGFILE				BOTDIR "mech.set"
+#define HELPFILE			BOTDIR "mech.help"
+#define LEVELFILE			BOTDIR "mech.levels"
+#define PIDFILE				BOTDIR "mech.pid"
+#define MSGFILE				BOTDIR "mech.msg"
+#define SESSIONFILE			BOTDIR "mech.session"
+#define TRIVIASCOREFILE			BOTDIR "mech.triviascore"
+
+#define AWAYFILE 			RANDDIR "randaway.e"
+#define NICKSFILE			RANDDIR "randnicks.e"
+#define RANDKICKSFILE			RANDDIR "randkicks.e"
+#define RANDTOPICSFILE			RANDDIR "randsay.e"
+#define RANDSAYFILE 			RANDDIR "randsay.e"
+#define RANDINSULTFILE			RANDDIR "randinsult.e"
+#define RANDPICKUPFILE			RANDDIR	"randpickup.e"
+#define RANDTRIVIAFILE			RANDDIR	"randtrivia.e"
+#define SIGNOFFSFILE			RANDDIR "randsignoff.e"
+#define VERSIONFILE			RANDDIR "randversions.e"
+
+#define DEFAULTSHITCHAN 		"*"
+#define DEFAULTSHITLEVEL 		2
+#define DEFAULTSHITLENGTH 		90	/* in days */
+
+#define EXVERSION			"EnergyMech 2"
+#define EXFINGER			EXVERSION
+
+#define AWAYFORM			"AWAY :%s (Away since %s)"
+
+#define WAITTIMEOUT			30
+
+#define PINGSENDINTERVAL		210
+#define RESETINTERVAL			90
+
+#define SRSIZE				200
+#define MRSIZE				200
+
+#define DCC_INPUT_LIMIT			2000
+#define DCC_INPUT_DECAY			200	/* 2000 (limit) / 200 (per second) = 10 seconds */
+
+#define LINKTIME			120
+#define AUTOLINK_DELAY			240	/* should be greater than link timeout ... */
+
+#define AVOICE_DELAY			6	/* maximum time to wait before doing +v */
+#define AVOICE_DELAY_MIN		3	/* minimum time to wait before doing +v */
+
+#define SEEN_TIME			14	/* How Long in Days to keep track of a record? */
+#define AUTH_TIMEOUT			600	/* 10 minutes */
+
+#define MINUSERLEVEL			10
+#define JOINLEVEL			70	/* affects invites */
+#define ASSTLEVEL			80
+#define OWNERLEVEL			100
+#define BOTLEVEL			200
+
+#define MAXPROTLEVEL			4
+#define SELFPROTLEVEL			1	/* protlevel for the bot itself */
+
+#define MAXSHITLEVEL			3
+
+#define ENFORCED_MODES			"stinklmp"
+
+#define MAXNICKLEN			31
+#define NICKBUF				MAXNICKLEN+1
+
+#define MAXLOGINLEN			11
+#define LOGINBUF			MAXLOGINLEN+1
+
+#define PASSLEN				20
+#define PASSBUF				PASSLEN+1
+
+#define MINPASSCHARS			4
+#define MAXPASSCHARS			50
+
+#define ENTITYLEN			32
+#define MAXHOSTLEN			512
+#define NAMELEN				128
+#define NUHLEN				128
+#define MSGLEN				512
+#define MAXLEN				1024
+#define HUGE				2048
+
+#define LASTCMDSIZE			20
+
+#ifndef TRUE
+#define TRUE				1
+#endif
+#ifndef FALSE
+#define FALSE				0
+#endif
+#define FAIL				0
+
+/*
+ *  Defines for commandlist parsing
+ */
+
+#define DCC	0x0100		/* requires DCC					*/
+#define CC	0x0200		/* requires commandchar				*/
+#define PASS	0x0400		/* requires password / authentication		*/
+#define ARGS	0x0800		/* requires args				*/
+#define NOPUB	0x1000		/* ignore in channel (for password commands)	*/
+#define NOCMD	0x4000		/* not allowed to be executed thru CMD		*/
+
+#define FLAGS	0xff00
+#define CLEVEL	0x00ff
+
+/*
+ *  A better version of RANDOM()
+ */
+
+#define RANDOM(min,max)                 (min + ((max - min) * (rand() / (RAND_MAX + 1.0))))
+
+#undef Ulong
+#undef Uchar
+#define Ulong				unsigned long
+#define Uchar				unsigned char
+
+/* Is there usleep() ? */
+@HAS_USLEEP@
+
+/* can strchr() be used to search for end of string? */
+@HAS_OK_STRCHR@
+
+/* AIX needs this or <sys/select.h> */
+@AIX_SELECT@
+
+/* AIX is generally screwed... */
+@AIX_DEFINE@
+
+/* 32bit machines */
+@PTSIZE_DEFINE32@
+
+/* 64bit machines */
+@PTSIZE_DEFINE64@
+
+/*
+ *  How to make things non-portable:
+ */
+#ifdef PTSIZE_32BIT
+
+#define	mx_ptr		unsigned int
+#define mx_pfmt		"%.8x"
+
+#endif
+
+#ifdef PTSIZE_64BIT
+
+#define	mx_ptr		long long
+#define mx_pfmt		"%.16Lx"
+
+#endif
+
+#define PTR_SIZE	sizeof(void*)
+
+/*
+ *  String of compile-time options:
+ */
+#undef OPT_LEN
+#ifdef MAIN_C
+
+char	__mx_opts[] = ""
+
+#ifdef DEBUG
+		"DBG"
+#define OPT_LEN 1
+#endif /* DEBUG */
+
+#ifdef SUPERDEBUG
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"SDB"
+#  define OPT_LEN 1
+#endif /* SUPERDEBUG */
+
+#ifdef LINKEVENTS
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"LNE"
+#  define OPT_LEN 1
+#endif /* LINKEVENTS */
+
+#ifdef SEEN
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"SEE"
+#  define OPT_LEN 1
+#endif /* SEEN */
+
+#ifdef LINKING
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"LNK"
+#  define OPT_LEN 1
+#endif /* LINKING */
+
+#ifdef TELNET
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"TEL"
+#  define OPT_LEN 1
+#endif /* TELNET */
+
+#ifdef PIPEUSER
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"PIP"
+#  define OPT_LEN 1
+#endif /* PIPEUSER */
+
+#ifdef DYNCMDLEVELS
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"DYN"
+#  define OPT_LEN 1
+#endif /* DYNCMDLEVELS */
+
+#ifdef NEWBIE
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"NEW"
+#  define OPT_LEN 1
+#endif /* NEWBIE */
+
+#ifdef ALIASES
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"ALS"
+#  define OPT_LEN 1
+#endif /* ALIASES */
+
+#ifdef WINGATES
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"WIN"
+#  define OPT_LEN 1
+#endif /* WINGATES */
+
+#ifdef SESSIONS
+#  ifdef OPT_LEN
+		", "
+#  endif /* OPT_LEN */
+		"SEF"
+#  define OPT_LEN 1
+#endif /* SESSIONS */
+		;
+
+#else /* MAIN_C */
+extern	char __mx_opts[];
+#endif /* MAIN_C */
+
+
+/*
+ *  Easier to include ALL header files here and
+ *  then include only *this* file elsewhere.
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/resource.h>
+#include <sys/wait.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <termios.h>
+#include <signal.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <time.h>
+#include <errno.h>
+
+#ifdef HAVE_SYS_SELECT_H
+#include <sys/select.h> 
+/*
+ *  bzero() is used by AIX select()
+ */
+#define bzero(x,y) memset(x,0,y)
+#endif
+
+#ifndef FILENAME_MAX
+#define FILENAME_MAX			256
+#endif
+#define FILENAMELEN			FILENAME_MAX
+
+#include "text.h"
+#include "defines.h"
+#include "structs.h"
+#include "global.h" 
+#include "h.h"
+
+#if !defined(MCMD_GEN_C)
+#include "mcmd.h"
+#endif
+
+#if defined(COM_ONS_C) || defined(MEGA)
+#include "usage.h"
+#endif
+
+#endif /* CONFIG_H */

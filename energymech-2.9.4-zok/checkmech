@@ -1,0 +1,50 @@
+#! /bin/sh
+#--------------------------------------------------
+# First try at making a cron script for starglider
+#--------------------------------------------------
+#
+# you can add this to your crontab (crontab -e) as
+# something like:
+#
+# 0,10,20,30,40,50 * * * * /path/to/checkmech
+#
+# this will check the mech every 10 minutes.
+#
+#--------------------------------------------------
+
+echo "You havent edited checkmech yet!!"
+exit 0
+
+# CHANGE THIS LINE!!
+cd /path/to/mech
+
+# run with...
+RUN=./mech
+
+# want any options?
+# ( debug, non-default config file... )
+OPT=
+#OPT=-d
+
+# Send output to...
+OUTPUT=./mech.cron
+#OUTPUT=/dev/null
+
+if [ -r mech.pid ]; then
+  PID=`cat mech.pid`
+  if [ -r /proc/$PID ]; then
+    exit 0
+  fi
+  if ( kill -0 $PID 1> /dev/null 2> /dev/null ); then
+    exit 0
+  fi
+fi
+
+# its not running...
+
+echo >> $OUTPUT
+echo "Mech restarted:" >> $OUTPUT
+( date 2>&1 ) >> $OUTPUT
+echo >> $OUTPUT
+( $RUN $OPT 2>&1 ) >> $OUTPUT
+
