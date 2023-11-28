@@ -48,25 +48,26 @@ Hopbot                               Very basic bot, less than 15kb.
    +--HipBot                         Stripped away some features.
    +--Vladbot-2.1.h-m                Removed note support.
    +--Achille
-   |     +--Vladbot 2.1-sk3          The Patrocle bot
+   |  +--Vladbot 2.1-sk3             The Patrocle bot
    VladBot-2.10
    +--fRitE 3.0                      Forked by Offspring.
    |  fRitE 4.1.x
-   |  +--fRitE+                      Continuation by a new author.
+   |  +--fRitE+                      Continuation by Pyber.
    VladBot 2.x                      
    +--Johbot                         Binary + config/lists only
    +--HackBot 0.9-alpha 13           Coded by ComStud.
-   |  +--TnT2 5.7                    Docs only, also has code from Johbot.
-   |  Hackbot 
+   |  +--TnT2 5.7                    Bin+docs. Has code from Johbot.
+   |  Hackbot-x.x                    Coded by ComStud.
    |  +--ComBot                      Coded by ComStud.
-   |  |  +--DweeB0t
+   |  |  +--DweeB0t                  Fork by Piraeus.
    |  |  +--StelBot                  StealthBot.
    |  |  |  +--RockBot               Fixes alleged backdoors in Stel.
    |  |  |     +--StarBot            Starlink network service bot.
-   |  |  +--EnergyMech               Widely used bot, feature-rich.
-   |  |     +--Extramech-gudelia     Fork with services support and a game.
-   |  +--Divbot 2.0a                 Binary only
-   |     Divbot 4.0                  Binary only
+   |  |  +--EnergyMech-2.0.3         Code by Polygon.
+   |  |     +--EnergyMech SGC        Starglider Class fork by Proton. 
+   |  |        +--Extramech-gudelia  Fork with services support and a game.
+   |  +--Divbot 2.0a                 Binary, docs
+   |     Divbot 4.0                  Binary, docs
    Vladbot 3.x branch                No known forks off of this one.
 ```
 

@@ -18,6 +18,10 @@ documentation other than the help file. Supports 'ccc' a system to replicate
 list changes to another bot.
 
 
+== DivBot ==
+Not much to say, don't have Linux binaries, but strings will tell mw what
+commands it supports.
+
 == Dweebot ==
 A Combot branch. Even though the config identify it as 0.3a, the readme 
 identifies it as 0.6a and lists changes from 0.3a.
@@ -64,6 +68,16 @@ more  functionality than Bot did. Hopbot has much of the same functionality,
 but it has been organzed better, into more source files. 
 
 
+== Starbot ==
+A service bot for the Starlink irc network. The code is according to the 
+current irc network staff lost. The coder behind it has passed away.
+
+
+== StelBot 1.0 ==
+A fork of Combot done by Brian 'Bryan8' Karrade. Has a few new commands and
+an updated help file.
+
+
 == TnT-II 5.7f ==
 Hackbot fork by ttone (tonys@access.mountain.net). Contains code form johbot.
 It seems it was only distributed as two types archives. One type consists of
@@ -94,6 +108,11 @@ in the Makefile, config.h etc.
 == Vladbot 2.1h-hip ==
 A few memory fixes, vladbomb removal, added two commands and removed some of 
 the more hostile channel protection functionality.
+
+
+== Vladbot 2.1h-m ==
+Removed the note functionality, different config files. Allows for larger dcc 
+files, some minor level changes and defaults changed.
 
 
 == Vladbot 2.1-sk3 ==
