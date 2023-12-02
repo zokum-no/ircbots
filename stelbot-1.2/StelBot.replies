@@ -1,0 +1,31 @@
+################ StelBot Version 1.2 ##################
+######## Written By: Bryan8!bryan@primenet.com ########
+#######################################################
+# This file contains the replies the bot gives        #
+# in certain cases.  If you modify these, make sure   #
+# the comments are in the correct order, using the    #
+# comments supplied to make sure.  Leave the line     #
+# blank, if you'd like no reply                       #
+#######################################################
+### Command not recognized:
+I'm Sorry That Command Is Invalid !!
+### Not enough access:
+Access Denied !!
+### Net split reaction:
+Notify :  A NetSplit Just Occured ...
+### Noone specified for commands like: access, add
+Please Specify Someone ...
+### User is protected warning:
+You Just Harmed A Protected User, That Will Not Happen Again !!
+### Bot can't message itself:
+Invalid Command !!!
+### Mass modes detected
+Notify :  Mass Modes Have Been Detected ...
+### No nick specifed with "NICK"
+Specify A Nick ...
+### No level specifed
+Specify A Level ...
+### Specify a channel name
+Specify The Channel Name ...
+### I'm not on that channel
+I'm Not Located On That Channel !!!

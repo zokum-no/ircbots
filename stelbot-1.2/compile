@@ -1,0 +1,5 @@
+cd source
+rm *.o
+make
+mv StelBot ..
+cd ..

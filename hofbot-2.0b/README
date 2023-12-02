@@ -1,0 +1,203 @@
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   _/               HOFBOT IS DEDICATED TO DREAM DELTA GROUP               _/
+   _/THIS HOFBOT V2.0B DOES NOT CONTAIN ANY BACKDOORS OR WHAT SO EVER.     _/
+   _/THERE ARE TWO WAYS TO GET THE NEWEST HOFBOT VERSION OR OTHER HOFBOT   _/
+   _/RELATED INFORMATION:                                                  _/
+   _/1. VIA BOT(S) IN #HOF						   _/
+   _/2. HTTP://WWW.UG.CS.SUNYSB.EDU/~POONJ/HOFBOT.HTML                     _/
+   _/3. FTP.ERBICIDE.COM/PUB/HOF/HOFBOT					   _/
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+*+-+*+-+*+-+*+-
+Part I. Legend
+*+-+*+-+*+-+*+-
+>>Hackbot is a powerful irc robot written by ComStud in C language. Besides
+  its powerful channel guarding abilities, It is not prone to flood and pretty
+  stable once you loaded it up.
+>>HOFbot is based on Hackbot.  Most bugs from Hackbot have been fixed and many
+  enhancements are added to MAXIMIZE its power and fun.
+>>This official HOFbot comes with all the source codes.  You can modify the
+  codes if you want. However, please do give me some credits if you appreciate
+  my hard work. :) Once again, i can only promise you that there are absolutely
+  no back doors if and only if you get the bot directly from bot(s) in #hof on
+  irc or via URL http://www.ug.cs.sunysb.edu/~poonj/hofbot.html
+
+*+-+*+-+*+-+*+-+*+-+*+-+*+-+*+-+*+-+*+-+*+-+
+Part II. New Features (See also NEWCOMMANDS)
+*+-+*+-+*+-+*+-+*+-+*+-+*+-+*+-+*+-+*+-+*+-+
+####################
+### HOFbotv2.0B  ###
+### Jun 29, 1996 ###
+####################
+NEW FEATURES:
+     1. DCC Partyline (will be enhanced in Final version)
+	@ Virtual lag free channel for everyone
+	@ Link hofbots together. HOFbotnet in future?
+        @ Flood
+     To check out this new partyline feature, type joinparty to get
+     in then /msg =botnick .helpme
+     all commands in partyline needs the . prefix.
+	     ex: /msg =botinick .ping  to ping the bot
+     To control all the linked bots, use the + prefix.
+	     ex: /msg =botinick +ping  to ping ALL the bots
+     Things without the prefix will send to all users on the partyline.
+	     ex: /msg =botnick hello all
+                 and all the users on partyline will see:
+		 <someone@botnick> hello all
+     2. You can specify prot number for each server in hofbot.set
+     3. WarOnTog is added in hofbot.set
+     4. Random nick
+     5. Random greet - No more annoying greet everytime u join the channel
+		       the chance of getting a greet is now 1/10!
+     6. Better channel flood protection
+   NEW hofbot.set NEW config.h NEW hof-dccparty.c NEW hof-commands.c
+   You HAVE TO make changes in the new hofbot.set and config.h
+   See FLOODCOUNT and CLONECOUNT in config.h for more info.
+   MORE THAN 10 NEW COMMANDS ARE ADDDED! See NEWCOMMANDS for more info.
+
+FIXED BUGS:
+     1. A memory leak found in channel.c
+     2. check_clonebots truely works now
+     3. some bad codes and small bugs have been removed
+
+BUGS:
+     1. The bot is unable to establish dcc connections after the bot has
+	been loaded up a few days.
+     2. Can't link bots in a circle: 
+	If A-B and B-C, A-C will creat a lot of problems. (- => is linked to)
+####################
+### HOFbotv1.03F ###
+### Feb. 3, 1996 ###
+####################
+1.  Able to detect and log most net splits in netsplit.log.
+2.  Change nick when net split is detected.
+3.  Can call all hofbot in public.  This is very useful if there are several
+    hofbots in a channel.  For example:
+    there are three hofbots in #hofbot
+	hofbot1 with command prefix !
+        hofbot2 with command prefix @
+        hofbot3 with command prefix #
+    instead of typing !ping, @ping and #ping to command those bots, you just
+    have to type: hofbot ping
+4.  TogWarOn is added! Don't get it wrong.  It's not an offensive war 
+    toggle.  It's an extremely defensive toggle that protects your channel.
+    When WARON toggle is on, the bot will ignore all ctcp, private, and public
+    messages that are done by non-users(0 accesss level). This is a very secure
+    way to ignore floods and thus stabilize the bot.  In addition, it will make
+    the bot respond much quickly.  The only disadvantage is that the bot won't 
+    kick people that are flooding in public.
+5.  Use three link lists for nicks, greets, and delayop.  They are more 
+    efficient than reading data from nicks.bot, greets.bot, and .delay.
+6.  No longer need to put a ";" after the awaymsg and topic in hofbot.set.  
+####################
+### HOFbotv1.03B ###
+### Jan. 3, 1996 ###
+####################
+1.  Fixed functions changenick(), read_nickfiles(), changetopic(), addgreet()
+    ... to make the bot work better and nicer. :)
+2.  Command.log and msg.log are added.  User can just /msg botnick <text> to
+    leave a msg in the msg.log.
+    Hint: Delete the log files once a week to save hard disk space.
+3.  Better upload interface!  Added information about the files for
+    downloading.  See upload/HOFbot.filelist for details.
+4.  Cycle the channel automatically when it is the only one in the
+    channel and has no op status(steal mode).
+5.  When it joins a channel, it will:
+    - Make itself invisible.
+    - Set the topic in hofbot.set for that channel.
+    - Set the modes in hofbot.set for that channel.
+6.  Set away itself if setaway msg is given in hofbot.set.
+    a) SETAWAY command is added.
+7.  HOFbot use the command levels in hofbot.levels instead of hof-ons.c.
+    a) SAVELEVELS command is added to let you save new command levels in
+       hofbot.levels.
+    Note: CHACCESS(hackbot command) will let you change a command level.
+8.  FL, FPL, MAL, MPL, ... can be found in hofbot.set now. ;)
+9.  CGREETLVL command is added.  Finally, you can change user's greet level
+    in a snap.  A must check out kewl command!
+10. DelayOpTog and RanQuoteTog are added to hofbot.set.
+    a) TOGDELAYOP command is added.
+    b) TOGRANQUOTE command is added.
+    c) SETRANQUOTE command is added.
+11. Fresh ADD, USERLIST, and STATS command.
+12. Uh...there are some more changes but i really can't remember.  Oh well,
+    i hope they are not important. :)
+######################
+### HOFbotv1.02P   ###
+### Sept. 16, 1995 ###
+######################
+1.  The SIGSERV - Trying to reboot is fixed.  HOFBot reloads
+     itself when a memory conflict occures.
+2.  The bot massops or massdeops using "+oooo" or "-oooo"
+3.  REFRESH command is added.  Use this command when the
+     bot act "strange" or "slow" with no reason.
+4.  HOFKEY command is added.
+5.  SENDROSE command is added.
+6.  ADDGREET command is added.
+####################
+### HOFbotv1.02  ###
+### Aug. 1, 1995 ###
+####################
+1.  Upload files and download files using dcc.
+Setting up files available for download
+---------------------------------------
+     HOFBot allows users to DCC get files from it that your designate in
+"HOFbot.filelist" -- This file must be located in the upload directory set
+in the hofbot.set file.  The HOFbot.filelist is displayed with the command
+"files".  So users will know which ones they can download.  Here's the format
+of the file:
+
+<Filename> <Accesslvl to get the file>
+
+     All the files must be located in the upload directory.
+Note: each file must be on a new line in HOFbot.filelist
+Also, there should be an example in /upload.
+
+2.  Enforce topic.  The bot will enforce the topic after a specific time
+    interval.  Two options: 1. enftop for short and "colorful" topic =)
+			    2. enftop2 for long and boring topic :O
+3.  Delayopppppppppppppppppppppp!  For the sake of ppl in the channel, the
+    bot will not op users or bots that are opped by others. It continues to
+    do other things and give op IF AND ONLY IF the users or bots haven't
+    been opped after 1 minute.
+    so no more ***Mode change "+o lamer" on channel #lame by lamer2
+	       ***Mode change "+o lamer" on channel #lame by lamer3
+####################
+### HOFbotv.101  ###
+### July 1, 1995 ###
+####################
+1. Change nick right after a Kill, nick collision or changed servers.
+2. Change nick during a specified time interval.
+3. Set a random topic according to the one millionth customer or the tenth
+   millionth or whatever you prefer. :)
+4. It greets ppl according to different greet levels. See the greets.bot for
+   more details.
+5. Word kick toggle. If word kick is enabled, it will kick-ban the lamer after
+   he/she has cursed in public three times.  The kick words are fuck, dick, or
+   pussy.
+6. News of the day!  It will send your news to all of its channels.
+   (I'm thinking about to make the bot show the news to user who just join the
+    channel(s) if news toggle is turn on in the future.)
+7. It will send a heart, poem, or song to some one u like upon request. ;)
+
+*+-+*+-+*+-+*+-+*+
+Part III. Credits
+*+-+*+-+*+-+*+-+*+
+ComStud, Vladrac, OffSpring, Curl, KuLat...	
+Thanks to Alp for all the suggestions, bug reports and most importantly
+his time helping new hofbot users on irc. 
+Thanks to Erb for all the "weird" ideas and great ftp site support!
+Thanks to all of you out there who care to send me supportive e-mails.
+
+*+-+*+-+*+-+*+-+*+-
+Part IV. The end?!?
+*+-+*+-+*+-+*+-+*+-
+If you find any bugs, please send e-mail to:
+	   jpoon@mathlab.sunysb.edu,
+	   jpoon@ic.sunysb.edu,
+	   poonj@ug.cs.sunysb.edu
+or contact HOF, HOFII, Alp, Del on IRC.
+
+Happy ircing and botting to ya all!
+
+HOF

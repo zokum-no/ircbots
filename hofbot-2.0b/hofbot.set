@@ -1,0 +1,100 @@
+###################################################
+####  Configuration file for HOFBOT v2.0Beta  #####
+###################################################
+
+###Part I: Global settings
+
+Owner=*!*jpoon@*.sunysb.edu
+
+Nick=hofbot
+	CmdChar=!
+	Username=hoffer
+	IrcName=http://www.ug.cs.sunysb.edu/~poonj/hofbot.html
+# Set the changing of nick to 5 mins
+	NickTime=5
+        IdleTime=3600
+	EnfTopTime=10
+	RanQuoteTime=5
+	RanTopTime=30
+# Turn on the greetings
+        GreeTog=1
+# Turn on the changing of nicks
+        NickTog=1
+# Turn on the changing of random topics
+        RanTopTog=1
+# Turn on the news toggle
+        NewsTog=0
+# If TogWarOn =  1, the bot will have maxmimun flood protection
+# for itself but minimum channel flood protection.
+	WarOnTog=0
+# sets
+# FloodLevel
+	FL=5
+# FloodProtLevel
+	FPL=1
+# BeepKickLevel
+	BKL=2
+# CapsKickLevel
+	CKL=2
+# MassDeopLevel
+	MDL=7
+# MassBanLevel
+	MBL=7
+# MassKickLevel
+	MKL=7
+# MassProtLevel
+	MPL=2
+# MassNickLevel
+	NCL=3
+# MassActionLevel
+	MAL=50
+# Servers
+	Server=irc.mcs.net 6664
+	Server=irc.mo.net 6663
+	Server=irc.ais.net 6665
+        Server=irc.stealth.net 6662
+        AwayMsg=I'll be back! When? I don't know.
+# default greetmsg for people who first join the channel.
+	GreetMsg=Welcome,type HOFBOT files or readnews if you need help.
+
+### Part II. Channel settings  
+### Note: 1 = ON, 0 = OFF
+
+# Put your bot in #hofbotnet if you want to link your hofbot with other 
+# hofbots.  You should change the access for addbot, addparty, and joinparty
+# to 0 to allow other bots to link with yours.
+	Channel=#HOFBOTNET
+                Topic=Welcome to hofbotnet! Please link your bot with ours!
+	        Mode=nt
+# Enforce topic toggle
+                EnfTopTog=1
+# Delay op toggle
+		DelayOpTog=1
+# Random quote toggle
+		RanQuoteTog=1
+# word-kick toggle
+                WkTog=0
+                SDTog=1
+                PubTog=1
+                ProtTog=1
+                ShitTog=1
+                EnfmTog=0
+                AopTog=1
+                MassTog=1
+                IkTog=0
+
+	Channel=#HOFBASE
+                Topic=Welcome to the base of H.O.F!
+	        Mode=nt
+                EnfTopTog=1
+		DelayOpTog=1
+		RanQuoteTog=1
+                SDTog=1
+                PubTog=1
+                ProtTog=1
+                ShitTog=1
+                EnfmTog=0
+                AopTog=1
+                MassTog=1
+                IkTog=0
+		WkTog=0

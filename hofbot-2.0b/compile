@@ -1,0 +1,4 @@
+cd source
+make
+mv hofbot ..
+cd ..

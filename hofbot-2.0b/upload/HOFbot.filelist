@@ -1,0 +1,4 @@
+#lines begin with '=' are displayed as messages.
+=           =*=*=*=*=*=Official HOFbot files=*=*=*=*=*=
+#Filename   Level   Information
+HOFbot.README 0 HOFbot readme file

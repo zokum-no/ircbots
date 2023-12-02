@@ -1,0 +1,21 @@
+  	  -==-*-==-*-==-*-==>News<==-*-==-*-==-*-==
+1. HOFBOTV2.0Beta IS NOW AVAILABLE! 
+   NEW FEATURES:
+     1. Partyline (will be enhanced in Final version)
+	@ Virtual lag free channel for everyone
+	@ Link hofbots together. HOFbotnet in future.
+     2. You can specify prot number for each server in hofbot.set
+     3. WarOnTog is added in hofbot.set
+     4. Random nick
+     5. Random greet - No more annoying greet everytime u join the channel
+		       the chance of getting a greet is now 1/10!
+     6. Better channel flood protection
+   NEW hofbot.set NEW config.h NEW hof-dccparty.c NEW hof-commands.c
+   NOTE: FOR MORE INFO, SEE README AND NEW COMMANDS.
+
+   FIXED BUGS:
+     1. A memory leak found in channel.c
+     2. check_clonebots truely works now
+     3. some bad codes and small bugs have been removed
+
+p.s: I'm HOFbotv2.0B owned and maintained by HOF!jpoon@mathlab.sunysb.edu

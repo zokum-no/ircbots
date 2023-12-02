@@ -1,0 +1,76 @@
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   _/               HOFBOT IS DEDICATED TO DREAM DELTA GROUP               _/
+   _/THIS HOFBOT V1.03Beta DOES NOT CONTAIN ANY BACKDOORS OR WHAT SO EVER. _/
+   _/THERE ARE TWO WAYS TO GET THE NEWEST HOFBOT VERSION OR OTHER HOFBOT   _/
+   _/RELATED INFORMATION:                                                  _/
+   _/1. VIA BOT(S) IN #HOF ON IRC(efnet or undernet)                       _/
+   _/2. HTTP://WWW.UG.CS.SUNYSB.EDU/~POONJ/HOFBOT.HTML            -*HOF*-  _/
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+###Installation guide for HOFbot by Fans, modified by HOF.
+
+
+Part I Installation:
+       HOFBot is easy to install but required some patient. If you haven't 
+   read the README file yet, please do so!  YOU WON'T MAXIMIZE THE POWER AND 
+   FUN OF THE HOFBOT IF YOU DON'T READ THE DOCS. Now, follow the as easy as
+   1-2-tree step by step instructions below and make sure you also read the
+   Q&A in part II.
+
+1. Edit the hofbot.set to your taste. E.G. onwer host, bot nick, channel name,
+      channel setting, command charater, servers...
+
+2. Edit hofbot.userlist, put all users' hosts and levellike this:
+      <channel or *> <user nick or host> <user level> <aop> <prot level> 
+      <greet level> <password>
+      Then rename the hofbot.userlist to <your bot's nick>.userlist
+
+3. You can also edit greet.bot to your taste too. So you can give your irc 
+      friend different greet when they join the channel. E.G. "Hi, my master lamer,
+      I am ready for your commands.", etc. Also you can edit quotes.bot for 
+      the bot's random topic, and edit nicks.bot for it's nicks changing.
+
+4. You now can begin to compile the bot by typing "compile" and wait for a few
+      minutes.
+
+4. After all, type "hofbot".  I advice you to try out the commands
+      in order to get yourself familiar to the bot.
+
+
+5. Type "help" on irc to get help.  Also you can read the hofbot.help for all
+      commands and NEWCOMMANDS for new HOFbot commands.
+
+
+Part II. Q&A
+
+1. My bot keep saying incorrect levels?
+   	Make sure if your owner host in hofbot.set is correct. 
+   Owner=*!*<userid>@*userhost  ex: Owner=*!*jpoon@*sunysb.edu
+
+2. My bot doesn't op my friends?
+         Make sure your friend in the bot's userlist. If you assigned
+   pass-word for your friend, they have to /msg <botnick> <prefix>auth <passwd>
+   After authorized, they can use the bot.
+
+3. Why my bot won't auto op me instantly?
+         To avoid too many mode changes in the channel, HOFBot add the delay 
+   op feature that the bot will op you only and if only you hasn't be opped 
+   by others after 1 minute.  
+
+4. My bot doesn't do greet to me or other users?
+         Check the greet.bot and the userlist. The greetlevel is from 1 to 99.
+   level 0 is no greet. So make sure the setting is right.
+
+5. My bot keep changing the random topic, but not the topic in my hofbot.set?
+   	You must add a ";" after the topic!  Also, u have to trun on the 
+   enforce topic option by either set the EnfTop = 1 in the hofbot.set or use 
+   the "TogEnfTop" command.
+
+6. My bot doesn't do the nick changing?
+         Edit the nicks.bot file, add some different nicks for the bots.
+   Also you can use the command "SetNick" for the nick changing time.
+
+_____________________________________________________________________________
+August, 1995
+HOF,Fans

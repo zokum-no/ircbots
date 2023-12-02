@@ -1,0 +1,39 @@
+#### StelBot / Version 1.2 ####
+
+This Bot Is Brought To You By  Bryan Karrade (bryan@primenet.com)
+                              InTouch Communications  1-(602)-241-9979
+
+-=[ StelBot.Guide / Written By  ~~Bryan8~~  bryan@primenet.com ]=-
+
+
+           --------------------------------------------------
+            Welcome To StelBot Version 1.2 By Bryan Karrade
+           --------------------------------------------------
+
+This Is The StelBot.Guide.  It Will Tell You How To Get You StelBot
+Started.  There Are A Couple Of Steps To Getting You Started On
+StelBot And Here They Are :
+
+-=[ Steps ]=-
+
+#### Do All These Steps At The Prompt ####
+
+1.  tar -xvf StelBotv1.2.tar 
+2.  cd StelBot
+3.  Rename The BotNick's To You Own Bots Name
+4.  Edit The StelBot.Set File To Your Likeing
+5.  Change AnyThing Else You Find That You Want To Change
+6.  cd source
+7.  Make Sure The Makefile Is Set Up Right For You System
+8.  In Commands.c Go To The Second  do_bot And Fill In The "Blanks"
+9.  make
+10. mv StelBot ../
+11. cd ../
+12. ./StelBot
+
+That Should Do It Your Bot Should Be Up And Running.
+
+I Hope You Have Success And I'll See Ya On Irc
+
+==Bryan8==  
+

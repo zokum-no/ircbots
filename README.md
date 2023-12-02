@@ -39,7 +39,7 @@ Hopbot                               Very basic bot, less than 15kb.
    VladBot 2.1.g
    +--ChRoniCBot                     Stricter on channel security.
    |  +--IncuBot 1.02c               The branch incubus worked on.
-   |  |  +--Incubot-1.02c-Byxnet     Compiler fixes, minor bug fixes.
+   |  |  +--Incubot 1.02c-Byxnet     Compiler fixes, minor bug fixes.
    |  |  +--Mikribot                 My own branch.
    |  |  +--Revbot                   Revzoot's branch for #quake.   
    |  IncuBot 1.03b-beta             Has more code from The Black
@@ -57,15 +57,21 @@ Hopbot                               Very basic bot, less than 15kb.
    +--Johbot                         Binary + config/lists only
    +--HackBot 0.9-alpha 13           Coded by ComStud.
    |  +--TnT2 5.7                    Bin+docs. Has code from Johbot.
-   |  Hackbot-x.x                    Coded by ComStud.
+   |  Hackbot x.x                    Coded by ComStud.
    |  +--ComBot                      Coded by ComStud.
    |  |  +--DweeB0t                  Fork by Piraeus.
-   |  |  +--StelBot                  StealthBot.
+   |  |  +--StelBot 1.0              StealthBot.
    |  |  |  +--RockBot               Fixes alleged backdoors in Stel.
-   |  |  |     +--StarBot            Starlink network service bot.
-   |  |  +--EnergyMech-2.0.3         Code by Polygon.
-   |  |     +--EnergyMech SGC        Starglider Class fork by Proton. 
-   |  |        +--Extramech-gudelia  Fork with services support and a game.
+   |  |  |  |  +--StarBot            Starlink network service bot.
+   |  |  |  StelBot 1.2              Polished and cleaned up.
+   |  |  Combot 2.05                 Base for energybot.
+   |  |  +--EnergyBot                Ancestor of emech.
+   |  |  |   +--EnergyMech 2.0.3     Code by Polygon.
+   |  |  |      +--EnergyMech SGC    Starglider Class fork by Proton. 
+   |  |  |         +--Extramech-gudelia  Fork with services support and a game.
+   |  |  |         +--Minimech       Low memory fork by same author.
+   |  |  +--ComBot-Deluxe            Only mentioned online on macademia.
+   |  +--Hofbot 2.0b                  Fork by KuLaT nmashudi@brazos.pe.utexas.edu
    |  +--Divbot 2.0a                 Binary, docs
    |     Divbot 4.0                  Binary, docs
    Vladbot 3.x branch                No known forks off of this one.

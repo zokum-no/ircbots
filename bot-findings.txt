@@ -43,10 +43,14 @@ Ascii Bot of the UnderNet.
 Source has been cleaed up, war functions were added. Many other additions.
 
 
-==Hackbot 0.90-alpha 13 ==
+== Hackbot 0.90-alpha 13 ==
 Early version of the hackbot/combot linneage, by Comstud. There is also a 
 slightly older alpha 12 in the archive.
 
+
+== HofBot ==
+A bot based on Hackbot, with a bunch of fixes. Found it on wayback's archive
+of Proton, the emech coder's site.
 
 == HopBot ==
 File: hop1.8.tar.Z
@@ -76,6 +80,10 @@ current irc network staff lost. The coder behind it has passed away.
 == StelBot 1.0 ==
 A fork of Combot done by Brian 'Bryan8' Karrade. Has a few new commands and
 an updated help file.
+
+
+== StelBot 1.2 ==
+Some more new commands, more polish, removed references to being a ComBot.
 
 
 == TnT-II 5.7f ==
