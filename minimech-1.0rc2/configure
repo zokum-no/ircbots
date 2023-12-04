@@ -1,0 +1,924 @@
+#! /bin/sh
+#
+#   Starglider Class EnergyMech, IRC Bot software for UNIX.
+#   Copyright (c) 1997-1999  proton
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program; if not, write to the Free Software
+#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+
+umask 077
+
+cf_MACH=
+cf_SYS=
+cf_GNUCC=
+
+ft_alias=
+ft_debug=
+ft_dyncmd=
+ft_linkevents=
+ft_linking=
+ft_newbie=
+ft_pipeuser=
+ft_seen=
+ft_session=
+ft_superdebug=
+ft_telnet=
+ft_wingate=
+ft_prof=
+
+AIX_SOCKETVAR=
+AIX_SELECT='#undef HAVE_SYS_SELECT_H'
+
+for opt
+do
+
+  case "$opt" in
+    -*=*)
+      optarg=`echo $opt | sed 's/.*=//;'` ;;
+    *)
+      optarg= ;;
+  esac
+
+  case "$opt" in
+    --enable-*=*)
+      feature=`echo $opt | sed 's/^\-\-enable\-//; s/=.*$//'` ;;
+    --enable-*)
+      feature=`echo $opt | sed 's/^\-\-enable\-//;'` ;;
+    --disable-*)
+      feature=`echo $opt | sed 's/^\-\-disable\-//;'` ;;
+    --with-*=*)
+      feature=`echo $opt | sed 's/^\-\-with\-//; s/=.*$//'` ;;
+    --with-*)
+      feature=`echo $opt | sed 's/^\-\-with\-//;'` ;;
+    --without-*)
+      feature=`echo $opt | sed 's/^\-\-without\-//;'` ;;
+    *)
+      feature=___none___ ;;
+  esac
+
+  case "$feature" in
+    alias | debug | dyncmd | linkevents | linking \
+    | newbie | pipeuser | seen | session | telnet \
+    | wingate | profiling | superdebug )
+      case _"$optarg"_ in
+        _yes_ | _no_ | __ )
+          ;;
+        *)
+          echo "unknown argument for $feature":" $optarg"
+          echo "Usage: configure [options]"
+          echo "use \"$0 --help\" for help"
+          exit 1
+      esac
+      ;;
+    ___none___ )
+      ;;
+    *)
+      echo "unknown feature: $feature"
+      echo "Usage: configure [options]"
+      echo "use \"$0 --help\" for help"
+      exit 1
+  esac
+
+  case "$opt" in
+    --enable-* | --with-*)
+      case "$feature"_"$optarg" in
+        alias_yes | alias_ ) ft_alias=yes ;;
+        alias_no ) ft_alias=no ;;
+        debug_yes | debug_ ) ft_debug=yes ;;
+        debug_no ) ft_debug=no ;;
+        dyncmd_yes | dyncmd_ ) ft_dyncmd=yes ;;
+        dyncmd_no ) ft_dyncmd=no ;;
+        linkevents_yes | linkevents_ ) ft_linkevents=yes ;;
+        linkevents_no ) ft_linkevents=no ;;
+        linking_yes | linking_ ) ft_linking=yes ;;
+        linking_no ) ft_linking=no ;;
+        newbie_yes | newbie_ ) ft_newbie=yes ;;
+        newbie_no ) ft_newbie=no ;;
+        pipeuser_yes | pipeuser_ ) ft_pipeuser=yes ;;
+        pipeuser_no ) ft_pipeuser=no ;;
+        seen_yes | seen_ ) ft_seen=yes ;;
+        seen_no ) ft_seen=no ;;
+        session_yes | session_ ) ft_session=yes ;;
+        session_no ) ft_session=no ;;
+        superdebug_yes | superdebug_ ) ft_superdebug=yes ;;
+        superdebug_no ) ft_superdebug=no ;;
+        telnet_yes | telnet_ ) ft_telnet=yes ;;
+        telnet_no ) ft_telnet=no ;;
+        wingate_yes | wingate_ ) ft_wingate=yes ;;
+        wingate_no ) ft_wingate=no ;;
+        profiling_yes | profiling_ ) ft_prof=yes ;;
+        profiling_no ) ft_prof=no ;;
+      esac
+    ;;
+    --disable-* | --without-*)
+      case "$feature" in
+        alias ) ft_alias=no ;;
+        debug ) ft_debug=no ;;
+        dyncmd ) ft_dyncmd=no ;;
+        linkevents ) ft_linkevents=no ;;
+        linking ) ft_linking=no ;;
+        newbie ) ft_newbie=no ;;
+        pipeuser ) ft_pipeuser=no ;;
+        seen ) ft_seen=no ;;
+        session ) ft_session=no ;;
+        telnet ) ft_telnet=no ;;
+        wingate ) ft_wingate=no ;;
+        profiling ) ft_prof=no ;;
+      esac
+    ;;
+    --use-m486)     cc_m486_opt=yes ;;
+    --no-m486)      cc_m486_opt=no ;;
+    --no-cpuflags)  cc_m486_opt=no ;;
+    --use-optimize) cc_O2_opt=yes ;;
+    --no-optimize)  cc_O2_opt=no ;;
+    --use-gnudebug) cc_g_opt=yes ;;
+    --no-gnudebug)  cc_g_opt=no ;;
+    --use-warnflag) cc_Wall_opt=yes ;;
+    --no-warnflag)  cc_Wall_opt=no ;;
+    --use-pipeflag) cc_pipe_opt=yes ;;
+    --no-pipeflag)  cc_pipe_opt=no ;;
+    --help | -h)
+        cat <<__EOT__
+Usage: configure [options]
+Configuration:
+  --help                   print this message
+Features and packages:
+  --disable-FEATURE        do not include FEATURE (same as --enable-FEATURE=no)
+  --enable-FEATURE[=ARG]   include FEATURE [ARG=yes]
+  --with-PACKAGE[=ARG]     use PACKAGE [ARG=yes]
+  --without-PACKAGE        do not use PACKAGE (same as --with-PACKAGE=no)
+  --with-alias             ALIAS support
+  --with-debug             Debug support
+  --with-dyncmd            Dynamic command levels support
+  --with-linkevents        LinkEvents logging support
+  --with-linking           Linking support
+  --with-newbie            Newbie support
+  --with-pipeuser          Pipeuser support
+  --with-profiling         Profiling (gcc+gprof)
+  --with-seen              SEEN support
+  --with-session           Session saving support
+  --with-superdebug        Debugging taken to the extreme
+  --with-telnet            Telnet support
+  --with-wingate           Wingate support
+__EOT__
+      exit 0
+      ;;
+    CC=*)
+      CC=`echo $opt | sed 's/.*=//;'`
+      ;;
+    *)
+      echo "unknown option: $opt"
+      echo "Usage: configure [options]"
+      echo "use \"$0 --help\" for help"
+      exit 1
+  esac
+
+done
+
+WHICH=./which$$
+cat > $WHICH <<EOF
+bin=\$1
+spath="`echo $PATH | sed 's/:/ /g;'`"
+if [ -x \$bin ]; then
+  echo \$bin
+  exit
+fi
+for pd in \$spath; do
+  if [ -x \$pd/\$bin ]; then
+    echo \$pd/\$bin
+    exit
+  fi
+done
+echo 'not found'
+EOF
+chmod +x $WHICH
+
+if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
+  if (echo -n testing; echo 1,2,3) | sed s/-n/xn/ | grep xn >/dev/null; then
+    ac_n=
+    ac_c='
+'
+    ac_t='	'
+  else
+    ac_n=-n
+    ac_c=
+    ac_t=  
+  fi
+else
+  ac_n=
+  ac_c='\c'
+  ac_t=
+fi
+
+echo $ac_n "checking system type ... "$ac_c
+
+UNAME=`$WHICH uname`     
+if [ -x $UNAME ]; then
+  cf_ERR=
+else
+  cf_ERR=yes
+fi 
+  
+if test -z "$cf_ERR" && ( $UNAME -s 1> /dev/null 2> /dev/null ); then
+  cf_SYS=`$UNAME -s`
+else
+  cf_ERR=yes
+fi
+
+if test -z "$cf_ERR" && ( $UNAME -m 1> /dev/null 2> /dev/null ); then
+  cf_MACH=`$UNAME -m`
+else
+  cf_ERR=yes
+fi
+
+if test -z "$cf_ERR" && test "$cf_SYS" = "AIX" ; then
+  cf_MACH=
+fi
+
+if test "$cf_ERR" ; then 
+  echo $ac_t "unknown"
+cat <<EOF
+Unable to determine system type.
+Dont know how to compile the EnergyMech.
+exiting ...
+EOF
+  rm -f $WHICH
+  exit 1
+fi  
+  
+if test "$cf_MACH" ; then
+  cf_SYSMACH="$cf_SYS"'-'"$cf_MACH"
+else
+  cf_SYSMACH="$cf_SYS"
+fi  
+  
+echo $ac_t "$cf_SYSMACH"
+
+#
+#
+#
+
+echo $ac_n "checking for C compiler ... "$ac_c
+if [ "$CC" ]; then
+  CC=`$WHICH $CC`
+else
+  CC=`$WHICH gcc`
+fi
+if [ ! -x "$CC" ]; then
+  CC=`$WHICH cc`
+  if [ ! -x "$CC" ]; then
+    echo $ac_t "not found"
+    echo "A working C compiler is needed to compile the EnergyMech"
+    echo "exiting ..."
+    rm -f $WHICH
+    exit 1
+  fi
+fi
+CClong="$CC"
+CC=`echo $CC|sed 's/.*\///;'`
+echo $ac_t "$CC"
+
+# make test.c program
+
+TESTC=./test$$.c
+TESTO=./test$$.o
+TESTP=./test$$
+rm -f $TESTC $TESTP
+
+cat > $TESTC << EOF
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+int main(int argc, char **argv)
+{
+#ifdef __GNUC__
+  printf("gnucc\n");
+#else
+  printf("yes\n");
+#endif
+  return(0);
+}
+EOF
+
+echo $ac_n "checking whether $CC works or not ... "$ac_c
+if ($CC -o $TESTP $TESTC 2>&1) | grep '.' >/dev/null; then
+  WORK=no
+fi
+if [ -x "$TESTP" ]; then
+  if ( $TESTP | grep 'yes' 1> /dev/null 2> /dev/null ) 1> /dev/null 2> /dev/null ; then
+    WORK=yes
+  fi
+  if ( $TESTP | grep 'gnucc' 1> /dev/null 2> /dev/null ) 1> /dev/null 2> /dev/null ; then
+    WORK=yes
+    cf_GNUCC=yes
+  fi
+fi
+
+rm -f $TESTP
+
+if [ "$WORK" = "yes" ]; then
+  echo $ac_t "yes"
+  compiler=$CC
+else
+  echo $ac_t "no"
+  echo "A working C compiler is needed to compile the EnergyMech"
+  echo "exiting ..."
+  rm -f $TESTC $WHICH
+  exit 1
+fi
+
+if [ "$cf_GNUCC" = "yes" ]; then
+  if [ -z "$cc_g_opt" ]; then
+    echo $ac_n "checking whether C compiler ($CC) accepts -g ... "$ac_c
+    cc_g_opt=yes
+    if ( $CC -g -o $TESTO $TESTC 2>&1 ) | grep '.' >/dev/null; then
+      cc_g_opt=no
+    fi
+    echo $ac_t "$cc_g_opt"
+  fi
+
+  Wtest=
+  Wshadow="$cc_Wshadow_opt"
+  test -z "$cc_Wall_opt" && Wtest=yes
+  test -z "$cc_Wshadow_opt" && Wtest=yes
+  if [ "$Wtest" ]; then
+    echo $ac_n "checking whether C compiler ($CC) accepts -Wall ... "$ac_c
+    if ( $CC -g -Wall -Wshadow -o $TESTO $TESTC 2>&1 ) | grep '.' >/dev/null; then
+      test -z "$cc_Wall_opt" && cc_Wall_opt=no
+      test -z "$cc_Wshadow_opt" && cc_Wshadow_opt=no
+    else
+      test -z "$cc_Wall_opt" && cc_Wall_opt=yes
+      test -z "$cc_Wshadow_opt" && cc_Wshadow_opt=yes
+    fi
+    echo $ac_t "$cc_Wall_opt"
+  fi
+
+  if [ -z "$Wshadow" ]; then
+    echo $ac_n "checking whether C compiler ($CC) accepts -Wshadow ... "$ac_c
+    echo $ac_t "$cc_Wshadow_opt"
+  fi
+
+  if [ -z "$cc_m486_opt" ]; then
+    cc_m486_opt=no
+    if ( echo $cf_MACH | grep '^i[456789]86' > /dev/null ); then
+      echo $ac_n "checking whether C compiler ($CC) accepts -m486 ... "$ac_c
+      cc_m486_opt=yes
+      if ( $CC -m486 -o $TESTO $TESTC 2>&1 ) | grep '.' >/dev/null; then
+        cc_m486_opt=no
+      fi
+      echo $ac_t "$cc_m486_opt"
+    fi
+  fi
+
+  if [ -z "$cc_pipe_opt" ]; then
+    cc_pipe_opt=no
+    echo $ac_n "checking whether C compiler ($CC) accepts -pipe ... "$ac_c
+    cc_pipe_opt=yes
+    if ( $CC -pipe -o $TESTO $TESTC 2>&1 ) | grep '.' >/dev/null; then
+      cc_pipe_opt=no
+    fi
+    echo $ac_t "$cc_pipe_opt"
+  fi
+fi
+
+if [ -z "$cc_O2_opt" ]; then
+  echo $ac_n "checking whether C compiler ($CC) accepts -O2 ... "$ac_c
+  cc_O2_opt=yes
+  if ( $CC -O2 -o $TESTO $TESTC 2>&1 ) | grep '.' >/dev/null; then
+    cc_O2_opt=no
+  fi
+  echo $ac_t "$cc_O2_opt"
+fi
+
+if [ "$ft_prof" = "yes" ]; then
+  echo $ac_n "checking profiling support ... "$ac_c
+  lib_dl=no
+  if ( $CC -pg -o $TESTO $TESTC 2>&1 ) | grep . > /dev/null ; then
+    if ( $CC -pg -o $TESTO $TESTC -ldl 2>&1 ) | grep . > /dev/null ; then
+      echo $ac_t "-ldl"
+      lib_dl=yes
+    else
+      echo $ac_t "missing"
+      ft_prof=no
+    fi
+  else
+    echo $ac_t "yes"
+  fi
+fi
+
+rm -f $TESTC $TESTO $TESTP
+
+cat > $TESTC << EOF
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+int main(int argc, char **argv)
+{
+  printf("%i\n",sizeof(void*));
+  return(0);
+}
+EOF
+
+if [ -z "$ptr_size" ]; then
+  echo $ac_n "checking pointer size ... "$ac_c
+  if ( $CC -o $TESTP $TESTC 2>&1 ) | grep '.' >/dev/null; then
+    ptr_size='unknown'
+  fi
+  if [ -x "$TESTP" ]; then
+    ptr_size=`$TESTP`
+  fi
+  echo $ac_t "$ptr_size"
+fi
+
+if test "$ptr_size" = "unknown" ; then
+  PTSIZE_DEFINE32='#define PTSIZE_32BIT'
+  PTSIZE_DEFINE64='#undef PTSIZE_64BIT'
+else
+  if test "$ptr_size" = "4" ; then
+    PTSIZE_DEFINE32='#define PTSIZE_32BIT'
+    PTSIZE_DEFINE64='#undef PTSIZE_64BIT'
+  else
+    if test "$ptr_size" = "8" ; then
+      PTSIZE_DEFINE32='#undef PTSIZE_32BIT'
+      PTSIZE_DEFINE64='#define PTSIZE_64BIT'
+    else
+      PTSIZE_DEFINE32='#define PTSIZE_32BIT'
+      PTSIZE_DEFINE64='#undef PTSIZE_64BIT'
+    fi
+  fi
+fi  
+
+rm -f $TESTC $TESTO $TESTP
+
+cat > $TESTC << EOF
+#include <netinet/in.h>
+#include <arpa/inet.h>
+int main(int argc, char **argv)
+{
+  struct in_addr ia;
+  ia.s_addr = inet_addr("0.0.0.0");
+  return(0);
+}
+EOF
+
+echo $ac_n "checking for inet_addr() ... "$ac_c
+has_inet_addr=no
+( $CC -o $TESTP $TESTC 2>&1 ) >/dev/null
+if [ -x $TESTP ]; then
+  has_inet_addr=yes
+else
+  ( $CC -o $TESTP $TESTC -lnsl 2>&1 ) >/dev/null
+  if [ -x $TESTP ]; then
+    has_inet_addr=-lnsl
+    libnsl=-lnsl
+  fi
+fi
+echo $ac_t "$has_inet_addr"
+rm -f $TESTC $TESTP
+
+cat > $TESTC << EOF
+#include <unistd.h>
+#include <sys/socket.h>
+int main(int argc, char **argv)
+{
+  int s;
+  s = socket(AF_INET,SOCK_STREAM,0);
+  return(0);
+}
+EOF
+
+echo $ac_n "checking for socket() ... "$ac_c
+has_socket=no
+( $CC -o $TESTP $TESTC 2>&1 ) >/dev/null
+if [ -x $TESTP ]; then
+  has_socket=yes
+else
+  ( $CC -o $TESTP $TESTC -lsocket 2>&1 ) >/dev/null
+  if [ -x $TESTP ]; then
+    has_socket=-lsocket
+    libsocket=-lsocket
+  fi
+fi
+echo $ac_t "$has_socket"
+rm -f $TESTC $TESTP
+
+cat > $TESTC << EOF
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+int main(int argc, char **argv)
+{
+  usleep(50000);
+  return(0);
+}
+EOF
+
+echo $ac_n "checking for usleep() ... "$ac_c
+has_usleep=no
+DEF_USLEEP='#undef HAS_USLEEP'
+( $CC -o $TESTP $TESTC 2>&1 ) >/dev/null
+if [ -x $TESTP ]; then
+  has_usleep=yes
+  DEF_USLEEP='#define HAS_USLEEP'
+else
+  has_usleep=no
+  DEF_USLEEP='#undef HAS_USLEEP'
+fi
+echo $ac_t "$has_usleep"
+rm -f $TESTC $TESTP
+
+cat > $TESTC <<EOF
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+char x[100] = "one\0two";
+int main(int argc, char **argv)
+{
+  char *a;
+  a = strchr(x,0);
+  if (!strcmp(++a,"two"))
+  printf("yes\n");
+  return(0);
+}
+EOF
+
+echo $ac_n "checking for proper function of strchr() ... "$ac_c
+has_ok_strchr=no
+DEF_OK_STRCHR='#undef HAS_OK_STRCHR'
+( $CC -o $TESTP $TESTC 2>&1 ) >/dev/null
+if [ -x $TESTP ]; then
+  if [ "`$TESTP`" = "yes" ]; then
+    has_ok_strchr=yes
+    DEF_OK_STRCHR='#define HAS_OK_STRCHR'
+  fi
+fi
+echo $ac_t "$has_ok_strchr"
+rm -f $TESTC $TESTP
+
+echo $ac_n "checking for chmod ... "$ac_c
+CHMOD=`$WHICH chmod`
+echo $ac_t "$CHMOD"
+
+echo $ac_n "checking for rm ... "$ac_c
+RM=`$WHICH rm`
+echo $ac_t "$RM"
+
+echo $ac_n "checking for mv ... "$ac_c
+MV=`$WHICH mv`
+echo $ac_t "$MV"
+
+echo $ac_n "checking for objcopy ... "$ac_c
+OBJCOPY=`$WHICH objcopy`
+echo $ac_t "$OBJCOPY"
+
+objcomment=
+if [ "$OBJCOPY" = "not found" ]; then
+  objcomment='#'
+fi
+
+rm -f $WHICH
+
+echo "Creating src/Makefile"
+
+cflags="-c"
+if [ "$cc_m486_opt" = "yes" ]; then
+  cflags="-m486 "$cflags
+fi
+if [ "$cc_O2_opt" = "yes" ]; then
+  cflags="-O2 "$cflags
+fi
+if [ "$cc_Wall_opt" = "yes" ]; then
+  cflags="-Wall "$cflags
+fi
+if [ "$cc_Wshadow_opt" = "yes" ]; then
+  cflags="-Wshadow "$cflags
+fi
+if [ "$cc_g_opt" = "yes" ]; then
+  cflags="-g "$cflags
+fi
+if [ "$cc_pipe_opt" = "yes" ]; then
+  cflags="-pipe "$cflags
+fi
+
+lflags="-o"
+if [ "$cc_g_opt" = "yes" ]; then
+  lflags="-g "$lflags
+fi
+
+cprof=
+lprof=
+if [ "$ft_prof" = "yes" ]; then
+  cprof="-pg"
+  lprof="-pg"
+  if [ "$lib_dl" = "yes" ]; then
+    lprof="$lprof -ldl"
+  fi
+fi
+
+libflags=$libsocket' '$libnsl
+
+sed "
+s%@CHMOD@%$CHMOD%
+s%@MV@%$MV%
+s%@CC@%$CClong%
+s%@RM@%$RM%
+s%@OBJCOPY@%$OBJCOPY%
+s%@cprof@%$cprof%
+s%@lprof@%$lprof%
+s%@cflags@%$cflags%
+s%@lflags@%$lflags%
+s%@libflags@%$libflags%
+s%@oc@%$objcomment%
+" < src/Makefile.in > src/Makefile
+
+echo
+echo "Do you want ..."
+echo
+
+echo $ac_n "Debug support? ............................. [y/N] "$ac_c
+unset ans
+if [ "$ft_debug" ]; then
+  echo "$ft_debug";
+  ans=$ft_debug
+else
+  read ans
+fi
+
+if [ -z "$ans" ]; then
+  DEBUGDEF='#undef DEBUG'
+else
+  DEBUGDEF='#undef DEBUG'
+  case "$ans" in
+    y | Y | yes | YES | Yes) DEBUGDEF='#define DEBUG' ;;
+  esac
+fi
+
+SUPERDEBUG='#undef SUPERDEBUG'
+
+if [ "$DEBUGDEF" = "#define DEBUG" ]; then
+  echo $ac_n "Superdebug support? ........................ [y/N] "$ac_c
+  unset ans
+  if [ "$ft_superdebug" ]; then
+    echo "$ft_superdebug"
+    ans=$ft_superdebug
+  else
+    read ans
+  fi
+  if [ -z "$ans" ]; then
+    SUPERDEBUG='#undef SUPERDEBUG'
+  else
+    SUPERDEBUG='#undef SUPERDEBUG'
+    case "$ans" in
+      y | Y | yes | YES | Yes) SUPERDEBUG='#define SUPERDEBUG' ;;
+    esac
+  fi
+fi
+
+LINKEVENTS='#undef LINKEVENTS'
+
+if [ "$DEBUGDEF" = "#define DEBUG" ]; then
+  echo $ac_n "LinkEvents support? ........................ [y/N] "$ac_c
+  unset ans
+  if [ "$ft_linkevents" ]; then
+    echo "$ft_linkevents"
+    ans=$ft_linkevents
+  else
+    read ans
+  fi
+  if [ -z "$ans" ]; then
+    LINKEVENTS='#undef LINKEVENTS'
+  else
+    LINKEVENTS='#undef LINKEVENTS'
+    case "$ans" in
+      y | Y | yes | YES | Yes) LINKEVENTS='#define LINKEVENTS' ;;
+    esac
+  fi
+fi
+
+echo $ac_n "Seen support? .............................. [y/N] "$ac_c
+unset ans
+if [ "$ft_seen" ]; then
+  echo "$ft_seen"
+  ans=$ft_seen
+else
+  read ans
+fi
+
+if [ -z "$ans" ]; then
+  SEENDEF='#undef SEEN'
+else
+  SEENDEF='#undef SEEN'
+  case "$ans" in
+    y | Y | yes | YES | Yes) SEENDEF='#define SEEN' ;;
+  esac
+fi
+
+echo $ac_n "Linking support? ........................... [Y/n] "$ac_c
+unset ans
+if [ "$ft_linking" ]; then
+  echo "$ft_linking"
+  ans=$ft_linking
+else
+  read ans
+fi
+
+if [ -z "$ans" ]; then
+  LINKDEF='#define LINKING'
+  linking_support=yes
+else
+  LINKDEF='#undef LINKING'
+  linking_support=no
+  case "$ans" in
+    y | Y | yes | YES | Yes) LINKDEF='#define LINKING' ; linking_support=yes ;;
+  esac
+fi
+
+if [ "$linking_support" = "yes" ]; then
+  echo $ac_n "Telnet support? ............................ [Y/n] "$ac_c
+  unset ans
+  if [ "$ft_telnet" ]; then
+    echo "$ft_telnet"
+    ans=$ft_telnet
+  else
+    read ans
+  fi
+  if [ -z "$ans" ]; then
+    TELNET='#define TELNET'
+  else
+    TELNET='#undef TELNET'
+    case "$ans" in
+      y | Y | yes | YES | Yes) TELNET='#define TELNET' ;;
+    esac
+  fi
+else
+  TELNET='#undef TELNET'
+fi
+
+if [ "$linking_support" = "yes" ]; then
+  echo $ac_n "Pipeuser support? .......................... [Y/n] "$ac_c
+  unset ans
+  if [ "$ft_pipeuser" ]; then
+    echo "$ft_pipeuser"
+    ans=$ft_pipeuser
+  else
+    read ans
+  fi
+  if [ -z "$ans" ]; then
+    PIPEUSER='#define PIPEUSER'
+  else
+    PIPEUSER='#undef PIPEUSER'
+    case "$ans" in
+      y | Y | yes | YES | Yes) PIPEUSER='#define PIPEUSER' ;;
+    esac
+  fi
+else
+  PIPEUSER='#undef PIPEUSER'
+fi
+
+echo $ac_n "Dynamic command levels support? ............ [Y/n] "$ac_c
+unset ans
+if [ "$ft_dyncmd" ]; then
+  echo "$ft_dyncmd"
+  ans=$ft_dyncmd
+else
+  read ans
+fi
+
+if [ -z "$ans" ]; then
+  DYNCMDDEF='#define DYNCMDLEVELS'
+else
+  DYNCMDDEF='#undef DYNCMDLEVELS'
+  case "$ans" in
+    y | Y | yes | YES | Yes) DYNCMDDEF='#define DYNCMDLEVELS' ;;
+  esac
+fi
+
+echo $ac_n "Newbie support? ............................ [Y/n] "$ac_c
+unset ans
+if [ "$ft_newbie" ]; then
+  echo "$ft_newbie"
+  ans=$ft_newbie
+else
+  read ans
+fi
+
+if [ -z "$ans" ]; then
+  NEWBIE='#define NEWBIE'
+else
+  NEWBIE='#undef NEWBIE'
+  case "$ans" in
+    y | Y | yes | YES | Yes) NEWBIE='#define NEWBIE' ;;
+  esac
+fi
+
+echo $ac_n "Alias support? ............................. [Y/n] "$ac_c
+unset ans
+if [ "$ft_alias" ]; then
+  echo "$ft_alias"
+  ans=$ft_alias
+else
+  read ans
+fi
+
+if [ -z "$ans" ]; then
+  ALIASES='#define ALIASES'
+else
+  ALIASES='#undef ALIASES'
+  case "$ans" in
+    y | Y | yes | YES | Yes) ALIASES='#define ALIASES' ;;
+  esac
+fi
+
+#
+#  WinGate code is disabled for now
+#
+
+echo $ac_n "WinGate support? ........................... [Y/n] "$ac_c
+unset ans
+if [ "$ft_wingate" ]; then
+  echo "$ft_wingate"
+  ans=$ft_wingate
+else
+  read ans
+fi
+
+if [ -z "$ans" ]; then
+  WINGATES='#define WINGATES'
+else
+  WINGATES='#undef WINGATES'
+  case "$ans" in
+    y | Y | yes | YES | Yes) WINGATES='#define WINGATES' ;;
+  esac
+fi
+
+echo $ac_n "Session support? ........................... [Y/n] "$ac_c
+unset ans
+if [ "$ft_session" ]; then
+  echo "$ft_session"
+  ans=$ft_session
+else
+  read ans
+fi
+
+if [ -z "$ans" ]; then
+  SESSIONS='#define SESSIONS'
+else
+  SESSIONS='#undef SESSIONS'
+  case "$ans" in
+    y | Y | yes | YES | Yes) SESSIONS='#define SESSIONS' ;;
+  esac
+fi
+
+#
+#  Special case: AIX is severely braindamaged when it comes to select()
+#
+
+if test "$cf_SYS" = "AIX" ; then
+  AIX_DEFINE='#define SYSTEM_IS_AIX'  
+else
+  AIX_DEFINE='#undef SYSTEM_IS_AIX'
+fi
+
+echo
+echo "Creating src/config.h"
+
+sed "
+s|@ALIASES@|$ALIASES|;
+s|@DEBUGDEF@|$DEBUGDEF|;
+s|@DYNCMDDEF@|$DYNCMDDEF|;
+s|@LINKEVENTS@|$LINKEVENTS|;
+s|@LINKDEF@|$LINKDEF|;
+s|@NEWBIE@|$NEWBIE|;
+s|@PIPEUSER@|$PIPEUSER|;
+s|@SEENDEF@|$SEENDEF|;
+s|@SESSIONS@|$SESSIONS|;
+s|@SUPERDEBUG@|$SUPERDEBUG|;
+s|@TELNET@|$TELNET|;
+s|@WINGATES@|$WINGATES|;
+s|@HAS_USLEEP@|$DEF_USLEEP|;
+s|@HAS_OK_STRCHR@|$DEF_OK_STRCHR|;
+s|@AIX_SELECT@|$AIX_SELECT|;
+s|@AIX_DEFINE@|$AIX_DEFINE|;
+s|@PTSIZE_DEFINE32@|$PTSIZE_DEFINE32|;
+s|@PTSIZE_DEFINE64@|$PTSIZE_DEFINE64|;
+" < src/config.h.in > src/config.h
+
+echo 'All done.'
+echo ''
+echo 'Send your bugreports to <proton@energymech.net>'
+echo ''

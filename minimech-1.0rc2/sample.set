@@ -1,0 +1,160 @@
+#
+# Sample EnergyMech configuration file
+#
+# Lines starting with '#' are comments.
+# (you knew that, rite?)
+#
+#-------------------------------------------------
+#
+# An entity name incase we want to link to other
+# bots. CHANGE THIS!
+#ENTITY        emech
+#
+# A password is needed if you want to link your
+# bot to other bots. CHANGE THIS!
+#LINKPASS      abc123
+#
+# A port where this bot will listen for other bots
+# to link with. NOTE: Firewalls may block out some
+# ports, this could be the cause your mech to fail
+# with linking.
+#LINKPORT      49152
+#
+# An example link configuration, here you have an
+# entity called ``hismech'' and its linkpass
+# is ``a1b2c3''. Its listening for connect-
+# ions on host ``mech.host.net'' port 49152.
+#LINK          hismech a1b2c3 mech.host.net 49152
+#
+# Another example, the entity ``muchomech'' isnt
+# listening on any port (no LINKPORT in config)
+# so its irrelevant what host its on and it
+# doesnt have a linkport, thus "0 0" at the end...
+#LINK          hermech abcdefg 0 0
+#
+# Uncomment this to enable auto-linking. This will
+# cause the mech to try and link to all the enti-
+# ties in its links-list until all are present
+# on the mech-net.
+#AUTOLINK
+#
+# All linking stuff is commented out cuz lamers
+# tend to leave configuration as it is which
+# could possibly compromise their bots/shells.
+#
+#-------------------------------------------------
+#
+# Nick, make one up that suits you. CHANGE THIS!
+NICK          emech
+#
+# The file we use to store the userlist.
+# This name is case sensitive (unix filename)...
+USERFILE      emech.users
+#
+# All commands begin with this char...
+CMDCHAR       -
+#
+# Register on IRC with this username
+LOGIN         emech
+#
+# Display this in the "Real Name" field
+IRCNAME       Have You Tried The Ultimate IRC BOT?
+#
+# Modes for the bot
+MODES         +i-ws
+#
+# If you have a virtual host that you want the
+# mech to use, uncomment and edit this line...
+#VIRTUAL       virtual.hosts.com
+#
+# Turn off seen cuz it consumes large amounts of
+# memory. SEEN isnt compiled into the mech by
+# default, you need to edit the config.h in src
+# directory and recompile to support this.
+# Comment this out if you want SEEN to work.
+NOSEEN
+#
+# turn off the possibility to do shell commands if
+# you want a more secure mech
+#NOSHELLCMD
+#
+# Toggles, global ones too! Check REPORT once
+# the bot is up and running!
+#
+TOG CC        1     # We want the bot to require command char.
+#                     Its possible to have to bot working without,
+#                     but that could cause some confusion...
+TOG CLOAK     1     # Ignore CTCP's from non-users? Yes.
+TOG SPY       1     # Tell who is executing what in the partyline.
+SET OPMODES   6     # How many modes in a line? 6 on undernet...
+SET BANMODES  6     # How many bans in a line? 6 on undernet...
+#
+# Basic channel setup...
+#
+CHANNEL       #emech # Channel name.
+TOG PUB       1      # Allow public commands? Yes.
+TOG MASS      1      # Do mass-mode/kick/ban checks...
+TOG SHIT      1      # Activate the shitlist for this channel...
+TOG PROT      1      # Activate protection of users
+TOG ENFM      0      # Dont enforce channel modes in #emech.
+SET MDL       7      # How many -o before killing the guy?
+SET MKL       7      # How many kicks?
+SET MBL       7      # And how many Bans?
+SET MPL       1      # What to do with massmoders?
+#                      0 = nothing,
+#                      1 = kick the bastard,
+#                      2 = kickban 'em,
+#                      3 = kickban & shitlist them.
+#
+CHANNEL       #zt    # And one more channel...
+TOG PUB       1
+TOG MASS      1
+TOG SHIT      1
+TOG PROT      1
+TOG ENFM      1
+SET ENFM      +mnt   # Moderated!
+SET MDL       7
+SET MKL       7
+SET MBL       7
+SET MPL       2      # We're really nice to lamers here...
+#
+CHANNEL       #anychannel
+TOG PUB       1
+TOG MASS      1
+TOG SHIT      1
+TOG PROT      1
+TOG ENFM      1
+SET ENFM      +nt
+SET MDL       7
+SET MKL       7
+SET MBL       7
+SET MPL       1
+#
+#-------------------------------------------------
+#
+# Some undernet servers to connect to... You can
+# use servernames aswell, but putting the resolved
+# IP's here instead of hostnames speeds up connects
+# (alot). Servers are global, ie all mechs in the
+# same process uses the same serverlist.
+#
+SERVER        207.110.0.52     6660  # SanDiego.CA.US
+SERVER        204.127.145.17   6660  # NewBrunswick.NJ.US
+SERVER        154.11.89.164    6660  # Toronto.ON.CA
+SERVER        199.60.228.129   6660  # Vancouver.BC.CA
+SERVER        205.188.149.3    6660  # Washington.DC.US
+SERVER        216.200.162.250  6660  # Los-Angeles.CA.US
+SERVER        207.114.4.35     6660  # Baltimore.MD.US
+SERVER        206.66.12.230    6660  # Dallas.TX.US
+SERVER        194.119.238.162  6660  # Flanders.BE.EU
+SERVER        195.225.2.23     6660  # Oslo-R.NO.EU
+SERVER        207.96.122.250   6060  # Arlington.VA.US
+SERVER        129.27.8.23      6669  # Graz.AT.EU
+#
+# Just in case lamers try to run their mechs with this
+# as their config file...
+#
+DIE You forgot to edit your configuration file...
+#
+# The end...
+#

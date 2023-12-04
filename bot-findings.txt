@@ -73,6 +73,15 @@ BadCRC's changes. The archive comes with many obsolete files and txt files from
 the bots it was based on. The 1.03 beta has more code from The Black's bot.
 
 
+== Minimech ==
+Not many versions known. This was a stripped down emech with no multi-bot 
+support etc. By the same author as the Starglider Class emech, Proton.
+
+
+== Patrocle ==
+Continuation of the Achille fork. Has scripting etc.
+
+
 == PC Bot 0.01 ==
 This seems to be an intermediate step between Bot 0.01 and Hopbot. It has much 
 more  functionality than Bot did. Hopbot has much of the same functionality, 
@@ -102,16 +111,9 @@ non-binary files.
 
 
 == Vladbot 1.9m ==
-File: vladbot-1.9m.tar.gz
-
 VladBot was originally based on HopBot but has changed so much, there is hardly
 any resemblance left. For DCC and other things, I took parts from the ircII 2.2.9
 client. This is (also) why VladBot is released under the GNU Copyright.
-
-Copyright:
-----------
-    VladBot 1.9 - A service bot for IRC.
-    (c) 1993 Ivo van der Wijk
 
 
 == Vladbot 2.1c-ariela ==

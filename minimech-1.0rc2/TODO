@@ -1,0 +1,34 @@
+/*
+ *  MiniMech TODO (October 16th, 2000)
+ *  mostly the same as EnergyMech TODO
+ */
+
+ - Intra-process userfile sharing and synchronization
+ - Inter-process userfile sharing and synchronization
+ - More testing on 64bit systems (OSF/1, Tru64, Alpha-Linux, SunOS 64bit?, IRIX64?)
+ - Genuine telnet protocol support for telnet sessions
+ - Built in nslookup and finger (Is this a wanted/used feature?)
+ - SOCKS4/5 support
+ - Automatic +l updating (should be (a) setting(s))
+ - Undernet CService support
+   (should be channel settings (set=password, tog=enable/disable) /proton)
+ - DalNet Nickserv/Chanserv support
+   (needed? they dont tolerate much bots on that network /proton)
+ - Update/complete the mech.help file.
+ - Mode +/-o commands to check for SO and if SO is set, check
+   userlevel and make sure user has access before sending MODEs.
+ - Multiple channels per userrecord.
+ - SET REGAIN for quicker nick regain control.
+   (Personally I dont agree with this one /proton)
+ - Make it possible to pipe SPY through another bot.
+   Ex: bots = laurel, hardy; /msg laurel -spy #emech hardy!#emech
+ - Add file transfer capabilities (DCC/ftp/whatever).
+ - ALIAS command to add/remove aliases at runtime.
+
+/*
+ *  Most of these features are open for discussion on how to
+ *  (or even if) implement them
+ *
+ *  Patches are most welcome
+ */
+

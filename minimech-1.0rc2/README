@@ -1,0 +1,78 @@
++--+------------+--+
+|**|  MiniMech  |**|
++--+------------+--+
+
+Compiling?
+~~~~~~~~~~
+To compile the source:
+
+1) Uncompress the source code distribution archive.
+
+2) cd minimech-1.0rc2
+-- Since you are reading this file, you have most likely already
+   come to this point.
+
+3) ./configure
+-- This script will prompt you for features to include or exclude,
+   going with the default isnt a bad idea.
+
+4) make clean install
+
+If all went well you should now have an executable called ``mech''.
+
+---*---
+
+Setup?
+~~~~~~
+Read  the  sample.set  file to  get  an idea of  the  config  file
+commands and then try to make your own.  A basic setup doesnt need
+much more than NICK,  USERFILE,  CHANNEL and  SERVER entries,  the
+rest is just tweaks of default values.
+
+Once you get your  mech online,  it will be running in setup mode.
+As long  as the  mech remains  in setup mode,  everyone will  have
+superuser access to it.  To get it out  of setup mode,  simply use
+the command ``ADD'' to add yourself to its userlist. Make sure you
+add yourself at  superuser level (100)  with access to all (``*'')
+channels. See ``HELP ADD'' for more help about the ADD command.
+
+An example:
+  -add spiffy * *!*spiffy@*dialup.dot.com 100 0 0 mysecretpassword
+
+---*---
+
+Updated Files?
+~~~~~~~~~~~~~~
+The main distro-site for the Starglider Class is:
+
+ http://www.energymech.net/index.html
+
+You can also find the files on ftp at:
+
+ ftp://ftp.eggheads.org/pub/energymech/
+
+---*---
+
+More Help?
+~~~~~~~~~~
+You  could try  asking for  help on  the undernet  channel #emech.
+However,  try reading the documentation  before asking there since
+we arent really fond of answering trivial questions.
+
+The  channel  #emech is  more a  place for  people  who  like  the
+MiniMech, not a help-channel,  so dont expect to get help from the
+people there. And if you *do* get help, be grateful for it.
+
+We will NOT teach  you how to work with UNIX  shells or how to use
+your mech, you have to learn that by yourself. Im noting this here
+since it seems to be a common misconception that we would.
+
+In short:
+
+THIS SOFTWARE IS PROVIDED AS IS. YOU ARE ENTIRELY ON YOUR OWN WHEN
+IT COMES TO CONFIGURING AND USING IT.
+
+---*---
+
+proton, February 12th, 2000.
+<mailto:proton@energymech.net>
