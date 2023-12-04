@@ -1,0 +1,78 @@
+###################################################
+####  Configuration file for HOFBOT v1.03Final #### 
+###################################################
+
+###Part I: Global settings
+
+Owner=*!*@alfa.zeke.ne.jp
+
+Nick=[AREA-89]
+	CmdChar=!
+	Username=zeke
+	IrcName=I am a bot of ZEKE Japan
+# Set the changing of nick to 5 mins
+	NickTime=5
+        IdleTime=3600
+	EnfTopTime=90
+	RanQuoteTime=120
+	RanTopTime=30
+# Turn on the greetings
+        GreeTog=0
+# Turn on the changing of nicks
+        NickTog=0
+# Turn on the changing of random topics
+        RanTopTog=0
+# Turn on the news toggle
+        NewsTog=0
+# Public checking
+# If public checking is off, the bot will not check public 
+# flooding and or beeping/CAPSing.
+	ChkPubTog=1
+# sets
+# FloodLevel
+	FL=5
+# FloodProtLevel
+	FPL=1
+# BeepKickLevel
+	BKL=2
+# CapsKickLevel
+	CKL=2
+# MassDeopLevel
+	MDL=7
+# MassBanLevel
+	MBL=7
+# MassKickLevel
+	MKL=7
+# MassProtLevel
+	MPL=2
+# MassNickLevel
+	NCL=3
+# MassActionLevel
+	MAL=50
+# Servers
+	Server=localhost
+        AwayMsg=I'm playing F/A-18 Hornet 3.0...
+
+###Part II. Channel settings  
+###Note: 1 = ON, 0 = OFF
+
+	Channel=#hornet-jp
+                Topic=Welcome to the base of F/A-18 Hornet! This is Japanese channel.
+	        Mode=nt
+# Enforce topic toggle
+                EnfTopTog=1
+# Delay op toggle
+		DelayOpTog=0
+# Random quote toggle
+		RanQuoteTog=1
+# word-kick toggle
+                WkTog=0
+                SDTog=1
+                PubTog=1
+                ProtTog=1
+                ShitTog=1
+                EnfmTog=0
+                AopTog=1
+                MassTog=1
+                IkTog=0
+

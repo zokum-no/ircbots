@@ -1,0 +1,13 @@
+	  -==-*-==-*-==-*-==>News<==-*-==-*-==-*-==
+HOFbotv1.02+powerup&bugfixed(HOFbotv1.02P) is now available!!!
+Please read UPDATE to see what's new in this release.
+To update HOFbotv1.02 to HOFbotv1.02P, you have to download the 
+HOFbotv1.02P.update.tar.gz and untar it INSIDE the hofbot 
+directory. The update version will overwrite some *.c and *.h 
+files in the source directory.  So make backup if you have
+modified or hacked those files before. ;)
+To get the new bot, just type ~get HOFbotv1.02P.
+
+        	                                     HOF
+
+

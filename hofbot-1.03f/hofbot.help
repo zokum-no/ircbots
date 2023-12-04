@@ -1,0 +1,579 @@
+#HOFbotv1.03B help file
+#Last modified: January, 1996
+:topics
+Help topics:
+   access basic files info lists mass misc sets spying toggles newcommands
+:Topic info
+:Help
+Usage: Help <topic or command_name>
+Example: help add         -- shows help for "add"
+         help topics      -- lists help topics
+         help topic basic -- shows list of basic commands
+:Ping
+Usage: Ping
+   Makes the bot respond with a "Pong" message
+:Stats
+Usage: Stats [<channel>] [<nick or userhost>]
+   Shows stats for a person on a certain channel
+:Info
+Usage: Info
+   Shows version data and bot uptime
+:Version
+Usage: Version
+   Returns the version of HackBot that is running
+:Access
+Usage: Access [<channel>] [<nick or userhost>]
+   Shows someone's access level
+:EndTopic
+:Topic files
+:Files
+Usage: Files
+   Shows the files available for download
+:Flist
+Usage: FList
+   Shows the files available for download
+:Get
+Usage: get [<filename>]
+   Download file(s) from the bot.
+:EndTopic
+:Topic newcommands
+:HOFKey
+Usage: HOFkey
+   Command prefix for the bot.
+:ReFresh
+Usage: ReFresh
+   Reload the bot.
+:EnfTop
+Usage: EnfTop [<channel>] <text>
+   Sets the enforced topic on a channel
+   Note: The bot will color the topic. :)
+:EnfTop2
+Usage: EnfTop2 [<channel>] <text>
+   Sets the enforced topic on a channel
+   Note: Use this command when you need to set a long topic
+:TogRanTop
+Usage: TogRanTop
+   Toggles the random topic on or off.
+:TogEnfTop
+Usage: TogEnfTop [<channel>]
+   Toggles the enforce topic on channel on or off.
+:ToGreet
+Usage: ToGreet
+   Toggles the greetings On or Off.
+:TogNick
+Usage: TogNick
+   Toggles the changing of nicks.
+:TogWK
+Usage: TogWK [<channel>]
+   Toggles the kicking of bad words.
+:SetEnfTop
+Usage: SetEnfTop <minutes>
+   The bot will reset the enforced topic after every given minutes.
+:SetRanQuote
+Usage: SetRanQuote <minutes>
+   The bot will notice the channel(RanQuote toggle is ON) a random
+   quote after every given minutes.
+:SetNick
+Usage: SetNick <minutes>
+   The bot will change its nick after every given minutes.
+:SetRanTop
+Usage: SetRanTop <number>
+   The bot will change the topic after the specific number of ppl has joined
+   the channel.
+:Files
+Usage: Files
+   Shows the files available for download.
+:Flist
+Usage: FList
+   Shows the files available for download.
+:Get
+Usage: get <filename>
+   Download file(s) from the bot.
+:Heart
+Usage: Heart <nick or channel>
+   Send the given nick or channel two big hearts!
+   Note: using this too much wiht out dcc connection will
+         excess flood the bot
+:SendRose
+Usage: SendRose <nick or channel> <rose color> <sender> <msg>
+   Send the give nick or channel a dozen rose!
+   Note: using this too much with out dcc connection will
+         excess flood the bot
+:SetAway
+Usage: SetAway [<text>]
+   Change the bot's away msg is given.  If not, the bot clear
+the away msg and thus has no away status.
+:CGreetLvl
+Usage: CGreetLvl <nick or userhost> <level>
+   Changes a user's greet level.
+:AddGreet
+Usage: AddGreet <text>
+   Add a new greet to greets.bot.
+:TogWarOn
+Usage: TogWarOn
+    An extremely defensive toggle that protects a channel. 
+    When WarOn toggle is on, the bot will ignore all ctcp, 
+    private, and public messages that are done by non-users
+   (0 access level).  This a very secure way to ignore floods 
+   and thus stabilize the bot.  In addition, it will make the
+   bot respond and act much quickly.  The only disadvantage is
+   that the bot won't kick people that are flooding in public.
+:EndTopic
+:Topic access
+:Auth
+Usage: Auth <passwd>
+   This verifies that you are who you claim to be
+:Passwd
+Usage: Passwd <old_password> <new_password>
+   Changes your password on the bot
+Note: Passwords are case-sensitive and are crypted so not even bot
+      runners will know your password
+:Aop
+Usage: Aop [<channel>] <nick or userhost>
+   Auto-ops someone on a certain channel
+:Raop
+Usage: RAop [<channel>] <nick or userhost>
+   Stop auto-opping someone on a certain channel
+:AddGreet
+Usage: AddGreet <new greet>
+   Add a new greet to greets.bot.
+:Add
+Usage: Add  <channel or *> <nick or userhost> <level> [<aop>]
+       [<prot_level>] [<greetlvl>] [<passwd>]
+   Adds someone on all chanels (*) or a certain channel
+   Level  - can be between 0 and 99, inclusive
+   AOp    - either 0 or 1 (0 = no, 1 = yes)
+   Prot   - can be 0 through 4
+            0 - no protection
+            1 - reop/unban, do nothing to offender
+            2 - reop/unban, deop offender
+            3 - reop/unban, kick offender
+            4 - reop/unban, kickban offender
+   Greetlvl - can be between 0 and 99, inclusive
+   Passwd - Assigns the person a password
+Note: If no args are given except the userlevel, all others are
+      assumed to be 0 with no passwd
+:Clvl
+Usage: Clvl [<channel>] <nick or userhost> <level>
+   Changes the userlevel of someone on a certain channel
+Note: the level must be less than or equal to yours on that
+      channel
+:CGreetLvl
+Usage: CGreetLvl <nick or userhost> <level>
+   Changes a user's greet level
+:Del
+Usage: Del <channel or *> <nick or userhost>
+   Deletes someone on all channels (*) or a certain channel
+:Shit
+Usage: Shit <channel or *> <nick or userhost> <level> <reason>
+   Shitlists someone on all channels (*) or a certain channel
+   level - can be 1 through 3
+           1 - doesn't let the person be opped
+           2 - will kb the person
+           3 - rebans the person when unbanned by anyone
+   reason - reason for the shitlist...displays it on kickban
+Note: The bot checks for shitlisted users on join, nick switch, and
+      when the bot is opped
+:Restrict
+Usage: Restrict <level>
+   Restricts the bot to a certain level...users with a level less than
+the restrict level will not be able to do commands
+Note: a level of 0 removes restrict
+:RShit
+Usage: Rshit <channel or *> <nick or userhost>
+   Removes someone from the shitlist
+:Prot
+Useage: Prot <channel or *> <nick or userhost> <level>
+   Protects someone on a certain channel or all channels (*)
+   level - can be 1 through 4
+           1 - reop/unban, do nothing to offender
+           2 - reop/unban, deop offender
+           3 - reop/unban, kick offender
+           4 - reop/unban, kickban offender
+:RProt
+Usage: Rprot <channel or *> <nick or userhost>
+   Stop protecting someone on a certain channel or all channels (*)
+:ChAccess
+Usage: ChAccess <command> <level>
+   Changes the level needed to do a command
+Note: the level cannot be set to a level higher than yours
+:EndTopic
+:Topic basic
+:Chat
+Usae: Chat
+   The bot will /DCC Chat you
+:Up
+Usage: Up [<channel>]
+   Ops you on a certain channel
+:Down
+Usage: Down [<channel>]
+   Deops you on a channel
+:B
+Usage: B [<channel>] <nick or userhost>
+   Bans someone on a certain channel
+:UB
+Usage: UB [<channel>] [<nick or userhost>]
+   Unbans someone on a certain channel
+Note: if no nick/userhost is given, you are unbanned
+:Op
+Usage: Op [<channel>] <nick>
+   Ops someone on a certain channel
+:Deop
+Usage: Deop [<channel>] <nick>
+   Deops someone on a certain channel
+:K
+Usage: K [<channel>] <nick> [<reason>]
+   Kicks someone on a certain channel
+:KB
+Usage: KB [<channel>] <nick> [<reason>]
+   Bans, then kicks someone on a certain channel
+:SB
+Usage: SB [<channel>] <nick or userhost>
+   Sitebans someone on a certain channel
+:SKB
+Usage: SKB [<channel>] <nick> [<reason>]
+   Sitekickbans someone on a certain channel
+:Invite
+Usage: Invite [<channel>] [<nick>]
+   Invite someone to a certain channel
+Note: It invites you, if no nick is given
+:EnfTop
+Usage: EnfTop [<channel>] <text>
+   Sets the enforced topic on a certain channel
+   Note: The bot will hilite some of the letters. :) 
+:Topic
+Usage: Topic [<channel>] <text>
+   Sets the topic on a certain channel
+:EndTopic
+:Topic Mass
+:MOP
+Usage: MOp [<channel>] [<wildcards>]
+   Mass-ops people on a certain channel...if wildcards are given,
+only those matching the wildcards will be opped.  Otherwise,
+everyone is opped
+:MDeOp
+Usage: MDeOp [<channel>] [<wildcards>]
+   Mass-deops people on a certain channel...if wildcards are given,
+only those matching the wildcards will be deopped.  Otherwise,
+everyone is deopped
+Note: the bot will NOT deop those with levels greater than or
+       equal to what is set with "SetMal"
+:MK
+Usage: MK [<channel>] [<wildcards>]
+   Mass-kicks people on a certain channel...if wildcards are given,
+only those matching the wildcards will be kicked.  Otherwise,
+everyone is kicked
+Note: the bot will NOT kick those with levels greater than or
+       equal to what is set with "SetMal"
+:MKB
+Usage: MKB [<channel>] [<wildcards>]
+   Mass-kickbans people on a certain channel...if wildcards are
+given, only those matching the wildcards will be kickbanned.
+Otherwise, everyone is kickbanned
+Note: the bot will NOT kickban those with levels greater than or
+       equal to what is set with "SetMal"
+:MDeOpNU
+Usage: MDeOpNU [<channel>]
+   Mass-deops non-users on a certain channel
+:MKNU
+Usage: MKNU [<channel>]
+   Masskick non-users on a certain channel
+:MopU
+Usage: MopU [<channel>]
+   Mass-ops users on a certain channel
+:MUB
+Usage: MUB [<channel>] [<wildcards>]
+   Massunbans the bans that match the wildcards specified
+:MUBF
+Usage: MUBF [<channel>] [<wildcards>]
+   Massunbans the bans done by the person specified with the
+wildcards
+:EndTopic
+:Topic Spying
+:SpyMsg
+Usage: SpyMsg
+   Redirects private messages the bot receives
+:RSpyMsg
+Usage: RSpyMsg <nick>
+   Stop redirecting private messages teh bot receives
+Note: if a nick is given, that person will be removed from
+      receiving the private messages
+:Spy
+Usage: Spy <channel> [<channel>]
+   Spy on a certain channel
+Note: if a channel is given at the end...the bot will redirect
+      to that channel instead of to you
+:RSpy
+Usage: RSpy <channel> [<nick or channel>]
+   Stop spying on a certain channel
+Note: if a nick or channel is given at the end...that person/channel
+will be removed from spying
+:EndTopic
+:Topic Toggles
+:TogRanTop
+Usage: TogRanTop [<channel>]
+   Toggles the random topic on or off.
+:TogEnfTop
+Usage: TogEnfTop [<channel>]
+   Toggles the enforce topic on channel on or off.
+:TogDelayOp
+Usage: TogDelayOp [<channel>]
+   Toggles delayop on a certain channel.
+:TogRanQuote
+Usage: TogRanQuote [<channel>]
+   Toggles random quote on a certain channel.
+:ToGreet
+Usage: ToGreet
+   Toggles the greet on or off.
+:TogNick
+Usage: TogNick
+   Toggles the changing of nicks.
+:TogWK
+Usage: TogWK [<channel>]
+   Toggles the kicking of bad words.
+:TogBK
+Usage: TogBK [<channel>]
+   Toggles the kicking of beepers
+:TogCK
+Usage: TogCK [<channel>]
+   Toggles the kicking of CAPSers
+:TogAOp
+Usage: TogAOp [<channel>]
+   Toggles the auto-opping of users if verified
+:TogProt
+Usage: TogProt [<channel>]
+   Toggles the protection of users
+:TogPub
+Usage: TogPub [<channel>]
+   Toggles the allowance of public commands
+:TogShit
+Usage: TogShit [<channel>]
+   Toggles the kicking of shitlisted users
+:TogIK
+Usage: TogIK [<channel>]
+   Toggles the kicking of idle users on a certain channel
+:TogSD
+Usage: TogSD [<channel>]
+   Toggles the deopping of non-users who are serveropped
+:TogCC
+Usage: TogCC
+   Toggles the necessity of the command character for doing commands
+:TogEnfm
+Usage: TogEnfm [<channel>]
+   Toggles mode enforcement on a certain channel
+:TogSO
+Usage: TogSO [<channel>]
+   Toggles strict opping...if on, if people not in the userlist
+are opped, they will be deopped
+:TogWarOn
+Usage: TogWarOn
+    An extremely defensive toggle that protects a channel. 
+    When WarOn toggle is on, the bot will ignore all ctcp, 
+    private, and public messages that are done by non-users
+   (0 access level).  This a very secure way to ignore floods 
+   and thus stabilize the bot.  In addition, it will make the
+   bot respond and act much quickly.  The only disadvantage is
+   that the bot won't kick people that are flooding in public.
+:EndTopic
+:Topic Sets
+:SetEnfTop
+Usage: SetEnfTop <minutes>
+   The bot will reset the enforced topic after every given minutes.
+:SetRanTop
+Usage: SetRanTop <number>
+   The bot will set a random topic after the given number of ppl have
+   joined the channel
+:SetNick
+Usage: SetNick <minutes>
+   The bot will change its nick after every given minutes.
+:SetRanTop
+Usage: SetRanTop <number>
+   The bot will change the topic after the specific number of ppl has joined
+   the channel.
+:SetBKL
+Usage: SetBKL <level>
+   Sets the number of beeps allowed within a 5 second period
+before the user will be kicked
+:SetCKL
+Usage: SetCKL <level>
+   Sets the number of lines of caps allowed within a 5 second
+period before the user will be kicked
+Note: a line is considered all caps if 60% if it is in caps
+:SetMDL
+Usage: SetMDL <level>
+   Sets the the number of deops allowed during a 10 sec time
+period before it is considered a massdeop
+:SetMBL
+Usage: SetMBL <level>
+   Sets the the number of bans allowed during a 10 sec time
+period before it is considered a massban
+:SetMKL
+Usage: SetMKL <level>
+   Sets the the number of kicks allowed during a 10 sec time
+period before it is considered a masskic
+:SetMPL
+Usage: SetMPL <level>
+   Sets the protection level against massmoders
+   level - can be 0, 1 or 2
+           0 - no action taken against offender
+           1 - kick offender
+           2 - kickban offender
+           3 - kickban and shitlist offender
+:SetFL
+Usage: SetFL <level>
+   Sets the number of lines by the same person within a 10 second
+peiod before it is considered a flood
+:SetFPL
+Usage: SetFPL <level>
+   Sets the protection level against floods
+   level - can be 0 through 2
+           0 - no action against offender
+           1 - kick offender
+           2 - kickban offender
+Note: After 3rd kick within 10 minutes, the person will be
+      sitekickbanned
+      After the 4th time, the person will be shitlisted
+:SetNCL
+Usage: SetNCL <level>
+   Sets the number of nick changes within a 10 second period
+before it is considered nickflooding
+:SetIKT
+Usage: SetIKT <level>
+   Sets the number of seconds someone is allowed to be idle before
+being kicked (if TogIK is on)
+:SetMal
+Usage: SetMAL <level>
+   Sets the mass-action level (the level massdeop, masskick,
+and masskickban will have no effect on)
+:EndTopic
+:Topic Lists
+:DCCList
+Usage: DCCList
+   Lists all of the bots DCC connections
+:Userlist
+Usage: Userlist
+   Shows the userlist
+:Shitlist
+Usage: Shitliost
+   Shows the shitlist
+:Loadusers
+Usage: Loadusers
+   Loads the userlist
+:Loashit
+Usage: Loadshit
+   Loads the shitlist
+:Saveusers
+Usage: Saveusers
+   Saves the userlist
+:Saveshit
+Usage: Saveshit
+   Saves the shitlist
+:Banlist
+Usage: Banlist [<channel>]
+   Shows the banlist for a certain channel
+:SpyList
+Usage: SpyList <channel>
+   Shows who's spying on a certain channel
+:Showusers
+Usage: Showusers [<channel>]
+   List the people on a certain channel
+   This will show their userlevel and current mode status too
+:Showidle
+Usage: Showidle [<seconds>]
+   This will show how long people are idle
+   If a number of seconds is given, it will only show people
+idle for more than that amount of time
+:Last10
+Usage: Last10
+   Shows the last 10 commadns done, and who did them
+:Channels
+Usage: Channels
+   Lists the channels the bot is active on
+:EndTopic
+:Topic misc
+:Say
+Usage: Say [<channel>] <text>
+   Make the bot talk on a certain channel
+:Me
+Usage: Me [<channel>] <text>
+   Make the bot do an action on a certain channel
+:Msg
+Usage: Msg <nick> <text>
+   Makes the bot /msg someone
+:Join
+Usage: Join <channel> [<key>]
+   Makes the bot join a channel
+:Cycle
+Usage: Cycle [<channel>]
+   Makes the bot leave and rejoin a certain channel
+:Leave
+Usage: Leave [<channel>]
+   Makes the bot leave a certain channel
+:Nick
+Usage: Nick <nick>
+   Changes the nick of the bot
+:Limit
+Usage: Limit [<channel>] <number>
+   This is a replacement for the +l mode
+   When the number of users reached = the number specified, the bot
+will +i the channel.  Once the number of lusers is 3 les tht thnube pecified, it will -i
+:Userhost
+Usage: Userhost <nick>
+   Returns the userhost of a person
+:Steal
+Usage: Steal <channel>
+   Makes the bot try and steal a channel
+:RSteal
+Usage: RSteal <channel>
+   Makes the bot stop trying to steal a channel
+:EnfModes
+Usage: EnfModes <channel> [<modes>]
+   Sets the modes to enforce on a certain channel.  If no modes
+are given, then no modes are enforeced
+:CmdChar
+Usage: CmdChar <command_character>
+   Changes the bot's command character
+:Server
+Usage: Server <servername>
+   Makes the bot switch servers
+:NextServer
+Usage: NextServer
+   Makes the bot go to the next server in the serverlist
+:Bomb
+Usage: Bomb <channel or nick> <tag> <args>
+   Sends a CTCP Reply to a channel or person
+:Do
+Usage: Do <raw_irc>
+   Sends raw crap to the server
+:Spawn
+Usage: Spawn <nick> <options>
+   Spawns a new bot with the given nickname
+   options:
+           -s servername
+           -l login
+           -i ircname
+           -z command character
+Example of usage: spawn Tickler -s irc.iastate.edu -l cbehrens -z - -i Do you
+want to be tickled???
+:GetCh
+Usage: GetCh
+   Returns the name of the bot's current channel
+:ChanStats
+Usage: ChanStats [<channel>]
+   Returns basically useless information about a channl
+:Global
+Usage: Global <subcommand> args...
+   Let's you control the other bots that are spawned
+Subcommands:
+   List -- Gives information about the current bots that are running
+   Info -- same as List
+   Die  -- kills a certain bot or all bots
+:Review
+usage: Review <#> where # is the last number of commands you wish to review
+Note: if you use "Review 5" it will show the last *6* commands, yours and
+the preceding 5
+:Die
+Usage: Die <reason>
+   Kills the bot =(
+:EndTopic
+

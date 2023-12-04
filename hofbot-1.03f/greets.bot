@@ -1,0 +1,14 @@
+#This file contains all the greets that the bot will use when it finds 
+#someone special. ;) If you have given the user greetlvl 1, it would call
+#MaStEr <username>, I'm ready for thoug commands! *bows*
+#2==>king, 3==>Mighty, .....
+#The following greets are just EXAMPLES, please modify them to ur needs.
+#You can add as many greets as you want in this file.
+#The standard format is <comment>,<comment>
+MaStEr,I'm ready for thou commands! *bows*
+King mAsTeR,I'm ready for thou commands!
+Mighty Master,blah...blah...blah...
+Cute Master,command me? hug me? or kiss me? =)
+Naughty Master,stop harrasing me! *cries*
+Flirt Master,err..STOP flirting with me! *puke*
+

@@ -1,3 +1,9 @@
+= Bots I want more information about =
+
+Chronicbot, SeekerBot, Lamerbawt, Energybot
+
+= Bots I have information about =
+
 == Achille 2.1hi-51 ==
 French Vladbot fork from 1996 with added AI code and commands.
 
@@ -50,7 +56,8 @@ slightly older alpha 12 in the archive.
 
 == HofBot ==
 A bot based on Hackbot, with a bunch of fixes. Found it on wayback's archive
-of Proton, the emech coder's site.
+of Proton, the emech coder's site. Thanks to the file name I manged to track
+down an older 1.03f version in addition to the 2.0.
 
 == HopBot ==
 File: hop1.8.tar.Z

@@ -71,7 +71,8 @@ Hopbot                               Very basic bot, less than 15kb.
    |  |  |         +--Extramech-gudelia  Fork with services support and a game.
    |  |  |         +--Minimech       Low memory fork by same author.
    |  |  +--ComBot-Deluxe            Only mentioned online on macademia.
-   |  +--Hofbot 2.0b                  Fork by KuLaT nmashudi@brazos.pe.utexas.edu
+   |  +--HofBot 1.03f                Fork by KuLaT nmashudi@brazos.pe.utexas.edu   
+   |  |  Hofbot 2.0b                 
    |  +--Divbot 2.0a                 Binary, docs
    |     Divbot 4.0                  Binary, docs
    Vladbot 3.x branch                No known forks off of this one.

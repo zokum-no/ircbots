@@ -1,0 +1,171 @@
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   _/               HOFBOT IS DEDICATED TO DREAM DELTA GROUP               _/
+   _/THIS HOFBOT V1.03F DOES NOT CONTAIN ANY BACKDOORS OR WHAT SO EVER.    _/
+   _/THERE ARE TWO WAYS TO GET THE NEWEST HOFBOT VERSION OR OTHER HOFBOT   _/
+   _/RELATED INFORMATION:                                                  _/
+   _/1. VIA BOT(S) IN #HOF OR #HOFBOT ON IRC(efnet or undernet)            _/
+   _/2. HTTP://WWW.UG.CS.SUNYSB.EDU/~POONJ/HOFBOT.HTML            -*HOF*-  _/
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+The following are new commands in addition to those commands in Hackbot.hlp.
+####################
+### HOFbotv1.03F ###
+### Feb. 3, 1996 ###
+####################
+26. TogWarOn
+Usage: TogWarOn
+    An extremely defensive toggle that protects a channel. 
+    When WarOn toggle is on, the bot will ignore all ctcp, 
+    private, and public messages that are done by non-users
+   (0 access level).  This a very secure way to ignore floods 
+   and thus stabilize the bot.  In addition, it will make the
+   bot respond and act much quickly.  The only disadvantage is
+   that the bot won't kick people that are flooding in public.
+####################
+### HOFbotv1.03B ###
+### Jan. 3, 1996 ###
+####################
+21. CGreetLvl(a very very kewl command)
+Usage: CGreetLvl <nick> <level>
+   Changes a user's greet level.
+   Level  - can be between 0 and 99, inclusive
+22. TogDelayOp
+Usage: TogDelayOp [<channel>]
+   Toggles delayop option on a certain channel.
+23. TogRanQuote
+Usage: TogRanQuote [<channel>]
+   Toggles random quote on a certain channel.
+24. SetRanQuote
+Usage: SetRanQuote <minutes>
+   The bot will notice the channel(RanQuote toggle is ON) a random
+   quote after every given minutes.
+24. SetAway
+Usage: SetAway [<text>]
+   Change the bot's away msg is given.  If not, the bot clear
+the away msg and thus has no away status.
+25. SaveLevels
+Usage: SaveLevels
+   Save all the command levels in hofbot.levels.
+
+######################
+### HOFbotv1.02P   ###
+### Sept. 16, 1996 ###
+######################
+17. HOFKey
+Usage: HOFkey
+   Command prefix for the bot.
+18. ReFresh
+Usage: ReFresh
+   Reload the bot.
+19. AddGreet
+Usage: AddGreet <text>
+   Add a new greet to the greets.bot.
+20. SendRose(a kewl command)
+Usage: SendRose <nick or channel> <rose color> <sender> <msg>
+   Send the give nick or channel a dozen rose!
+   Note: using this too much with out dcc connection will
+	 excess flood the bot
+
+####################
+### HOFbotv1.02  ###
+### Aug. 1, 1995 ###
+####################
+14. EnfTop
+Usage: EnfTop [<channel>] <text>
+   Sets the enforced topic on a certain channel
+   Note: The bot will color the topic. :)
+
+15. Files
+Usage: Files
+   Show the files available for download.
+
+16. Get
+Usage: get <filename>
+   Download file(s) from the bot.
+
+####################
+### HOFbotv1.01  ###
+### July 1, 1995 ###
+####################
+1. Add
+Usage: Add  <channel or *> <nick or userhost> <level> [<aop>] [<greetlvl>]
+[<prot_level>] [<passwd>]
+   Adds someone on all channels (*) or a certain channel
+   Level  - can be between 0 and 99, inclusive
+   AOp    - either 0 or 1 (0 = no, 1 = yes)
+   Prot   - can be 0 through 4
+	    0 - no protection
+	    1 - reop/unban, do nothing to offender
+	    2 - reop/unban, deop offender
+	    3 - reop/unban, kick offender
+	    4 - reop/unban, kickban offender
+   Greetlvl - can be between 0 and 99, inclusive
+   Passwd - Assigns the person a password
+   Note: If no args are given except the userlevel, all others are
+	 assumed to be 0 with no passwd
+
+2. TogRanTop
+Usage: TogRanTop [<channel>]
+   Toggles the random topic on or off.
+
+3. ToGreet
+Usage: ToGreet
+   Toggles the greetings On or Off.
+
+4. TogNick
+Usage: TogNick
+   Toggles the changing of nicks.
+
+5. TogWK
+Usage: TogWK [<channel>]
+   Toggles the kicking of bad words on a certain channel.
+
+6. SetEnfTop
+Usage: SetEnfTop <minutes>
+   The bot will reset the enforced topic after every given minutes.
+
+7. SetNick
+Usage: SetNick <minutes>
+   The bot will change its nick after every given minutes.
+
+8. SetRanTop
+Usage: SetRanTop <number>
+   The bot will change the topic after every given number of ppl has joined
+   the channel.
+
+9. NexTopic
+Usage: NexTopic <channel>
+   Set a random topic for thc channel.
+
+10. NextNick
+Usage: NextNick
+   Change to next nick in the nicks.bot.
+
+11. Poem(Removed since v1.02P)
+Usage: Poem <nick or channel>
+   Send nick or channel a love poem!
+   Note: using this too much with out dcc connection will
+	 excess flood the bot.
+
+12. Song
+Usage: Song <nick or channel>
+   Send nick or channel a song!
+   Note: using this too much with out dcc connection will
+	 excess flood the bot.
+
+13. Heart
+Usage: Heart <nick or channel>
+   Send nick or channel two big hearts!
+   Note: using this too much with out dcc connection will
+	 excess flood the bot.
+
+----------------------------------------------------------------------------
+
+See also: hofbot.set, hofbot.userlist, greets.bot, nicks.bot, quotes.bot for
+	  additional new changes.
+
+Please send E-Mail to jpoon@ic.sunysb.edu if you find any bugs.
+
+
+
+								HOF
