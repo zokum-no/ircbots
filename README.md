@@ -1,5 +1,5 @@
 # ircbots
-A comprehensive collection of classic IRC bots, mostly from the Vladbot family.
+A comprehensive collection of classic IRC bots, mostly from the VladBot family.
 Many of these bots were written in a time where cpu and memory was quite 
 expensive and having a scripting engine or inefficient code would be very
 detrimental. Version control systems, public repositories and pre-packaged bots
@@ -23,11 +23,11 @@ access to.
 I started using Incubots in 2000-2001 and have been using a fork of this bot
 since then. In 2023 I started digging into the history of the bot and went
 looking for forks of the bot. I found a lot more than I had expected. It was
-a big surprise to me that the well-known Energy Mech bot was from the Vladbot
+a big surprise to me that the well-known Energy Mech bot was from the VladBot
 family.
 
-## Vladbot family tree
-After some research, this is the known family tree for the Vladbot family of irc
+## VladBot family tree
+After some research, this is the known family tree for the VladBot family of irc
 bots.
 ```
 Bot 0.01                             Early version of Hopbot, same author.
@@ -35,7 +35,7 @@ PCBot 0.01                           Intermediate between bot and hopbot.
 Hopbot                               Very basic bot, less than 15kb.
 +--VladBot 1.x                       Only got the source for 1.9
    VladBot 2.1.c
-   +--Vladbot 2.1.c-ariela           A few very minor modifications.
+   +--VladBot 2.1.c-ariela           A few very minor modifications.
    VladBot 2.1.g
    +--ChRoniCBot                     Stricter on channel security.
    |  +--IncuBot 1.02c               The branch incubus worked on.
@@ -43,62 +43,67 @@ Hopbot                               Very basic bot, less than 15kb.
    |  |  +--Mikribot                 My own branch.
    |  |  +--Revbot                   Revzoot's branch for #quake.   
    |  IncuBot 1.03b-beta             Has more code from The Black
-   Vladbot 2.1.h
-   +--Vladbot-pHb-Nefertari          French translation.
+   VladBot 2.1.h
+   +--VladBot-pHb-Nefertari          French translation.
    +--HipBot                         Stripped away some features.
-   +--Vladbot-2.1.h-m                Removed note support.
+   +--VladBot-2.1.h-m                Removed note support.
    +--Achille
-   |  +--Vladbot 2.1-sk3             The Patrocle bot
+   |  +--VladBot 2.1-sk3             The Patrocle bot
    VladBot-2.10
    +--fRitE 3.0                      Forked by Offspring.
    |  fRitE 4.1.x
    |  +--fRitE+                      Continuation by Pyber.
    VladBot 2.x                      
-   +--Johbot                         Binary + config/lists only
+   +--Johbot-10.2                    Binary + config/docs only, 3 versions.
    +--HackBot 0.9-alpha 13           Coded by ComStud.
    |  +--TnT2 5.7                    Bin+docs. Has code from Johbot.
    |  Hackbot x.x                    Coded by ComStud.
-   |  +--ComBot                      Coded by ComStud.
+   |  +--ComBot x.x                  Coded by ComStud.
+   |  |  +--ComBot-Deluxe            Only mentioned online on macademia.
    |  |  +--DweeB0t                  Fork by Piraeus.
    |  |  +--StelBot 1.0              StealthBot.
    |  |  |  +--RockBot               Fixes alleged backdoors in Stel.
    |  |  |  |  +--StarBot            Starlink network service bot.
    |  |  |  StelBot 1.2              Polished and cleaned up.
-   |  |  Combot 2.05                 Base for energybot.
+   |  |  ComBot 2.05                 Base for energybot.
    |  |  +--EnergyBot                Ancestor of emech.
-   |  |  |   +--EnergyMech 2.0.3     Code by Polygon.
-   |  |  |      +--EnergyMech SGC    Starglider Class fork by Proton. 
-   |  |  |         +--Extramech-gudelia  Fork with services support and a game.
-   |  |  |         +--Minimech       Low memory fork by same author.
-   |  |  +--ComBot-Deluxe            Only mentioned online on macademia.
+   |  |     +--EnergyMech 2.0.3      Code by Polygon.
+   |  |         +--EnergyMech SG     Starglider Class fork by Proton.
+   |  |            +--Minimech       Low memory fork by same author.
+   |  |            +--Extramech-gudelia Fork with services support and a game.
    |  +--HofBot 1.03f                Fork by KuLaT nmashudi@brazos.pe.utexas.edu   
-   |  |  Hofbot 2.0b                 
-   |  +--Divbot 2.0a                 Binary, docs
-   |     Divbot 4.0                  Binary, docs
-   Vladbot 3.x branch                No known forks off of this one.
+   |  |  HofBot 2.0b                 
+   |  +--DivBot 2.0a                 Binary, docs
+   |     DivBot 4.0                  Binary, docs
+   VladBot 3.x branch                No known forks off of this one.
 ```
 
 ## Credits
 Many of the forks removed the credits to earlier authors, giving an incomplete
 view of who did what. All of the bots should credit 'Coyote Peyote' and all but
-the two earliest should credit Ivo and the rest of the Vladbot team.
+the two earliest should credit Ivo and the rest of the VladBot team.
 
 ### Bot, PCBot, HopBot
 Coyote Peyote
 
-### Vladbot
+### VladBot
 Ivo 'VladDrac' van der Wijk, Richard 'Richie\_B' van der Berg, President, mozgy 
 \+ the HopBot author.
 AIX port: Dathes
 
 ### Ariela
-H\_I (parmenti@loria.fr) + Vladbot authors.
+H\_I (parmenti@loria.fr) + VladBot authors.
+
+### VladBot-pHb-Nefertari
+Most likely Philippe 'PhBb' Brand + Vladbot authors. PhB is also mentioned in
+the credits for the Dancer irc bot.
+
 
 ### ChroniC Bot
 Robert 'BadCRC' Alto, The-Black, Adrian 'MeGALiTH' Cable, Brian 'Wendigo' Hess 
-\+ the Vladbot authors.
+\+ the VladBot authors.
 
-### Incubot
+### IncuBot
 Incubus, Eggdrop team + the ChroniC bot authors.
 
 ### Revbot
@@ -108,7 +113,7 @@ Revzoot + the Incubot authors.
 Kim Roar 'Zokum' Foldøy Hauge, Reep, Colin 'cph' Phipps + the Incubot authors.
 
 ### Hackbot & Combot
-Christopher 'CoMSTuD' Behrens + the Vladbot authors.
+Christopher 'CoMSTuD' Behrens + the VladBot authors.
 
 ### TnT2 
 ttone + Hackbot authors and johbot authors.
@@ -117,7 +122,7 @@ ttone + Hackbot authors and johbot authors.
 Energy Mech Team, Mong (RoverBot code), Pup (LamerBawt code) + the Combot authors
 
 ### Johbot
-joh!chihhung@wam.umd.edu (John Kao), + Vladbot authors, possibly others.
+joh!chihhung@wam.umd.edu (John Kao), + VladBot authors, possibly others.
 
 ### Divbot
 curl@rabi.phys.columbia.edu + Hackbot authors.

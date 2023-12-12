@@ -1,0 +1,2440 @@
+
+%SUBJECT STANDARD
+- \b Help for \n version \v\b -
+  Thank you for using bot written by chihhung@wam.umd.edu.
+  [] -> Parameters that are not necessary for the command to
+      be performed.
+  <> -> Parameters that are necessary for \n to carry
+      out the command.
+  [channel] -> Most of the commands, if entered as private 
+     message to a channel, that channel will be assumed.  [channel] 
+     overrides that assumption.  If a command is send through msg or
+     dcc chat and [channel] is not passed in, the bot's active 
+     channel will be assumed
+
+  \b\u/MSG <BOTNICK> [**<PASSWORD>] <COMMAND> [COMMAND PARAMETERS]
+                         This feature will allow you to access
+                         the bot without login and logout.
+
+  \b\uHELP COMMANDS <UPTO>\b\u List commands that are avaliable
+                         to you at your access level or upto the
+                         level you specified.
+  \b\uHELP NEWS\b\u         Read news
+  \b\uHELP <command>\b\u    Get help on that command.
+  \b\uHELP\b\u              This Menu.
+\b==============================================================
+%end STANDARD
+
+%SUBJECT INFO
+\b  FORMAT: \uINFO\b\u 
+\b  DESCRIPTION:\b 
+       Shows information about \n
+       This include the uptime and total running time.
+       It also includes the released version.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON INFO =================
+%END INFO
+
+%SUBJECT FILES
+\b  FORMAT: \uFILES\b\u 
+\b  DESCRIPTION:\b
+      List files that are available for DCC send.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON FILES =================
+%END FILES
+
+%SUBJECT SEND
+\b  FORMAT: \uSEND\b\u <filename> 
+\b  DESCRIPTION:\b
+       Type files for a list of available files,
+       then type send <filename> to receive that
+       file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SEND =================
+%END SEND
+
+%SUBJECT HELP
+\b  FORMAT: \uHELP\b\u [commands or <command name>] 
+\b  DESCRIPTION:\b
+       commands shows a list of commands available to you 
+       at your access level.
+       <command name> gives you information about that 
+       command. 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON HELP =================
+%END HELP
+
+%SUBJECT NEWS
+\b  FORMAT: \uNEWS\b\u 
+\b  DESCRIPTION:\b
+       Gives the current news set by the owner of this
+       bot. 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NEWS =================
+%END NEWS
+
+%SUBJECT INVITE
+\b  FORMAT: \uINVITE\b\u [channel] [nick]
+\b  DESCRIPTION:\b 
+       If [nick] is provided then the animation will
+       invite [nick] to [channel].
+       Otherwise the animation will invite you to
+       [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON INVITE =================
+%END INVITE
+
+%SUBJECT PASSWD
+\b  FORMAT: \uPASSWD\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help passwd.<subcommand name>
+       This command is to set, unset, and remove
+       password access option.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PASSWD =================
+%END PASSWD
+%SUBJECT FL
+\b  FORMAT: \uFL\b\u <<nick> or -<address>>
+\b  DESCRIPTION:\b 
+       Flashes <nick>/<address>.  <nick>/<address>
+       will receive a bunch of talk requests that 
+       is from his/her own host machine.  These 
+       talk requests will mess up his terminal and
+       a zmodem download request.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON FL =================
+%END FL
+
+
+%SUBJECT LIN
+\b  FORMAT: \uLIN\b\u <passwd>
+\b  DESCRIPTION:\b 
+       If you enabled your password function for your 
+       access, then you will have to login each time
+       you sign into IRC.  Notice that the <password> 
+       is case sensitive.
+\b  SEE ALSO:\b PASSWD, LO
+\bEND OF HELP ON LIN =================
+%END LIN
+
+%SUBJECT LO
+\b  FORMAT: \uLO\b\u 
+\b  DESCRIPTION:\b 
+       This will allow you to log out thus preventing
+       hackers from hacking your account and gaining 
+       access to the bot.  If you idle from accessing
+       this animation for more than 20 minutes you will
+       automatically be logged out.
+\b  SEE ALSO:\b PASSWD, LIN
+\bEND OF HELP ON LO =================
+%END LO
+
+%SUBJECT ACC
+\b  FORMAT: \uACC\b\u [<nick> or -<address pattern>]
+\b  DESCRIPTION:\b 
+       If no parameter is given, the animation will assume
+       you want your own access information.    Otherwise,
+       it will show you the access information of the <nick>
+       or the <address>.    Note: If you want to enter
+       address instead of nick please prefix the address with
+       a dash as shown.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON ACC =================
+%END ACC
+
+%SUBJECT CHAT
+\b  FORMAT: \uCHAT\b\u 
+\b  DESCRIPTION:\b 
+       This command will have the animation initiate a DCC
+       chat connection request to you.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CHAT =================
+%END CHAT
+
+%SUBJECT NOTE
+\b  FORMAT: \uNOTE\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help note.<subcommand name>
+       This command is to read and write notes to other
+       users.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NOTE =================
+%END NOTE
+
+%SUBJECT TIME
+\b  FORMAT: \uTIME\b\u 
+\b  DESCRIPTION:\b 
+       The animation will report its local time.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON TIME =================
+%END TIME
+
+%SUBJECT ME
+\b  FORMAT: \uME\b\u [channel]
+\b  DESCRIPTION:\b 
+       Request op from the animation in [channel]
+\b  SEE ALSO:\b 
+\bEND OF HELP ON ME =================
+%END ME
+
+%SUBJECT LAST
+\b  FORMAT: \uLAST\b\u [channel]
+\b  DESCRIPTION:\b 
+       The animation will report nick and address of the 
+       last user who kicked it out of [channel].
+       It will also report the last channel key set in
+       [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON LAST =================
+%END LAST
+
+%SUBJECT PING
+\b  FORMAT: \uPING\b\u 
+\b  DESCRIPTION:\b 
+       A pong will be replied by the animation when it
+       receives this command.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PING =================
+%END PING
+
+%SUBJECT OP
+\b  FORMAT: \uOP\b\u [channel] <nick> <nick> <nick> ...
+\b  DESCRIPTION:\b 
+       Requests this animation to op all the nicks 
+       following the command.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON OP =================
+%END OP
+
+%SUBJECT SEC
+\b  FORMAT: \uSEC\b\u <level> <<length> or -1>
+\b  DESCRIPTION:\b 
+       This command will secure the animation at 
+       level <level> for <length> seconds.  This
+       command is useful when you want to limit
+       the bot to only access level of <level>
+       and above users.  If -1 is entered for length
+       then the setting will not be limited by time.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SEC =================
+%END SEC
+
+%SUBJECT OPK
+\b  FORMAT: \uOPK\b\u [channel] [level]
+\b  DESCRIPTION:\b 
+       This will request the animation to op all
+       the users in [channel] with access level
+       of [level] and up.  If [level] is not 
+       included, then anyuser in the userlist
+       with access in [channel] will be opped.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON OPK =================
+%END OPK
+
+%SUBJECT DOUK
+\b  FORMAT: \uDOUK\b\u [channel] [level]
+\b  DESCRIPTION:\b 
+       This will request the animation to deop 
+       all the users on the [channel] with 
+       access level lesser than [level].  If
+       [level] is not included, then any users
+       in the [channel] without access to the
+       bot will be deopped.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON DOUK =================
+%END DOUK
+
+%SUBJECT CI
+\b  FORMAT: \uCI\b\u [channel]
+\b  DESCRIPTION:\b 
+       Animation will report the information for
+       [channel].  This information include \#'s
+       of ops, \#'s of none ops, \#'s of users, and
+       \#'s of users with access to it.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CI =================
+%END CI
+
+%SUBJECT TOPIC
+\b  FORMAT: \uTOPIC\b\u [channel] <topic>
+\b  DESCRIPTION:\b 
+       The animation will change the topic of
+       [channel] to <topic>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON TOPIC =================
+%END TOPIC
+
+%SUBJECT ACT
+\b  FORMAT: \uACT\b\u [channel] <action>
+\b  DESCRIPTION:\b 
+       The animation will perform <action> in
+       [channel].   This is equivalent to /me
+       in regular IRC clients.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON ACT =================
+%END ACT
+
+%SUBJECT SUS
+\b  FORMAT: \uSUS\b\u <<nick> or -<address>>
+\b  DESCRIPTION:\b 
+       This is to put <nick>/<address> on suspension.
+       If he/she is suspended, then he will not have
+       access to this bot until his suspension is 
+       removed.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SUS =================
+%END SUS
+
+%SUBJECT BANS
+\b  FORMAT: \uBANS\b\u [channel]
+\b  DESCRIPTION:\b 
+       This is to request the animation to place all
+       the ak patterns set for this [channel] into
+       the channel's ban list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BANS =================
+%END BANS
+
+%SUBJECT B
+\b  FORMAT: \uB\b\u [channel] <nick>
+\b  DESCRIPTION:\b 
+       Requests the animation to ban <nick> from 
+       entering [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON B =================
+%END B
+
+%SUBJECT KB
+\b  FORMAT: \uKB\b\u [channel] <nick> [reason]
+\b  DESCRIPTION:\b 
+       Requests the animation to ban the <nick>  
+       from enter [channel].  If <nick> is in 
+       the channel, he/she will also be kicked with
+       <reason> attaching behind kick notification.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON KB =================
+%END KB
+
+%SUBJECT UB
+\b  FORMAT: \uUB\b\u [channel] [nick]
+\b  DESCRIPTION:\b 
+       This command will request the animation to
+       unban [nick] in [channel].  If no [nick]  is
+       provided, the bot will unban the person who
+       requested this action in [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON UB =================
+%END UB
+
+%SUBJECT K
+\b  FORMAT: \uK\b\u [channel] <nick> [reason]
+\b  DESCRIPTION:\b 
+       Kicks <nick> from [channel] with [reason]
+       attaching to the back of kick notification. 
+\b  SEE ALSO:\b KB
+\bEND OF HELP ON K =================
+%END K
+
+%SUBJECT MODE
+\b  FORMAT: \uMODE\b\u [channel] <modes>
+\b  DESCRIPTION:\b 
+       Sets <modes> into [channel].  This command
+       is equivalent to /mode command in IRC clients.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON MODE =================
+%END MODE
+
+%SUBJECT CS
+\b  FORMAT: \uCS\b\u [channel]
+\b  DESCRIPTION:\b 
+       Shows the current bot settings in [channel].
+       These settings are channel specific settings.
+       Meaning different channels can have different
+       settings.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CS =================
+%END CS
+
+%SUBJECT BS
+\b  FORMAT: \uBS\b\u 
+\b  DESCRIPTION:\b 
+       Shows the current setting of the variables that
+       effects the entire bot.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BS =================
+%END BS
+
+%SUBJECT OPEN
+\b  FORMAT: \uOPEN\b\u [channel]
+\b  DESCRIPTION:\b 
+       Clears all the modes in [channel] that will prevent 
+       a regular IRC user from entering it.  This command
+       will also request the animation to clear the banlist
+       in [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON OPEN =================
+%END OPEN
+
+%SUBJECT DEOP
+\b  FORMAT: \uDEOP\b\u [channel] <nick> <nick> <nick>  ...
+\b  DESCRIPTION:\b 
+       Removes op status from the <nick>-list in 
+       [channel]. 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON DEOP =================
+%END DEOP
+
+%SUBJECT CNB
+\b  FORMAT: \uCNB\b\u [channel]
+\b  DESCRIPTION:\b 
+       Clears all the nick-only bans in [channel].
+       This means all the bans of the type hello!*@* and
+       example!*@* will be removed.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CNB =================
+%END CNB
+
+%SUBJECT LASTCK
+\b  FORMAT: \uLASTCK\b\u [channel]
+\b  DESCRIPTION:\b 
+       Animation will report the last channel key
+       that was set in [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON LASTCK =================
+%END LASTCK
+
+%SUBJECT SBANS
+\b  FORMAT: \uSBANS\b\u [channel]
+\b  DESCRIPTION:\b 
+       Shows the current ban-list in [channel].  
+       This command is great for checking channel
+       synch.  It is also useful when a user wants
+       to check if banning was the reason why he/she
+       could not enter [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SBANS =================
+%END SBANS
+
+%SUBJECT REJOIN
+\b  FORMAT: \uREJOIN\b\u [channel]
+\b  DESCRIPTION:\b 
+       Leaves and then joins [channel].  This is
+       useful to maintain synch of this animation.
+       It also serves other purposes.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON REJOIN =================
+%END REJOIN
+
+%SUBJECT BK
+\b  FORMAT: \uBK\b\u [channe] <nick> [reason]
+\b  DESCRIPTION:\b 
+       Kicks all the matching user@host pattern of
+       <nick> from [channel].  It will also attach
+       [reason] to the back of kick notification if
+       it was provided.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BK =================
+%END BK
+
+%SUBJECT HK
+\b  FORMAT: \uHK\b\u [channel] <nick> [reason]
+\b  DESCRIPTION:\b 
+       Kicks all the matching host pattern of <nick>
+       from [channel].  It will also attach [reason]
+       to the back of kick notification if it was 
+       provided.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON HK =================
+%END HK
+
+%SUBJECT PR
+\b  FORMAT: \uPR\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help pr.<subcommand name>
+       This command is to manage protected list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PR =================
+%END PR
+
+%SUBJECT JOIN
+\b  FORMAT: \uJOIN\b\u [channel]
+\b  DESCRIPTION:\b 
+       Requests the animation to join the [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON JOIN =================
+%END JOIN
+
+%SUBJECT UNSUS
+\b  FORMAT: \uUNSUS\b\u <<nick> or -<address>>
+\b  DESCRIPTION:\b 
+       Unsuspands a <nick>/<address>.  Enabling him/her
+       to access this animation again.
+\b  SEE ALSO:\b SUS
+\bEND OF HELP ON UNSUS =================
+%END UNSUS
+
+%SUBJECT PART
+\b  FORMAT: \uPART\b\u [channel] <reason>
+\b  DESCRIPTION:\b 
+       Parts [channel].  If the requester is not
+       owner,  it will rejoin the channel after
+       a certain amount of time.  Otherwise it
+       will not rejoin the channel again  until
+       a join command is issued.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PART =================
+%END PART
+
+%SUBJECT CBAN
+\b  FORMAT: \uCBAN\b\u [channel]
+\b  DESCRIPTION:\b 
+       Clears all the bans in [channel].  Do this
+       when ban-list in  a  channel is full.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CBAN =================
+%END CBAN
+
+%SUBJECT CMODE
+\b  FORMAT: \uCMODE\b\u [channel]
+\b  DESCRIPTION:\b 
+       Clears all the modes that would usually  
+       prevent a regular user from the [channel].
+       These include +ilkms.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CMODE =================
+%END CMODE
+
+%SUBJECT LOCK
+\b  FORMAT: \uLOCK\b\u [channel]
+\b  DESCRIPTION:\b 
+       Places in all the undesire modes into [channel]
+       to make it unable to be joined and unable to
+       talk in.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON LOCK =================
+%END LOCK
+
+%SUBJECT SB
+\b  FORMAT: \uSB\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help sb.<subcommand name>
+       This command is to set bot variables.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SB =================
+%END SB
+
+%SUBJECT BT
+\b  FORMAT: \uBT\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help bt.<subcommand name>
+       This command is to toggle bot variables.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BT =================
+%END BT
+
+%SUBJECT CT
+\b  FORMAT: \uCT\b\u [channel] [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help ct.<subcommand name>
+       This command is to toggle channel variables.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT =================
+%END CT
+
+
+%SUBJECT SM
+\b  FORMAT: \uSM\b\u [channel] <modes to enforce>
+\b  DESCRIPTION:\b 
+       Requests the bot to enforce <modes to enforce>.
+       Automatically enables the channel toggle variable
+       for enforcing modes. 
+\b  SEE ALSO:\b CT.EM
+\bEND OF HELP ON SM =================
+%END SM
+
+%SUBJECT STO
+\b  FORMAT: \uSTO\b\u [channel] <topic to enforce>
+\b  DESCRIPTION:\b 
+       Requests the animation to enforce
+       <topic to enforce>.  It will also enable
+       the channel toggle variable for setting topics. 
+\b  SEE ALSO:\b SC.TR
+\bEND OF HELP ON STO =================
+%END STO
+
+%SUBJECT CHANACC
+\b  FORMAT: \uCHANACC\b\u [channel] [user@host]
+\b  DESCRIPTION:\b 
+       Check the whole userlist for users
+       with access in [channel].  If
+       [user@host] is included, only users
+       with matching user@host will be scanned.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CHANACC =================
+%END CHANACC
+
+%SUBJECT STM
+\b  FORMAT: \uSTM\b\u [channel]
+\b  DESCRIPTION:\b 
+       Requests the animation to set
+       the buffered topic and modes for [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON STM =================
+%END STM
+
+
+%SUBJECT KK
+\b  FORMAT: \uKK\b\u [channel] <<nick> [nick] ..> [; reason]
+\b  DESCRIPTION:\b
+       Kicks all the <nick>-list from [channel].
+       If [; reason] is provided,  all kick notification
+       for the <nick>-list will be followed by that reason.
+       Note:  Reason must be followed by a semicolon and
+              a minimum of one nick must be provided.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON KK =================
+%END KK
+
+%SUBJECT RECHN
+\b  FORMAT: \uRECHN\b\u [channel] [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help rechn.<subcommand name>
+       This command is to reset channel related lists.
+       These lists include user, ban, and modes.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON RECHN =================
+%END RECHN
+
+%SUBJECT AWAY
+\b  FORMAT: \uAWAY\b\u [away]
+\b  DESCRIPTION:\b 
+       Sets the animation's away to [away].  If no
+       [away] is included, the current away of the
+       bot will be removed.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AWAY =================
+%END AWAY
+
+%SUBJECT NEWN
+\b  FORMAT: \uNEWN\b\u <nick>
+\b  DESCRIPTION:\b 
+       Requests the animation to change it's current
+       nick to <nick>.  
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NEWN =================
+%END NEWN
+
+%SUBJECT NEXTN
+\b  FORMAT: \uNEXTN\b\u 
+\b  DESCRIPTION:\b 
+       Requests the animation to change it's current
+       nick to the next nick in it's pre-stored 
+       nick list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NEXTN =================
+%END NEXTN
+
+%SUBJECT SERV
+\b  FORMAT: \uSERV\b\u <server name> [port]
+\b  DESCRIPTION:\b 
+       Changes server to <server name> at port [port].
+       If the animation could not connect with the 
+       requested server, it will connect to the 
+       next server in it's pre-stored server list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SERV =================
+%END SERV
+
+%SUBJECT REFRESH
+\b  FORMAT: \uREFRESH\b\u 
+\b  DESCRIPTION:\b 
+       Reread all the files,  including the user files 
+       and configuration file.  Then server reconnect
+       and rejoin all the channels.  Note: This is not 
+       the same as starting a new process like the reload
+       command.
+\b  SEE ALSO:\b RELOAD
+\bEND OF HELP ON REFRESH =================
+%END REFRESH
+
+%SUBJECT PACHAN
+\b  FORMAT: \uPACHAN\b\u 
+\b  DESCRIPTION:\b 
+       Leaves all the channels this animation is 
+       currently on.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PACHAN =================
+%END PACHAN
+
+%SUBJECT SHOW
+\b  FORMAT: \uSHOW\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help show.<subcommand name>
+       This command displays different user lists 
+       including user, ak, timerak, etc.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SHOW =================
+%END SHOW
+
+%SUBJECT P
+\b  FORMAT: \uP\b\u [channel] [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help p.<subcommand name>
+       This command does pattern operations including
+       kick ban, kick, op, deop, etc.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON P =================
+%END P
+
+%SUBJECT RELOAD
+\b  FORMAT: \uRELOAD\b\u 
+\b  DESCRIPTION:\b
+       Starts a new bot process and exit the current
+       process.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON RELOAD =================
+%END RELOAD
+
+%SUBJECT HACK
+\b  FORMAT: \uHACK\b\u <userid> [IRCNAME]
+\b  DESCRIPTION:\b 
+       Changes the userid to <userid> and name to 
+       [IRCNAME].  The animation will reconnect the
+       current server.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON HACK =================
+%END HACK
+
+%SUBJECT SPLIT
+\b  FORMAT: \uSPLIT\b\u <nick> [userid] [name]
+\b  DESCRIPTION:\b 
+       Hashs another bot with nick <nick> and 
+       userid [userid] and name [name].  If [userid]
+       and/or  [name] are/is not provided, animation's
+       userid and name will be used.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SPLIT =================
+%END SPLIT
+
+%SUBJECT TEMPBOT
+\b  FORMAT: \uTEMPBOT\b\u <userid> <server> <<nick> [nick] [nick] ...>
+\b  DESCRIPTION:\b 
+       Creates a list of bots with nicks in <nick>-list.
+       These bots will all have userid of <userid>
+       and connect to server <server>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON TEMPBOT =================
+%END TEMPBOT
+
+%SUBJECT SPY
+\b  FORMAT: \uSPY\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help spy.<subcommand name>
+       This command is spy related.  It adds,  deletes,
+       sets channels, etc  for spy  function.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SPY =================
+%END SPY
+
+%SUBJECT AR
+\b  FORMAT: \uAR\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help ar.<subcommand name>
+       This command is auto-rejoin related.  It adds,
+       deletes, and sets auto rejoin channels for
+       this animation.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AR =================
+%END AR
+
+%SUBJECT SCS
+\b  FORMAT: \uSCS\b\u [channel] [pattern]
+\b  DESCRIPTION:\b 
+       Shows a list of users on [channel] with the
+       servers they are on.  
+       if [pattern]  is included, it will only show
+       the matching server patterns
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SCS =================
+%END SCS
+
+%SUBJECT SCU
+\b  FORMAT: \uSCU\b\u [channel] [pattern]
+\b  DESCRIPTION:\b 
+       Shows a list of users on [channel].   It shows
+       their nick, user, host, and their mode status.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SCU =================
+%END SCU
+
+%SUBJECT SDCC
+\b  FORMAT: \uSDCC\b\u 
+\b  DESCRIPTION:\b 
+       Shows a list of DCC connections including 
+       nick!user@host info, type of connection, amount
+       sent,  amount received, time of connection, and
+       idle time.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SDCC =================
+%END SDCC
+
+%SUBJECT MSG
+\b  FORMAT: \uMSG\b\u <nick> <msg>
+\b  DESCRIPTION:\b 
+       Sends <msg> to <nick>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON MSG =================
+%END MSG
+
+%SUBJECT SAY
+\b  FORMAT: \uSAY\b\u [channel] <msg>
+\b  DESCRIPTION:\b 
+       Sends <msg> to [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SAY =================
+%END SAY
+
+%SUBJECT REQ
+\b  FORMAT: \uREQ\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help req.<subcommand name>
+       This command Adds, deletes, changes channels
+       of access info of a user.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON REQ =================
+%END REQ
+
+%SUBJECT AK
+\b  FORMAT: \uAK\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help ak.<subcommand name>
+       This command manages the auto-kick list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AK =================
+%END AK
+
+%SUBJECT USER
+\b  FORMAT: \uUSER\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help user.<subcommand name>
+       This command maanages the actual user access
+       list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER =================
+%END USER
+
+%SUBJECT IGN
+\b  FORMAT: \uIGN\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help ign.<subcommand name>
+       This command manages the ignore list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON IGN =================
+%END IGN
+
+%SUBJECT CMD
+\b  FORMAT: \uCMD\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help cmd.<subcommand name>
+       This command manages the command list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CMD =================
+%END CMD
+
+%SUBJECT CLEAR
+\b  FORMAT: \uCLEAR\b\u [subcommand]
+\b  DESCRIPTION:\b 
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help clear.<subcommand name>
+       This command clears different userlist including
+       user, ak, pr, req, ign, etc.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CLEAR =================
+%END CLEAR
+
+%SUBJECT GLOBAL
+\b  FORMAT: \uGLOBAL\b\u [subcommand]
+       This command is a prefix command to a list of
+       other commands.  If you do not include a
+       [subcommand] the animation will give you a list
+       of available subcommands.  Otherwise it will
+       carry out the subcommand.  To see help for one
+       of the subcommands just type :
+       help global.<subcommand name>
+       This command regulates Global information.   
+       If more  than one bot is hashed,  this command
+       manages the existance and the information of
+       each bot.
+\b  DESCRIPTION:\b 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON GLOBAL =================
+%END GLOBAL
+
+%SUBJECT DWIS
+\b  FORMAT: \uDWIS\b\u <todo>
+\b  DESCRIPTION:\b 
+       Requests the animation to send <todo> message
+       directly to its server.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON DWIS =================
+%END DWIS
+
+%SUBJECT OFF
+\b  FORMAT: \uOFF\b\u [message]
+\b  DESCRIPTION:\b 
+       Have the animation signoff.  If it's
+       the last bot on the fork list, then the
+       process will die.  If [message] is
+       provided, then the bot will signoff with
+       [message] attached to the back of the
+       signoff reason. 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON OFF =================
+%END OFF
+
+%SUBJECT ALLOFF
+\b  FORMAT: \uALLOFF\b\u [message]
+\b  DESCRIPTION:\b 
+       Kills all the existing fork bots and
+       the process.   If [message] was provided,
+       it will be attached to the back of  all
+       the bot's signoff reason.
+\bEND OF HELP ON ALLOFF =================
+%END ALLOFF
+
+%SUBJECT PASSWORD
+\b  FORMAT: \uPASSWORD\b\u <<nick> or -<address>> <<new password> or ->
+\b  DESCRIPTION:\b 
+       If <new password> is provided, 
+       The <nick>/<address> 's password will be 
+       altered to  the <new  password>.  Otherwise
+       if - is the parameter,  then  <nick>/<address>'s
+       password will be removed.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PASSWORD =================
+%END PASSWORD
+
+%SUBJECT PASSWD.SET
+\b  FORMAT: \uPASSWD SET\b\u 
+\b  DESCRIPTION:\b 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PASSWD.SET =================
+%END PASSWD.SET
+
+%SUBJECT PASSWD.UNSET
+\b  FORMAT: \uPASSWD UNSET\b\u 
+\b  DESCRIPTION:\b 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PASSWD.UNSET =================
+%END PASSWD.UNSET
+
+%SUBJECT PASSWD.CNG
+\b  FORMAT: \uPASSWD CNG\b\u 
+\b  DESCRIPTION:\b 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PASSWD.CNG =================
+%END PASSWD.CNG
+
+%SUBJECT CMD.PREFIX
+\b  FORMAT: \uCMD PREFIX\b\u <command prefix>
+\b  DESCRIPTION:\b 
+       Sets <command prefix> as the new command prefix.
+       Command prefix is used to prevent the bot from
+       taking too much system time.  Note: Only first
+       character of the input will be used as prefix.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CMD.PREFIX =================
+%END CMD.PREFIX
+
+%SUBJECT CMD.LVLCNG
+\b  FORMAT: \uCMD LVLCNG\b\u <command name> <level>
+\b  DESCRIPTION:\b 
+       Changes the access level of the <command name>
+       to <level>.
+       Note: <command name> must be one of the commands
+       of this animation.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CMD.LVLCNG =================
+%END CMD.LVLCNG
+
+%SUBJECT CMD.SECURE
+\b  FORMAT: \uCMD SECURE\b\u <pattern> <level> <<length> or -1>
+\b  DESCRIPTION:\b 
+       Secures all the main commands that matches
+       the <pattern> to <level> for <length> second.
+       Therefore only users with access level of 
+       <level> and above can access the animation.
+       Note: If you entered -1 as length, then 
+       the security will stay until it is changed 
+       manually.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CMD.SECURE =================
+%END CMD.SECURE
+
+%SUBJECT CMD.WRITE
+\b  FORMAT: \uCMD WRITE\b\u 
+\b  DESCRIPTION:\b 
+       Writes all the main command names and it's 
+       access level to a file to be read when
+       it reloads.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CMD.WRITE =================
+%END CMD.WRITE
+
+%SUBJECT CMD.RELOAD
+\b  FORMAT: \uCMD RELOAD\b\u 
+\b  DESCRIPTION:\b 
+       Reloads all the access level of the command
+       list from the preset command file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CMD.RELOAD =================
+%END CMD.RELOAD
+
+%SUBJECT AR.ADD
+\b  FORMAT: \uAR ADD\b\u [channel]
+\b  DESCRIPTION:\b 
+       Adds [channel] to auto-rejoin list.
+       The animation will automatically check
+       to see if it's in all the channels in
+       the auto-rejoin channel list every
+       few  hours.  If it's not in one of the
+       channels, it will automatically join the
+       channel.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AR.ADD =================
+%END AR.ADD
+
+%SUBJECT AR.DEL
+\b  FORMAT: \uAR DEL\b\u [channel]
+\b  DESCRIPTION:\b 
+       Deletes [channel] from the auto-rejoin
+       channel list.
+\b  SEE ALSO:\b AR.ADD
+\bEND OF HELP ON AR.DEL =================
+%END AR.DEL
+
+%SUBJECT AR.SHOW
+\b  FORMAT: \uAR SHOW\b\u 
+\b  DESCRIPTION:\b 
+       Shows all the channels in the auto-rejoin
+       channel list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AR.SHOW =================
+%END AR.SHOW
+
+%SUBJECT CHANNELLIST
+  A list of channels seperated by commas. 
+  No space is allowed between each channel.  All of
+  the channels can be in patterns.  For example:
+  \#chan1,\#chan2,\#chan3 <-- three channels
+  or
+  \#*   <-- all channels
+  or \#a*,\#b*,\#c* <-- all channels starting with
+    a, b, or c
+%END CHANNELLIST
+
+%SUBJECT PROTECTLEVEL
+  There are 7 levels of protection. Below is what
+  each level means.
+
+     Level 1 : Unban the user when he/she was deopped.
+               The animation will not reop the user
+               if he/she is deopped.
+     Level 2 : Reop and/or unban the user when he/she
+               was deopped and/or banned.
+     Level 3 : Level 2 plus deop the offender.
+     Level 4 : Level 2 plus kick the offender.
+     Level 5 : Level 2 plus deop, ban, and kick the
+               the offender. 
+     Level 6 : Level 2 plus deop, ban and kick all
+               the matching *!*user*@host patterns with 
+               the offender.
+     Level 7 : Level 2 plus deop, ban and kick all
+               the matching *!*@host patterns with 
+               the offender. (Maximum protection).
+
+
+  Note: Before the animation will punish the offender,  
+        (level 3 and above protection) It will first
+        check the level of protection of the offender.
+        It substracts the protection level of offender
+        from the offended.  If the result is greater 
+        than or equal to 3 then it will punish the  
+        offender.
+%END PROTECTLEVEL
+  
+%SUBJECT USER.ADD
+\b  FORMAT: \uUSER ADD\b\u <<nick> or -<address>> <level> <aop> <protect level> <channel list>
+\b  DESCRIPTION:\b 
+       Adds <nick>/<address> to the user list at
+       level <level>.   
+       <aop> : 1 = on 
+               0 = off
+       <protect level> : 1-5 (for information
+          on what each level means see PROTECTLEVEL)
+       <channel list> : a list of channels that 
+          the user list. See CHANNELLIST
+\b  SEE ALSO:\b PROTECTLEVEL CHANNELLIST
+\bEND OF HELP ON USER.ADD =================
+%END USER.ADD
+
+%SUBJECT USER.CHANACC
+\b  FORMAT: \uUSER CHANACC\b\u [channel] [userhost]
+\b  DESCRIPTION:\b 
+       Searches through the whole userlist and 
+       look for all the users with access in 
+       [channel]
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.CHANACC =================
+%END USER.CHANACC
+
+%SUBJECT USER.DEL
+\b  FORMAT: \uUSER DEL\b\u <<nick> or -<address>>
+\b  DESCRIPTION:\b 
+       Removes the first user@host pattern that matches
+       the <address> or the user@host of <nick> from the
+       user list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.DEL =================
+%END USER.DEL
+
+%SUBJECT USER.CHANNELS
+\b  FORMAT: \uUSER CHANNELS\b\u <<nick> or -<address>> <channel list>
+\b  DESCRIPTION:\b 
+       Changes the access channel list of 
+       <nick>/<address> to <channel list>.
+\b  SEE ALSO:\b CHANNELLIST
+\bEND OF HELP ON USER.CHANNELS =================
+%END USER.CHANNELS
+
+%SUBJECT USER.CHANADD
+\b  FORMAT: \uUSER CHANADD\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Adds <channel> to the access channel list
+       of <nick>/<address>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.CHANADD =================
+%END USER.CHANADD
+
+%SUBJECT USER.CHANDEL
+\b  FORMAT: \uUSER CHANDEL\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Deletes <channel> from the access channel list
+       of <nick>/<address>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.CHANDEL =================
+%END USER.CHANDEL
+
+%SUBJECT USER.NICKS
+\b  FORMAT: \uUSER NICKS\b\u <<nick> or -<address>> <nick list>
+\b  DESCRIPTION:\b 
+       Changes the nicklist of 
+       <nick>/<address> to <nick list>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.NICKS =================
+%END USER.NICKS
+
+%SUBJECT USER.NICKADD
+\b  FORMAT: \uUSER NICKADD\b\u <<nick> or -<address>> <nick>
+\b  DESCRIPTION:\b 
+       Adds <nick> to the nick list
+       of <nick>/<address>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.NICKADD =================
+%END USER.NICKADD
+
+%SUBJECT USER.NICKDEL
+\b  FORMAT: \uUSER NICKDEL\b\u <<nick> or -<address>> <nick>
+\b  DESCRIPTION:\b 
+       Deletes <nick> from nick list
+       of <nick>/<address>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.NICKDEL =================
+%END USER.NICKDEL
+
+%SUBJECT USER.USERHOST
+\b  FORMAT: \uUSER USERHOST\b\u <<nick> or <-address>> <user@host>
+\b  DESCRIPTION:\b 
+       Changes the user@host pattern of 
+       <nick>/<address> in the user list to
+       <user@host>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.USERHOST =================
+%END USER.USERHOST
+
+%SUBJECT USER.AOP
+\b  FORMAT: \uUSER AOP\b\u <<nick> or -<address>>
+\b  DESCRIPTION:\b 
+       Toggles the auto-op status of <nick>/<address>.
+       If the auto-op status of <nick>/<address> was on,
+       it will be turned off and it will be turned on
+       if otherwise. 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.AOP =================
+%END USER.AOP
+
+%SUBJECT USER.PROTLEVEL
+\b  FORMAT: \uUSER PROTLEVEL\b\u <<nick> or -<address>> <protect level>
+\b  DESCRIPTION:\b 
+       Changes the protection level of <nick>/<address>
+       to <protect level>.
+\b  SEE ALSO:\b PROTECTLEVEL
+\bEND OF HELP ON USER.PROTLEVEL =================
+%END USER.PROTLEVEL
+
+%SUBJECT USER.ACCLEVEL
+\b  FORMAT: \uUSER ACCLEVEL\b\u <<nick> or -<address>> <level>
+\b  DESCRIPTION:\b 
+       Changes the access level of <nick>/<address>
+       to <level>.  Note: <level> must be greater than
+       0 and lesser than or equal to the requester's
+       level.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.ACCLEVEL =================
+%END USER.ACCLEVEL
+
+%SUBJECT USER.RELOAD
+\b  FORMAT: \uUSER RELOAD\b\u 
+\b  DESCRIPTION:\b 
+        Reloads the user list from the preset
+        user file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.RELOAD =================
+%END USER.RELOAD
+
+%SUBJECT USER.WRITE
+\b  FORMAT: \uUSER WRITE\b\u 
+\b  DESCRIPTION:\b 
+       Writes the whole user list to the preset
+       user file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON USER.WRITE =================
+%END USER.WRITE
+
+%SUBJECT PR.CHANACC
+\b  FORMAT: \uPR CHANACC\b\u [channel] [userhost]
+\b  DESCRIPTION:\b 
+       Searches through the whole requestlist and 
+       look for all the users with banprotection in 
+       [channel]
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PR.CHANACC =================
+%END PR.CHANACC
+
+%SUBJECT PR.ADD
+\b  FORMAT: \uPR ADD\b\u <<nick> or -<address>> [level]
+\b  DESCRIPTION:\b 
+       Adds <nick>/<address> to protect list at level
+       [level].  If [level] is not included, then 2 
+       will be assumed.  The protected channels will
+       be the access channels of the requester.
+\b  SEE ALSO:\b PROTECTLEVEL
+\bEND OF HELP ON PR.ADD =================
+%END PR.ADD
+
+%SUBJECT PR.DEL
+\b  FORMAT: \uPR DEL\b\u <<nick> or -<address>>
+\b  DESCRIPTION:\b 
+       Removes <nick>/<address> from the currently
+       protected list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PR.DEL =================
+%END PR.DEL
+
+%SUBJECT PR.CHANNELS
+\b  FORMAT: \uPR CHANNELS\b\u <<nick> or -<address>> <channel list>
+\b  DESCRIPTION:\b 
+       Changes the protected channel list of 
+       <nick>/<address> to <channel list>.
+\b  SEE ALSO:\b CHANNELLIST
+\bEND OF HELP ON PR.CHANNELS =================
+%END PR.CHANNELS
+
+%SUBJECT PR.CHANADD
+\b  FORMAT: \uPR CHANADD\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Adds <channel> to the protected
+       channel list for <nick>/<address>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PR.CHANADD =================
+%END PR.CHANADD
+
+%SUBJECT PR.CHANDEL
+\b  FORMAT: \uPR CHANDEL\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Deletes <channel> from the protected 
+       channel list for <nick>/<address>
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PR.CHANDEL =================
+%END PR.CHANDEL
+
+%SUBJECT PR.RESET
+\b  FORMAT: \uPR RESET\b\u 
+\b  DESCRIPTION:\b 
+       Clears the current protect list and
+       then sends "WHO *" to all the channels the
+       animation is on to get a new list of 
+       protected user.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON PR.RESET =================
+%END PR.RESET
+
+%SUBJECT P.O
+\b  FORMAT: \uP [channel] O\b\u <pattern> [pattern] [pattern] ...
+\b  DESCRIPTION:\b 
+       Gives op status to all the users on [channel] 
+       with nick!user@host matching any of the patterns
+       in the <pattern>-list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON P.O =================
+%END P.O
+
+%SUBJECT P.D
+\b  FORMAT: \uP [channel] D\b\u <pattern> [pattern] [pattern] ...
+\b  DESCRIPTION:\b 
+       Takes op status away from any user on 
+       [channel] with nick!user@host that matches
+       any of the patterns in the <pattern>-list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON P.D =================
+%END P.D
+
+%SUBJECT P.V+
+\b  FORMAT: \uP [channel] V+\b\u <pattern> [pattern] [pattern] ...
+\b  DESCRIPTION:\b 
+       Gives talk status to all users on the
+       [channel] with nick!user@host matching
+       any of the patterns in the <pattern>-list.
+       Note: Op status or talk status is required
+       to talk on a channel with mode +m set.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON P.V+ =================
+%END P.V+
+
+%SUBJECT P.V-
+\b  FORMAT: \uP [channel] V-\b\u <pattern> [pattern] [pattern] ...
+\b  DESCRIPTION:\b 
+       Takes away talk status from any user
+       in [channel] with nick!user@host matching
+       any of the patterns in the <pattern>-list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON P.V- =================
+%END P.V-
+
+%SUBJECT P.K
+\b  FORMAT: \uP [channel] K\b\u <pattern> [pattern] [pattern] ... [; reason]
+\b  DESCRIPTION:\b 
+       Kicks any user on [channel] with 
+       nick!user@host matching any of the patterns
+       in the <pattern>-list. If a [; reason] is
+       provided, the reason will be attached to the
+       end of all the kick notification. 
+       Note: a semicolon must preceed the reason and
+       a minimum of one pattern must be included.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON P.K =================
+%END P.K
+
+%SUBJECT P.KB
+\b  FORMAT: \uP [channel] KB\b\u <pattern> [pattern] [pattern] ... [; reason]
+\b  DESCRIPTION:\b 
+       Kicks and bans any user on [channel] with 
+       nick!user@host matching any of the patterns
+       in the <pattern>-list. If a [; reason] is
+       provided, the reason will be attached to the
+       end of all the kick notification. 
+       Note: a semicolon must preceed the reason and
+       a minimum of one pattern must be included.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON P.KB =================
+%END P.KB
+
+%SUBJECT P.UB
+\b  FORMAT: \uP [channel] UB\b\u <pattern> [pattern] [pattern] ...
+\b  DESCRIPTION:\b 
+       Unbans all the bans on the [channel]
+       that matches any of the patterns in
+       <pattern>-list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON P.UB =================
+%END P.UB
+
+%SUBJECT AK.ADD
+\b  FORMAT: \uAK ADD\b\u <<nick> or -<address>> <level> [%<length>] <channel list> <reason>
+\b  DESCRIPTION:\b 
+       Adds <nick>/<address> to auto-kick list
+       at level <level>, in channels
+       [%<length>] Notice this parameter is optional.
+         It must be preceeded by a '%' sign. 
+         If this parameter is ommitted, regular ak is
+         assumed.
+         amount of time to be on AK <Timered ak>
+         amount of time in seconds before autodelete.
+         0 = no timer. Default is 0 if length is ommitted.
+       <channel list>, and with reason <reason>.
+       <reason> will be attached to the end of
+       kick notification each time ak user attempts
+       to join a channel in <channel list>.
+       Level 1: Kick only on join.
+       Level 2: Kick + ban  on join.
+\b  SEE ALSO:\b CHANNELLIST
+\bEND OF HELP ON AK.ADD =================
+%END AK.ADD
+
+%SUBJECT AK.CHANACC
+\b  FORMAT: \uAK CHANACC\b\u [channel] [userhost]
+\b  DESCRIPTION:\b 
+       Searches through the whole aklist and 
+       look for all the users with ak in 
+       [channel]
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AK.CHANACC =================
+%END AK.CHANACC
+
+%SUBJECT AK.DEL
+\b  FORMAT: \uAK DEL\b\u <<nick> or -<address>>
+\b  DESCRIPTION:\b 
+       Removes ALL the nick!user@host that matches
+       <address> or the nick!user@host of <nick>
+       from the auto-kick list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AK.DEL =================
+%END AK.DEL
+
+%SUBJECT AK.CHANNELS
+\b  FORMAT: \uAK CHANNELS\b\u <<nick> or -<address>> <channel list>
+\b  DESCRIPTION:\b 
+       Changes the auto-kick channel list of 
+       <nick>/<address> to <channel list>.
+\b  SEE ALSO:\b  CHANNELLIST
+\bEND OF HELP ON AK.CHANNELS =================
+%END AK.CHANNELS
+
+%SUBJECT AK.CHANADD
+\b  FORMAT: \uAK CHANADD\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Adds <channel> to the auto-kick
+       channel list for <nick>/<address>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AK.CHANADD =================
+%END AK.CHANADD
+
+%SUBJECT AK.CHANDEL
+\b  FORMAT: \uAK CHANDEL\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Deletes <channel> from the auto-kick
+       channel list for <nick>/<address>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AK.CHANDEL =================
+%END AK.CHANDEL
+
+%SUBJECT AK.RELOAD
+\b  FORMAT: \uAK RELOAD\b\u 
+\b  DESCRIPTION:\b 
+       Clears the auto-kick list and refresh it
+       with the list in the preset auto-kick file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AK.RELOAD =================
+%END AK.RELOAD
+
+%SUBJECT AK.WRITE
+\b  FORMAT: \uAK WRITE\b\u 
+\b  DESCRIPTION:\b 
+       Writes the current auto-kick list to
+       the preset auto-kick file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON AK.WRITE =================
+%END AK.WRITE
+
+%SUBJECT SHOW.UHINFO
+\b  FORMAT: \uSHOW UHINFO\b\u [pattern]
+\b  DESCRIPTION:\b 
+       Just show the list in the uhinfo.  This
+       list is only a temperory list for the bot
+       to use to buffer the userhost request
+       from the server.  No one can add or delete
+       from the list.  So this command may be
+       removed shortly.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SHOW.UHINFO =================
+%END SHOW.UHINFO
+
+%SUBJECT SHOW.AK
+\b  FORMAT: \uSHOW AK\b\u [pattern]
+\b  DESCRIPTION:\b 
+       Shows the entire auto-kick list in the
+       short format to prevent being flooded.
+       If [pattern] is included, then only the
+       nick!user@host in the auto-kick  list that
+       matches the [pattern] will be shown.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SHOW.AK =================
+%END SHOW.AK
+
+%SUBJECT SHOW.AKLONG
+\b  FORMAT: \uSHOW AKLONG\b\u [pattern]
+\b  DESCRIPTION:\b 
+       Shows the entire auto-kick list in
+       long format.  This means all the detail
+       information  will be shown.  This include
+       number  of kicks, when it was set, etc.
+       If [pattern] is included, only 
+       nick!user@host's that matches the [pattern]
+       will be shown.
+\b  SEE ALSO:\b SHOW.AK
+\bEND OF HELP ON SHOW.AKLONG =================
+%END SHOW.AKLONG
+
+%SUBJECT SHOW.PR
+\b  FORMAT: \uSHOW PR\b\u [pattern]
+\b  DESCRIPTION:\b 
+       Shows the entire list of currently
+       protected users.  
+       If [pattern] is included, only
+       user@host(s)  that matches the [pattern]
+       will be shown.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SHOW.PR =================
+%END SHOW.PR
+
+%SUBJECT SHOW.REQUEST
+\b  FORMAT: \uSHOW REQUEST\b\u [pattern]
+\b  DESCRIPTION:\b 
+       Shows the entire list of request op.
+       If [pattern] is included, only
+       user@host(s)  that matches the [pattern]
+       will be shown.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SHOW.REQUEST =================
+%END SHOW.REQUEST
+
+%SUBJECT SHOW.IGN
+\b  FORMAT: \uSHOW IGN\b\u [pattern]
+\b  DESCRIPTION:\b 
+       Shows the entire list of Ignored users.
+       If [pattern] is included, only
+       nick!user@host(s)  that matches the [pattern]
+       will be shown.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SHOW.IGN =================
+%END SHOW.IGN
+
+%SUBJECT SHOW.SPY
+\b  FORMAT: \uSHOW SPY\b\u [pattern]
+\b  DESCRIPTION:\b 
+       Shows the entire list of spies.
+       If [pattern] is included, only
+       nick!user@host(s)  that matches the [pattern]
+       will be shown.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SHOW.SPY =================
+%END SHOW.SPY
+
+%SUBJECT SHOW.USER
+\b  FORMAT: \uSHOW USER\b\u [pattern]
+\b  DESCRIPTION:\b 
+       Shows the entire list of users with
+       access to the animation.
+       If [pattern] is included, only
+       user@host(s)  that matches the [pattern]
+       will be shown.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SHOW.USER =================
+%END SHOW.USER
+
+%SUBJECT REQ.CHANACC
+\b  FORMAT: \uREQ CHANACC\b\u [channel] [userhost]
+\b  DESCRIPTION:\b 
+       Searches through the whole requestlist and 
+       look for all the users with request op access in 
+       [channel]
+\b  SEE ALSO:\b 
+\bEND OF HELP ON REQ.CHANACC =================
+%END REQ.CHANACC
+
+%SUBJECT REQ.ADD
+\b  FORMAT: \uREQ ADD\b\u <<nick> or -<address>> <channel list>
+\b  DESCRIPTION:\b 
+       Adds <nick>/<address> to the request-op
+       list.   <nick>/<address> can then request
+       the animation to op him/her in a channel
+       that matches the <channel list> by typing
+       opme [channel].
+\b  SEE ALSO:\b CHANNELLIST
+\bEND OF HELP ON REQ.ADD =================
+%END REQ.ADD
+
+%SUBJECT REQ.DEL
+\b  FORMAT: \uREQ DEL\b\u <<nick> or -<address>> 
+\b  DESCRIPTION:\b 
+       Deletes <nick>/<address> from the request-op
+       list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON REQ.DEL =================
+%END REQ.DEL
+
+%SUBJECT REQ.USERHOST
+\b  FORMAT: \uREQ USERHOST\b\u <<nick> or -<address>> <user@host>
+\b  DESCRIPTION:\b 
+       Changes the user@host pattern of 
+       <nick>/<address> in the request list 
+       to <user@host>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON REQ.USERHOST =================
+%END REQ.USERHOST
+
+%SUBJECT REQ.CHANNELS
+\b  FORMAT: \uREQ CHANNELS\b\u <<nick> or -<address>> <channel list>
+\b  DESCRIPTION:\b 
+       Changes channel list of <nick>/<address>
+       in request-op list to <channel list>.
+\b  SEE ALSO:\b CHANNELLIST
+\bEND OF HELP ON REQ.CHANNELS =================
+%END REQ.CHANNELS
+
+%SUBJECT REQ.CHANADD
+\b  FORMAT: \uREQ CHANADD\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Adds <channel> to channel list of
+       <nick>/<address> in the request-op list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON REQ.CHANADD =================
+%END REQ.CHANADD
+
+%SUBJECT REQ.CHANDEL
+\b  FORMAT: \uREQ CHANDEL\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Deletes <channel> from the channel list
+       of <nick>/<address> in request-op list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON REQ.CHANDEL =================
+%END REQ.CHANDEL
+
+%SUBJECT REQ.RELOAD
+\b  FORMAT: \uREQ RELOAD\b\u 
+\b  DESCRIPTION:\b 
+       Clears the request-op list then refreshes
+       it with the list from the preset request-op
+       file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON REQ.RELOAD =================
+%END REQ.RELOAD
+
+%SUBJECT REQ.WRITE
+\b  FORMAT: \uREQ WRITE\b\u 
+\b  DESCRIPTION:\b 
+       Writes the current request-op list to
+       a preset request-op file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON REQ.WRITE =================
+%END REQ.WRITE
+
+%SUBJECT RECHN.BAN
+\b  FORMAT: \uRECHN [channel] BAN\b\u 
+\b  DESCRIPTION:\b 
+       Clears the internally stored ban-list
+       for [channel] then resets it by sending
+       to server "mode [channel] +b".
+\b  SEE ALSO:\b 
+\bEND OF HELP ON RECHN.BAN =================
+%END RECHN.BAN
+
+%SUBJECT RECHN.USER
+\b  FORMAT: \uRECHN [channel] USER\b\u 
+\b  DESCRIPTION:\b 
+       Clears the internally stored user-list
+       for [channel] then resets it by sending
+       to server "WHO [channel]".
+\b  SEE ALSO:\b 
+\bEND OF HELP ON RECHN.USER =================
+%END RECHN.USER
+
+%SUBJECT RECHN.MODE
+\b  FORMAT: \uRECHN [channel] MODE\b\u 
+\b  DESCRIPTION:\b
+       Clears the internally stored mode-list
+       for [channel] then resets it by sending
+       to server  "mode [channel]".
+\b  SEE ALSO:\b 
+\bEND OF HELP ON RECHN.MODE =================
+%END RECHN.MODE
+
+%SUBJECT CLEAR.USER
+\b  FORMAT: \uCLEAR USER\b\u 
+\b  DESCRIPTION:\b 
+       Clears the entire user list.
+       Use it with caution.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CLEAR.USER =================
+%END CLEAR.USER
+
+%SUBJECT CLEAR.REQUEST
+\b  FORMAT: \uCLEAR REQUEST\b\u 
+\b  DESCRIPTION:\b 
+       Clears the entire request list.
+       Use it with caution.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CLEAR.REQUEST =================
+%END CLEAR.REQUEST
+
+%SUBJECT CLEAR.AK
+\b  FORMAT: \uCLEAR AK\b\u 
+\b  DESCRIPTION:\b 
+       Clears the entire auto-kick list.
+       Use it with caution.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CLEAR.AK =================
+%END CLEAR.AK
+
+%SUBJECT CLEAR.PR
+\b  FORMAT: \uCLEAR PR\b\u 
+\b  DESCRIPTION:\b 
+       Clears the entire currently protected
+       list. Use it with caution. 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CLEAR.PR =================
+%END CLEAR.PR
+
+%SUBJECT CLEAR.SPY
+\b  FORMAT: \uCLEAR SPY\b\u 
+\b  DESCRIPTION:\b 
+       Clears the entire spy list.
+       Use it with caution.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CLEAR.SPY =================
+%END CLEAR.SPY
+
+%SUBJECT CLEAR.IGN
+\b  FORMAT: \uCLEAR IGN\b\u 
+\b  DESCRIPTION:\b 
+       Clears the entire ignore list.
+       Use it with caution.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CLEAR.IGN =================
+%END CLEAR.IGN
+
+%SUBJECT SPY.CHANACC
+\b  FORMAT: \uSPY CHANACC\b\u [channel] [userhost]
+\b  DESCRIPTION:\b 
+       Searches through the whole spylist and 
+       look for all the users with spy option in 
+       [channel]
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SPY.CHANACC =================
+%END SPY.CHANACC
+
+%SUBJECT SPY.ADD
+\b  FORMAT: \uSPY ADD\b\u <channel list>
+\b  DESCRIPTION:\b 
+       Adds the requester to the spy list for
+       all the channels in the <channel list>.  
+       The spy function spies everything that
+       takes place in all the channels in the
+       <channel list>.
+\b  SEE ALSO:\b CHANNELLIST
+\bEND OF HELP ON SPY.ADD =================
+%END SPY.ADD
+
+%SUBJECT SPY.DEL
+\b  FORMAT: \uSPY DEL\b\u [user@host (option only available for owner access)]
+\b  DESCRIPTION:\b 
+       Deletes the requester from the spy list.  
+       If the requester does not have OWNER access,
+       [user@host] will be left out.  Otherwise,
+       if the requester has OWNER access, then
+       he/she can only delete anyone by including
+       [user@host] as parameter.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SPY.DEL =================
+%END SPY.DEL
+
+%SUBJECT SPY.CHANNELS
+\b  FORMAT: \uSPY CHANNELS\b\u <<nick> or -<address>>  <channel list>
+\b  DESCRIPTION:\b 
+       Changes the channel list of <nick>/<address>
+       to <channel list>.
+\b  SEE ALSO:\b CHANNELLIST
+\bEND OF HELP ON SPY.CHANNELS =================
+%END SPY.CHANNELS
+
+%SUBJECT SPY.CHANADD
+\b  FORMAT: \uSPY CHANADD\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Adds <channel> to the channel list for 
+       <nick>/<address>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SPY.CHANADD =================
+%END SPY.CHANADD
+
+%SUBJECT SPY.CHANDEL
+\b  FORMAT: \uSPY CHANDEL\b\u <<nick> or -<address>> <channel>
+\b  DESCRIPTION:\b 
+       Deletes <channel> from the channel list for
+       <nick>/<address>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SPY.CHANDEL =================
+%END SPY.CHANDEL
+
+%SUBJECT IGN.ADD
+\b  FORMAT: \uIGN ADD\b\u <<nick> or -<address>> <type> <<length> or -1>
+\b  DESCRIPTION:\b 
+       Adds <nick>/<address> to ignore list.
+       Type 1: Ignore all messages, public and private.
+       Type 2: Ignore all mode changes and kicks.  
+               Useful when the requester wishes to
+               ignore the mode changes of a user@host
+               yet refuses to protect that user@host.
+       Type 3: Type 1 + Type 2
+       The ignore will be effective for <length> seconds.
+       If the type of ignore is 2 or 3, there will be
+       no time limit on the mode changes.  Also if -1 
+       is entered in the place of <length> then there 
+       will also be no time limit.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON IGN.ADD =================
+%END IGN.ADD
+
+%SUBJECT IGN.DEL
+\b  FORMAT: \uIGN DEL\b\u <<nick> or -<address>>
+\b  DESCRIPTION:\b 
+       Removes <nick>/<address> from the ignore list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON IGN.DEL =================
+%END IGN.DEL
+
+%SUBJECT IGN.RELOAD
+\b  FORMAT: \uIGN RELOAD\b\u 
+\b  DESCRIPTION:\b 
+       Clears the ignore list then refreshes it
+       with the ignore list from the preset
+       ignore list file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON IGN.RELOAD =================
+%END IGN.RELOAD
+
+%SUBJECT IGN.WRITE
+\b  FORMAT: \uIGN WRITE\b\u 
+\b  DESCRIPTION:\b 
+       Writes the current ignore-list into  a
+       preset file.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON IGN.WRITE =================
+%END IGN.WRITE
+
+%SUBJECT BT.CNON
+\b  FORMAT: \uBT CNON\b\u 
+\b  DESCRIPTION:\b 
+       AUTO NICK CHANGE DURING A NETSPLIT.
+       When toggled to on, \n will automatically
+       change its nick to the next nick in the
+       nick-list to avoid nick collision kill.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BT.CNON =================
+%END BT.CNON
+
+%SUBJECT BT.FNL
+\b  FORMAT: \uBT FNL\b\u 
+\b  DESCRIPTION:\b 
+     GET NICKNAMES DURING AUTO-NICK CHANGE FROM NICK-LIST
+     Toggles whether if the bot will get 
+     nicknames during the auto-nick change 
+     from nick-list or generating a nick
+     by combining the first 4 characters of
+     the current nick with a 5 digit number. 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BT.FNL =================
+%END BT.FNL
+
+%SUBJECT BT.DOK
+\b  FORMAT: \uBT DOK\b\u 
+\b  DESCRIPTION:\b 
+     TERMINATE ON SERVER KILL
+     Toggles the terminate on server kill option
+     for the animation.  This option determines
+     whether the bot should signoff after it has 
+     been killed by server in anyway.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BT.DOK =================
+%END BT.DOK
+
+%SUBJECT BT.CNOK
+\b  FORMAT: \uBT CNOK\b\u 
+\b  DESCRIPTION:\b 
+     CHANGE NICK ON KILL
+     Toggles the change nick on kill option
+     for the animation.  This option determines
+     whether the bot should change it's nick 
+     after it has been killed.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BT.CNOK =================
+%END BT.CNOK
+
+
+%SUBJECT BT.SPY
+\b  FORMAT: \uBT SPY\b\u 
+\b  DESCRIPTION:\b 
+     SPY MODE
+     This option is to set the spy mode
+     on/off.   It's not necessary for the
+     user to toggle it since the bot  will
+     detect it automatically.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BT.SPY =================
+%END BT.SPY
+
+%SUBJECT BT.NN
+\b  FORMAT: \uBT NN\b\u 
+\b  DESCRIPTION:\b 
+     NOTIFY NOTES
+     This option decides whether a notification
+     should be send to a user upon he/she joining
+     a channel when he has a note.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BT.NN =================
+%END BT.NN
+
+%SUBJECT BT.K3D
+\b  FORMAT: \uBT K3D\b\u 
+\b  DESCRIPTION:\b 
+     KICKING *-ooo* MODE CHANGE
+     Determins whether to kick a user upon making
+     any -ooo mode pattern in a channel.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BT.K3D =================
+%END BT.K3D
+
+%SUBJECT BT.CIF
+\b  FORMAT: \uBT CIF\b\u 
+\b  DESCRIPTION:\b 
+     Check for public flood (for kicking
+     purpose only) on already ignored users.
+     If this option is enabled, the bot will
+     check for public flood even on ignored users. 
+     This might cause the bot to repeatly 
+     excess-flood.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON BT.K3D =================
+%END BT.K3D
+
+%SUBJECT NOTE.CREATE
+\b  FORMAT: \uNOTE CREATE\b\u <to> [subject]
+\b  DESCRIPTION:\b 
+       Starts a note for <to> with subject [subject].
+       <to> : nick!user@host pattern. It can also be
+              "PUBLIC" if it's for everyone.
+\b  SEE ALSO:\b NOTE.ADDL NOTE.DELL NOTE.REPL NOTE.VIEW NOTE.SEND
+\bEND OF HELP ON NOTE.CREATE =================
+%END NOTE.CREATE
+
+%SUBJECT NOTE.DELETE
+\b  FORMAT: \uNOTE DELETE\b\u <note id>
+\b  DESCRIPTION:\b 
+       Deletes <note id> from the note list.
+       The note must either be for you or a
+       note that you have yet to finish.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NOTE.DELETE =================
+%END NOTE.DELETE
+
+%SUBJECT NOTE.READ
+\b  FORMAT: \uNOTE READ\b\u <note id>
+\b  DESCRIPTION:\b 
+       Shows the content of <note id>.
+       The note must either be directed to you
+       or to "PUBLIC".
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NOTE.READ =================
+%END NOTE.READ
+
+%SUBJECT NOTE.VIEW
+\b  FORMAT: \uNOTE VIEW\b\u 
+\b  DESCRIPTION:\b 
+       Shows the requester content of the note 
+       that he/she has yet to finish/send.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NOTE.VIEW =================
+%END NOTE.VIEW
+
+%SUBJECT NOTE.ADDL
+\b  FORMAT: \uNOTE ADDL\b\u [msg]
+\b  DESCRIPTION:\b 
+       Adds [msg] to the note that requester has
+       started.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NOTE.ADDL =================
+%END NOTE.ADDL
+
+%SUBJECT NOTE.DELL
+\b  FORMAT: \uNOTE DELL\b\u <line \#>
+\b  DESCRIPTION:\b 
+       Deletes line <line \#> from the note that
+       requester has created and  has yet to
+       finish/send.
+       To view note and find out which line the
+       requester wants to delete type:
+       note view.
+\b  SEE ALSO:\b NOTE.VIEW
+\bEND OF HELP ON NOTE.DELL =================
+%END NOTE.DELL
+
+%SUBJECT NOTE.REPL
+\b  FORMAT: \uNOTE REPL\b\u <line \#> [msg]
+\b  DESCRIPTION:\b 
+       Repleaces <line \#> with [msg].
+       To view note and find out which line the
+       requester wants to replace type:
+       note view.
+\b  SEE ALSO:\b NOTE.VIEW
+\bEND OF HELP ON NOTE.REPL =================
+%END NOTE.REPL
+
+%SUBJECT NOTE.LIST
+\b  FORMAT: \uNOTE LIST\b\u 
+\b  DESCRIPTION:\b 
+       Shows a list of note ids that are directed
+       to you or the "PUBLIC".
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NOTE.LIST =================
+%END NOTE.LIST
+
+%SUBJECT NOTE.SEND
+\b  FORMAT: \uNOTE SEND\b\u 
+\b  DESCRIPTION:\b 
+       Sends the note.  After the note has
+       been sent, the requester can no longer
+       view that note if it's not directed to
+       himself/herself.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NOTE.SEND =================
+%END NOTE.SEND
+
+%SUBJECT NOTE.DUMP
+\b  FORMAT: \uNOTE DUMP\b\u 
+\b  DESCRIPTION:\b 
+       Writes all the notes to a preset note file.
+       Only user with OWNER access has access to
+       this command.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON NOTE.DUMP =================
+%END NOTE.DUMP
+
+%SUBJECT GLOBAL.INFO
+\b  FORMAT: \uGLOBAL INFO\b\u 
+\b  DESCRIPTION:\b 
+       Lists information about all the hashed bots.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON GLOBAL.INFO =================
+%END GLOBAL.INFO
+
+%SUBJECT GLOBAL.DEBUG
+\b  FORMAT: \uGLOBAL DEBUG\b\u <level>
+\b  DESCRIPTION:\b 
+       Sets the global debugging level to <level>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON GLOBAL.DEBUG =================
+%END GLOBAL.DEBUG
+
+%SUBJECT GLOBAL.DIE
+\b  FORMAT: \u GLOBAL DIE\b\u <<bot number> or <bot name>>
+\b  DESCRIPTION:\b 
+       Requests <bot number> or <bot name> to signoff.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON GLOBAL.DIE =================
+%END GLOBAL.DIE
+
+%SUBJECT CT.CPL
+\b  FORMAT: \uCT [channel] CPL\b\u 
+\b  DESCRIPTION:\b 
+     COMPUTE PUNISHMENT LEVEL TOGGLE
+     Toggles for computing punishment level for 
+     [channel] on/off.
+     if off, and the offender who does a kick 
+     or a mode change againest a proteced 
+     offended, will not be punished. On the other
+     hand, if it is turned on, then the punishment
+     level of the offender is equal to the
+     difference in protection level between the
+     offended and the offender.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT.CPL =================
+%END CT.CPL
+
+%SUBJECT CT.DO
+\b  FORMAT: \uCT [channel] DO\b\u 
+\b  DESCRIPTION:\b 
+     DELAY-OP TOGGLE
+     Toggles delay-op option for
+     [channel] on/off.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT.DO =================
+%END CT.DO
+
+%SUBJECT CT.NSO
+\b  FORMAT: \uCT [channel] NSO\b\u 
+\b  DESCRIPTION:\b 
+     NO SERVER OP
+     Toggles whether if animation should deop
+     any none user who is opped by a server in
+     [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT.NSO =================
+%END CT.NSO
+
+%SUBJECT CT.AOP
+\b  FORMAT: \uCT [channel] AOP\b\u 
+\b  DESCRIPTION:\b 
+     AUTO OP
+     Toggles whether if the animation should
+     auto-op any user who joins a channel and
+     has auto-op status access turned on in
+     [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT.AOP =================
+%END CT.AOP
+
+%SUBJECT CT.UNDO
+\b  FORMAT: \uCT [channel] UNDO\b\u 
+\b  DESCRIPTION:\b 
+     REVERSE SELF-MADE MODE IF PROTECTED
+     Toggles whether if the animation should
+     undo a mode change  that it has just 
+     created in [channel], yet the mode change 
+     is againest one of the users in it's 
+     protected list.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT.UNDO =================
+%END CT.UNDO
+
+%SUBJECT CT.EM
+\b  FORMAT: \uCT [channel] EM\b\u 
+\b  DESCRIPTION:\b 
+     MODE ENFORCEMENT
+     Toggles whether the animation should
+     enforece a list preset modes. This means
+     the animation will regulate all 
+     channel mode changes that does not
+     agree with the preset modes.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT.EM =================
+%END CT.EM
+
+%SUBJECT CT.PR
+\b  FORMAT: \uCT [channel] PR\b\u 
+\b  DESCRIPTION:\b 
+     USER PROTECTION
+     Toggles whether the animation should
+     protect any user who is on the protection list
+     and his/her modes has been altered in
+     the unpleasent way in [channel]
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT.PR =================
+%END CT.PR
+
+%SUBJECT CT.AK
+\b  FORMAT: \uCT [channel] AK\b\u 
+\b  DESCRIPTION:\b 
+     AUTO KICK
+     Toggles whether the animation should
+     autokick any user who is on the 
+     autokick list for [channel] and attempts
+     to join it.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT.AK =================
+%END CT.AK
+
+%SUBJECT CT.KP
+\b  FORMAT: \uCT [channel] KP\b\u 
+\b  DESCRIPTION:\b 
+     KICK PROTECTED
+     Toggles whether the animation should
+     kick a protected user just as it would
+     kick a non-protected user in [channel].
+\b  SEE ALSO:\b 
+\bEND OF HELP ON CT.KP =================
+%END CT.KP
+
+%SUBJECT SB.MOR
+\b  FORMAT: \uSB MOR\b\u <\# of lines>
+\b  DESCRIPTION:\b 
+
+  Maximum number of output to server per second.
+  The smaller the value, the slower the bot 
+  will be and the more chance that it will reserve 
+  a lot of memory.  (Due to buffering)
+  The larger the value, the faster the bot will be 
+  (upto the speed the server can handle.)
+  This means. the smaller the value, the lesser 
+  the chance of excess flood and the larger the value 
+  the more chance for excess flood.
+  NOTE: Excess flood depends on how strict the server 
+    is plus how fast the server is.  Most server only 
+    allows 1K of unprocessed data sent by the client 
+    before disconnect the client for excess flooding.  
+    Clearly you can see why this depends on how 
+    strict and how fast the server is. 
+  Recommanded value for both speed and efficency is 3.
+  If too much excess flood, change server and/or
+  decrease value.
+
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SB.MOR =================
+%END SB.MOR
+%SUBJECT SB.RI
+\b  FORMAT: \uSB RI\b\u <\# of seconds>
+\b  DESCRIPTION:\b 
+     The length of time in seconds before the bot
+     rejoin kicked channel, reset nick, etc..
+     The default is 4 seconds.  The larger the
+     number the smaller the CPU time this bot
+     will use, but it means it will take a long 
+     time before the bot resets all the necessary
+     variables. This can be bad depending on the
+     usage of the bot.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SB.RI =================
+%END SB.RI
+
+%SUBJECT SB.NCI
+\b  FORMAT: \uSB NCI\b\u <num of minutes>
+\b  DESCRIPTION:\b 
+       Requests the animation to change to 
+       the next nick in the predefined nick-
+       list in <num of minutes>.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SB.NCI =================
+%END SB.NCI
+
+
+%SUBJECT SB.MMF
+\b  FORMAT: \uSB MMF\b\u <\# of message lines>
+\b  DESCRIPTION:\b 
+     MAXIMUM MESSAGE FLOOD LINES
+     Sets the number of message lines to 
+     sum up the interval time and
+     test for flood.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SB.MMF =================
+%END SB.MMF
+
+
+%SUBJECT SB.AIL
+\b  FORMAT: \uSB AIL\b\u <\# of seconds to auto-ignore>
+\b  DESCRIPTION:\b 
+      Number of seconds to auto-ignore.  
+      0 = off.  No auto-ignore.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SB.AIL =================
+%END SB.AIL
+
+%SUBJECT SB.MNC
+\b  FORMAT: \uSB MNC\b\u <\# of message lines>
+\b  DESCRIPTION:\b 
+       Maximum number of nick changes before the
+       animation will consider the user to be 
+       mass-nick-change-flooding.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SB.MNC =================
+%END SB.MNC
+
+%SUBJECT SB.MDL
+\b  FORMAT: \uSB MDL\b\u <user level>
+\b  DESCRIPTION:\b 
+     MINIMUM ACCESS LEVEL FOR DCC CHAT
+     Sets the minimmum access level for
+     a user for the bot to allow DCC
+     connection.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SB.MDL =================
+%END SB.MDL
+
+%SUBJECT SC.REV
+\b  FORMAT: \uSC [channel] REV\b\u <level>
+\b  DESCRIPTION:\b 
+       This command is to set revenge level for [channel].
+       Revenge takes place after a bot rejoins and receives 
+       its first op from being kicked by an user.
+       level 0 - No revenge.   Revenge  disabled.
+       level 1 - Kicks the revengee.
+       level 2 - Kicks and bans the revengee.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SC.REV =================
+%END SC.REV
+
+%SUBJECT SC.IDLE
+\b  FORMAT: \uSC.IDLE\b\u <length>
+\b  DESCRIPTION:\b 
+       Sets the amount of time a no-access user
+       can stay idle on the channel.
+       0 = off.   The <length> is in minutes.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SC.IDLE =================
+%END SC.IDLE
+%SUBJECT SC.TR
+\b  FORMAT: \uSC.TR\b\u <length>
+\b  DESCRIPTION:\b 
+       Sets the topic refresh time to <length> 
+       minutes.  This will determine amount of 
+       minutes before this animation resets 
+       all of channel topics.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SC.TR =================
+%END SC.TR
+
+%SUBJECT SC.AFO
+\b  FORMAT: \uSC.AFO\b\u <length>
+\b  DESCRIPTION:\b 
+      Amount of time in minutes when
+      the bot will ask for op in the
+      format of "JOHBOT ME".
+      If 0 is set, the  option is turned
+      off.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SC.AFO =================
+%END SC.AFO
+
+%SUBJECT SC.FK
+\b  FORMAT: \uSC.FK\b\u <number of public flood lines>
+\b  DESCRIPTION:\b 
+      Number of public flood lines before the bot 
+      considers it to be flood and does the
+      appropriate actions.
+      if 0 is set, the option is turned off.
+      Meaning, no flood kick.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SC.FK =================
+%SUBJECT SC.FK
+
+\b  FORMAT: \uSC.MK\b\u <number of kicks>
+\b  DESCRIPTION:\b 
+      Number of kicks before the bot considers
+      the user to be mass-kicking and takes the
+      appropriate actions.
+      if 0 is set, the option is turned off.
+      That means no masskick protection.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SC.MK =================
+
+%SUBJECT SC.MD
+\b  FORMAT: \uSC.MD\b\u <number of deops>
+\b  DESCRIPTION:\b 
+      Number of deops before the bot consides
+      the user to be mass-deopping and takes
+      the appropriate action.
+      If 0 is set, the option is turned off.
+      That means no massdeop protection.
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SC.MD =================
+%SUBJECT SC.MD
+
+%SUBJECT SC.OL
+\b  FORMAT: \uSC.OL\b\u <level>
+      Turns on the opuser only protection.
+      This means only users are allow to be 
+      opped.  If someone on the channel 
+      decides to op a/group person/ppl,
+      he/she's userlevel must be higer
+      than <level>.  Otherwise appropriate
+      actions will be taken. 
+\b  SEE ALSO:\b 
+\bEND OF HELP ON SC.AFO =================

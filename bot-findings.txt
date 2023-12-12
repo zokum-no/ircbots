@@ -141,3 +141,15 @@ list types were added. Used to run a bot called Patrocle.
 Looks like a translation fork / personalization of a VladBot 2.1h. It has a lot of 
 the replies and commands translated into french. Some command levels have been
 changed.
+
+= People of interest =
+Jettero Heller:
+Since we are apparently going to be having more and more people on the exclude 
+list, i will implement a function to unban the persons host if they are on the 
+list.. I haven't decided what to call the command as of yet, so any input is 
+welcome.. It shouldn't be TOO deragatory since they will be using it a lot, and
+they have already been "ridden outta #doom" enough times.. I will give you 
+specifics after i put the command in.b
+
+
+
